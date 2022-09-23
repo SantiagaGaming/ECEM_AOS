@@ -24,6 +24,7 @@ public class ÑupboardDoor : BaseObject
     }
     private IEnumerator RotateDoor(bool value)
     {
+        GetComponent<Collider>().enabled = false;
         _canRotate = false;
         _key.SetActive(true);
         if (value)
@@ -79,5 +80,6 @@ public class ÑupboardDoor : BaseObject
 
         }
         _canRotate = true;
+        GetComponent<Collider>().enabled = true;
     }
 }
