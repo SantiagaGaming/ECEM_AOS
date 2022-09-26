@@ -19,6 +19,7 @@ public class MovebleObject : MonoBehaviour
     private IEnumerator Move()
     { if(canMove)
         {
+            GetComponent<Collider>().enabled = false;
             MovingButtonsController.Instance.HideAllButtons();
           canMove = false;
         int x = 0;
@@ -55,7 +56,8 @@ public class MovebleObject : MonoBehaviour
             x--;
         }
             canMove = true;
-            MovingButtonsController.Instance.ShowAllButtons();
+            GetComponent<Collider>().enabled = true;
+
         }
     }
     public bool GetCondition()
