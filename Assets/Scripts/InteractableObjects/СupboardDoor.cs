@@ -91,12 +91,13 @@ public class ÑupboardDoor : BaseObject
         _canRotate = true;
         GetComponent<Collider>().enabled = true;
     }
-    private void ColliderEnabler(bool value)
+    public void ColliderEnabler(bool value)
     {
         foreach (var item in _colliderObjects)
         {
             item.GetComponent<Collider>().enabled = value;
         }
     }
+
 
 }
