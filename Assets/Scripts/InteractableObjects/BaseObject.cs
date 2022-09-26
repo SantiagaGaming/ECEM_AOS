@@ -34,25 +34,28 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void OnHoverIn(InteractHand interactHand)
     {
-        if (helperPos != null)
-            canvasHelper.ShowTextHelper(helperName, helperPos);
-        if (outlineObjects != null)
-            foreach (var obj in outlineObjects)
-            {
-                obj.enabled = true;
-                obj.OutlineWidth = 3;
-            }
+ 
+            if (helperPos != null)
+                canvasHelper.ShowTextHelper(helperName, helperPos);
+            if (outlineObjects != null)
+                foreach (var obj in outlineObjects)
+                {
+                    obj.enabled = true;
+                    obj.OutlineWidth = 3;
+                }
+
     }
     public virtual void OnHoverOut(InteractHand interactHand)
     {
-        if (helperPos != null)
-            canvasHelper.HidetextHelper();
-        if (outlineObjects != null)
-            foreach (var obj in outlineObjects)
-            {
-                obj.enabled = false;
-                obj.OutlineWidth = 0;
-            }
+
+            if (helperPos != null)
+                canvasHelper.HidetextHelper();
+            if (outlineObjects != null)
+                foreach (var obj in outlineObjects)
+                {
+                    obj.enabled = false;
+                    obj.OutlineWidth = 0;
+                }
 
     }
     public void DisableObject()

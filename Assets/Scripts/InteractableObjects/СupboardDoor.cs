@@ -12,10 +12,12 @@ public class ÑupboardDoor : BaseObject
     private bool _canRotate = true;
     [SerializeField] private GameObject _key;
     [HideInInspector] public bool CanOpen = true;
+    [SerializeField] private GameObject[] _colliderObjects;
     public override void OnClicked(InteractHand interactHand)
     {
         if (_canRotate && CanOpen)
         {
+            CurrentDoorController.Instance.SetCurrentDoor(this);
             StartCoroutine(RotateDoor(_side));
             if (_side)
                 _side = false;
@@ -24,11 +26,13 @@ public class ÑupboardDoor : BaseObject
     }
     private IEnumerator RotateDoor(bool value)
     {
+
         GetComponent<Collider>().enabled = false;
         _canRotate = false;
         _key.SetActive(true);
         if (value)
         {
+            ColliderEnabler(false);
             _key.SetActive(true);
             int keyX = 0;
             while (keyX < 40)
@@ -51,10 +55,13 @@ public class ÑupboardDoor : BaseObject
                 y--;
                 yield return new WaitForSeconds(0.01f);
             }
+            ColliderEnabler(true);
         }
 
         else
         {
+            MovingButtonsController.Instance.HideAllButtons();
+            ColliderEnabler(false);
             int y = 0;
             while (y <= 90)
             {
@@ -78,8 +85,18 @@ public class ÑupboardDoor : BaseObject
             }
             _key.SetActive(false);
 
+
+
         }
         _canRotate = true;
         GetComponent<Collider>().enabled = true;
     }
+    private void ColliderEnabler(bool value)
+    {
+        foreach (var item in _colliderObjects)
+        {
+            item.GetComponent<Collider>().enabled = value;
+        }
+    }
+
 }

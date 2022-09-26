@@ -8,7 +8,6 @@ public class NotebookObject : BaseObject
 {
     [SerializeField] private GameObject _noteBook;
     [SerializeField] private GameObject _lid;
-    [SerializeField] private ÑupboardDoor _door;
     private bool _side = true;
     private bool _canRotate = true;
     public override void OnClicked(InteractHand interactHand)
@@ -27,7 +26,7 @@ public class NotebookObject : BaseObject
         _canRotate = false;
         if (value)
         {
-            _door.CanOpen = false;
+            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = false;
             int z = 0;
             while (z <= 35)
             {
@@ -60,7 +59,7 @@ public class NotebookObject : BaseObject
                 z--;
                 yield return new WaitForSeconds(0.01f);
             }
-            _door.CanOpen = true;
+            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = true;
 
         }
         _canRotate = true;

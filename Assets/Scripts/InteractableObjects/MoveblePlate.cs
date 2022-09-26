@@ -21,6 +21,7 @@ public class MoveblePlate : MovebleObject
     {
         if (canMove)
         {
+            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = false;
             canMove = false;
             GetComponent<Collider>().enabled = false;
             MovingButtonsController.Instance.HideAllButtons();
@@ -109,6 +110,7 @@ public class MoveblePlate : MovebleObject
             _screwDown.SetActive(false);
             canMove = true;
             GetComponent<Collider>().enabled = true;
+            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = true;
         }
     }
 
