@@ -10,7 +10,9 @@ public class MovebleObject : MonoBehaviour
 
     [SerializeField][HideInInspector] protected bool _condition;
     [SerializeField] protected bool _yPoz;
+    [SerializeField] private GameObject _child;
     protected bool canMove = true;
+
 
     public virtual void RepairObject()
     {
@@ -36,9 +38,12 @@ public class MovebleObject : MonoBehaviour
         if (GetComponent<MeshRenderer>())
         {
             GetComponent<MeshRenderer>().enabled = false;
-            yield return new WaitForSeconds(0.5f);
-            GetComponent<MeshRenderer>().enabled = true;
-        }
+                EnableChildObjects(false);
+                yield return new WaitForSeconds(0.5f);
+                EnableChildObjects(true);
+                GetComponent<MeshRenderer>().enabled = true;
+      
+            }
         else 
         {
         GetComponentInChildren<MeshRenderer>().enabled = false;
@@ -67,5 +72,10 @@ public class MovebleObject : MonoBehaviour
     public void SetCondition(bool value)
     {
         _condition = value;
+    }
+    private void EnableChildObjects(bool value)
+    {
+        if (_child != null)
+            _child.SetActive(value);
     }
 }
