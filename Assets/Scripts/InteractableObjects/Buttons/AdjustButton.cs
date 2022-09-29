@@ -9,6 +9,6 @@ public class AdjustButton : MovingButton
 
     public override void OnClicked(InteractHand interactHand)
     {
-
+        MovingButtonsController.Instance.PlayPushAnimation();
     }
 }

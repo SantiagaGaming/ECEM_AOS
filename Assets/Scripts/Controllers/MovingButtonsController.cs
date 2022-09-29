@@ -8,6 +8,7 @@ public class MovingButtonsController : MonoBehaviour
     [HideInInspector] public string ObjectHelperName { get; set; }
     [HideInInspector] public string ObjectName { get; set; }
     private MovebleObject _movingObject;
+    private PushableObject _pushableObject;
     private MovingButtonsController() { }
     private void Awake()
     {
@@ -65,6 +66,15 @@ public class MovingButtonsController : MonoBehaviour
     {
         if (_movingObject != null)
             _movingObject.RepairObject();
+    }
+    public void SetPushableObject(PushableObject obj)
+    {
+        _pushableObject = obj;
+    }
+    public void PlayPushAnimation()
+    {
+        if (_pushableObject != null)
+            _pushableObject.StartPush();
     }
 
 }

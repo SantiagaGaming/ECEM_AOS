@@ -9,6 +9,7 @@ public class ObjectWithButton : BaseObject
     [SerializeField] private Transform _buttonsPos;
     [SerializeField] private bool _vertical;
     [SerializeField] private MovebleObject _movingObject;
+    [SerializeField] private PushableObject _pushableObject;
     [SerializeField] private bool _bigWatch;
 
     public override void OnClicked(InteractHand interactHand)
@@ -42,6 +43,17 @@ public class ObjectWithButton : BaseObject
                 MovingButtonsController.Instance.SetMovingObject(null);
                 MovingButtonsController.Instance.HideRepairButton();
             }
+        if (_pushableObject == null)
+            _pushableObject = GetComponent<PushableObject>();
+        if (_pushableObject != null)
+        {
+            MovingButtonsController.Instance.SetPushableObject(_pushableObject);
+            MovingButtonsController.Instance.HideRepairButton();
+        }
+        else
+        {
+            MovingButtonsController.Instance.SetPushableObject(null);
+        }
     }
 
 
