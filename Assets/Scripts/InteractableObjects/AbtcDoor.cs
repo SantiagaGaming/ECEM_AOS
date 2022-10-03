@@ -48,7 +48,7 @@ public class AbtcDoor : BaseObject
             while (y >= -107)
             {
                 transform.localRotation = Quaternion.Euler(-90, y, 17.137f);
-                y--;
+                y--g;
                 yield return new WaitForSeconds(0.01f);
             }
 
