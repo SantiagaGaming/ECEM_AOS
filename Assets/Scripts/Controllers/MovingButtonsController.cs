@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MovingButtonsController : MonoBehaviour
 {
     public static MovingButtonsController Instance;
+    public UnityAction ButtonsPositionChanged;
     [HideInInspector] public string ObjectHelperName { get; set; }
     [HideInInspector] public string ObjectName { get; set; }
     private MovebleObject _movingObject;
@@ -24,6 +26,7 @@ public class MovingButtonsController : MonoBehaviour
     public void SetMovingButtonsPosition(Vector3 position)
     {
         transform.position = position;
+        ButtonsPositionChanged?.Invoke();
     }
     public void ShowWatchButton()
     {
