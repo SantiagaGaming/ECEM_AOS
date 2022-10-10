@@ -1,23 +1,42 @@
 ﻿using System.Collections;
 using AosSdk.Core.Interaction;
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.Player.Pointer;
-using AosSdk.Core.Utils;
+using AosSdk.Core.PlayerModule.Pointer;
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Management;
 
-namespace AosSdk.Core.Player.VRPlayer
+namespace AosSdk.Core.PlayerModule.VRPlayer
 {
     public class VRPlayer : MonoBehaviour, IPlayer
     {
         [SerializeField] private RayCaster[] handRayCasters;
         [SerializeField] private Grabber leftHandGrabber;
         [SerializeField] private Grabber rightHandGrabber;
+        [SerializeField] private Camera _eventCamera;
+        [SerializeField] private Camera _playerCamera;
 
         public XROrigin xrOrigin;
 
         public bool CanMove { get; set; } = true;
+        public bool CanRun { get; set; } = true;
+
+        public Camera EventCamera
+        {
+            get => _eventCamera;
+            set { }
+        }
+
+        public GameObject GameObject
+        {
+            get => gameObject;
+            set { }
+        }
+
+        public void Init()
+        {
+            StartCoroutine(InitializeOpenXRRoutine());
+        }
 
         public void TeleportTo(Transform target)
         {
@@ -39,14 +58,24 @@ namespace AosSdk.Core.Player.VRPlayer
         {
             var target = GameObject.Find(objectName)?.transform;
 
-            if (!target)
+            if (target == null)
             {
-                RuntimeData.Instance.CurrentPlayer.ReportError($"Teleport to object failed, no object with name {objectName} found");
+                Player.Instance.ReportError($"Teleport to object failed, no object with name {objectName} found");
                 return;
             }
 
             var targetPosition = target.position;
             TeleportTo(targetPosition.x, targetPosition.y, targetPosition.z);
+        }
+
+        public void ForwardTo(Transform target)
+        {
+            // should not be implemented
+        }
+
+        public void ReleaseForwarding()
+        {
+            // should not be implemented
         }
 
         public void EnableCamera(bool value)
@@ -62,12 +91,7 @@ namespace AosSdk.Core.Player.VRPlayer
             }
         }
 
-        public void InitializeOpenXR()
-        {
-            StartCoroutine(InitializeOpenXRRoutine());
-        }
-
-        private static IEnumerator InitializeOpenXRRoutine()
+        private IEnumerator InitializeOpenXRRoutine()
         {
             yield return XRGeneralSettings.Instance.Manager.InitializeLoader();
             if (XRGeneralSettings.Instance.Manager.activeLoader == null)
@@ -76,6 +100,19 @@ namespace AosSdk.Core.Player.VRPlayer
             }
 
             XRGeneralSettings.Instance.Manager.StartSubsystems();
+
+            _eventCamera.fieldOfView = _playerCamera.fieldOfView;
+        }
+
+        private void OnDestroy()
+        {
+            XRGeneralSettings.Instance.Manager.DeinitializeLoader();
+            if (XRGeneralSettings.Instance.Manager.activeLoader)
+            {
+                XRGeneralSettings.Instance.Manager.activeLoader.Stop();
+            }
+
+            XRGeneralSettings.Instance.Manager.StopSubsystems();
         }
 
         public void GrabObject(string objectName, int hand)

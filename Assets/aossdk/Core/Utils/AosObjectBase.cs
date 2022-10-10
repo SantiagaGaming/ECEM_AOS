@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using AosSdk.Core.Utils.EditorUtils;
 using UnityEngine;
 
 namespace AosSdk.Core.Utils
@@ -10,10 +9,7 @@ namespace AosSdk.Core.Utils
     [DisallowMultipleComponent]
     public class AosObjectBase : MonoBehaviour
     {
-#if UNITY_EDITOR
-        [ReadOnly]
-#endif
-        public string objectStaticGuid = string.Empty;
+        [field: SerializeField] public string ObjectId { get; set; } = string.Empty;
 
         public delegate void AosEventHandler();
 
@@ -33,7 +29,7 @@ namespace AosSdk.Core.Utils
             {
                 type = ServerMessageType.Event.ToString(),
                 eventName = helper.EventName,
-                objectGuid = helper.GameObjectGuid
+                objectId = helper.GameObjectId
             });
         }
 
@@ -43,12 +39,12 @@ namespace AosSdk.Core.Utils
             {
                 type = ServerMessageType.Event.ToString(),
                 eventName = helper.EventName,
-                objectGuid = helper.GameObjectGuid,
+                objectId = helper.GameObjectId,
                 castedToStringAttribute = attribute.ToString()
             });
         }
 
-        public void OnEnable()
+        public virtual void OnEnable()
         {
             foreach (var eventInfo in GetType().GetEvents())
             {
@@ -70,7 +66,7 @@ namespace AosSdk.Core.Utils
                 var eventHandler = GetType().GetMethod(invokeParameters.Length == 0 ? "InheritEventFired" : "InheritEventWithParameterFired",
                     BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.Static);
 
-                var eventHandlerHelper = new EventHandlerHelper {GameObjectGuid = objectStaticGuid, EventName = eventInfo.Name};
+                var eventHandlerHelper = new EventHandlerHelper {GameObjectId = ObjectId, EventName = eventInfo.Name};
                 var delegateMethod = Delegate.CreateDelegate(handlerType, eventHandlerHelper, eventHandler ?? throw new InvalidOperationException());
                 eventInfo.AddEventHandler(this, delegateMethod);
             }
@@ -143,7 +139,7 @@ namespace AosSdk.Core.Utils
 
             WebSocketWrapper.Instance.DoSendMessage(new ServerMessageCallback
             {
-                objectGuid = objectStaticGuid,
+                objectId = ObjectId,
                 invokedMethod = methodInfo.Name,
                 isSuccess = isInvokeWasSuccess,
                 returnValue = returnValue == null ? "null" : returnValue.ToString(),
@@ -155,7 +151,7 @@ namespace AosSdk.Core.Utils
         {
             WebSocketWrapper.Instance.DoSendMessage(new ServerMessageError
             {
-                objectGuid = objectStaticGuid,
+                objectId = ObjectId,
                 errorMessage = errorMessage,
                 type = ServerMessageType.Error.ToString()
             });

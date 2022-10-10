@@ -5,22 +5,25 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace AosSdk.Core.Utils
 {
     public class WebSocketWrapper : MonoBehaviour
     {
-        [SerializeField] private AosCommandQueueHandler aosCommandQueueHandler;
-        
-        private AosSDKSettings _sdkSettings;
+        [SerializeField] private AosCommandQueueHandler _aosCommandQueueHandler;
 
         public static WebSocketWrapper Instance;
 
         private Socket _serverSocket;
         private Socket _currentClientSocket;
 
-        private readonly byte[] _buffer = new byte[1024];
+        private IPEndPoint _ipEndPoint = null;
+
+        private readonly byte[] _buffer = new byte[8192];
+
+        private readonly List<byte> _received = new List<byte>();
 
         public delegate void SocketMessageReceivedHandler(string message);
 
@@ -29,14 +32,16 @@ namespace AosSdk.Core.Utils
         public event SocketMessageReceivedHandler OnClientMessageReceived;
         public event SocketMessageSentHandler OnClientMessageSent;
 
-        public void Init(IPAddress ip, int port, AosSDKSettings sdkSettings)
+        public void Init(IPEndPoint ipEndPoint)
         {
-            _sdkSettings = sdkSettings;
+            _ipEndPoint = ipEndPoint;
+
             _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-            _serverSocket.Bind(new IPEndPoint(IPAddress.Any, _sdkSettings.socketPort));
+            _serverSocket.Bind(ipEndPoint);
             _serverSocket.Listen(128);
-            _serverSocket.BeginAccept(null, 0, ClientConnectedCallback, null);
-            
+
+            BeginAcceptClients();
+
             OnClientMessageReceived += ClientMessageReceived;
             OnClientMessageSent += ClientMessageSent;
 
@@ -46,6 +51,11 @@ namespace AosSdk.Core.Utils
             }
 
             Debug.Log("AosSdk: web socket server is ready");
+        }
+
+        private void BeginAcceptClients()
+        {
+            _serverSocket.BeginAccept(null, 0, ClientConnectedCallback, null);
         }
 
         private static void ClientMessageSent()
@@ -58,15 +68,15 @@ namespace AosSdk.Core.Utils
             AosCommand aosCommandToQueue = null;
             try
             {
-                aosCommandToQueue = JsonUtility.FromJson<AosCommand>(message);
+                aosCommandToQueue = JsonConvert.DeserializeObject<AosCommand>(message);
             }
             catch (Exception e)
             {
-                Debug.LogError(e.Message);
+                Debug.LogError($"Error parsing AOSCommand: {message}: {e.Message}");
             }
             finally
             {
-                aosCommandQueueHandler.CommandQueue.Add(aosCommandToQueue);
+                _aosCommandQueueHandler.CommandQueue.Add(aosCommandToQueue);
             }
         }
 
@@ -113,7 +123,7 @@ namespace AosSdk.Core.Utils
             {
                 Socket client = null;
 
-                if (_serverSocket is { IsBound: true })
+                if (_serverSocket is {IsBound: true})
                 {
                     client = _serverSocket.EndAccept(ar);
                 }
@@ -154,7 +164,7 @@ namespace AosSdk.Core.Utils
             }
             finally
             {
-                if (_serverSocket is { IsBound: true })
+                if (_serverSocket is {IsBound: true})
                 {
                     _serverSocket.BeginAccept(null, 0, ClientConnectedCallback, null);
                 }
@@ -173,8 +183,16 @@ namespace AosSdk.Core.Utils
                 }
 
                 var received = client.EndReceive(result);
+                _received.AddRange(_buffer.Take(received));
 
-                var message = DecodeMessage(_buffer.Take(received).ToArray());
+                var messageDecoded = DecodeMessage(_received.ToArray(), out var message);
+
+                if (!messageDecoded)
+                {
+                    return;
+                }
+                
+                _received.Clear();
 
                 OnClientMessageReceived?.Invoke(message);
             }
@@ -188,16 +206,28 @@ namespace AosSdk.Core.Utils
             }
         }
 
-        private static string DecodeMessage(IReadOnlyList<byte> bytes)
+        private static bool DecodeMessage(IReadOnlyList<byte> bytes, out string message)
         {
+            message = string.Empty;
+
             var secondByte = bytes[1];
-            var dataLength = secondByte & 127;
-            var indexFirstMask = dataLength switch
+            long dataLength = (secondByte & 127) switch
+            {
+                126 => (bytes[2] << 8) + bytes[3],
+                127 => (bytes[2] << 56) + (bytes[3] << 48) + (bytes[4] << 40) + (bytes[5] << 32) + (bytes[6] << 24) + (bytes[7] << 16) + (bytes[8] << 8) + bytes[9],
+                _ => secondByte & 127
+            };
+            var indexFirstMask = (secondByte & 127) switch
             {
                 126 => 4,
                 127 => 10,
                 _ => 2
             };
+
+            if (indexFirstMask + 4 + dataLength > bytes.Count)
+            {
+                return false;
+            }
 
             var keys = bytes.Skip(indexFirstMask).Take(4);
             var indexFirstDataByte = indexFirstMask + 4;
@@ -205,10 +235,12 @@ namespace AosSdk.Core.Utils
             var decoded = new byte[bytes.Count - indexFirstDataByte];
             for (int i = indexFirstDataByte, j = 0; i < bytes.Count; i++, j++)
             {
-                decoded[j] = (byte)(bytes[i] ^ keys.ElementAt(j % 4));
+                decoded[j] = (byte) (bytes[i] ^ keys.ElementAt(j % 4));
             }
 
-            return Encoding.UTF8.GetString(decoded, 0, decoded.Length);
+            message = Encoding.UTF8.GetString(decoded, 0, decoded.Length);
+
+            return true;
         }
 
         private static byte[] EncodeMessage(string message)
@@ -222,27 +254,27 @@ namespace AosSdk.Core.Utils
             frame[0] = 129;
             if (length <= 125)
             {
-                frame[1] = (byte)length;
+                frame[1] = (byte) length;
                 indexStartRawData = 2;
             }
             else if (length <= 65535)
             {
                 frame[1] = 126;
-                frame[2] = (byte)((length >> 8) & 255);
-                frame[3] = (byte)(length & 255);
+                frame[2] = (byte) ((length >> 8) & 255);
+                frame[3] = (byte) (length & 255);
                 indexStartRawData = 4;
             }
             else
             {
                 frame[1] = 127;
-                frame[2] = (byte)((length >> 56) & 255);
-                frame[3] = (byte)((length >> 48) & 255);
-                frame[4] = (byte)((length >> 40) & 255);
-                frame[5] = (byte)((length >> 32) & 255);
-                frame[6] = (byte)((length >> 24) & 255);
-                frame[7] = (byte)((length >> 16) & 255);
-                frame[8] = (byte)((length >> 8) & 255);
-                frame[9] = (byte)(length & 255);
+                frame[2] = (byte) ((length >> 56) & 255);
+                frame[3] = (byte) ((length >> 48) & 255);
+                frame[4] = (byte) ((length >> 40) & 255);
+                frame[5] = (byte) ((length >> 32) & 255);
+                frame[6] = (byte) ((length >> 24) & 255);
+                frame[7] = (byte) ((length >> 16) & 255);
+                frame[8] = (byte) ((length >> 8) & 255);
+                frame[9] = (byte) (length & 255);
 
                 indexStartRawData = 10;
             }
@@ -285,6 +317,35 @@ namespace AosSdk.Core.Utils
                                                           "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"))) + eol + eol);
             return response;
         }
+
+        private void FixedUpdate()
+        {
+            if (_currentClientSocket == null)
+            {
+                return;
+            }
+
+            if (IsSocketConnected(_currentClientSocket))
+            {
+                return;
+            }
+
+            ResetSocket();
+        }
+
+        private void ResetSocket()
+        {
+            Debug.Log("AosSdk: web socket server restart: client lost");
+
+            _serverSocket.Close();
+            _serverSocket = null;
+            _currentClientSocket.Close();
+            _currentClientSocket = null;
+
+            Init(_ipEndPoint);
+        }
+
+        private static bool IsSocketConnected(Socket socket) => !socket.Poll(1000, SelectMode.SelectRead) || socket.Available != 0;
 
         private void OnDisable()
         {

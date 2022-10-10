@@ -1,11 +1,11 @@
 ﻿using AosSdk.Core.Interaction;
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.Player.Pointer;
+using AosSdk.Core.PlayerModule.Pointer;
 using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace AosSdk.Core.Player.DesktopPlayer
+namespace AosSdk.Core.PlayerModule.DesktopPlayer
 {
     [RequireComponent(typeof(CharacterController))]
     public class DesktopPlayer : MonoBehaviour, IPlayer
@@ -25,8 +25,20 @@ namespace AosSdk.Core.Player.DesktopPlayer
 
         [SerializeField] private Grabber grabber;
 
-        public bool CanRun { get; set; } = true;
         public bool CanMove { get; set; } = true;
+        public bool CanRun { get; set; } = true;
+
+        public Camera EventCamera
+        {
+            get => playerCamera;
+            set { }
+        }
+
+        public GameObject GameObject
+        {
+            get => gameObject;
+            set { }
+        }
 
         private Transform _playerTransform;
 
@@ -44,29 +56,56 @@ namespace AosSdk.Core.Player.DesktopPlayer
 
         private Transform _playerCameraTransform;
 
-        private void OnEnable()
+        private Transform _forwardToTransform;
+
+        public void Init()
         {
-            // TODO unsubscribe
-            movementAction.action.performed += context => _horizontalInput = context.ReadValue<Vector2>();
+            movementAction.action.performed += MovementActionActionOnPerformed;
 
-            jumpAction.action.performed += _ => _isJumping = true;
+            jumpAction.action.performed += JumpActionOnPerformed;
 
-            runAction.action.performed += _ => _isRunning = true;
-            runAction.action.canceled += _ => _isRunning = false;
+            runAction.action.performed += RunActionOnPerformed;
+            runAction.action.canceled += RunActionOnCanceled;
 
-            mouseXAction.action.performed += context => _mouseInput.x = context.ReadValue<float>();
+            mouseXAction.action.performed += MouseXActionOnPerformed;
+            mouseYAction.action.performed += MouseYActionOnPerformed;
 
-            mouseYAction.action.performed += context => _mouseInput.y = context.ReadValue<float>();
-
-            crouchAction.action.performed += _ => _isCrouching = true;
-
-            crouchAction.action.canceled += _ => _isCrouching = false;
+            crouchAction.action.performed += CrouchActionOnPerformed;
+            crouchAction.action.canceled += CrouchActionOnCanceled;
 
             _playerTransform = transform;
 
             _characterHeight = characterController.height;
 
             _playerCameraTransform = playerCamera.transform;
+        }
+
+        private void CrouchActionOnCanceled(InputAction.CallbackContext obj) => _isCrouching = false;
+
+        private void CrouchActionOnPerformed(InputAction.CallbackContext obj) => _isCrouching = true;
+
+        private void MouseYActionOnPerformed(InputAction.CallbackContext obj) => _mouseInput.y = obj.ReadValue<float>();
+
+        private void MouseXActionOnPerformed(InputAction.CallbackContext obj) => _mouseInput.x = obj.ReadValue<float>();
+
+        private void RunActionOnCanceled(InputAction.CallbackContext obj) => _isRunning = false;
+
+        private void RunActionOnPerformed(InputAction.CallbackContext obj) => _isRunning = true;
+
+        private void JumpActionOnPerformed(InputAction.CallbackContext obj) => _isJumping = true;
+
+        private void MovementActionActionOnPerformed(InputAction.CallbackContext obj) => _horizontalInput = obj.ReadValue<Vector2>();
+
+        private void OnDisable()
+        {
+            movementAction.action.performed -= MovementActionActionOnPerformed;
+            jumpAction.action.performed -= JumpActionOnPerformed;
+            runAction.action.performed -= RunActionOnPerformed;
+            runAction.action.canceled -= RunActionOnCanceled;
+            mouseXAction.action.performed -= MouseXActionOnPerformed;
+            mouseYAction.action.performed -= MouseYActionOnPerformed;
+            crouchAction.action.performed -= CrouchActionOnPerformed;
+            crouchAction.action.canceled -= CrouchActionOnCanceled;
         }
 
         public void TeleportTo(Transform target)
@@ -87,13 +126,47 @@ namespace AosSdk.Core.Player.DesktopPlayer
 
             if (target == null)
             {
-                RuntimeData.Instance.CurrentPlayer.ReportError(
+                Player.Instance.ReportError(
                     $"Teleport to object failed, no object with name {objectName} found");
                 return;
             }
 
             var targetPosition = target.position;
             TeleportTo(targetPosition.x, targetPosition.y, targetPosition.z);
+        }
+
+        public void ForwardTo(Transform target)
+        {
+            var targetPosition = target.position;
+
+            var rotation = Quaternion.LookRotation(targetPosition - transform.position);
+            transform.eulerAngles = new Vector3(0, rotation.eulerAngles.y, 0);
+
+            var cameraRotation = Quaternion.LookRotation(targetPosition - _playerCameraTransform.position);
+            _playerCameraTransform.localEulerAngles = new Vector3(cameraRotation.eulerAngles.x, 0, 0);
+
+            _forwardToTransform = target;
+        }
+
+        public void ReleaseForwarding()
+        {
+            if (!_forwardToTransform)
+            {
+                return;
+            }
+
+            var targetPosition = _forwardToTransform.position;
+
+            var rotation = Quaternion.LookRotation(targetPosition - transform.position);
+            transform.eulerAngles = new Vector3(0, rotation.eulerAngles.y, 0);
+
+            _rotationX = 0f;
+
+            _isJumping = false;
+
+            _isCrouching = false;
+
+            _forwardToTransform = null;
         }
 
         public void EnableCamera(bool value)
@@ -213,18 +286,22 @@ namespace AosSdk.Core.Player.DesktopPlayer
                 {
                     return;
                 }
-                
+
                 characterController.Move(_moveDirection * Time.deltaTime);
             }
             finally
             {
-                _rotationX += -_mouseInput.y * sdkSettings.mouseLookSpeed;
+                if (Player.Instance.CursorLockMode != CursorLockMode.Locked)
+                {
+                    _rotationX += -_mouseInput.y * sdkSettings.mouseLookSpeed;
 
-                _rotationX = Mathf.Clamp(_rotationX, -sdkSettings.mouseLookXLimit, sdkSettings.mouseLookXLimit);
-                _playerCameraTransform.localPosition =
-                    new Vector3(0, characterController.center.y + characterController.height / 2, 0);
-                _playerCameraTransform.localRotation = Quaternion.Euler(_rotationX, 0, 0);
-                transform.rotation *= Quaternion.Euler(0, _mouseInput.x * sdkSettings.mouseLookSpeed, 0);
+                    _rotationX = Mathf.Clamp(_rotationX, -sdkSettings.mouseLookXLimit, sdkSettings.mouseLookXLimit);
+
+                    _playerCameraTransform.localPosition =
+                        new Vector3(0, characterController.center.y + characterController.height / 2, 0);
+                    _playerCameraTransform.localRotation = Quaternion.Euler(_rotationX, 0, 0);
+                    transform.rotation *= Quaternion.Euler(0, _mouseInput.x * sdkSettings.mouseLookSpeed, 0);
+                }
             }
         }
     }

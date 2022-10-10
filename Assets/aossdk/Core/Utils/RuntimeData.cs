@@ -5,10 +5,9 @@ namespace AosSdk.Core.Utils
 {
     public class RuntimeData : MonoBehaviour
     {
-        public static RuntimeData Instance { get; internal set; }
+        public static RuntimeData Instance { get; private set; }
 
-        public Player.Player CurrentPlayer { get; set; }
-        public List<AosObjectBase> AosObjects { get; private set; } = new List<AosObjectBase>();
+        public List<AosObjectBase> AosObjects { get; } = new List<AosObjectBase>();
 
         private void OnEnable()
         {

@@ -3,7 +3,7 @@ using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace AosSdk.Core.Player.DesktopPlayer
+namespace AosSdk.Core.PlayerModule.DesktopPlayer
 {
     public class DesktopTeleportationManager : TeleportationManager
     {

@@ -1,6 +1,6 @@
 ﻿using AosSdk.Core.Input;
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.Player.Pointer;
+using AosSdk.Core.PlayerModule.Pointer;
 using AosSdk.Core.Utils;
 using UnityEngine;
 
@@ -119,7 +119,7 @@ namespace AosSdk.Core.Interaction
         {
             if (_currentGrabbable == null)
             {
-                Player.Player.Instance.ReportError($"Can't drop object from {_currentInteractHand.ToString()}: nothing grabbed");
+                PlayerModule.Player.Instance.ReportError($"Can't drop object from {_currentInteractHand.ToString()}: nothing grabbed");
                 return;
             }
 

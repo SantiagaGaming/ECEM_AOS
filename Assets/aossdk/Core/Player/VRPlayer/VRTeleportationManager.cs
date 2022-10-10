@@ -2,7 +2,7 @@ using AosSdk.Core.Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace AosSdk.Core.Player.VRPlayer
+namespace AosSdk.Core.PlayerModule.VRPlayer
 {
     public class VRTeleportationManager : TeleportationManager
     {

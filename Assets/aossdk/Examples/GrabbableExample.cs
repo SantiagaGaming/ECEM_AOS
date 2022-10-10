@@ -1,6 +1,6 @@
 using AosSdk.Core.Interaction;
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.Player.Pointer;
+using AosSdk.Core.PlayerModule.Pointer;
 using AosSdk.Core.Utils;
 using UnityEngine;
 
@@ -30,12 +30,6 @@ namespace AosSdk.Examples
         public void OnClicked(InteractHand interactHand)
         {
             Debug.Log("Grabbed was clicked");
-        }
-
-        [AosAction("Тест текста")]
-        public void TextDebug(string text)
-        {
-            Debug.Log(text);
         }
     }
 }

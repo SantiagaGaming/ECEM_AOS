@@ -2,7 +2,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace AosSdk.Core.Player.VRPlayer
+namespace AosSdk.Core.PlayerModule.VRPlayer
 {
     public class SnapTurnManager : MonoBehaviour
     {

@@ -17,7 +17,7 @@ namespace AosSdk.CustomObjects.OutlineManager
             float green, [AosParameter("b - компонента цвета [0...255]")] float blue, [AosParameter("толщина выделения")] float width,
             [AosParameter("режим выделения")] OutlineMode mode)
         {
-            var aosObjectToOutline = AosObjectFind.FindAosObjectByGuid(RuntimeData.Instance.AosObjects, objectGuid);
+            var aosObjectToOutline = AosObjectFind.FindAosObjectById(RuntimeData.Instance.AosObjects, objectGuid);
 
             if (!aosObjectToOutline)
             {
@@ -31,7 +31,7 @@ namespace AosSdk.CustomObjects.OutlineManager
         [AosAction("Выделить объект со стандартными настройками выделения")]
         public void OutlineObjectWithDefaultParameters(string objectGuid)
         {
-            var aosObjectToOutline = AosObjectFind.FindAosObjectByGuid(RuntimeData.Instance.AosObjects, objectGuid);
+            var aosObjectToOutline = AosObjectFind.FindAosObjectById(RuntimeData.Instance.AosObjects, objectGuid);
 
             if (!aosObjectToOutline)
             {
@@ -55,7 +55,7 @@ namespace AosSdk.CustomObjects.OutlineManager
         [AosAction("Убрать выделение с объекта")]
         public void DisableOutline([AosParameter("guid объекта")] string objectGuid)
         {
-            var aosObjectToHighlight = AosObjectFind.FindAosObjectByGuid(RuntimeData.Instance.AosObjects, objectGuid);
+            var aosObjectToHighlight = AosObjectFind.FindAosObjectById(RuntimeData.Instance.AosObjects, objectGuid);
 
             if (!aosObjectToHighlight)
             {

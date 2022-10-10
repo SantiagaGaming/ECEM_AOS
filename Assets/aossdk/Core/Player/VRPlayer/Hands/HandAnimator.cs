@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace AosSdk.Core.Player.VRPlayer.Hands
+namespace AosSdk.Core.PlayerModule.VRPlayer.Hands
 {
     [RequireComponent(typeof(Animator))]
     public class HandAnimator : MonoBehaviour

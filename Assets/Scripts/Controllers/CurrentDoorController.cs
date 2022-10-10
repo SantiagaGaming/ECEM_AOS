@@ -6,17 +6,17 @@ public class CurrentDoorController : MonoBehaviour
 {
 	private CurrentDoorController(){}
 	public static CurrentDoorController Instance;
-	private ÑupboardDoor _currentDoor;
+	private CupboardDoor _currentDoor;
     private void Awake()
 	{
 		if(Instance==null)
 			Instance = this;
 	}
-	public void SetCurrentDoor(ÑupboardDoor door)
+	public void SetCurrentDoor(CupboardDoor door)
 	{
 		_currentDoor = door;
 	}
-	public ÑupboardDoor GetCurrentDoor()
+	public CupboardDoor GetCurrentDoor()
 	{
 		if (_currentDoor != null)
 			return _currentDoor;

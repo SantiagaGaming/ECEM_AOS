@@ -1,15 +1,27 @@
 using AosSdk.Core.Utils;
 using UnityEngine;
 
-namespace AosSdk.Core.Player
+namespace AosSdk.Core.PlayerModule
 {
     [AosObject(name: "Игрок")]
     public class Player : AosObjectBase, IPlayer
     {
-        [SerializeField] private DesktopPlayer.DesktopPlayer desktopPlayer;
-        [SerializeField] private VRPlayer.VRPlayer vrPlayer;
+        [SerializeField] private DesktopPlayer.DesktopPlayer _desktopPlayer;
+        [SerializeField] private VRPlayer.VRPlayer _vrPlayer;
 
-        public static Player Instance { get; internal set; }
+        public static Player Instance { get; private set; }
+
+        private IPlayer _currentPlayer;
+
+        public Camera EventCamera
+        {
+            get => _currentPlayer.EventCamera;
+            set { }
+        }
+
+        public GameObject GameObject { get; set; }
+
+        private bool _canMove = true;
 
         public bool CanMove
         {
@@ -17,38 +29,49 @@ namespace AosSdk.Core.Player
             set
             {
                 _canMove = value;
-                desktopPlayer.CanMove = _canMove;
-                vrPlayer.CanMove = _canMove;
+                _currentPlayer.CanMove = _canMove;
             }
         }
 
-        private bool _canMove = true;
+        private bool _canRun = true;
 
-        private void Start()
+        public bool CanRun
         {
-            Instance ??= this;
-
-            RuntimeData.Instance.CurrentPlayer = this;
+            get => _canRun;
+            set
+            {
+                _canRun = value;
+                _currentPlayer.CanRun = value;
+            }
         }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            Instance ??= this;
+        }
+
+        public CursorLockMode CursorLockMode { get; set; }
 
         public LaunchMode LaunchMode
         {
             set
             {
-                desktopPlayer.gameObject.SetActive(value == LaunchMode.Desktop);
-                vrPlayer.gameObject.SetActive(value == LaunchMode.Vr);
+                _currentPlayer = value == LaunchMode.Desktop ? (IPlayer) _desktopPlayer : _vrPlayer;
 
-                if (value != LaunchMode.Desktop)
-                {
-                    vrPlayer.InitializeOpenXR();
-                    return;
-                }
+                _desktopPlayer.GameObject.SetActive(value == LaunchMode.Desktop);
+                _vrPlayer.GameObject.SetActive(value == LaunchMode.Vr);
 
-                Cursor.lockState = CursorLockMode.Locked;
+                _currentPlayer.Init();
+
                 Cursor.visible = false;
             }
         }
-        
+
+        public void Init()
+        {
+        }
+
         public void TeleportTo(Vector3 target)
         {
             TeleportTo(target.x, target.y, target.z);
@@ -56,55 +79,57 @@ namespace AosSdk.Core.Player
 
         public void TeleportTo(Transform target)
         {
-            desktopPlayer.TeleportTo(target);
-            vrPlayer.TeleportTo(target);
+            _currentPlayer.TeleportTo(target);
         }
 
         [AosAction("Телепортировать игрока в координаты")]
         public void TeleportTo([AosParameter("Координата x")] float x, [AosParameter("Координата y")] float y, [AosParameter("Координата z")] float z)
         {
-            desktopPlayer.TeleportTo(x, y, z);
-            vrPlayer.TeleportTo(x, y, z);
+            _currentPlayer.TeleportTo(x, y, z);
         }
 
         [AosAction("Телепортировать игрока к объекту")]
         public void TeleportTo([AosParameter("Имя объекта")] string objectName)
         {
-            desktopPlayer.TeleportTo(objectName);
-            vrPlayer.TeleportTo(objectName);
+            _currentPlayer.TeleportTo(objectName);
+        }
+
+        public void ForwardTo(Transform target)
+        {
+            _currentPlayer.ForwardTo(target);
+        }
+
+        public void ReleaseForwarding()
+        {
+            _currentPlayer.ReleaseForwarding();
         }
 
         public void EnableCamera(bool value)
         {
-            desktopPlayer.EnableCamera(value);
-            vrPlayer.EnableCamera(value);
+            _currentPlayer.EnableCamera(value);
         }
 
         public void EnableRayCaster(bool value)
         {
-            desktopPlayer.EnableRayCaster(value);
-            vrPlayer.EnableRayCaster(value);
+            _currentPlayer.EnableRayCaster(value);
         }
 
         [AosAction("Взять объект в руку")]
         public void GrabObject([AosParameter("Имя объекта")] string objectName, [AosParameter("Индекс руки. 0 - левая, 1 - правая")] int hand)
         {
-            desktopPlayer.GrabObject(objectName, hand);
-            vrPlayer.GrabObject(objectName, hand);
+            _currentPlayer.GrabObject(objectName, hand);
         }
 
         [AosAction("Выпустить объект из руки")]
         public void DropObject([AosParameter("Индекс руки. 0 - левая, 1 - правая")] int hand)
         {
-            desktopPlayer.DropObject(hand);
-            vrPlayer.DropObject(hand);
+            _currentPlayer.DropObject(hand);
         }
 
         [AosAction("Задать состояние приседания")]
         public void SetCrouchState(bool state)
         {
-            desktopPlayer.SetCrouchState(state);
-            vrPlayer.SetCrouchState(state);
+            _currentPlayer.SetCrouchState(state);
         }
     }
 }

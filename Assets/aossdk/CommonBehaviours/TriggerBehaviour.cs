@@ -18,7 +18,7 @@ namespace AosSdk.CommonBehaviours
         public event AosEventHandlerWithAttribute OnObjectTriggerStay;
 
         [AosAction("Проверить, находится ли объект в триггере")]
-        public bool IsObjectInTrigger([AosParameter("guid объекта")] string objectGuid) => (bool) ObjectsInTrigger.FirstOrDefault(item => item.objectStaticGuid == objectGuid);
+        public bool IsObjectInTrigger([AosParameter("guid объекта")] string objectGuid) => (bool) ObjectsInTrigger.FirstOrDefault(item => item.ObjectId == objectGuid);
 
         public IEnumerable<AosObjectBase> ObjectsInTrigger => _collidedObjects.Keys.Select(a => a).ToList();
 
@@ -43,12 +43,12 @@ namespace AosSdk.CommonBehaviours
             if (!_collidedObjects.ContainsKey(aosObject))
             {
                 Debug.Log(aosObject.name + "Entered");
-                OnObjectTriggerEnter?.Invoke(aosObject.objectStaticGuid);
+                OnObjectTriggerEnter?.Invoke(aosObject.ObjectId);
                 _collidedObjects.Add(aosObject, ExitFramesCount);
             }
             else
             {
-                OnObjectTriggerStay?.Invoke(aosObject.objectStaticGuid);
+                OnObjectTriggerStay?.Invoke(aosObject.ObjectId);
                 _collidedObjects[aosObject] = ExitFramesCount;
             }
         }
@@ -64,7 +64,7 @@ namespace AosSdk.CommonBehaviours
                 }
 
                 Debug.Log(aosObject.name + "Exited");
-                OnObjectTriggerExit?.Invoke(aosObject.objectStaticGuid);
+                OnObjectTriggerExit?.Invoke(aosObject.ObjectId);
                 _collidedObjects.Remove(aosObject);
             }
         }

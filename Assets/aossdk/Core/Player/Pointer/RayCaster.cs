@@ -3,7 +3,7 @@ using AosSdk.Core.Interaction;
 using AosSdk.Core.Interaction.Interfaces;
 using UnityEngine;
 
-namespace AosSdk.Core.Player.Pointer
+namespace AosSdk.Core.PlayerModule.Pointer
 {
     public enum InteractHand
     {
@@ -56,7 +56,7 @@ namespace AosSdk.Core.Player.Pointer
                 return false;
             }
 
-            Debug.DrawLine(transform.position, hit.point, Color.magenta); // TODO remove on RC
+            Debug.DrawLine(transform.position, hit.point, Color.magenta);
 
             hitPoint = hit.point;
             hitNormal = hit.normal;
@@ -80,6 +80,11 @@ namespace AosSdk.Core.Player.Pointer
 
                         _currentHoverAble.OnHoverIn(interactHand);
                     }
+                }
+
+                if (_currentHoverAble is {IsHoverable: true})
+                {
+                    isInteractable = true;
                 }
 
                 if (_currentClickAble is {IsClickable: true})

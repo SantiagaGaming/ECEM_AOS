@@ -1,24 +1,35 @@
 ﻿using UnityEngine;
 
-namespace AosSdk.Core.Player
+namespace AosSdk.Core.PlayerModule
 {
     public interface IPlayer
     {
-        public bool CanMove { get; set; }
+        bool CanMove { get; set; }
 
-        public void TeleportTo(Transform target);
+        bool CanRun { get; set; }
 
-        public void TeleportTo(float x, float y, float z);
+        void Init();
 
-        public void TeleportTo(string objectName);
+        void TeleportTo(Transform target);
 
-        public void EnableCamera(bool value);
+        void TeleportTo(float x, float y, float z);
 
-        public void EnableRayCaster(bool value);
+        void TeleportTo(string objectName);
 
-        public void GrabObject(string objectName, int hand);
-        public void DropObject(int hand);
+        void ForwardTo(Transform target);
+        void ReleaseForwarding();
 
-        public void SetCrouchState(bool state);
+        void EnableCamera(bool value);
+
+        void EnableRayCaster(bool value);
+
+        void GrabObject(string objectName, int hand);
+        void DropObject(int hand);
+
+        void SetCrouchState(bool state);
+
+        Camera EventCamera { get; set; }
+
+        GameObject GameObject { get; set; }
     }
 }

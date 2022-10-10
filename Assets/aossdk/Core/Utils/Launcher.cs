@@ -8,7 +8,7 @@ namespace AosSdk.Core.Utils
     {
         [SerializeField] private AosSDKSettings sdkSettings;
         [SerializeField] private WebSocketWrapper webSocketWrapper;
-        [SerializeField] private Player.Player player;
+        [SerializeField] private PlayerModule.Player player;
 
         private string _webSocketIpAddress = "127.0.0.1";
         private int _webSocketPort = 8080;
@@ -44,21 +44,26 @@ namespace AosSdk.Core.Utils
             }
             else
             {
+                _webSocketPort = sdkSettings.socketPort;
                 _aosPendingSecret = AosSecret;
             }
-
+#if UNITY_STANDALONE_WIN
             if (_aosPendingSecret != AosSecret)
             {
                 Debug.LogError("Wrong secret key, quiting...");
                 Application.Quit();
             }
-
+#endif
+#if UNITY_ANDROID
+            sdkSettings.launchMode = LaunchMode.Vr;
+#endif
             Debug.Log($"Launched in {sdkSettings.launchMode.ToString()} mode");
 
-            webSocketWrapper.Init(IPAddress.Parse(_webSocketIpAddress), _webSocketPort, sdkSettings);
+            webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
             
             player.LaunchMode = sdkSettings.launchMode;
             
+            // TODO move to AosObjectBase
             RuntimeData.Instance.AosObjects.AddRange(FindObjectsOfType<AosObjectBase>());
         }
     }

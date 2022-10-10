@@ -1,7 +1,8 @@
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.Player;
-using AosSdk.Core.Player.Pointer;
+using AosSdk.Core.PlayerModule;
+using AosSdk.Core.PlayerModule.Pointer;
 using AosSdk.Core.Utils;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,6 +56,13 @@ namespace AosSdk.Examples
         public bool NonVoidAction()
         {
             return true;
+        }
+        
+        [AosAction("Json parameters")]
+        public void JsonTest(JObject data1, JArray data2)
+        {
+            Debug.Log(data1.SelectToken("name"));
+            Debug.Log(data2.SelectToken("[0].data_pan.position"));
         }
 
         private bool _grabbed;

@@ -5,9 +5,9 @@ namespace AosSdk.Core.Utils
 {
     public static class AosObjectFind
     {
-        public static AosObjectBase FindAosObjectByGuid(IEnumerable<AosObjectBase> aosObjectBaseList, string guid)
+        public static AosObjectBase FindAosObjectById(IEnumerable<AosObjectBase> aosObjectBaseList, string guid)
         {
-            return aosObjectBaseList.FirstOrDefault(aosObject => aosObject.objectStaticGuid == guid);
+            return aosObjectBaseList.FirstOrDefault(aosObject => aosObject.ObjectId == guid);
         }
     }
 }

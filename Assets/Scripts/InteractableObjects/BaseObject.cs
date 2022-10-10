@@ -4,7 +4,7 @@ using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.Events;
 using AosSdk.ThirdParty.QuickOutline.Scripts;
-using AosSdk.Core.Player.Pointer;
+using AosSdk.Core.PlayerModule.Pointer;
 
 public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
 {

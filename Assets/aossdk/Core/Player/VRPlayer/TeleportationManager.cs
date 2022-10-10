@@ -51,7 +51,7 @@ namespace AosSdk.Core.Interaction
                 return;
             }
 
-            Player.Player.Instance.TeleportTo((Vector3) teleportRaycastData.TeleportPosition);
+            PlayerModule.Player.Instance.TeleportTo((Vector3) teleportRaycastData.TeleportPosition);
             
             IsTeleportActive = false;
         }

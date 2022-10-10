@@ -1,8 +1,8 @@
 ﻿using AosSdk.Core.Input;
-using AosSdk.Core.Player.VRPlayer.Hands;
+using AosSdk.Core.PlayerModule.VRPlayer.Hands;
 using UnityEngine;
 
-namespace AosSdk.Core.Player.Pointer
+namespace AosSdk.Core.PlayerModule.Pointer
 {
     [RequireComponent(typeof(LineRenderer))]
     public class VrPointer : Pointer
@@ -39,7 +39,7 @@ namespace AosSdk.Core.Player.Pointer
         private void Update()
         {
             if (!raycaster.TryGetInteractable(sdkSettings.vrInteractDistance, out var hitPoint, out var hitNormal, out var isInteractable) ||
-                isInteractable == null) // TODO Test if this works properly (raycast to ground shouldn't draw ray)
+                isInteractable == null)
             {
                 PointerState = PointerState.Default;
                 

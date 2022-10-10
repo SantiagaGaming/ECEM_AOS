@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AosSdk.Core.Player.VRPlayer.Hands
+namespace AosSdk.Core.PlayerModule.VRPlayer.Hands
 {
     public class TeleportAnimationHandler : StateMachineBehaviour
     {

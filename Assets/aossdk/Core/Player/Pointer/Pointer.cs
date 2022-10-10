@@ -2,7 +2,7 @@
 using AosSdk.Core.Utils;
 using UnityEngine;
 
-namespace AosSdk.Core.Player.Pointer
+namespace AosSdk.Core.PlayerModule.Pointer
 {
     public class Pointer : MonoBehaviour
     {

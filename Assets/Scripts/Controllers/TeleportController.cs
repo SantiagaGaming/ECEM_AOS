@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AosSdk.Core.Player;
 using AosSdk.Core.Interaction.Interfaces;
 using UnityEngine.Events;
+using AosSdk.Core.PlayerModule;
 
 public class TeleportController : MonoBehaviour
 {
