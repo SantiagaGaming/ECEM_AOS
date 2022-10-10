@@ -11,6 +11,7 @@ public class ObjectWithButton : BaseObject
     [SerializeField] private MovebleObject _movingObject;
     [SerializeField] private PushableObject _pushableObject;
     [SerializeField] private bool _bigWatch;
+    [SerializeField] private bool _pencil;
 
     public override void OnClicked(InteractHand interactHand)
     {
@@ -26,12 +27,12 @@ public class ObjectWithButton : BaseObject
             MovingButtonsController.Instance.ObjectHelperName = helperName;
             MovingButtonsController.Instance.ObjectName = gameObject.name;
         MovingButtonsController.Instance.HideAllButtons();
-        if (!_bigWatch)
-
+        if (!_bigWatch && !_pencil)
             MovingButtonsController.Instance.ShowAllButtons();
-        else
+        else if(_bigWatch)
             MovingButtonsController.Instance.ShowBigWatchButton();
-
+        else if(_pencil)
+            MovingButtonsController.Instance.ShowPencilButton();
         if (_movingObject == null)
                 _movingObject = GetComponent<MovebleObject>();
             if (_movingObject != null)

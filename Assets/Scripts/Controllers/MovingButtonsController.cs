@@ -22,6 +22,7 @@ public class MovingButtonsController : MonoBehaviour
     [SerializeField] private GameObject _repairButton;
     [SerializeField] private GameObject _adjustButton;
     [SerializeField] private GameObject _bigWatchButton;
+    [SerializeField] private GameObject _pencilButton;
 
     public void SetMovingButtonsPosition(Vector3 position)
     {
@@ -47,6 +48,10 @@ public class MovingButtonsController : MonoBehaviour
     public void ShowBigWatchButton()
     {
         _bigWatchButton.SetActive(true);
+    }
+    public void ShowPencilButton()
+    {
+       _pencilButton.SetActive(true);
     }
     public void HideAllButtons()
     {
