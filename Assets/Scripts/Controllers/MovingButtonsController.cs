@@ -59,6 +59,7 @@ public class MovingButtonsController : MonoBehaviour
         _repairButton.SetActive(false);
         _adjustButton.SetActive(false);
         _bigWatchButton.SetActive(false);
+        _pencilButton.SetActive(false);
     }
     public void ShowAllButtons()
     {
