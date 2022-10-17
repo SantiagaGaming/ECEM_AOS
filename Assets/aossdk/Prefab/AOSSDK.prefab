@@ -273,7 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedInput: {fileID: 5322696991581248047}
   handRenderer: {fileID: 0}
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
 --- !u!1 &645668285790748648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedInput: {fileID: 8543112637829891575}
   handRenderer: {fileID: 3349514245440523564}
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
 --- !u!120 &6725190738548014426
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1756,7 +1754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71980b14b15d414b8410bad1e2353033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   raycaster: {fileID: 703344394779714262}
   reticle: {fileID: 3723304863176439298}
   handAnimator: {fileID: 3323494637193455840}
@@ -1836,7 +1833,7 @@ GameObject:
   - component: {fileID: 6094350622653014848}
   - component: {fileID: 5102166742707384354}
   - component: {fileID: 3460625201906942208}
-  - component: {fileID: 7856517944434152623}
+  - component: {fileID: 2092457121864122421}
   - component: {fileID: 6094350622653014850}
   - component: {fileID: 6419588783361774890}
   m_Layer: 2
@@ -2078,7 +2075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100cd48de0455e94d8b4eefbb2d45f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   excludeLayers:
     serializedVersion: 2
     m_Bits: 4
@@ -2140,7 +2136,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &7856517944434152623
+--- !u!114 &2092457121864122421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2149,7 +2145,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6094350622653014911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b2a3056ae30274e80f83709e8daea9, type: 3}
+  m_Script: {fileID: 11500000, guid: b58d643a909059b4fa312230fdeb4b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapTurnAction:
@@ -2158,7 +2154,7 @@ MonoBehaviour:
       m_Name: Snap Turn
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1757eb43-0cc8-46b5-b46a-ea3f2acfbb03
+      m_Id: 44b0d5cd-9823-4b20-bc55-e99a8c05e1a1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2283,13 +2279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c119f30ac146ba8b4253353014ded3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportActivateAction:
+  <TeleportActivateAction>k__BackingField:
     m_UseReference: 1
     m_Action:
       m_Name: Teleport Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 6f66720d-5909-4725-8c7e-146399cd315e
+      m_Id: b9d15a91-402a-48e5-80b4-6efe5f5cd921
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2297,7 +2293,9 @@ MonoBehaviour:
     m_Reference: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   teleportReticle: {fileID: 3095300505307756515}
   teleportArcManager: {fileID: 3460625201906942208}
-  anotherHandTeleportationManager: {fileID: 2842203959576706574}
+  _anotherHandMovementManager: {fileID: 2842203959576706574}
+  _xrOrigin: {fileID: 6094350623024804007}
+  _characterController: {fileID: 4663682374864156162}
 --- !u!1 &6094350623024804006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2307,7 @@ GameObject:
   - component: {fileID: 6094350623024804004}
   - component: {fileID: 4286592386170214906}
   - component: {fileID: 6094350623024804007}
+  - component: {fileID: 4663682374864156162}
   m_Layer: 2
   m_Name: VRPlayer
   m_TagString: Untagged
@@ -2350,7 +2349,6 @@ MonoBehaviour:
   rightHandGrabber: {fileID: 649657283291506629}
   _eventCamera: {fileID: 1295665353}
   _playerCamera: {fileID: 6094350623844154699}
-  xrOrigin: {fileID: 6094350623024804007}
 --- !u!114 &6094350623024804007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,6 +2366,24 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 6094350622327036249}
   m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
+--- !u!143 &4663682374864156162
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094350623024804006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.7
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6094350623844154695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1295665349}
+  - {fileID: 5801146439991321855}
   m_Father: {fileID: 6094350622327036254}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2795,7 +2812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100cd48de0455e94d8b4eefbb2d45f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   excludeLayers:
     serializedVersion: 2
     m_Bits: 4
@@ -2866,7 +2882,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6094350624055366710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24b2a3056ae30274e80f83709e8daea9, type: 3}
+  m_Script: {fileID: 11500000, guid: b58d643a909059b4fa312230fdeb4b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   snapTurnAction:
@@ -2875,7 +2891,7 @@ MonoBehaviour:
       m_Name: Snap Turn
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1757eb43-0cc8-46b5-b46a-ea3f2acfbb03
+      m_Id: 44b0d5cd-9823-4b20-bc55-e99a8c05e1a1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3000,13 +3016,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c119f30ac146ba8b4253353014ded3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportActivateAction:
+  <TeleportActivateAction>k__BackingField:
     m_UseReference: 1
     m_Action:
       m_Name: Teleport Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 57a4b1a5-cad8-4e68-b2ba-e0d26ded9f34
+      m_Id: c7ee93e9-93e6-4757-9a69-8b09f44da01c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3014,7 +3030,9 @@ MonoBehaviour:
     m_Reference: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   teleportReticle: {fileID: 7911228438090954052}
   teleportArcManager: {fileID: 3604251406972078122}
-  anotherHandTeleportationManager: {fileID: 6419588783361774890}
+  _anotherHandMovementManager: {fileID: 6419588783361774890}
+  _xrOrigin: {fileID: 6094350623024804007}
+  _characterController: {fileID: 4663682374864156162}
 --- !u!1 &6112893536366926220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharedInput: {fileID: 5102166742707384354}
   handRenderer: {fileID: 2733808412250802596}
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
 --- !u!120 &79757280383019974
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3290,7 +3307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71980b14b15d414b8410bad1e2353033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   raycaster: {fileID: 6067633067311883986}
   reticle: {fileID: 1452257648320409541}
   handAnimator: {fileID: 5918697321246370442}
@@ -3307,7 +3323,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerAction: {fileID: 8574583333046284336, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  _sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   _isOverInteractableCanvas: 0
 --- !u!1 &6816701330480641243
 GameObject:
@@ -3459,7 +3474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100cd48de0455e94d8b4eefbb2d45f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   excludeLayers:
     serializedVersion: 2
     m_Bits: 4
@@ -3533,21 +3547,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26298facc9646629350e3059773414b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportActivateAction:
-    m_UseReference: 1
+  <TeleportActivateAction>k__BackingField:
+    m_UseReference: 0
     m_Action:
       m_Name: Teleport Activate
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: b4dd877f-520c-4da1-ac45-c2fa5bf1bd8d
+      m_Id: 57c8ca43-1f99-40f0-8d94-cdf160056817
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -5164502503691619372, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   teleportReticle: {fileID: 1199809839448276558}
   teleportArcManager: {fileID: 1895065900407533433}
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
 --- !u!1 &7143094408858809262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,7 +4099,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c8b45f9dee342838e5008306be80f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   raycaster: {fileID: 6383379126719146253}
 --- !u!1 &7969288616097411683
 GameObject:
@@ -4155,7 +4167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a822233b5b04c4196fc980e73f6b4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   characterController: {fileID: 7969288616097411684}
   rayCaster: {fileID: 6383379126719146253}
   playerCamera: {fileID: 7969288614997306578}
@@ -4305,7 +4316,6 @@ GameObject:
   - component: {fileID: 7529043281997351369}
   - component: {fileID: 7969288616097644830}
   - component: {fileID: 7969288616097644896}
-  - component: {fileID: 5734196115667122057}
   m_Layer: 0
   m_Name: AOSSDK
   m_TagString: Untagged
@@ -4341,7 +4351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8d7a62ab1343e2a2b695b7a7d7a00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sdkSettings: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
+  <SdkSettings>k__BackingField: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
   webSocketWrapper: {fileID: 7969288616097644830}
   player: {fileID: 466068714055864384}
 --- !u!114 &7969288616097644830
@@ -4367,18 +4377,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd5fe7e19e8764d26b37741c0b09538f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5734196115667122057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7969288616097644831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee425d60dbc408da10daa48a5201498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8055012193070411004
@@ -4502,6 +4500,87 @@ Transform:
   m_Father: {fileID: 6094350622653014908}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8367144512916706034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5604179923168707967}
+  - component: {fileID: 3300719747216511382}
+  - component: {fileID: 4472386147188593153}
+  m_Layer: 2
+  m_Name: FadeScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5604179923168707967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367144512916706034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5801146439991321855}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3300719747216511382
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367144512916706034}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4472386147188593153
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367144512916706034}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f09614e81f5838e45a4f47a212410d20, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8590151732654631285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4568,6 +4647,83 @@ Transform:
   m_Father: {fileID: 7536615468850741648}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8773806738008586682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5801146439991321855}
+  - component: {fileID: 911721079041874999}
+  - component: {fileID: 6947283377278932841}
+  - component: {fileID: 3410986827849200823}
+  m_Layer: 2
+  m_Name: HeadCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5801146439991321855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773806738008586682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5604179923168707967}
+  m_Father: {fileID: 6094350623844154692}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911721079041874999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773806738008586682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648d816b289d45e9ae85104f1527d75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeSpeed: 5
+  _fadeMaterial: {fileID: 2100000, guid: f09614e81f5838e45a4f47a212410d20, type: 2}
+--- !u!135 &6947283377278932841
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773806738008586682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3410986827849200823
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8773806738008586682}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &9056291431572876755
 GameObject:
   m_ObjectHideFlags: 0

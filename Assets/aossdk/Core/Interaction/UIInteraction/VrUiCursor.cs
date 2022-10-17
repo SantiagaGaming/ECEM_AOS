@@ -11,7 +11,6 @@ namespace AosSdk.Core.Interaction.UIInteraction
     public class VrUiCursor : UiCursor
     {
         [SerializeField] private InputActionReference _triggerAction;
-        [SerializeField] private AosSDKSettings _sdkSettings;
 
         private Vector3 CurrentHitPosition { get; set; }
 
@@ -48,7 +47,7 @@ namespace AosSdk.Core.Interaction.UIInteraction
             _isOverInteractableCanvas = false;
 
             var hits = new RaycastHit[1];
-            var hitCount = Physics.RaycastNonAlloc(transform.position, transform.TransformDirection(Vector3.forward), hits, _sdkSettings.vrInteractDistance * 100,
+            var hitCount = Physics.RaycastNonAlloc(transform.position, transform.TransformDirection(Vector3.forward), hits, Launcher.Instance.SdkSettings.vrInteractDistance * 100,
                 ~LayerMask.NameToLayer("UI"));
 
             if (hitCount == 0)

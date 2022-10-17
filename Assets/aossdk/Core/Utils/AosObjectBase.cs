@@ -11,6 +11,8 @@ namespace AosSdk.Core.Utils
     {
         [field: SerializeField] public string ObjectId { get; set; } = string.Empty;
 
+        public static readonly List<AosObjectBase> AosObjects = new List<AosObjectBase>();
+
         public delegate void AosEventHandler();
 
         public delegate void AosEventHandlerWithAttribute(object parameter);
@@ -46,6 +48,8 @@ namespace AosSdk.Core.Utils
 
         public virtual void OnEnable()
         {
+            AosObjects.Add(this);
+
             foreach (var eventInfo in GetType().GetEvents())
             {
                 if (!(Attribute.GetCustomAttribute(eventInfo, typeof(AosEvent)) is AosEvent))
@@ -85,7 +89,7 @@ namespace AosSdk.Core.Utils
             }
 
             StartCoroutine(ExecuteCommandRoutine(_commandQueue[0]));
-            // TODO stop coroutine if new is invoking
+
             _commandQueue.RemoveAt(0);
         }
 

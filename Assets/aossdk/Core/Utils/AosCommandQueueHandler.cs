@@ -18,7 +18,7 @@ namespace AosSdk.Core.Utils
                 return;
             }
 
-            var aosObjectToExecuteCommandOn = AosObjectFind.FindAosObjectById(RuntimeData.Instance.AosObjects, command.objectId);
+            var aosObjectToExecuteCommandOn = AosObjectFind.FindAosObjectById(command.objectId);
 
             if (aosObjectToExecuteCommandOn)
             {

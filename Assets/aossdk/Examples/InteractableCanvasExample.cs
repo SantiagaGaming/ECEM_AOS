@@ -1,6 +1,5 @@
 using AosSdk.Core.PlayerModule;
 using AosSdk.Core.Utils;
-using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -98,11 +97,6 @@ namespace AosSdk.Examples
             }
 
             _scrollRect.verticalNormalizedPosition = 0;
-        }
-
-        public void ShowPlace(JObject data1, JArray data2)
-        {
-            
         }
     }
 }

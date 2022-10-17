@@ -4,20 +4,28 @@ using UnityEngine;
 
 namespace AosSdk.Core.Utils
 {
+    [RequireComponent(typeof(WebSocketWrapper))]
     public class Launcher : MonoBehaviour
     {
-        [SerializeField] private AosSDKSettings sdkSettings;
-        [SerializeField] private WebSocketWrapper webSocketWrapper;
+        [field: SerializeField] public AosSDKSettings SdkSettings { get; private set; }
         [SerializeField] private PlayerModule.Player player;
 
         private string _webSocketIpAddress = "127.0.0.1";
         private int _webSocketPort = 8080;
         private string _aosPendingSecret = string.Empty;
+        
+        private WebSocketWrapper _webSocketWrapper;
 
         private const string AosSecret = "aos";
 
-        private void OnEnable()
+        internal static Launcher Instance { get; private set; }
+
+        private void Awake()
         {
+            Instance ??= this;
+
+            _webSocketWrapper = GetComponent<WebSocketWrapper>();
+
             var commandLineArguments = Environment.GetCommandLineArgs();
 
             if (!Application.isEditor)
@@ -37,14 +45,14 @@ namespace AosSdk.Core.Utils
                             _aosPendingSecret = argument.Substring(2);
                             break;
                         case "-m":
-                            sdkSettings.launchMode = argument.Substring(2).Contains(LaunchMode.Desktop.ToString()) ? LaunchMode.Desktop : LaunchMode.Vr;
+                            SdkSettings.launchMode = argument.Substring(2).Contains(LaunchMode.Desktop.ToString()) ? LaunchMode.Desktop : LaunchMode.Vr;
                             break;
                     }
                 }
             }
             else
             {
-                _webSocketPort = sdkSettings.socketPort;
+                _webSocketPort = SdkSettings.socketPort;
                 _aosPendingSecret = AosSecret;
             }
 #if UNITY_STANDALONE_WIN
@@ -57,14 +65,11 @@ namespace AosSdk.Core.Utils
 #if UNITY_ANDROID
             sdkSettings.launchMode = LaunchMode.Vr;
 #endif
-            Debug.Log($"Launched in {sdkSettings.launchMode.ToString()} mode");
+            Debug.Log($"Launched in {SdkSettings.launchMode.ToString()} mode");
 
-            webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
-            
-            player.LaunchMode = sdkSettings.launchMode;
-            
-            // TODO move to AosObjectBase
-            RuntimeData.Instance.AosObjects.AddRange(FindObjectsOfType<AosObjectBase>());
+            _webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
+
+            player.LaunchMode = SdkSettings.launchMode;
         }
     }
 }

@@ -7,12 +7,18 @@ namespace AosSdk.Core.Utils
         Desktop,
         Vr
     }
-    
-    public enum DesktopMovementType 
+
+    public enum DesktopMovementType
     {
         Wasd,
         Teleport,
         Both
+    }
+
+    public enum VrMovementType
+    {
+        Teleport,
+        Locomotion
     }
 
     [CreateAssetMenu(fileName = "AosSDKSettings", menuName = "AOS/AosSDKSettings", order = 1)]
@@ -24,8 +30,13 @@ namespace AosSdk.Core.Utils
         [Space] [Header("Connection")] [SerializeField]
         internal int socketPort = 8080;
 
-        [Space] [Header("Desktop player move")] [SerializeField]
-        internal DesktopMovementType movementType = DesktopMovementType.Teleport;
+        [Space] [Header("Vr player movement")] [SerializeField]
+        internal VrMovementType vrMovementType = VrMovementType.Teleport;
+
+        [SerializeField] internal float locomotionMovementSpeed = 4f;
+
+        [Space] [Header("Desktop player movement")] [SerializeField]
+        internal DesktopMovementType desktopMovementType = DesktopMovementType.Teleport;
 
         [SerializeField] internal Vector3 teleportArcOffset;
         [SerializeField] internal float walkSpeed = 4f;

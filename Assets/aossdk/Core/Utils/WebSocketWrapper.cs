@@ -10,20 +10,21 @@ using UnityEngine;
 
 namespace AosSdk.Core.Utils
 {
+    [RequireComponent(typeof(AosCommandQueueHandler))]
     public class WebSocketWrapper : MonoBehaviour
     {
-        [SerializeField] private AosCommandQueueHandler _aosCommandQueueHandler;
-
         public static WebSocketWrapper Instance;
 
         private Socket _serverSocket;
         private Socket _currentClientSocket;
 
-        private IPEndPoint _ipEndPoint = null;
+        private IPEndPoint _ipEndPoint;
 
         private readonly byte[] _buffer = new byte[8192];
 
         private readonly List<byte> _received = new List<byte>();
+
+        private AosCommandQueueHandler _aosCommandQueueHandler;
 
         public delegate void SocketMessageReceivedHandler(string message);
 
@@ -34,6 +35,8 @@ namespace AosSdk.Core.Utils
 
         public void Init(IPEndPoint ipEndPoint)
         {
+            _aosCommandQueueHandler = GetComponent<AosCommandQueueHandler>();
+
             _ipEndPoint = ipEndPoint;
 
             _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
@@ -113,7 +116,7 @@ namespace AosSdk.Core.Utils
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                Debug.LogError(e.Message);
             }
         }
 
@@ -185,16 +188,18 @@ namespace AosSdk.Core.Utils
                 var received = client.EndReceive(result);
                 _received.AddRange(_buffer.Take(received));
 
-                var messageDecoded = DecodeMessage(_received.ToArray(), out var message);
+                var messageDecoded = DecodeMessage(_received.ToArray(), out var message, out var disconnected);
 
-                if (!messageDecoded)
+                if (messageDecoded)
                 {
-                    return;
+                    OnClientMessageReceived?.Invoke(message);
                 }
-                
-                _received.Clear();
+                else if (disconnected)
+                {
+                    client.BeginDisconnect(false, ClientDisconnectCallback, client);
+                }
 
-                OnClientMessageReceived?.Invoke(message);
+                _received.Clear();
             }
             catch (SocketException exception)
             {
@@ -206,9 +211,37 @@ namespace AosSdk.Core.Utils
             }
         }
 
-        private static bool DecodeMessage(IReadOnlyList<byte> bytes, out string message)
+        private static void ClientDisconnectCallback(IAsyncResult ar)
+        {
+            try
+            {
+                if (!(ar.AsyncState is Socket client))
+                {
+                    Debug.LogError("AosSdk: Can't disconnect, client is null");
+                    return;
+                }
+
+                client.EndDisconnect(ar);
+
+                Debug.Log("AosSdk: web socket client disconnected");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message);
+            }
+        }
+
+        private static bool DecodeMessage(IReadOnlyList<byte> bytes, out string message, out bool disconnect)
         {
             message = string.Empty;
+            disconnect = false;
+
+            var opCode = bytes[0] & 0x0f;
+            if (0x08 == opCode)
+            {
+                disconnect = true;
+                return false;
+            }
 
             var secondByte = bytes[1];
             long dataLength = (secondByte & 127) switch
@@ -223,7 +256,6 @@ namespace AosSdk.Core.Utils
                 127 => 10,
                 _ => 2
             };
-
             if (indexFirstMask + 4 + dataLength > bytes.Count)
             {
                 return false;
@@ -239,7 +271,6 @@ namespace AosSdk.Core.Utils
             }
 
             message = Encoding.UTF8.GetString(decoded, 0, decoded.Length);
-
             return true;
         }
 
