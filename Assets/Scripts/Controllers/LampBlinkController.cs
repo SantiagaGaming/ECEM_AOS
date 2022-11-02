@@ -16,7 +16,7 @@ public class LampBlinkController : MonoBehaviour
 
     private void Start()
     {
-        StartBlink();
+        StartCoroutine(CoolDownBlink());
     }
     public void StartBlink()
     {
@@ -35,5 +35,10 @@ public class LampBlinkController : MonoBehaviour
     public void AddLampBlinker(LampBlinker blinker)
     {
         _lamps.Add(blinker);
+    }
+    private IEnumerator CoolDownBlink()
+    {
+        yield return new WaitForSeconds(0.5f);
+        StartBlink();
     }
 }

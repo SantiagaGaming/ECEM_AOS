@@ -30,10 +30,11 @@ namespace AosSdk.Core.Interaction.UIInteraction
                 return;
             }
 
-            InputState.Change(VirtualMouse.position, Player.Instance.EventCamera.WorldToScreenPoint(CurrentHitPosition));
-
             VirtualMouse.CopyState<MouseState>(out var mouseState);
+            
+            mouseState.position = Player.Instance.EventCamera.WorldToScreenPoint(CurrentHitPosition);
             mouseState.WithButton(MouseButton.Left, _triggerAction.action.ReadValue<float>() > 0f);
+            
             InputState.Change(VirtualMouse, mouseState);
         }
 
@@ -66,7 +67,7 @@ namespace AosSdk.Core.Interaction.UIInteraction
 
             CurrentHitPosition = candidateHit.point;
 
-            Debug.DrawLine(_thisTransform.position, CurrentHitPosition, Color.cyan);
+            Debug.DrawLine(_thisTransform.position, CurrentHitPosition, Color.red);
         }
 
         private static (RaycastHit, bool) GetValidHit(IEnumerable<RaycastHit> hits)

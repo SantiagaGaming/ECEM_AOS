@@ -7,7 +7,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
     public class FadeController : MonoBehaviour
     {
         [SerializeField] private float _fadeSpeed = 1f;
-        [SerializeField] private Material _fadeMaterial;
+        [SerializeField] private Renderer _fadeScreen;
 
         private Color _currentColor = new Color(0, 0, 0, 0);
 
@@ -19,7 +19,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
         private void OnEnable()
         {
-            _fadeMaterial.color = _currentColor;
+            _fadeScreen.material.color = _currentColor;
             _thisTransform = transform;
             _headCollider = GetComponent<Collider>();
         }
@@ -95,9 +95,11 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         {
             _fadeValue = Mathf.MoveTowards(_currentColor.a, targetAlpha, Time.fixedDeltaTime * _fadeSpeed);
 
-            _currentColor = _fadeMaterial.color;
+            var material = _fadeScreen.material;
+            
+            _currentColor = material.color;
             _currentColor.a = _fadeValue;
-            _fadeMaterial.color = _currentColor;
+            material.color = _currentColor;
         }
 
         private void OnDrawGizmos()

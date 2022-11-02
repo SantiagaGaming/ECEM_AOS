@@ -6,7 +6,7 @@ namespace AosSdk.Core.Interaction
 {
     public class MovementManager : MonoBehaviour
     {
-        [field: SerializeField] public InputActionProperty TeleportActivateAction { get; private set; }
+        [field: SerializeField] protected InputActionProperty TeleportActivateAction { get; private set; }
 
         [SerializeField] private GameObject teleportReticle;
         [SerializeField] protected TeleportArcManager teleportArcManager;
@@ -17,7 +17,7 @@ namespace AosSdk.Core.Interaction
         {
             teleportReticle.SetActive(false);
 
-            if (IsVRLocomotion())
+            if (IsVRLocomotion)
             {
                 return;
             }
@@ -28,7 +28,7 @@ namespace AosSdk.Core.Interaction
 
         private void OnDisable()
         {
-            if (IsVRLocomotion())
+            if (IsVRLocomotion)
             {
                 return;
             }
@@ -69,7 +69,7 @@ namespace AosSdk.Core.Interaction
 
         private void LateUpdate()
         {
-            if (IsVRLocomotion())
+            if (IsVRLocomotion)
             {
                 return;
             }
@@ -97,6 +97,6 @@ namespace AosSdk.Core.Interaction
             teleportReticle.SetActive(false);
         }
         
-        protected static bool IsVRLocomotion() => Launcher.Instance.SdkSettings.launchMode == LaunchMode.Vr && Launcher.Instance.SdkSettings.vrMovementType == VrMovementType.Locomotion;
+        protected static bool IsVRLocomotion => Launcher.Instance.SdkSettings.launchMode == LaunchMode.Vr && Launcher.Instance.SdkSettings.vrMovementType == VrMovementType.Locomotion;
     }
 }

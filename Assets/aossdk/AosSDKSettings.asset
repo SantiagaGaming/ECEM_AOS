@@ -16,7 +16,8 @@ MonoBehaviour:
   socketPort: 8080
   vrMovementType: 1
   locomotionMovementSpeed: 1
-  desktopMovementType: 2
+  vrHeadCollisionType: 1
+  desktopMovementType: 0
   teleportArcOffset: {x: 0, y: -0.2, z: 0}
   walkSpeed: 4
   runSpeed: 8

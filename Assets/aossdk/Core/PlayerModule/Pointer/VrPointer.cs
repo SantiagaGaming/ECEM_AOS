@@ -71,7 +71,7 @@ namespace AosSdk.Core.PlayerModule.Pointer
                 return;
             }
 
-            handAnimator.PerformPont();
+            handAnimator.PerformPoint();
         }
     }
 }

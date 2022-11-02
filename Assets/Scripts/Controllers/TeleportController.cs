@@ -7,7 +7,6 @@ using AosSdk.Core.PlayerModule;
 
 public class TeleportController : MonoBehaviour
 {
-    public UnityAction<string> TeleportEvent;
     [SerializeField] private GameObject _descPlayer;
     [SerializeField] private GameObject _vrPlayer;
     [SerializeField] private TeleportDoor[] _doors;
@@ -22,7 +21,7 @@ public class TeleportController : MonoBehaviour
             Door.TeleportToObjectEvent += OnStartTeleporting;
         }
     }
-    private void OnStartTeleporting(Transform newPlayerPosition, string name)
+    public void OnStartTeleporting(Transform newPlayerPosition)
     {
         if (CanTeleport)
         {
@@ -32,9 +31,13 @@ public class TeleportController : MonoBehaviour
             _vrPlayer.transform.rotation = newPlayerPosition.rotation;
             Player.Instance.CanMove = true;
             _cameraFlash.CameraFlashStart();
-            TeleportEvent?.Invoke(name);
-
         }
 
+    }
+    public Transform GetCurrentPlayerMode()
+    {
+        if (_descPlayer.activeSelf == true)
+            return _descPlayer.transform;
+        else return _vrPlayer.transform;
     }
 }

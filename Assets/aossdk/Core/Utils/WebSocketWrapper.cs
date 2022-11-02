@@ -188,18 +188,18 @@ namespace AosSdk.Core.Utils
                 var received = client.EndReceive(result);
                 _received.AddRange(_buffer.Take(received));
 
-                var messageDecoded = DecodeMessage(_received.ToArray(), out var message, out var disconnected);
+                var decoded = DecodeMessage(_received.ToArray(), out var message, out var disconnected);
 
-                if (messageDecoded)
+                if (decoded > 0)
                 {
                     OnClientMessageReceived?.Invoke(message);
+                    _received.RemoveRange(0, decoded);
                 }
                 else if (disconnected)
                 {
+                    _received.Clear();
                     client.BeginDisconnect(false, ClientDisconnectCallback, client);
                 }
-
-                _received.Clear();
             }
             catch (SocketException exception)
             {
@@ -231,7 +231,7 @@ namespace AosSdk.Core.Utils
             }
         }
 
-        private static bool DecodeMessage(IReadOnlyList<byte> bytes, out string message, out bool disconnect)
+        private static int DecodeMessage(IReadOnlyList<byte> bytes, out string message, out bool disconnect)
         {
             message = string.Empty;
             disconnect = false;
@@ -240,7 +240,7 @@ namespace AosSdk.Core.Utils
             if (0x08 == opCode)
             {
                 disconnect = true;
-                return false;
+                return 0;
             }
 
             var secondByte = bytes[1];
@@ -258,20 +258,21 @@ namespace AosSdk.Core.Utils
             };
             if (indexFirstMask + 4 + dataLength > bytes.Count)
             {
-                return false;
+                return 0;
             }
 
             var keys = bytes.Skip(indexFirstMask).Take(4);
             var indexFirstDataByte = indexFirstMask + 4;
 
-            var decoded = new byte[bytes.Count - indexFirstDataByte];
-            for (int i = indexFirstDataByte, j = 0; i < bytes.Count; i++, j++)
+            var decoded = new byte[dataLength];
+            for (int i = indexFirstDataByte, j = 0; i < dataLength + indexFirstDataByte; i++, j++)
             {
                 decoded[j] = (byte) (bytes[i] ^ keys.ElementAt(j % 4));
             }
 
             message = Encoding.UTF8.GetString(decoded, 0, decoded.Length);
-            return true;
+
+            return indexFirstMask + 4 + (int) dataLength;
         }
 
         private static byte[] EncodeMessage(string message)

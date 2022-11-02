@@ -1,3 +1,4 @@
+using System;
 using AosSdk.Core.PlayerModule;
 using AosSdk.Core.Utils;
 using TMPro;
@@ -40,7 +41,12 @@ namespace AosSdk.Examples
             _dropdown.onValueChanged.RemoveAllListeners();
             _inputField.onEndEdit.RemoveAllListeners();
         }
-        
+
+        private void Start()
+        {
+            //Player.Instance.TeleportTo("1");
+        }
+
         private void LockPlayer()
         {
             var playerInstance = Player.Instance;

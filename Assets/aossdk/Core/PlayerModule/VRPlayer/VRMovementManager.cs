@@ -1,3 +1,4 @@
+using System;
 using AosSdk.Core.Interaction;
 using AosSdk.Core.Utils;
 using Unity.XR.CoreUtils;
@@ -28,32 +29,38 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
         private void Update()
         {
-            if (!Player.Instance.CanMove)
+            if (!Player.Instance.CanMove || !IsVRLocomotion)
             {
                 return;
             }
 
-            if (!IsVRLocomotion())
+            var desiredMove = new Vector3();
+
+            try
             {
-                return;
+                var input = TeleportActivateAction.reference.action.ReadValue<Vector2>();
+
+                desiredMove = ComputeDesiredMove(input);
+
+                if (!Physics.Raycast(transform.position + desiredMove * _characterController.skinWidth, -transform.up,
+                        out var hit))
+                {
+                    return;
+                }
+
+                if (!hit.collider.CompareTag(Launcher.Instance.SdkSettings.walkableTag))
+                {
+                    desiredMove = Vector3.zero;
+                }
             }
-
-            var input = TeleportActivateAction.reference.action.ReadValue<Vector2>();
-
-            var desiredMove = ComputeDesiredMove(input);
-
-            if (!Physics.Raycast(transform.position + desiredMove * _characterController.skinWidth, -transform.up,
-                    out var hit))
+            catch (Exception e)
             {
-                return;
+                Debug.LogError(e);
             }
-
-            if (!hit.collider.CompareTag(Launcher.Instance.SdkSettings.walkableTag))
+            finally
             {
-                return;
+                MoveRig(desiredMove);
             }
-
-            MoveRig(desiredMove);
         }
 
         private Vector3 ComputeDesiredMove(Vector2 input)
@@ -88,14 +95,14 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         {
             var motion = translationInWorldSpace;
 
-            if (_characterController.isGrounded)
-            {
-                _verticalVelocity = Vector3.zero;
-            }
-            else
-            {
-                _verticalVelocity += Physics.gravity * Time.deltaTime;
-            }
+             if (_characterController.isGrounded)
+             {
+                 _verticalVelocity = Vector3.zero;
+             }
+             else
+             {
+                 _verticalVelocity += Physics.gravity * Time.deltaTime;
+             }
 
             motion += _verticalVelocity * Time.deltaTime;
 

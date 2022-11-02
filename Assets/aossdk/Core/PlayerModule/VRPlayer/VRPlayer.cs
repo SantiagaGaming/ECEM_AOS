@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using AosSdk.Core.Interaction;
 using AosSdk.Core.Interaction.Interfaces;
 using AosSdk.Core.PlayerModule.Pointer;
@@ -17,7 +18,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         [SerializeField] private Grabber rightHandGrabber;
         [SerializeField] private Camera _eventCamera;
         [SerializeField] private Camera _playerCamera;
-        
+
         private CharacterController _characterController;
         private XROrigin _xrOrigin;
 
@@ -40,7 +41,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         {
             _characterController = GetComponent<CharacterController>();
             _xrOrigin = GetComponent<XROrigin>();
-            
+
             StartCoroutine(InitializeOpenXRRoutine());
         }
 
@@ -189,7 +190,13 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
             var height = _xrOrigin.CameraInOriginSpaceHeight;
 
-            var center = _xrOrigin.CameraInOriginSpacePos;
+            var center = Launcher.Instance.SdkSettings.vrHeadCollisionType switch
+            {
+                VrHeadCollisionType.Collide => _xrOrigin.CameraInOriginSpacePos,
+                VrHeadCollisionType.FadeOut => Vector3.zero,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
             center.y = height / 2f + _characterController.skinWidth;
 
             _characterController.height = height;

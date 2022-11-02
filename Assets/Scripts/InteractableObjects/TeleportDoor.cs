@@ -7,14 +7,13 @@ using UnityEngine.Events;
 
 public class TeleportDoor : BaseObject
 {
-    public UnityAction<Transform, string> TeleportToObjectEvent;
+    public UnityAction<Transform> TeleportToObjectEvent;
     public UnityAction AosTeleportEvent;
     [SerializeField] private Transform _newPlayerPosition;
 
-
     public void StartTeleporting()
     {
-        TeleportToObjectEvent?.Invoke(_newPlayerPosition, gameObject.name);
+        TeleportToObjectEvent?.Invoke(_newPlayerPosition);
         AosTeleportEvent?.Invoke();
     }
     override public void OnClicked(InteractHand interactHand)

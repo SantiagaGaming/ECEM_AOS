@@ -113,6 +113,7 @@ public class MoveblePlate : MovebleObject
             GetComponent<Collider>().enabled = true;
             CurrentDoorController.Instance.GetCurrentDoor().CanOpen = true;
             CurrentDoorController.Instance.GetCurrentDoor().ColliderEnabler(true);
+            LampBlinkController.Instance.StartBlink();
         }
     }
 

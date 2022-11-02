@@ -1,5 +1,8 @@
 using System;
+using System.IO;
 using System.Net;
+using System.Text;
+using AosSdk.Core.Utils.EditorUtils;
 using UnityEngine;
 
 namespace AosSdk.Core.Utils
@@ -13,7 +16,7 @@ namespace AosSdk.Core.Utils
         private string _webSocketIpAddress = "127.0.0.1";
         private int _webSocketPort = 8080;
         private string _aosPendingSecret = string.Empty;
-        
+
         private WebSocketWrapper _webSocketWrapper;
 
         private const string AosSecret = "aos";
@@ -22,6 +25,8 @@ namespace AosSdk.Core.Utils
 
         private void Awake()
         {
+            DontDestroyOnLoad(this);
+
             Instance ??= this;
 
             _webSocketWrapper = GetComponent<WebSocketWrapper>();
@@ -65,11 +70,36 @@ namespace AosSdk.Core.Utils
 #if UNITY_ANDROID
             sdkSettings.launchMode = LaunchMode.Vr;
 #endif
+            GetBuildInfo(out var buildDate, out var buildNumber, out var buildFingerprint);
+            Debug.Log($"AOS SDK Build number:{buildNumber} ({buildFingerprint}), build at:{buildDate}");
+
             Debug.Log($"Launched in {SdkSettings.launchMode.ToString()} mode");
 
             _webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
 
             player.LaunchMode = SdkSettings.launchMode;
+        }
+
+        private static void GetBuildInfo(out string buildDate, out int buildNumber, out string buildFingerprint)
+        {
+            const string sdkInfoPath = BuildInfo.SdkVersionInfoPath;
+
+            if (File.Exists(sdkInfoPath))
+            {
+                var buildInfo = File.ReadAllBytes(sdkInfoPath);
+                var buildInfoJson = Encoding.UTF8.GetString(buildInfo, 0, buildInfo.Length);
+
+                var buildInfoObject = JsonUtility.FromJson<BuildInfo>(buildInfoJson);
+                buildDate = buildInfoObject.BuildDate;
+                buildNumber = buildInfoObject.BuildNumber;
+                buildFingerprint = buildInfoObject.BuildFingerPrint;
+            }
+            else
+            {
+                buildDate = "Unknown build date";
+                buildNumber = -1;
+                buildFingerprint = "Unknown build fingerprint";
+            }
         }
     }
 }

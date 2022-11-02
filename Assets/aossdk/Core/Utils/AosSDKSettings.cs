@@ -21,6 +21,12 @@ namespace AosSdk.Core.Utils
         Locomotion
     }
 
+    public enum VrHeadCollisionType
+    {
+        Collide,
+        FadeOut
+    }
+
     [CreateAssetMenu(fileName = "AosSDKSettings", menuName = "AOS/AosSDKSettings", order = 1)]
     public class AosSDKSettings : ScriptableObject
     {
@@ -34,6 +40,9 @@ namespace AosSdk.Core.Utils
         internal VrMovementType vrMovementType = VrMovementType.Teleport;
 
         [SerializeField] internal float locomotionMovementSpeed = 4f;
+
+        [Space] [Header("Vr head collision type")] [SerializeField]
+        internal VrHeadCollisionType vrHeadCollisionType = VrHeadCollisionType.FadeOut;
 
         [Space] [Header("Desktop player movement")] [SerializeField]
         internal DesktopMovementType desktopMovementType = DesktopMovementType.Teleport;

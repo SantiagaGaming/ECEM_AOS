@@ -2396,7 +2396,6 @@ GameObject:
   - component: {fileID: 6094350623844154699}
   - component: {fileID: 6094350623844154698}
   - component: {fileID: 6094350623844154693}
-  - component: {fileID: 844304105}
   m_Layer: 2
   m_Name: PlayerCamera[VR]
   m_TagString: Untagged
@@ -2544,20 +2543,6 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
---- !u!136 &844304105
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6094350623844154695}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6094350624055366710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,7 +4337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <SdkSettings>k__BackingField: {fileID: 11400000, guid: dfb0e11a00884224a8f421f06bad7654, type: 2}
-  webSocketWrapper: {fileID: 7969288616097644830}
   player: {fileID: 466068714055864384}
 --- !u!114 &7969288616097644830
 MonoBehaviour:
@@ -4366,7 +4350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ba268b09a144167aa641cc1f3b1390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aosCommandQueueHandler: {fileID: 7969288616097644896}
 --- !u!114 &7969288616097644896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4694,7 +4677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeSpeed: 5
-  _fadeMaterial: {fileID: 2100000, guid: f09614e81f5838e45a4f47a212410d20, type: 2}
+  _fadeScreen: {fileID: 4472386147188593153}
 --- !u!135 &6947283377278932841
 SphereCollider:
   m_ObjectHideFlags: 0
