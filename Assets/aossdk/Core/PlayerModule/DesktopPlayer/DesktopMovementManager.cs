@@ -1,6 +1,5 @@
 using AosSdk.Core.Interaction;
 using AosSdk.Core.Utils;
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace AosSdk.Core.PlayerModule.DesktopPlayer

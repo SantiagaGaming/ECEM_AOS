@@ -1,4 +1,3 @@
-using System;
 using AosSdk.Core.PlayerModule;
 using AosSdk.Core.Utils;
 using TMPro;
@@ -20,7 +19,7 @@ namespace AosSdk.Examples
         [SerializeField] private TMP_InputField _inputField;
         [SerializeField] private ScrollRect _scrollRect;
 
-        private new void OnEnable()
+        private void Awake()
         {
             _lockButton.onClick.AddListener(LockPlayer);
             _exitButton.onClick.AddListener(ExitButtonClicked);
@@ -42,21 +41,16 @@ namespace AosSdk.Examples
             _inputField.onEndEdit.RemoveAllListeners();
         }
 
-        private void Start()
-        {
-            //Player.Instance.TeleportTo("1");
-        }
-
         private void LockPlayer()
         {
             var playerInstance = Player.Instance;
-            
+
             playerInstance.TeleportTo(_playerLockedAnchor);
             playerInstance.CanMove = false;
             playerInstance.CursorLockMode = CursorLockMode.Locked;
             playerInstance.ForwardTo(transform);
         }
-        
+
         private void ExitButtonClicked()
         {
             AppendToLog($"Нажата кнопка выхода");

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!114 &845281936
 MonoBehaviour:
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 5528085046224310587, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: -4059455797801430849, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 2
 --- !u!114 &7561812110568306542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3308,7 +3308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerAction: {fileID: 8574583333046284336, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  _isOverInteractableCanvas: 0
 --- !u!1 &6816701330480641243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,7 +3532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <TeleportActivateAction>k__BackingField:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Teleport Activate
       m_Type: 0
@@ -3543,7 +3542,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -5164502503691619372, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   teleportReticle: {fileID: 1199809839448276558}
   teleportArcManager: {fileID: 1895065900407533433}
 --- !u!1 &7143094408858809262

@@ -30,11 +30,17 @@ namespace AosSdk.Core.Utils
 
         public delegate void SocketMessageSentHandler();
 
+        public delegate void SocketClientConnected();
+
         public event SocketMessageReceivedHandler OnClientMessageReceived;
         public event SocketMessageSentHandler OnClientMessageSent;
+        public event SocketClientConnected OnClientConnected;
 
         public void Init(IPEndPoint ipEndPoint)
         {
+            OnClientMessageReceived -= ClientMessageReceived;
+            OnClientMessageSent -= ClientMessageSent;
+
             _aosCommandQueueHandler = GetComponent<AosCommandQueueHandler>();
 
             _ipEndPoint = ipEndPoint;
@@ -136,14 +142,21 @@ namespace AosSdk.Core.Utils
                     return;
                 }
 
-                var messageLength = client.Receive(_buffer);
-
-                if (messageLength == 0)
+                var headerResponse = "";
+                while (true)
                 {
-                    return;
-                }
+                    var messageLength = client.Receive(_buffer);
+                    if (0 == messageLength)
+                    {
+                        return;
+                    }
 
-                var headerResponse = Encoding.UTF8.GetString(_buffer).Substring(0, messageLength);
+                    headerResponse += Encoding.UTF8.GetString(_buffer).Substring(0, messageLength);
+                    if (new Regex("\r\n\r\n$").IsMatch(headerResponse))
+                    {
+                        break;
+                    }
+                }
 
                 var handshakeResponse = GetHandshakeData(headerResponse);
 
@@ -157,6 +170,7 @@ namespace AosSdk.Core.Utils
                 _currentClientSocket = client;
 
                 Debug.Log("AosSdk: web socket client connected");
+                OnClientConnected?.Invoke();
 
                 _currentClientSocket.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, MessageReceivedCallback,
                     _currentClientSocket);
@@ -177,6 +191,7 @@ namespace AosSdk.Core.Utils
         private void MessageReceivedCallback(IAsyncResult result)
         {
             var client = result.AsyncState as Socket;
+            var disconnected = new bool();
 
             try
             {
@@ -188,18 +203,22 @@ namespace AosSdk.Core.Utils
                 var received = client.EndReceive(result);
                 _received.AddRange(_buffer.Take(received));
 
-                var decoded = DecodeMessage(_received.ToArray(), out var message, out var disconnected);
+                int decoded;
+                do
+                {
+                    decoded = DecodeMessage(_received.ToArray(), out var message, out disconnected);
 
-                if (decoded > 0)
-                {
-                    OnClientMessageReceived?.Invoke(message);
-                    _received.RemoveRange(0, decoded);
-                }
-                else if (disconnected)
-                {
-                    _received.Clear();
-                    client.BeginDisconnect(false, ClientDisconnectCallback, client);
-                }
+                    if (decoded > 0)
+                    {
+                        OnClientMessageReceived?.Invoke(message);
+                        _received.RemoveRange(0, decoded);
+                    }
+                    else if (disconnected)
+                    {
+                        _received.Clear();
+                        client.BeginDisconnect(false, ClientDisconnectCallback, client);
+                    }
+                } while (decoded > 0 && _received.Any());
             }
             catch (SocketException exception)
             {
@@ -207,7 +226,10 @@ namespace AosSdk.Core.Utils
             }
             finally
             {
-                client?.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, MessageReceivedCallback, client);
+                if (!disconnected)
+                {
+                    client?.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, MessageReceivedCallback, client);
+                }
             }
         }
 
@@ -384,6 +406,12 @@ namespace AosSdk.Core.Utils
             _serverSocket.Close();
             OnClientMessageReceived -= ClientMessageReceived;
             OnClientMessageSent -= ClientMessageSent;
+        }
+
+        private void OnDestroy()
+        {
+            _serverSocket.Dispose();
+            _serverSocket = null;
         }
     }
 }

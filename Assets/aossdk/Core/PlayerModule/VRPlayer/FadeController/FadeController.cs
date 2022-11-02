@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -17,13 +18,6 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
         private Collider _headCollider;
 
-        private void OnEnable()
-        {
-            _fadeScreen.material.color = _currentColor;
-            _thisTransform = transform;
-            _headCollider = GetComponent<Collider>();
-        }
-
         private struct CurrentColliding
         {
             public Collider Collider;
@@ -32,6 +26,13 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         }
 
         private readonly List<CurrentColliding> _currentColliding = new List<CurrentColliding>();
+
+        private void OnEnable()
+        {
+            _fadeScreen.material.color = _currentColor;
+            _thisTransform = transform;
+            _headCollider = GetComponent<Collider>();
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -84,19 +85,27 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
             foreach (var currentColliding in _currentColliding)
             {
                 Physics.ComputePenetration(currentColliding.Collider, currentColliding.Position, currentColliding.Rotation, _headCollider, _thisTransform.position,
-                    _thisTransform.rotation, out var direction, out var distance);
+                    _thisTransform.rotation, out _, out var distance);
                 maxPenetration = Mathf.Max(distance, maxPenetration);
             }
 
             CameraFade(Mathf.InverseLerp(0, 0.15f, maxPenetration));
         }
 
-        private void CameraFade(float targetAlpha)
+        private void LateUpdate()
         {
-            _fadeValue = Mathf.MoveTowards(_currentColor.a, targetAlpha, Time.fixedDeltaTime * _fadeSpeed);
+            if (!_currentColliding.Any())
+            {
+                CameraFade(0,true);
+            }
+        }
+
+        private void CameraFade(float targetAlpha, bool isInstant = false)
+        {
+            _fadeValue = isInstant ? targetAlpha : Mathf.MoveTowards(_currentColor.a, targetAlpha, Time.fixedDeltaTime * _fadeSpeed);
 
             var material = _fadeScreen.material;
-            
+
             _currentColor = material.color;
             _currentColor.a = _fadeValue;
             material.color = _currentColor;

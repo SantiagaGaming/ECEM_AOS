@@ -29,7 +29,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
         private void Update()
         {
-            if (!Player.Instance.CanMove || !IsVRLocomotion)
+            if (!Player.Instance.CanMove || !IsVRLocomotion())
             {
                 return;
             }

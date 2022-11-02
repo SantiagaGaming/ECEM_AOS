@@ -1,3 +1,4 @@
+using System.Collections;
 using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,13 +14,20 @@ namespace AosSdk.Core.Interaction
 
         public bool IsMovementInProgress { get; set; }
 
-        private void Start()
+        private void OnEnable()
         {
             teleportReticle.SetActive(false);
 
-            if (IsVRLocomotion)
+            StartCoroutine(SubscribeToActions());
+        }
+
+        private IEnumerator SubscribeToActions()
+        {
+            yield return new WaitWhile(() => Launcher.Instance == null);
+
+            if (IsVRLocomotion())
             {
-                return;
+                yield break;
             }
 
             TeleportActivateAction.action.performed += TeleportationActivateActionOnPerformed;
@@ -28,11 +36,11 @@ namespace AosSdk.Core.Interaction
 
         private void OnDisable()
         {
-            if (IsVRLocomotion)
+            if (IsVRLocomotion())
             {
                 return;
             }
-            
+
             TeleportActivateAction.action.performed -= TeleportationActivateActionOnPerformed;
             TeleportActivateAction.action.canceled -= TeleportationActivateActionOnCancelled;
         }
@@ -69,7 +77,7 @@ namespace AosSdk.Core.Interaction
 
         private void LateUpdate()
         {
-            if (IsVRLocomotion)
+            if (IsVRLocomotion())
             {
                 return;
             }
@@ -96,7 +104,11 @@ namespace AosSdk.Core.Interaction
 
             teleportReticle.SetActive(false);
         }
-        
-        protected static bool IsVRLocomotion => Launcher.Instance.SdkSettings.launchMode == LaunchMode.Vr && Launcher.Instance.SdkSettings.vrMovementType == VrMovementType.Locomotion;
+
+        protected static bool IsVRLocomotion()
+        {
+            var settings = Launcher.Instance.SdkSettings;
+            return settings.launchMode == LaunchMode.Vr && settings.vrMovementType == VrMovementType.Locomotion;
+        }
     }
 }
