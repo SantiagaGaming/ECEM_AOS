@@ -10,7 +10,7 @@ public class TeleportController : MonoBehaviour
     public UnityAction<string> TeleportEvent;
     [SerializeField] private GameObject _descPlayer;
     [SerializeField] private GameObject _vrPlayer;
-    [SerializeField] private Door[] _doors;
+    [SerializeField] private TeleportDoor[] _doors;
     [SerializeField] private CameraFlash _cameraFlash;
     [HideInInspector] public bool CanTeleport = true;
 

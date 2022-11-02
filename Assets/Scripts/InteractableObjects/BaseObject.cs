@@ -13,7 +13,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     public bool IsClickable { get; set; } = true;
 
 
-    protected CanvasObjectHelperController canvasHelper;
+    protected CanvasHelperController canvasHelper;
 
 
     [SerializeField] protected OutlineCore[] outlineObjects;
@@ -22,7 +22,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
 
     protected virtual void Start()
     {
-        canvasHelper = FindObjectOfType<CanvasObjectHelperController>();
+        canvasHelper = FindObjectOfType<CanvasHelperController>();
 
 
     }
