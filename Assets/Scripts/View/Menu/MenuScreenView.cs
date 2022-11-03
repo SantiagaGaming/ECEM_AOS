@@ -1,29 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MenuScreenView : MonoBehaviour
 {
-    [SerializeField] private GameObject _mainMenuScreen;
-    [SerializeField] private GameObject _infoOtkazScreen;
-    [SerializeField] private GameObject _otkaziScreen;
-    [SerializeField] private GameObject _exitScreen;
 
+    [SerializeField] private MenuScreenObject[] _menuScreens;
     [SerializeField] private TextMeshProUGUI _currentLocationText;
     [SerializeField] private TextMeshProUGUI _timertext;
-    
-    [SerializeField] private Button _infoOtkazButton;
-    [SerializeField] private Button _showOtkazButton;
-    [SerializeField] private Button _exitScreenButton;
-    private void Awake()
+
+    private string _locationName;
+   
+   
+    public void SetLosctiontext(string text)
     {
-        _infoOtkazButton.onClick.AddListener(TestText);
+        _currentLocationText.text = text;
     }
-    private void TestText()
+    public void SetTimertext(string text)
     {
-        Debug.Log("Test");
+        _timertext.text = text;
+    }
+    public void ActivateMenuScreen(string name)
+    {
+        DeactivateAllObjects();
+        var tempMenuScreen = _menuScreens.FirstOrDefault(n => n.GetScreenName() == name);
+        tempMenuScreen.EnableScreenObject(true);
+        _locationName = name;
+    }
+    private void DeactivateAllObjects()
+    {
+        foreach (var item in _menuScreens)
+        {
+            item.EnableScreenObject(false);
+        }
+    }
+    public string GetCurrentLoactionName()
+    {
+        return _locationName;
     }
 
 }

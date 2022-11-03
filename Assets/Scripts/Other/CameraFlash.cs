@@ -11,6 +11,7 @@ public class CameraFlash : MonoBehaviour
     private bool _doCameraFlash = false;
     private bool _flashing = false;
     private float _startTime;
+    private Canvas _canvas;
 
    private void Start()
     {
@@ -18,6 +19,7 @@ public class CameraFlash : MonoBehaviour
            Color col = _flashImage.color;
         col.a = 0.0f;
         _flashImage.color = col;
+        _canvas = GetComponent<Canvas>();
     }
 
    private void Update()
@@ -34,6 +36,7 @@ public class CameraFlash : MonoBehaviour
 
     public void CameraFlashStart()
     {
+
         _flashImage.enabled = true;
         // initial color
         Color col = _flashImage.color;
@@ -52,14 +55,13 @@ public class CameraFlash : MonoBehaviour
 
         // flag we are flashing so user can't do 2 of them
         _flashing = true;
-
         StartCoroutine(FlashCoroutine());
     }
 
   private IEnumerator FlashCoroutine()
     {
         bool done = false;
-
+        _canvas.enabled = true;
         while (!done)
         {
             float perc;
@@ -83,6 +85,7 @@ public class CameraFlash : MonoBehaviour
 
         _flashing = false;
         _flashImage.enabled = false;
+        _canvas.enabled = false;
         yield break;
     }
 }
