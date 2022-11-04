@@ -37,23 +37,23 @@ public class ObjectWithButton : BaseObject
                 _movingObject = GetComponent<MovebleObject>();
             if (_movingObject != null)
             {
-                MovingButtonsController.Instance.SetMovingObject(_movingObject);
+                //MovingButtonsController.Instance.SetMovingObject(_movingObject);
             }
             else
             {
-                MovingButtonsController.Instance.SetMovingObject(null);
+                //MovingButtonsController.Instance.SetMovingObject(null);
                 MovingButtonsController.Instance.HideRepairButton();
             }
         if (_pushableObject == null)
             _pushableObject = GetComponent<PushableObject>();
         if (_pushableObject != null)
         {
-            MovingButtonsController.Instance.SetPushableObject(_pushableObject);
+            //MovingButtonsController.Instance.SetPushableObject(_pushableObject);
             MovingButtonsController.Instance.HideRepairButton();
         }
         else
         {
-            MovingButtonsController.Instance.SetPushableObject(null);
+            //MovingButtonsController.Instance.SetPushableObject(null);
         }
     }
 

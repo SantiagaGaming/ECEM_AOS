@@ -9,12 +9,10 @@ public class MovingButtonsController : MonoBehaviour
     public UnityAction ButtonsPositionChanged;
     [HideInInspector] public string ObjectHelperName { get; set; }
     [HideInInspector] public string ObjectName { get; set; }
-    private MovebleObject _movingObject;
-    private PushableObject _pushableObject;
     private MovingButtonsController() { }
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
             Instance = this;
     }
 
@@ -27,11 +25,14 @@ public class MovingButtonsController : MonoBehaviour
     public void SetMovingButtonsPosition(Vector3 position)
     {
         transform.position = position;
-        ButtonsPositionChanged?.Invoke();
     }
     public void ShowWatchButton()
     {
         _watchButton.SetActive(true);
+    }
+    public void HideWatchButton()
+    {
+        _watchButton.SetActive(false);
     }
     public void ShowRepairButton()
     {
@@ -45,13 +46,17 @@ public class MovingButtonsController : MonoBehaviour
     {
         _adjustButton.SetActive(true);
     }
+    public void HideAdjustButton()
+    {
+        _adjustButton.SetActive(false);
+    }
     public void ShowBigWatchButton()
     {
         _bigWatchButton.SetActive(true);
     }
     public void ShowPencilButton()
     {
-       _pencilButton.SetActive(true);
+        _pencilButton.SetActive(true);
     }
     public void HideAllButtons()
     {
@@ -60,6 +65,7 @@ public class MovingButtonsController : MonoBehaviour
         _adjustButton.SetActive(false);
         _bigWatchButton.SetActive(false);
         _pencilButton.SetActive(false);
+        ButtonsPositionChanged?.Invoke();
     }
     public void ShowAllButtons()
     {
@@ -67,23 +73,21 @@ public class MovingButtonsController : MonoBehaviour
         _repairButton.SetActive(true);
         _adjustButton.SetActive(true);
     }
-    public void SetMovingObject(MovebleObject obj)
+    public void SetWatchButtonText(string text)
     {
-        _movingObject = obj;
+        _watchButton.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
     }
-    public void PlayRepairAnimation()
+
+    public void SetRepairButtonText(string text)
     {
-        if (_movingObject != null)
-            _movingObject.RepairObject();
+        _repairButton.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
     }
-    public void SetPushableObject(PushableObject obj)
+    public void SetAdjustButtonText(string text)
     {
-        _pushableObject = obj;
-    }
-    public void PlayPushAnimation()
-    {
-        if (_pushableObject != null)
-            _pushableObject.StartPush();
+        _adjustButton.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
     }
 
 }

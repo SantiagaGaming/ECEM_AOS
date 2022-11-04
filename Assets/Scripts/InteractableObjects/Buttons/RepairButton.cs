@@ -9,6 +9,6 @@ public class RepairButton : MovingButton
 
     public override void OnClicked(InteractHand interactHand)
     {
-        MovingButtonsController.Instance.PlayRepairAnimation();
+        //MovingButtonsController.Instance.PlayRepairAnimation();
     }
 }

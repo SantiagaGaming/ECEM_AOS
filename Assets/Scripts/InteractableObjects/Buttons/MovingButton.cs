@@ -1,4 +1,3 @@
-
 using AosSdk.Core.PlayerModule.Pointer;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,14 +12,17 @@ public class MovingButton : BaseButton
         transform.localScale *= 1.5f;
         if (helperPos != null)
         {
-            string temptext = $"{actionText} {MovingButtonsController.Instance.ObjectHelperName}";
-            canvasHelper.ShowTextHelper(temptext, helperPos);
-        }  
+            canvasHelper.ShowTextHelper(actionText, helperPos);
+        }
     }
     public override void OnHoverOut(InteractHand interactHand)
     {
         transform.localScale /= 1.5f;
         if (helperPos != null)
             canvasHelper.HidetextHelper();
+    }
+    public void SetActionText(string text)
+    {
+        actionText = text;
     }
 }
