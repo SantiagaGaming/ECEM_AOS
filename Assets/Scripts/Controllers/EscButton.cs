@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class EscButton : MonoBehaviour
 {
     [SerializeField] private InputActionProperty _menuAction;
-    [SerializeField] private PlayerToMenuTeleportController _menuController;
+    [SerializeField] private PlayerToMenuAndArmTeleportController _menuController;
 
     private bool _show = false;
     private void OnEnable()

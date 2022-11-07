@@ -6,7 +6,7 @@ using UnityEngine;
 public class LastScreenController : MonoBehaviour
 {
     [SerializeField] private GameObject[] _screens;
-    [SerializeField] private MainMenuController _mainMenuController;
+    [SerializeField] private MainMenuAndArmTeleportController _mainMenuController;
     [SerializeField] private GameObject _lastScreen;
     [SerializeField] private TextMeshProUGUI _headerText;
     [SerializeField] private TextMeshProUGUI _commentText;
