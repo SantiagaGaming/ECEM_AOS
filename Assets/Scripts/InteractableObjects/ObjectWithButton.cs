@@ -19,11 +19,11 @@ public class ObjectWithButton : BaseObject
             base.OnClicked(interactHand);
 
             if (_buttonsPos == null && !_vertical)
-                MovingButtonsController.Instance.SetMovingButtonsPosition(transform.position + new Vector3(0f, 0.12f, 0));
+                MovingButtonsController.Instance.SetMovingButtonsPosition(transform.position + new Vector3(0f, 0.12f, 0),this);
             else if (_buttonsPos == null && _vertical)
-                MovingButtonsController.Instance.SetMovingButtonsPosition(transform.position + new Vector3(0.09f, 0.05f, 0));
+                MovingButtonsController.Instance.SetMovingButtonsPosition(transform.position + new Vector3(0.09f, 0.05f, 0), this);
             else
-                MovingButtonsController.Instance.SetMovingButtonsPosition(_buttonsPos.position);
+                MovingButtonsController.Instance.SetMovingButtonsPosition(_buttonsPos.position, this);
             MovingButtonsController.Instance.ObjectHelperName = helperName;
             MovingButtonsController.Instance.ObjectName = gameObject.name;
         MovingButtonsController.Instance.HideAllButtons();

@@ -9,6 +9,8 @@ public class MovingButtonsController : MonoBehaviour
     public UnityAction ButtonsPositionChanged;
     [HideInInspector] public string ObjectHelperName { get; set; }
     [HideInInspector] public string ObjectName { get; set; }
+
+    public BaseObject CurrentBaseObject { get; set;}
     private MovingButtonsController() { }
     private void Awake()
     {
@@ -22,9 +24,10 @@ public class MovingButtonsController : MonoBehaviour
     [SerializeField] private GameObject _bigWatchButton;
     [SerializeField] private GameObject _pencilButton;
 
-    public void SetMovingButtonsPosition(Vector3 position)
+    public void SetMovingButtonsPosition(Vector3 position, BaseObject obj)
     {
         transform.position = position;
+        CurrentBaseObject = obj;
     }
     public void ShowWatchButton()
     {
