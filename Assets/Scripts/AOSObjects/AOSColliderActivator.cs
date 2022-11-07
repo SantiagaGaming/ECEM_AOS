@@ -6,7 +6,9 @@ using UnityEngine;
 public class AOSColliderActivator : MonoBehaviour
 {
     public static AOSColliderActivator Instance;
+    [SerializeField] private bool _isDevelopment;
     private List<BaseObject> _aosSceneObjects = new List<BaseObject>();
+    
     private AOSColliderActivator() { }
     private void Awake()
     {
@@ -36,5 +38,9 @@ public class AOSColliderActivator : MonoBehaviour
         {
             item.EnableObject(false);
         }
+    }
+    public bool DevelopMode()
+    {
+        return _isDevelopment;
     }
 }

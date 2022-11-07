@@ -26,8 +26,11 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         if (!Button)
         {
             var collider = gameObject.GetComponent<Collider>();
-            if (collider != null)
+            if (collider != null&& !AOSColliderActivator.Instance.DevelopMode())
+            {
                 collider.enabled = false;
+            }
+             
             AOSColliderActivator.Instance.AddBaseObject(this);
         }
     }
