@@ -6,11 +6,10 @@ using AosSdk.Core.PlayerModule;
 
 public class PlayerToMenuAndArmTeleportController : MonoBehaviour
 {
-    [SerializeField] private CameraFlash _cameraFlash;
     [Space]
     [SerializeField] private Transform _menuPosition;
-    [SerializeField] private Transform _armPosition;
     [SerializeField] private TeleportController _teleportController;
+    [SerializeField] private CameraFadeIn _cameraFadeIn;
     private bool _canTeleport = true;
 
     private Vector3 _currentPlayerPosition = new Vector3();
@@ -27,14 +26,14 @@ public class PlayerToMenuAndArmTeleportController : MonoBehaviour
             _currentPlayerPosition = _teleportController.GetCurrentPlayerMode().position;
             Player.Instance.TeleportTo(newPos);
             _teleportController.OnStartTeleporting(newPos);
-            _cameraFlash.CameraFlashStart();
+            _cameraFadeIn.FadeStart = true;
         }
     }
     public void TeleportToPreviousLocation()
     {
         if (_canTeleport)
         {
-            _cameraFlash.CameraFlashStart();
+            _cameraFadeIn.FadeStart=true;
             Player.Instance.TeleportTo(_currentPlayerPosition);
 
         }

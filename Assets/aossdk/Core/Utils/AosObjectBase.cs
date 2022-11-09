@@ -81,7 +81,7 @@ namespace AosSdk.Core.Utils
             _commandQueue.Add(command);
         }
 
-        private void FixedUpdate()
+        public virtual void FixedUpdate()
         {
             if (_commandQueue.Count <= 0)
             {

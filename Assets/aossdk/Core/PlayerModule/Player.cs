@@ -8,6 +8,7 @@ namespace AosSdk.Core.PlayerModule
     {
         [SerializeField] private DesktopPlayer.DesktopPlayer _desktopPlayer;
         [SerializeField] private VRPlayer.VRPlayer _vrPlayer;
+        [field: SerializeField] public FadeController FadeController { get; set; }
 
         public static Player Instance { get; private set; }
 
@@ -63,6 +64,7 @@ namespace AosSdk.Core.PlayerModule
                 _vrPlayer.GameObject.SetActive(value == LaunchMode.Vr);
 
                 _currentPlayer.Init();
+                _currentPlayer.FadeController = FadeController;
 
                 Cursor.visible = false;
             }
@@ -92,6 +94,18 @@ namespace AosSdk.Core.PlayerModule
         public void TeleportTo([AosParameter("Имя объекта")] string objectName)
         {
             _currentPlayer.TeleportTo(objectName);
+        }
+
+        [AosAction("Затемнить экран")]
+        public void FadeIn([AosParameter("Скорость затухания")] float speed, [AosParameter("Затухнуть мгновенно?")] bool isInstant)
+        {
+            _currentPlayer.FadeIn(speed, isInstant);
+        }
+
+        [AosAction("Высветлить экран")]
+        public void FadeOut([AosParameter("Длительность высветления")] float speed, [AosParameter("Высветлить мгновенно?")] bool isInstant)
+        {
+            _currentPlayer.FadeOut(speed, isInstant);
         }
 
         public void ForwardTo(Transform target)

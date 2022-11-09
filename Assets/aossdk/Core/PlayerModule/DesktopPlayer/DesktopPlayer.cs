@@ -27,6 +27,7 @@ namespace AosSdk.Core.PlayerModule.DesktopPlayer
         public bool CanMove { get; set; } = true;
         public bool CanRun { get; set; } = true;
 
+
         public Camera EventCamera
         {
             get => playerCamera;
@@ -37,6 +38,20 @@ namespace AosSdk.Core.PlayerModule.DesktopPlayer
         {
             get => gameObject;
             set { }
+        }
+
+        public FadeController FadeController
+        {
+            get => _fadeController;
+            set
+            {
+                _fadeController = value;
+
+                var fadeControllerTransform = _fadeController.transform;
+
+                fadeControllerTransform.parent = playerCamera.transform;
+                fadeControllerTransform.localPosition = new Vector3(0, 0, playerCamera.nearClipPlane + 0.01f);
+            }
         }
 
         private Transform _playerTransform;
@@ -56,6 +71,8 @@ namespace AosSdk.Core.PlayerModule.DesktopPlayer
         private Transform _playerCameraTransform;
 
         private Transform _forwardToTransform;
+
+        private FadeController _fadeController;
 
         public void Init()
         {
@@ -222,6 +239,16 @@ namespace AosSdk.Core.PlayerModule.DesktopPlayer
                 characterController.height = _characterHeight;
                 characterController.center = new Vector3(0, 0, 0);
             }
+        }
+
+        public void FadeIn(float speed, bool isInstant)
+        {
+            StartCoroutine(FadeController.FadeIn(speed, isInstant));
+        }
+
+        public void FadeOut(float speed, bool isInstant)
+        {
+            StartCoroutine(FadeController.FadeOut(speed, isInstant));
         }
 
         private void Update()

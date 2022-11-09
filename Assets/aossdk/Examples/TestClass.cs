@@ -44,6 +44,16 @@ namespace AosSdk.Examples
             {
                 OnEventWithStringAttributeHappened?.Invoke("I can be any type!");
             }
+            
+            if (Keyboard.current.iKey.wasPressedThisFrame)
+            {
+                Player.Instance.FadeIn(1f, false);
+            }
+
+            if (Keyboard.current.oKey.wasPressedThisFrame)
+            {
+                Player.Instance.FadeOut(1f, false);
+            }
         }
 
         [AosAction("Do magic void")]

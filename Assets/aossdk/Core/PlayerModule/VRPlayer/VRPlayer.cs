@@ -21,6 +21,7 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
         private CharacterController _characterController;
         private XROrigin _xrOrigin;
+        private FadeController _fadeController;
 
         public bool CanMove { get; set; } = true;
         public bool CanRun { get; set; } = true;
@@ -35,6 +36,20 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
         {
             get => gameObject;
             set { }
+        }
+
+        public FadeController FadeController
+        {
+            get => _fadeController;
+            set
+            {
+                _fadeController = value;
+
+                var fadeControllerTransform = _fadeController.transform;
+
+                fadeControllerTransform.parent = _playerCamera.transform;
+                fadeControllerTransform.localPosition = new Vector3(0, 0, _playerCamera.nearClipPlane + 0.01f);
+            }
         }
 
         public void Init()
@@ -201,6 +216,16 @@ namespace AosSdk.Core.PlayerModule.VRPlayer
 
             _characterController.height = height;
             _characterController.center = center;
+        }
+
+        public void FadeIn(float speed, bool isInstant)
+        {
+            StartCoroutine(FadeController.FadeIn(speed, isInstant));
+        }
+
+        public void FadeOut(float speed, bool isInstant)
+        {
+            StartCoroutine(FadeController.FadeOut(speed, isInstant));
         }
     }
 }

@@ -19,8 +19,10 @@ namespace AosSdk.Examples
         [SerializeField] private TMP_InputField _inputField;
         [SerializeField] private ScrollRect _scrollRect;
 
-        private void Awake()
+        public override void OnEnable()
         {
+            base.OnEnable();
+            
             _lockButton.onClick.AddListener(LockPlayer);
             _exitButton.onClick.AddListener(ExitButtonClicked);
             _buttonOne.onClick.AddListener(ButtonOneClicked);

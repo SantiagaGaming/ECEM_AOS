@@ -10,7 +10,7 @@ public class TeleportController : MonoBehaviour
     [SerializeField] private GameObject _descPlayer;
     [SerializeField] private GameObject _vrPlayer;
     [SerializeField] private TeleportDoor[] _doors;
-    [SerializeField] private CameraFlash _cameraFlash;
+    [SerializeField] private CameraFadeIn _cameraFadeIn;
     [HideInInspector] public bool CanTeleport = true;
 
 
@@ -30,7 +30,7 @@ public class TeleportController : MonoBehaviour
             _descPlayer.transform.rotation = newPlayerPosition.rotation;
             _vrPlayer.transform.rotation = newPlayerPosition.rotation;
             Player.Instance.CanMove = true;
-            _cameraFlash.CameraFlashStart();
+            _cameraFadeIn.FadeStart = true;
         }
 
     }
