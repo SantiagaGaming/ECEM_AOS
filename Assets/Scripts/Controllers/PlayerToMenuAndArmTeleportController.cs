@@ -19,10 +19,7 @@ public class PlayerToMenuAndArmTeleportController : MonoBehaviour
     {
         TeleportPlayer(_menuPosition);
     }
-    public void TeleportToArmLocation()
-    {
-        TeleportPlayer(_armPosition);
-    }
+
     private void TeleportPlayer(Transform newPos)
     {
         if (_canTeleport)

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BigWatchButton : BaseButton
-{
+{w
     [SerializeField] private PlayerToMenuAndArmTeleportController _menuArmController;
 
     public override void OnClicked(InteractHand interactHand)
@@ -12,7 +12,7 @@ public class BigWatchButton : BaseButton
         if(MovingButtonsController.Instance.CurrentBaseObject!=null&&
             MovingButtonsController.Instance.CurrentBaseObject.GetComponent<ArmMenuTeleporter>() != null)
         {
-            _menuArmController.TeleportToArmLocation();
+           
         }
     }
 }
