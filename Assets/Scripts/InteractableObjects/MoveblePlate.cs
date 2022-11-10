@@ -4,7 +4,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MoveblePlate : MovebleObject
+public class MoveblePlate : RepairableObject
 {
     [SerializeField] private bool _mbko;
     [SerializeField] private GameObject _plate;
@@ -13,7 +13,7 @@ public class MoveblePlate : MovebleObject
     [SerializeField] private GameObject _scpuTop;
     [SerializeField] private GameObject _scpuBot;
  
-    public override void RepairObject()
+    public override void PlayScritableAnimtaion()
     {
         StartCoroutine(Move());
     }
@@ -21,8 +21,6 @@ public class MoveblePlate : MovebleObject
     {
         if (canMove)
         {
-            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = false;
-            CurrentDoorController.Instance.GetCurrentDoor().ColliderEnabler(false);
             canMove = false;
             GetComponent<Collider>().enabled = false;
             MovingButtonsController.Instance.HideAllButtons();
@@ -111,8 +109,6 @@ public class MoveblePlate : MovebleObject
             _screwDown.SetActive(false);
             canMove = true;
             GetComponent<Collider>().enabled = true;
-            CurrentDoorController.Instance.GetCurrentDoor().CanOpen = true;
-            CurrentDoorController.Instance.GetCurrentDoor().ColliderEnabler(true);
             LampBlinkController.Instance.StartBlink();
         }
     }

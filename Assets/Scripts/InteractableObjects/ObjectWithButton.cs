@@ -8,7 +8,7 @@ public class ObjectWithButton : BaseObject
 
     [SerializeField] private Transform _buttonsPos;
     [SerializeField] private bool _vertical;
-    [SerializeField] private MovebleObject _movingObject;
+    [SerializeField] private RepairableObject _movingObject;
     [SerializeField] private PushableObject _pushableObject;
     [SerializeField] private bool _bigWatch;
     [SerializeField] private bool _pencil;
@@ -34,14 +34,14 @@ public class ObjectWithButton : BaseObject
         else if(_pencil)
             MovingButtonsController.Instance.ShowPencilButton();
         if (_movingObject == null)
-                _movingObject = GetComponent<MovebleObject>();
+                _movingObject = GetComponent<RepairableObject>();
             if (_movingObject != null)
             {
-                //MovingButtonsController.Instance.SetMovingObject(_movingObject);
+                MovingButtonsController.Instance.SetMovingObject(_movingObject);
             }
             else
             {
-                //MovingButtonsController.Instance.SetMovingObject(null);
+                MovingButtonsController.Instance.SetMovingObject(null);
                 MovingButtonsController.Instance.HideRepairButton();
             }
         if (_pushableObject == null)

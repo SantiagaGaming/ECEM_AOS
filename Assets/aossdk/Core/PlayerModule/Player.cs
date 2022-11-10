@@ -1,5 +1,6 @@
 using AosSdk.Core.Utils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AosSdk.Core.PlayerModule
 {
@@ -50,6 +51,25 @@ namespace AosSdk.Core.PlayerModule
         {
             base.OnEnable();
             Instance ??= this;
+
+            SceneManager.sceneLoaded += OnSceneChanged;
+        }
+
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneChanged;
+        }
+
+        private void OnSceneChanged(Scene scene, LoadSceneMode mode)
+        {
+            var spawnPoint = FindObjectsOfType<PlayerSpawnPoint>();
+            if (spawnPoint.Length == 0)
+            {
+                Debug.LogError("AOS SDK: No spawn point found on scene!");
+                return;
+            }
+
+            TeleportTo(spawnPoint[0].transform);
         }
 
         public CursorLockMode CursorLockMode { get; set; }

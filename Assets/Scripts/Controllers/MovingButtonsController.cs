@@ -12,6 +12,7 @@ public class MovingButtonsController : MonoBehaviour
 
     public BaseObject CurrentBaseObject { get; set;}
     private MovingButtonsController() { }
+    private RepairableObject _tempObject;
     private void Awake()
     {
         if (Instance == null)
@@ -91,6 +92,15 @@ public class MovingButtonsController : MonoBehaviour
     {
         _adjustButton.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(text);
+    }
+    public void SetMovingObject(RepairableObject obj)
+    {
+        _tempObject = obj;
+    }
+    public void PlayRepairAnimation()
+    {
+        if(_tempObject!=null)
+        _tempObject.PlayScritableAnimtaion();
     }
 
 }

@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitcherObject : MovebleObject
+public class SwitcherObject : RepairableObject
 {
     [SerializeField] private GameObject _switcher;
     private bool _canRotate = true;
     private bool _side = true;
-    public override void RepairObject()
+    public override void PlayScritableAnimtaion()
     {
-
         if (_canRotate)
         {
             StartCoroutine(Rotate(_side));

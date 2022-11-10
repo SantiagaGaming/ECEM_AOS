@@ -9,10 +9,6 @@ public class BigWatchButton : BaseButton
 
     public override void OnClicked(InteractHand interactHand)
     {
-        if(MovingButtonsController.Instance.CurrentBaseObject!=null&&
-            MovingButtonsController.Instance.CurrentBaseObject.GetComponent<ArmMenuTeleporter>() != null)
-        {
-           
-        }
+   
     }
 }

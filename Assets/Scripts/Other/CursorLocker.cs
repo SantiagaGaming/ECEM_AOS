@@ -6,6 +6,6 @@ public class CursorLocker : MonoBehaviour
 {
     private void Awake()
     {
-     //  Cursor.lockState = CursorLockMode.Locked;
+       Cursor.lockState = CursorLockMode.Locked;
     }
 }

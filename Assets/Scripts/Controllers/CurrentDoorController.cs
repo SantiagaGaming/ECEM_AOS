@@ -6,17 +6,17 @@ public class CurrentDoorController : MonoBehaviour
 {
 	private CurrentDoorController(){}
 	public static CurrentDoorController Instance;
-	private CupboardDoor _currentDoor;
+	private UVKDoorAnimation _currentDoor;
     private void Awake()
 	{
 		if(Instance==null)
 			Instance = this;
 	}
-	public void SetCurrentDoor(CupboardDoor door)
+	public void SetCurrentDoor(UVKDoorAnimation door)
 	{
 		_currentDoor = door;
 	}
-	public CupboardDoor GetCurrentDoor()
+	public UVKDoorAnimation GetCurrentDoor()
 	{
 		if (_currentDoor != null)
 			return _currentDoor;
