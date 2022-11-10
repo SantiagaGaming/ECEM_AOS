@@ -58,13 +58,18 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void OnHoverOut(InteractHand interactHand)
     {
-        if (helperPos != null)
+        if (helperPos != null && canvasHelper!=null)
             canvasHelper.HidetextHelper();
         if (outlineObjects != null)
             foreach (var obj in outlineObjects)
             {
-                obj.enabled = false;
-                obj.OutlineWidth = 0;
+                if (obj != null)
+                {
+                    obj.enabled = false;
+                    obj.OutlineWidth = 0;
+
+                }
+               
             }
 
     }
