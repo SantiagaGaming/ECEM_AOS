@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class CameraFadeIn : MonoBehaviour
 {
-    public bool FadeStart = true;
+    public bool FadeStart;
     private void Update()
     {
 
@@ -15,14 +15,13 @@ public class CameraFadeIn : MonoBehaviour
             Player.Instance.FadeIn(1f, true);
             StartCoroutine(Delay());
         }
-        else
-            Player.Instance.FadeOut(1f, false);
 
 
     }
     private IEnumerator Delay()
     {
         yield return new WaitForSeconds(0.2f);
+        Player.Instance.FadeOut(1f, false);
         FadeStart = false;
     }
 }
