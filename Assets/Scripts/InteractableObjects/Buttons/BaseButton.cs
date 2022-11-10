@@ -1,11 +1,12 @@
 using System.Collections;
 using AosSdk.Core.Interaction.Interfaces;
-using AosSdk.Core.PlayerModule.Pointer;
 using AosSdk.Core.Utils;
+using AosSdk.Core.PlayerModule.Pointer;
 using UnityEngine;
 using UnityEngine.Events;
 public class BaseButton : BaseObject
 {
+
     public override void OnClicked(InteractHand interactHand)
     {
         base.OnClicked(interactHand);
@@ -25,6 +26,15 @@ public class BaseButton : BaseObject
     public void DisableButton()
     {
         gameObject.SetActive(false);
+    }
+    public virtual void EnableButton(bool value)
+    {
+        Collider collider = GetComponent<Collider>();
+        if (collider != null)
+            collider.enabled = value;
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null)
+            sprite.enabled = value;
     }
 
 }

@@ -9,6 +9,7 @@ public class RepairButton : MovingButton
 
     public override void OnClicked(InteractHand interactHand)
     {
+        if(AOSColliderActivator.Instance.DevelopMode())
         MovingButtonsController.Instance.PlayRepairAnimation();
     }
 }

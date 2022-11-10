@@ -14,7 +14,7 @@ using UnityEngine.Events;
 [AosSdk.Core.Utils.AosObject(name: "Место с телепортом")]
 public class API : AosObjectBase
 {
-    [SerializeField] private Teleporter _teleporter;
+   // [SerializeField] private Teleporter _teleporter;
     [SerializeField] private StartScreenController _startScreenController;
     [SerializeField] private LastScreenController _lastScreenController;
     [SerializeField] private LocationTextController _locationTextController;
@@ -48,7 +48,7 @@ public class API : AosObjectBase
     }
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-        _teleporter.StartTeleport(location);
+       // _teleporter.StartTeleport(location);
         EndTween?.Invoke(location);
         Debug.Log(location + " EndTween");
     }
@@ -73,7 +73,7 @@ public class API : AosObjectBase
         if (place.SelectToken("name") != null)
             _locationTextController.SetLocationText(place.SelectToken("name").ToString());
         else Debug.Log("нету");
-        _teleporter.StartTeleport(location);
+      //  _teleporter.StartTeleport(location);
         Debug.Log("Enter UpdatePlace");
         AOSColliderActivator.Instance.DeactivateAllColliders();
         foreach (JObject item in data)

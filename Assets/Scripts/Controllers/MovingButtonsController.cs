@@ -93,7 +93,7 @@ public class MovingButtonsController : MonoBehaviour
         _adjustButton.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(text);
     }
-    public void SetMovingObject(RepairableObject obj)
+    public void SetRepairableObject(RepairableObject obj)
     {
         _tempObject = obj;
     }

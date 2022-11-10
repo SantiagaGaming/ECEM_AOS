@@ -119,10 +119,11 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
                 yield return new WaitForSeconds(0.01f);
             }
             _key.SetActive(false);
+            GetComponent<Collider>().enabled = true;
         }
         _isClosed = _isClosed ? false : true;
         DoorRotateEvent?.Invoke(false);
         _canRotate = true;
-        GetComponent<Collider>().enabled = true;
+ 
     }
 }

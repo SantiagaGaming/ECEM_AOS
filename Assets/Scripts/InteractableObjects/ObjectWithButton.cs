@@ -9,7 +9,6 @@ public class ObjectWithButton : BaseObject
     [SerializeField] private Transform _buttonsPos;
     [SerializeField] private bool _vertical;
     [SerializeField] private RepairableObject _movingObject;
-    [SerializeField] private PushableObject _pushableObject;
     [SerializeField] private bool _bigWatch;
     [SerializeField] private bool _pencil;
 
@@ -25,7 +24,6 @@ public class ObjectWithButton : BaseObject
             else
                 MovingButtonsController.Instance.SetMovingButtonsPosition(_buttonsPos.position, this);
             MovingButtonsController.Instance.ObjectHelperName = helperName;
-            MovingButtonsController.Instance.ObjectName = gameObject.name;
         MovingButtonsController.Instance.HideAllButtons();
         if (!_bigWatch && !_pencil)
             MovingButtonsController.Instance.ShowAllButtons();
@@ -37,24 +35,14 @@ public class ObjectWithButton : BaseObject
                 _movingObject = GetComponent<RepairableObject>();
             if (_movingObject != null)
             {
-                MovingButtonsController.Instance.SetMovingObject(_movingObject);
+                MovingButtonsController.Instance.SetRepairableObject(_movingObject);
             }
             else
             {
-                MovingButtonsController.Instance.SetMovingObject(null);
+                MovingButtonsController.Instance.SetRepairableObject(null);
                 MovingButtonsController.Instance.HideRepairButton();
             }
-        if (_pushableObject == null)
-            _pushableObject = GetComponent<PushableObject>();
-        if (_pushableObject != null)
-        {
-            //MovingButtonsController.Instance.SetPushableObject(_pushableObject);
-            MovingButtonsController.Instance.HideRepairButton();
-        }
-        else
-        {
-            //MovingButtonsController.Instance.SetPushableObject(null);
-        }
+
     }
 
 
