@@ -38,7 +38,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     public virtual void OnClicked(InteractHand interactHand)
     {
         sceneAosObject = GetComponent<SceneAosObject>();
-        if (sceneAosObject != null)
+        if (sceneAosObject != null && !AOSColliderActivator.Instance.DevelopMode())
         {
             sceneAosObject.InvokeOnClick();
             MovingButtonsController.Instance.ObjectName = sceneAosObject.ObjectId;
@@ -52,8 +52,12 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         if (outlineObjects != null)
             foreach (var obj in outlineObjects)
             {
-                obj.enabled = true;
-                obj.OutlineWidth = 3;
+                if(obj!=null)
+                {
+                    obj.enabled = true;
+                    obj.OutlineWidth = 3;
+                }
+                
             }
     }
     public virtual void OnHoverOut(InteractHand interactHand)

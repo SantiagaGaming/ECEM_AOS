@@ -10,11 +10,11 @@ public class CameraFadeIn : MonoBehaviour
     private void Update()
     {
 
-        if (FadeStart)
-        {
-            Player.Instance.FadeIn(1f, true);
-            StartCoroutine(Delay());
-        }
+        //if (FadeStart)
+        //{
+        //    Player.Instance.FadeIn(1f, true);
+        //    StartCoroutine(Delay());
+        //}
 
 
     }

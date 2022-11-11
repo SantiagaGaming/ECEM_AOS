@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
 
-    [SerializeField] private TeleportDoor _teleportDoor;
-    private void OnEnable()
+    [SerializeField] private TeleportDoor[] _teleportDoors;
+    private void Awake()
     {
-        _teleportDoor.DoorClickedEvent += OnTeleportToLocaion;
-    }
-    private void OnDisable()
-    {
-        _teleportDoor.DoorClickedEvent -= OnTeleportToLocaion;
+        foreach (var door in _teleportDoors)
+        {
+            door.DoorClickedEvent += OnTeleportToLocaion;
+        }
     }
     private void OnTeleportToLocaion(string locationName)
     {
+        Debug.Log("in teleport");
         SceneManager.LoadScene(locationName);
     }
 }

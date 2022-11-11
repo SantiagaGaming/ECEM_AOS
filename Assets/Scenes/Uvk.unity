@@ -519,7 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a573fd91ff30e0f4fa664cfa21ac2124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _teleportDoor: {fileID: 120688973475703373}
+  _teleportDoors:
+  - {fileID: 120688973475703373}
 --- !u!1 &104031135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,43 +4796,6 @@ Transform:
   m_Father: {fileID: 120688973426349343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &120688972205123204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120688972205123206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acce169346461c14fb53e4431720e6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: 0
-  outlineObjects:
-  - {fileID: 120688972205123205}
-  - {fileID: 120688971966477663}
-  helperPos: {fileID: 7850148349653556532}
-  helperName: "\u0414\u0432\u0435\u0440\u044C \u043A \u0448\u043A\u0430\u0444\u0430\u043C"
-  _locationName: 
---- !u!114 &120688972205123205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120688972205123206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineModeL: 0
-  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
-  outlineWidth: 0
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!1 &120688972205123206
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,9 +4807,6 @@ GameObject:
   - component: {fileID: 120688972205123201}
   - component: {fileID: 120688972205123212}
   - component: {fileID: 120688972205123213}
-  - component: {fileID: 120688972205123227}
-  - component: {fileID: 120688972205123204}
-  - component: {fileID: 120688972205123205}
   m_Layer: 7
   m_Name: OrdinaryDoor (1)
   m_TagString: Untagged
@@ -4902,19 +4863,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &120688972205123227
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120688972205123206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.076416, y: 1.1656077, z: 0.3563533}
-  m_Center: {x: 0.038208008, y: 0.08280323, z: 1.9252377}
 --- !u!4 &120688972223201764
 Transform:
   m_ObjectHideFlags: 0
@@ -5452,7 +5400,7 @@ GameObject:
   - component: {fileID: 120688973475703372}
   - component: {fileID: 120688973475703375}
   m_Layer: 7
-  m_Name: Door (1)
+  m_Name: KoridUpDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
