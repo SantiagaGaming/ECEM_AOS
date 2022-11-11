@@ -11,8 +11,9 @@ public class KnifeObjectWithButtons : BaseObject
 
     public override void OnClicked(InteractHand interactHand)
     {
-        _knifeButtons.SetActive(true);
         MovingButtonsController.Instance.HideAllButtons();
+        _knifeButtons.SetActive(true);
+
     }
     private void OnEnable()
     {

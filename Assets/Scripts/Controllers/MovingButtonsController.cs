@@ -12,7 +12,8 @@ public class MovingButtonsController : MonoBehaviour
 
     public BaseObject CurrentBaseObject { get; set;}
     private MovingButtonsController() { }
-    private RepairableObject _tempObject;
+    private RepairableObject _tempRepairableObject;
+    private PushableObject _tempPushableObject;
     private void Awake()
     {
         if (Instance == null)
@@ -95,12 +96,21 @@ public class MovingButtonsController : MonoBehaviour
     }
     public void SetRepairableObject(RepairableObject obj)
     {
-        _tempObject = obj;
+        _tempRepairableObject = obj;
     }
     public void PlayRepairAnimation()
     {
-        if(_tempObject!=null)
-        _tempObject.PlayScritableAnimtaion();
+        if(_tempRepairableObject!=null)
+        _tempRepairableObject.PlayScritableAnimtaion();
+    }
+    public void SetPushableObject(PushableObject obj)
+    {
+        _tempPushableObject = obj;
+    }
+    public void PushPushableObject()
+    {
+        if (_tempPushableObject != null)
+            _tempPushableObject.StartPush();
     }
 
 }

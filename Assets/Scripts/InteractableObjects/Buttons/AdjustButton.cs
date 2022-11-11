@@ -6,9 +6,9 @@ using UnityEngine.Events;
 
 public class AdjustButton : MovingButton
 {
-
     public override void OnClicked(InteractHand interactHand)
     {
-        //MovingButtonsController.Instance.PlayPushAnimation();
+        if (AOSColliderActivator.Instance.DevelopMode()) 
+        MovingButtonsController.Instance.PushPushableObject();
     }
 }

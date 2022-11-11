@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PushableObject : MonoBehaviour
 {
-    private bool _pushed = false;
+    private bool _pushed = true;
     private bool _canPush = true;
     public void StartPush()
     {

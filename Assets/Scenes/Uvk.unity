@@ -8908,9 +8908,9 @@ GameObject:
   - component: {fileID: 6841393508493116025}
   - component: {fileID: 3003663623108872626}
   - component: {fileID: 3003663623108872625}
-  - component: {fileID: 3003663623108872627}
   - component: {fileID: 7850148350500884866}
   - component: {fileID: 7850148350500884876}
+  - component: {fileID: 3003663623108872627}
   m_Layer: 0
   m_Name: door1
   m_TagString: Untagged
@@ -8975,7 +8975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: uvk_cpu
+  <ObjectId>k__BackingField: 
   _button: 0
   _place: 1
 --- !u!33 &3036889525035173840
@@ -10606,6 +10606,7 @@ GameObject:
   - component: {fileID: 1597022816692378667}
   - component: {fileID: 4432666281260248243}
   - component: {fileID: 4432666281260248242}
+  - component: {fileID: 4432666281260248244}
   - component: {fileID: 7850148349675946099}
   - component: {fileID: 7850148349675946108}
   m_Layer: 0
@@ -10653,6 +10654,21 @@ MonoBehaviour:
   - {fileID: 418740542}
   - {fileID: 3124484784969269319}
   _backButton: {fileID: 978365010}
+--- !u!114 &4432666281260248244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432666281260248241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: 
+  _button: 0
+  _place: 1
 --- !u!1 &4456971270256570142
 GameObject:
   m_ObjectHideFlags: 0
@@ -14112,6 +14128,7 @@ GameObject:
   - component: {fileID: 5063001943705817500}
   - component: {fileID: 6707977181893591854}
   - component: {fileID: 6707977181893591852}
+  - component: {fileID: 6707977181893591855}
   - component: {fileID: 7850148351085686313}
   - component: {fileID: 6707977181893591853}
   m_Layer: 0
@@ -14177,6 +14194,21 @@ MonoBehaviour:
   - {fileID: 1011765213}
   - {fileID: 29451166}
   _backButton: {fileID: 2022038443}
+--- !u!114 &6707977181893591855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6707977181893591851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: 
+  _button: 0
+  _place: 1
 --- !u!114 &6715917151279596949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16750,6 +16782,7 @@ GameObject:
   - component: {fileID: 4725529776752849630}
   - component: {fileID: 7117767132151344907}
   - component: {fileID: 7117767132151344906}
+  - component: {fileID: 7117767132151344908}
   - component: {fileID: 7850148349905749355}
   - component: {fileID: 7850148349905749396}
   m_Layer: 0
@@ -16853,6 +16886,21 @@ MonoBehaviour:
   - {fileID: 7850148349788439202}
   - {fileID: 7850148350240009682}
   _backButton: {fileID: 700107639}
+--- !u!114 &7117767132151344908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7117767132151344905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: 
+  _button: 0
+  _place: 1
 --- !u!33 &7147004457156871732
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -57555,6 +57603,7 @@ GameObject:
   - component: {fileID: 7759821857337761503}
   - component: {fileID: 8351174229451105922}
   - component: {fileID: 8351174229451105921}
+  - component: {fileID: 8351174229451105923}
   - component: {fileID: 7850148351091971528}
   - component: {fileID: 7850148351091971529}
   m_Layer: 0
@@ -57602,6 +57651,21 @@ MonoBehaviour:
   - {fileID: 13769913}
   - {fileID: 541900537256787482}
   _backButton: {fileID: 2146511743}
+--- !u!114 &8351174229451105923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351174229451105920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: 
+  _button: 0
+  _place: 1
 --- !u!4 &8388331543136801502
 Transform:
   m_ObjectHideFlags: 0

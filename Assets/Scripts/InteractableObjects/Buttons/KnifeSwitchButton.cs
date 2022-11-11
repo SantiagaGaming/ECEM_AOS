@@ -10,6 +10,7 @@ public class KnifeSwitchButton : BaseButton
     public UnityAction<int>KnifeButtonClicked;
     public override void OnClicked(InteractHand interactHand)
     {
-        KnifeButtonClicked?.Invoke(_position);
+        KnifeSwitch knife = FindObjectOfType<KnifeSwitch>();
+        knife.ChangeKnifePosition(_position);
     }
 }

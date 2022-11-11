@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using AosSdk.Core.PlayerModule.Pointer;
 
-public class BaseObjectWithAnimation : BaseObject
+public class PlaceObject : BaseObject
 {
 
     [SerializeField] private BaseObject[] _objects;
@@ -14,8 +14,11 @@ public class BaseObjectWithAnimation : BaseObject
     public override void OnClicked(InteractHand interactHand)
     {
         IScriptableAnimationObject scriptableAnimationObject = GetComponent(typeof(IScriptableAnimationObject)) as IScriptableAnimationObject;
-        CurrentAOSObject.Instance.IScriptObject = scriptableAnimationObject;
-        scriptableAnimationObject.PlayScritableAnimtaion();
+        if(scriptableAnimationObject!=null)
+        {
+            scriptableAnimationObject.PlayScritableAnimtaion();
+        }
+   
         if (AOSColliderActivator.Instance.DevelopMode())
             OnActivateObjectsInPlace(true);
     }
@@ -35,7 +38,10 @@ public class BaseObjectWithAnimation : BaseObject
         {
             OnActivateObjectsInPlace(false);
             IScriptableAnimationObject scriptableAnimationObject = GetComponent(typeof(IScriptableAnimationObject)) as IScriptableAnimationObject;
-            scriptableAnimationObject.PlayScritableAnimtaion();
+            if (scriptableAnimationObject != null)
+            {
+                scriptableAnimationObject.PlayScritableAnimtaion();
+            }
         }
        
     }
