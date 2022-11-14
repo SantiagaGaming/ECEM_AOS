@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-
+    public UnityAction SceneChangerEvent;
     [SerializeField] private TeleportDoor[] _teleportDoors;
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class SceneChanger : MonoBehaviour
     }
     private void OnTeleportToLocaion(string locationName)
     {
-        Debug.Log("in teleport");
+   SceneChangerEvent?.Invoke();
         SceneManager.LoadScene(locationName);
     }
 }

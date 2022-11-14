@@ -1720,11 +1720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!20 &690812157 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6094350623844154699, guid: 0ca0918b4ef944d268e55ca0c315c5d2, type: 3}
-  m_PrefabInstance: {fileID: 35238194}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &700107638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246824329056555136, guid: 140f756820456294ca03420683ec608d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -2.2
       objectReference: {fileID: 0}
     - target: {fileID: 7246824329056555136, guid: 140f756820456294ca03420683ec608d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3434,7 +3429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a21dcb208e5f7c47acd3ecb4f99d060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeStart: 1
+  FadeStart: 0
 --- !u!1 &1667543173
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,11 +3494,6 @@ Transform:
   m_Father: {fileID: 52180260255887179}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1752099070 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7969288614997306578, guid: 0ca0918b4ef944d268e55ca0c315c5d2, type: 3}
-  m_PrefabInstance: {fileID: 35238194}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768321669
 GameObject:
   m_ObjectHideFlags: 0
@@ -8307,7 +8297,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 3474637138919394722, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  _playerCamera: {fileID: 1752099070}
   CanZoom: 1
 --- !u!4 &2504321248491281157
 Transform:
@@ -8377,8 +8366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54cad4b675645184b80fe6b90115392d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraVr: {fileID: 690812157}
-  _cameraDesc: {fileID: 1752099070}
 --- !u!4 &2504321249208331687
 Transform:
   m_ObjectHideFlags: 0
