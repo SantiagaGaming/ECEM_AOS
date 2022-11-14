@@ -6,7 +6,11 @@ using UnityEngine.InputSystem;
 public class Zoom : MonoBehaviour
 {
     [SerializeField] private InputActionProperty _wheelAction;
-    [SerializeField] private Camera _playerCamera;
+    private Camera _camera;
+    private void Start()
+    {
+        _camera = FindObjectOfType<Camera>();
+    }
 
     public bool CanZoom = true;
 
@@ -21,7 +25,7 @@ public class Zoom : MonoBehaviour
     }
     public void ResetZoomCamera()
     {
-        _playerCamera.fieldOfView = 60;
+        _camera.fieldOfView = 60;
     }
     private void OnMouseWheel(InputAction.CallbackContext obj)
     {
@@ -29,9 +33,9 @@ public class Zoom : MonoBehaviour
         {
             _zoom = obj.ReadValue<float>();
             if (_zoom < 0)
-                _playerCamera.fieldOfView = 60;
+                _camera.fieldOfView = 60;
             else
-                _playerCamera.fieldOfView = 15;
+                _camera.fieldOfView = 15;
         }
     }
 }
