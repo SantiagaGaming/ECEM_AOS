@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class ARMActivator : BaseObject
 {
-    [SerializeField] private GameObject _arm;
+    [SerializeField] private Canvas _arm;
     [SerializeField] private GameObject _tempImage;
     [SerializeField] private GameObject _backButton;
     
     public override void OnClicked(InteractHand interactHand)
     {
-      _arm.SetActive(true);
+      _arm.enabled= true;
         _tempImage.SetActive(false);
         GetComponent<Collider>().enabled = false;
         _backButton.SetActive(true);
@@ -30,7 +30,7 @@ public class ARMActivator : BaseObject
     private void OnBackClick()
     {
         _tempImage.SetActive(true);
-        _arm.SetActive(false);
+        _arm.enabled = false;
         GetComponent<Collider>().enabled = true;
         _backButton.SetActive(false);
     }
