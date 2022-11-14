@@ -18,6 +18,7 @@ public class PlaceObject : BaseObject
         {
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
+        else GetComponent<Collider>().enabled= false;
    
         if (AOSColliderActivator.Instance.DevelopMode())
             OnActivateObjectsInPlace(true);
@@ -42,6 +43,7 @@ public class PlaceObject : BaseObject
             {
                 scriptableAnimationObject.PlayScritableAnimtaion();
             }
+            else GetComponent<Collider>().enabled= true;
         }
        
     }

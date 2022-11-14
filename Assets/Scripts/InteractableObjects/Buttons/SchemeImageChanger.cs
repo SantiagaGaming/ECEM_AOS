@@ -5,7 +5,6 @@ using AosSdk.Core.PlayerModule.Pointer;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using TMPro.EditorUtilities;
 
 public class SchemeImageChanger : MonoBehaviour, IClickAble
 {
