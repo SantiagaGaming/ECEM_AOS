@@ -7702,20 +7702,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2235299778441680205}
   m_Mesh: {fileID: 155825749844219580, guid: afe1454b53c99e54e99f5dca309e5b5d, type: 3}
---- !u!64 &2235299778560476482
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3439383898385754671}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7513297493162946847, guid: f9f3392f467391e449a67021664ad7d2, type: 3}
 --- !u!1 &2235299778596480600
 GameObject:
   m_ObjectHideFlags: 0
@@ -12665,7 +12651,9 @@ GameObject:
   - component: {fileID: 997411976525209703}
   - component: {fileID: 1980400793844397590}
   - component: {fileID: 5489348635895768012}
-  - component: {fileID: 2235299778560476482}
+  - component: {fileID: 3439383898385754674}
+  - component: {fileID: 3439383898385754673}
+  - component: {fileID: 3439383898385754672}
   m_Layer: 0
   m_Name: floor
   m_TagString: Walkable
@@ -12673,6 +12661,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &3439383898385754672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439383898385754671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.65943, y: 1.0869768, z: 0.0077943783}
+  m_Center: {x: 6.636405, y: 1.3200617, z: -3.2411857}
+--- !u!65 &3439383898385754673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439383898385754671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85144234, y: 3.6954122, z: 0}
+  m_Center: {x: 2.111516, y: 0.0010402203, z: -3.2372885}
+--- !u!65 &3439383898385754674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3439383898385754671}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18.52199, y: 0.94268715, z: 0.0077943783}
+  m_Center: {x: -6.782735, y: -1.3392882, z: -3.2411857}
 --- !u!33 &3470110180528423937
 MeshFilter:
   m_ObjectHideFlags: 0
