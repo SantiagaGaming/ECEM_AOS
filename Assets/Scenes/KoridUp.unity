@@ -5855,7 +5855,7 @@ MonoBehaviour:
   - {fileID: 2235299777717950551}
   helperPos: {fileID: 1769414472}
   helperName: "\u0414\u0432\u0435\u0440\u044C \u0432 \u043A\u043E\u0440\u0438\u0434\u043E\u0440"
-  _locationName: ReleUp
+  _locationName: Rele
 --- !u!65 &2235299777717950553
 BoxCollider:
   m_ObjectHideFlags: 0
