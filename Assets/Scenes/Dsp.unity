@@ -23508,7 +23508,7 @@ GameObject:
   - component: {fileID: 5842121957789993318}
   - component: {fileID: 5842121957789993324}
   m_Layer: 0
-  m_Name: RadioWorkPlaceButton
+  m_Name: dsp_workplace_radio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23653,7 +23653,7 @@ GameObject:
   - component: {fileID: 5842121958514739039}
   - component: {fileID: 5842121958514738980}
   m_Layer: 0
-  m_Name: SchemeWorkPlaceButton
+  m_Name: dsp_workplace_scheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23793,7 +23793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5842121958819085981}
   m_Layer: 0
-  m_Name: WarkPlaceCanvas
+  m_Name: WorkPlaceCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

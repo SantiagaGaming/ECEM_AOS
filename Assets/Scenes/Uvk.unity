@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 418740540}
   - component: {fileID: 418740544}
   m_Layer: 0
-  m_Name: SchemeKPButton
+  m_Name: uvk_kp1_scheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

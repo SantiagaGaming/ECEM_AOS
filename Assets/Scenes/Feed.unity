@@ -355,8 +355,9 @@ GameObject:
   - component: {fileID: 477979615}
   - component: {fileID: 477979614}
   - component: {fileID: 477979613}
+  - component: {fileID: 477979617}
   m_Layer: 0
-  m_Name: RadioRCHAButton
+  m_Name: feed_rsch_radio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +472,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &477979617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477979611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_rsch_radio
+  _button: 0
+  _place: 0
 --- !u!1 &712661478
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,8 +661,9 @@ GameObject:
   - component: {fileID: 862827485}
   - component: {fileID: 862827484}
   - component: {fileID: 862827483}
+  - component: {fileID: 862827487}
   m_Layer: 0
-  m_Name: SchemeRCHAButton
+  m_Name: feed_rsch_scheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,6 +778,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &862827487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862827481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_rsch_scheme
+  _button: 0
+  _place: 0
 --- !u!1 &955200408
 GameObject:
   m_ObjectHideFlags: 0
@@ -19127,13 +19159,29 @@ GameObject:
   - component: {fileID: 4054688449822691898}
   - component: {fileID: 4054688449822691909}
   - component: {fileID: 4054688449822691899}
+  - component: {fileID: 4054688449822691912}
   m_Layer: 0
-  m_Name: SchemeTSHAButton
+  m_Name: feed_tsch_scheme
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4054688449822691912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054688449822691911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_tsch_scheme
+  _button: 0
+  _place: 0
 --- !u!4 &4054688450431151974
 Transform:
   m_ObjectHideFlags: 0
@@ -19286,13 +19334,29 @@ GameObject:
   - component: {fileID: 4054688450750536716}
   - component: {fileID: 4054688450750536717}
   - component: {fileID: 4054688450750536706}
+  - component: {fileID: 4054688450750536720}
   m_Layer: 0
-  m_Name: RadioTSHAButton
+  m_Name: feed_tsch_radio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4054688450750536720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054688450750536719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_tsch_radio
+  _button: 0
+  _place: 0
 --- !u!4 &4054688451099301044
 Transform:
   m_ObjectHideFlags: 0
