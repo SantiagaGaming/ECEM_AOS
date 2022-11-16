@@ -17,7 +17,7 @@ public class SceneChanger : MonoBehaviour
     }
     private void OnTeleportToLocaion(string locationName)
     {
-   SceneChangerEvent?.Invoke();
+        SceneChangerEvent?.Invoke();
         SceneManager.LoadScene(locationName);
     }
 }

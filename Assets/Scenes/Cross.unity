@@ -19999,7 +19999,7 @@ GameObject:
   - component: {fileID: 8601733931053502977}
   - component: {fileID: 8601733931053502980}
   m_Layer: 7
-  m_Name: t_hall1_t_hall2
+  m_Name: t_cross_t_hall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20034,7 +20034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: t_hall1_t_hall2
+  <ObjectId>k__BackingField: t_cross_t_hall1
   _button: 0
   _place: 0
 --- !u!23 &8601733931053502983
@@ -20104,7 +20104,7 @@ MonoBehaviour:
   - {fileID: 8601733930213630122}
   helperPos: {fileID: 1874322911387145831}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _locationName: koridDown
+  _locationName: Hall1
 --- !u!114 &8601733931327135944
 MonoBehaviour:
   m_ObjectHideFlags: 0

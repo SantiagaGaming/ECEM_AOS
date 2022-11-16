@@ -16156,7 +16156,7 @@ MonoBehaviour:
   - {fileID: 7348667040147662553}
   helperPos: {fileID: 7348667038444736727}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _locationName: KoridDown
+  _locationName: Hall1
 --- !u!33 &7358637873241217083
 MeshFilter:
   m_ObjectHideFlags: 0

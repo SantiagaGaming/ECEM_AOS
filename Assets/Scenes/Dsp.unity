@@ -11384,7 +11384,7 @@ MonoBehaviour:
   - {fileID: 281678774812607765}
   helperPos: {fileID: 7977327345526050567}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _locationName: KoridUp
+  _locationName: Hall2
 --- !u!4 &281678774812607976
 Transform:
   m_ObjectHideFlags: 0

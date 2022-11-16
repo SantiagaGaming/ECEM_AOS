@@ -4522,7 +4522,7 @@ MonoBehaviour:
   - {fileID: 566057331198399278}
   helperPos: {fileID: 7675993634813606373}
   helperName: "\u0414\u0432\u0435\u0440\u044C \u0432 \u043A\u043E\u0440\u0438\u0434\u043E\u0440"
-  _locationName: KoridDown
+  _locationName: Hall1
 --- !u!65 &566057331198399277
 BoxCollider:
   m_ObjectHideFlags: 0

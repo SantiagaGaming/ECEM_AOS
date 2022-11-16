@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Uvk.unity
     guid: 64aee3c905d47974ab0f461efa9fcbac
   - enabled: 1
-    path: Assets/Scenes/KoridUp.unity
+    path: Assets/Scenes/Hall2.unity
     guid: 73d504ee0251e7d4985be7f7b8e61cd1
   - enabled: 1
     path: Assets/Scenes/Dsp.unity
@@ -18,16 +18,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Field.unity
     guid: bc4041c1da58f404bbd9089b4ba2dd10
   - enabled: 1
-    path: Assets/Scenes/KoridDown.unity
+    path: Assets/Scenes/Hall1.unity
     guid: 2d80059f768ec394486d92d4ca5c3471
   - enabled: 1
-    path: Assets/Scenes/Mechanics.unity
+    path: Assets/Scenes/Shn.unity
     guid: 762129586d558b140b826a9748814a48
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 008cf642a710d0c48bb1429821c1c5ed
   - enabled: 1
-    path: Assets/Scenes/PowerSupply.unity
+    path: Assets/Scenes/Feed.unity
     guid: b7bc2667c1a087c48a04b1b39abb3b8d
   - enabled: 1
     path: Assets/Scenes/Cross.unity

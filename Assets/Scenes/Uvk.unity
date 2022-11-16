@@ -5708,7 +5708,7 @@ MonoBehaviour:
   - {fileID: 120688972223201787}
   helperPos: {fileID: 7850148349991160112}
   helperName: "\u0414\u0432\u0435\u0440\u044C \u0432 \u043A\u043E\u0440\u0438\u0434\u043E\u0440"
-  _locationName: KoridUp
+  _locationName: Hall2
 --- !u!1 &120688973475703374
 GameObject:
   m_ObjectHideFlags: 0
