@@ -4,29 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
+public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
 {
     public UnityAction<bool> DoorRotateEvent;
 
     [SerializeField] private GameObject _key;
     [SerializeField] private bool _inside;
 
-    [HideInInspector] public bool CanOpen = true;
 
-    private bool _isClosed = true;
-    private bool _canRotate = true;
-
-    public void PlayScritableAnimtaion()
+    public override void PlayScritableAnimtaion()
     {
-        if(_canRotate && CanOpen)
-            StartCoroutine(RotateDoor(_isClosed));
+           if (CanRotate && CanOpen)
+            StartCoroutine(RotateDoor(IsClosed));
     }
 
     private IEnumerator RotateDoor(bool value)
     {
         DoorRotateEvent?.Invoke(true);
         GetComponent<Collider>().enabled = false;
-        _canRotate = false;
+        CanRotate = false;
         _key.SetActive(true);
         if (value)
         {
@@ -34,7 +30,7 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             int keyX = 0;
             while (keyX < 40)
             {
-                if (!_inside)
+                if (_inside)
                     _key.transform.localPosition += new Vector3(0.001f, 0, 0);
                 else
                     _key.transform.localPosition += new Vector3(0, 0, 0.001f);
@@ -44,7 +40,7 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             int keyXRot = -90;
             while (keyXRot > -180)
             {
-                if (!_inside)
+                if (_inside)
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 180, 0);
                 else
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 90, 0);
@@ -53,8 +49,8 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             }
             if (!_inside)
             {
-                int y = 90;
-                while (y >= 0)
+                int y = -90;
+                while (y >= -180)
                 {
 
                     transform.localRotation = Quaternion.Euler(0, y, 0);
@@ -79,8 +75,8 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             MovingButtonsController.Instance.HideAllButtons();
             if (!_inside)
             {
-                int y = 0;
-                while (y <= 90)
+                int y = -180;
+                while (y <= -90)
                 {
                     transform.localRotation = Quaternion.Euler(0, y, 0);
                     y++;
@@ -101,7 +97,7 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             int keyXRot = -180;
             while (keyXRot < -90)
             {
-                if (!_inside)
+                if (_inside)
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 180, 0);
                 else
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 90, 0);
@@ -111,7 +107,7 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             int keyX = 40;
             while (keyX > 0)
             {
-                if (!_inside)
+                if (_inside)
                     _key.transform.localPosition -= new Vector3(0.001f, 0, 0);
                 else
                     _key.transform.localPosition -= new Vector3(0, 0, 0.001f);
@@ -121,9 +117,9 @@ public class UVKDoorAnimation : MonoBehaviour, IScriptableAnimationObject
             _key.SetActive(false);
             GetComponent<Collider>().enabled = true;
         }
-        _isClosed = _isClosed ? false : true;
+        IsClosed = IsClosed ? false : true;
         DoorRotateEvent?.Invoke(false);
-        _canRotate = true;
+        CanRotate = true;
  
     }
 }
