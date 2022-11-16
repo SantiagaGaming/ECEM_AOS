@@ -3,24 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FartukObject : BaseObject
+public class FartukAnimation : BaseAnimationObject
 {
-    private bool _side = true;
-    private bool _canRotate = true;
-    public override void OnClicked(InteractHand interactHand)
+
+    public override void PlayScritableAnimtaion()
     {
-        if (_canRotate)
+        if (CanRotate && CanOpen)
         {
-            StartCoroutine(RoofRotator(_side));
-            if (_side)
-                _side = false;
-            else _side = true;
+            StartCoroutine(RoofRotator(IsClosed));
+        
         }
     }
     private IEnumerator RoofRotator(bool value)
     {
+        CanRotate = false;
         if (value)
         {
+            GetComponent<Collider>().enabled= false;
             int x = 0;
             while (x <= 90)
             {
@@ -38,7 +37,10 @@ public class FartukObject : BaseObject
                 x--;
                 yield return new WaitForSeconds(0.001f);
             }
+            GetComponent<Collider>().enabled = true;
         }
+        CanRotate = true;
+        IsClosed = IsClosed ? false : true;
 
     }
 }
