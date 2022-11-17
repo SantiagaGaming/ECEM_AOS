@@ -24,15 +24,15 @@ public class MenuScreenController : MonoBehaviour
        
         else
         {
-           if(_menuScreenView.GetCurrentLoactionName()== "otkazInfo"|| _menuScreenView.GetCurrentLoactionName() == "otkazi"|| _menuScreenView.GetCurrentLoactionName() == "exit")
+           if(_menuScreenView.GetCurrentLocationName()== "otkazInfo"|| _menuScreenView.GetCurrentLocationName() == "otkazi"|| _menuScreenView.GetCurrentLocationName() == "exit")
             {
                 _menuScreenView.ActivateMenuScreen("main");
             }
-           else if(_menuScreenView.GetCurrentLoactionName() == "uvk"||
-                    _menuScreenView.GetCurrentLoactionName() == "field" ||
-                    _menuScreenView.GetCurrentLoactionName() == "feed" ||
-                _menuScreenView.GetCurrentLoactionName() == "dsp"||
-                _menuScreenView.GetCurrentLoactionName() == "relay")
+           else if(_menuScreenView.GetCurrentLocationName() == "uvk"||
+                    _menuScreenView.GetCurrentLocationName() == "field" ||
+                    _menuScreenView.GetCurrentLocationName() == "feed" ||
+                _menuScreenView.GetCurrentLocationName() == "dsp"||
+                _menuScreenView.GetCurrentLocationName() == "relay")
             {
                 _menuScreenView.ActivateMenuScreen("otkazi");
             }

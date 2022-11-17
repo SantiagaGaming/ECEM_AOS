@@ -8,18 +8,19 @@ using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
-[AosSdk.Core.Utils.AosObject(name: "Место с телепортом")]
+[AosSdk.Core.Utils.AosObject(name: "API")]
 public class API : AosObjectBase
 {
-   // [SerializeField] private Teleporter _teleporter;
-    [SerializeField] private StartScreenController _startScreenController;
+    [SerializeField] private StartEndScreenView _startEndScreenView;
+    [SerializeField] private MenuScreenChanger _menuScreenChanger;
     [SerializeField] private LastScreenController _lastScreenController;
-    [SerializeField] private LocationTextController _locationTextController;
+    [SerializeField] private MenuScreenView _locationTextController;
+    [SerializeField] private SceneChanger _sceneChanger;
     [SerializeField] private NextButton _nextButton;
     [SerializeField] private TimerView _timer;
     [SerializeField] private PointerDevice _pointerDevice;
-    [SerializeField] private MenuTextView _menuTextView;
     [AosEvent(name: "Перемещение игрока")]
     public event AosEventHandlerWithAttribute EndTween;
     [AosEvent(name: "Клик по кнопке далее")]
@@ -30,49 +31,59 @@ public class API : AosObjectBase
     public event AosEventHandlerWithAttribute OnReason;
     [AosEvent(name: "Открыть меню")]
     public event AosEventHandler OnMenu;
+    public UnityAction NextButtonStateChangedEvent;
     private string _measuretext;
     private string _type;
     private string _blackValue;
     private string _redValue;
     private string _pointerValue;
-    public void NextButtonClicked(string value)
+    private void Start()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        EndTween?.Invoke(sceneName);
+        if(_nextButton!=null)
+        _nextButton.NextButtonClickedEvent += OnNextButtonClicked;
+    }
+    private void OnNextButtonClicked(string value)
     {
         navAction.Invoke(value);
     }
 
     public void SetLocation()
     {
-        EndTween?.Invoke(_locationTextController.GetLocationName());
+        EndTween?.Invoke(_locationTextController.GetCurrentLocationName());
     }
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-       // _teleporter.StartTeleport(location);
-        EndTween?.Invoke(location);
-        Debug.Log(location + " EndTween");
+        _sceneChanger.OnTeleportToLocation(location);
     }
     [AosAction(name: "Задать текст локации")]
     public void showWelcome(JObject info, JObject nav)
-
     {
-        _startScreenController.EnableStartScteen(true);
-        _startScreenController.SetHeaderText(info.SelectToken("name").ToString());
-        _startScreenController.SetCommentText(info.SelectToken("text").ToString());
-        _startScreenController.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
-        //_nextButton.CurrentState = NextButtonState.Start;
+        _menuScreenChanger.EnableScreen("info");
+        _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
+        _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
+        _startEndScreenView.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
+    }
+    [AosAction(name: "Показать информацию отказа")]
+    public void showFaultInfo(JObject info, JObject nav)
+    {
+        NextButtonStateChangedEvent?.Invoke();
+        _menuScreenChanger.EnableScreen("info");
+        _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
+        _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
+        _startEndScreenView.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
     }
 
     [AosAction(name: "Показать место")]
     public void showPlace(JObject place, JArray data, JObject nav)
-
     {
         Debug.Log(place.SelectToken("apiId").ToString());
         string location = place.SelectToken("apiId").ToString();
-        _locationTextController.SetLocationT(location);
+        _locationTextController.SetLocationText(location);
         if (place.SelectToken("name") != null)
             _locationTextController.SetLocationText(place.SelectToken("name").ToString());
         else Debug.Log("нету");
-      //  _teleporter.StartTeleport(location);
-        Debug.Log("Enter UpdatePlace");
         AOSColliderActivator.Instance.DeactivateAllColliders();
         foreach (JObject item in data)
         {
@@ -114,16 +125,7 @@ public class API : AosObjectBase
         }
     }
 
-    [AosAction(name: "Показать информацию отказа")]
-    public void showFaultInfo(JObject info, JObject nav)
 
-    {
-        _startScreenController.SetHeaderText(info.SelectToken("name").ToString());
-        _startScreenController.SetCommentText(info.SelectToken("text").ToString());
-        _startScreenController.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
-        //_nextButton.CurrentState = NextButtonState.Fault;
-
-    }
     [AosAction(name: "Показать реакцию")]
     public void showReaction(JObject info, JObject nav)
     {
@@ -217,13 +219,13 @@ public class API : AosObjectBase
     [AosAction(name: "Показать меню")]
     public void showMenu(JObject faultInfo, JObject exitInfo,JObject resons)
     {
-        _menuTextView.SetHeaderText(faultInfo.SelectToken("name").ToString());
-        _menuTextView.SetInfoText(faultInfo.SelectToken("text").ToString());
-        _menuTextView.SetExitSureText(exitInfo.SelectToken("quest").ToString());
+        _startEndScreenView.SetHeaderText(faultInfo.SelectToken("name").ToString());
+        _startEndScreenView.SetCommentText(faultInfo.SelectToken("text").ToString());
+        _startEndScreenView.SetExitSureText(exitInfo.SelectToken("quest").ToString());
         if (exitInfo.SelectToken("text") != null)
-            _menuTextView.SetExitText(HtmlToText.Instance.HTMLToTextReplace(exitInfo.SelectToken("text").ToString()));
+            _startEndScreenView.SetExitText(HtmlToText.Instance.HTMLToTextReplace(exitInfo.SelectToken("text").ToString()));
         if(exitInfo.SelectToken("warn")!=null)
-        _menuTextView.SetWarnText(HtmlToText.Instance.HTMLToTextReplace(exitInfo.SelectToken("warn").ToString()));
+            _startEndScreenView.SetWarnText(HtmlToText.Instance.HTMLToTextReplace(exitInfo.SelectToken("warn").ToString()));
     }
 
 
@@ -242,14 +244,7 @@ public class API : AosObjectBase
             OnMeasure?.Invoke(_measuretext);
         }
     }
-    public void FinishEvent()
-    {
-        navAction.Invoke("finish");
-    }
-    public void ExitEvent()
-    {
-        navAction.Invoke("exit");
-    }
+
     public void InvokeNavActionBack(string value)
     {
         navAction?.Invoke(value);

@@ -8,11 +8,20 @@ using UnityEngine.UI;
 
 public class NextButton : MonoBehaviour
 {
+    [SerializeField] private API _api;
     public UnityAction <string> NextButtonClickedEvent;
 
     private Button _button;
 
     private int _index;
+    private void OnEnable()
+    {
+        _api.NextButtonStateChangedEvent += OnChangeIndexValue;
+    }
+    private void OnDisable()
+    {
+        _api.NextButtonStateChangedEvent -= OnChangeIndexValue;
+    }
     private void Start()
     {
         _button= GetComponent<Button>();
@@ -22,12 +31,10 @@ public class NextButton : MonoBehaviour
     {
         if(_index==0)
         {
-            //_buttonText.text = "Далее";
             NextButtonClickedEvent?.Invoke("next");
         }
         else if(_index==1)
         {
-            //_buttonText.text = "Начать";
             NextButtonClickedEvent?.Invoke("start");
         }
         else if (_index == 2)

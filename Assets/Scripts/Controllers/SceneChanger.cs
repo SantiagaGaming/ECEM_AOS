@@ -13,13 +13,16 @@ public class SceneChanger : MonoBehaviour
 
     private void Awake()
     {
-        foreach (var door in _teleportDoors)
+        if (AOSColliderActivator.Instance.DevelopMode())
         {
-            door.DoorClickedEvent += OnTeleportToLocation;
+            foreach (var door in _teleportDoors)
+            {
+                door.DoorClickedEvent += OnTeleportToLocation;
+            }
         }
         PrevousSceneName = SceneManager.GetActiveScene().name;
     }
-    private void OnTeleportToLocation(string locationName)
+    public void OnTeleportToLocation(string locationName)
     {
         SceneChangerEvent?.Invoke();
         PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);

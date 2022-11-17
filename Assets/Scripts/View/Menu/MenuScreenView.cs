@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuScreenView : MonoBehaviour
+public class MenuScreenView : BaseScreenView
 {
 
     [SerializeField] private MenuScreenObject[] _menuScreens;
@@ -13,9 +13,8 @@ public class MenuScreenView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _timertext;
 
     private string _locationName;
-   
-   
-    public void SetLosctiontext(string text)
+
+    public void SetLocationText(string text)
     {
         _currentLocationText.text = text;
     }
@@ -37,7 +36,7 @@ public class MenuScreenView : MonoBehaviour
             item.EnableScreenObject(false);
         }
     }
-    public string GetCurrentLoactionName()
+    public string GetCurrentLocationName()
     {
         return _locationName;
     }
