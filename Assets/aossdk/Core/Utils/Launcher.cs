@@ -25,12 +25,6 @@ namespace AosSdk.Core.Utils
 
         private void Awake()
         {
-            if (Instance != null)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
             DontDestroyOnLoad(this);
 
             Instance = this;

@@ -127,6 +127,7 @@ namespace AosSdk.Core.PlayerModule.DesktopPlayer
         public void TeleportTo(Transform target)
         {
             var targetPosition = target.position;
+            _playerTransform.rotation = target.rotation;
             TeleportTo(targetPosition.x, targetPosition.y, targetPosition.z);
         }
 

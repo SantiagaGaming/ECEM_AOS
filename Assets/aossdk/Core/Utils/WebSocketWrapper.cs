@@ -403,14 +403,14 @@ namespace AosSdk.Core.Utils
 
         private void OnDisable()
         {
-            _serverSocket.Close();
+            _serverSocket?.Close();
             OnClientMessageReceived -= ClientMessageReceived;
             OnClientMessageSent -= ClientMessageSent;
         }
 
         private void OnDestroy()
         {
-            _serverSocket.Dispose();
+            _serverSocket?.Dispose();
             _serverSocket = null;
         }
     }
