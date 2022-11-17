@@ -9,8 +9,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-
 [AosSdk.Core.Utils.AosObject(name: "Место с телепортом")]
 public class API : AosObjectBase
 {
@@ -60,7 +58,7 @@ public class API : AosObjectBase
         _startScreenController.SetHeaderText(info.SelectToken("name").ToString());
         _startScreenController.SetCommentText(info.SelectToken("text").ToString());
         _startScreenController.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
-        _nextButton.CurrentState = NextButtonState.Start;
+        //_nextButton.CurrentState = NextButtonState.Start;
     }
 
     [AosAction(name: "Показать место")]
