@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4853a8a05c4c0442a376d62ff6e025d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _settings: {fileID: 0}
+  _settings: {fileID: 11400000, guid: 6f1820183d93ce74ba9903efdb644b53, type: 2}
 --- !u!1 &651885026
 GameObject:
   m_ObjectHideFlags: 0
@@ -14234,10 +14234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ace8bc8f7a45c946ba42a05d8b18d05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: locationText
-  _deskText: {fileID: 0}
-  _textMesh: {fileID: 0}
-  _api: {fileID: 0}
 --- !u!4 &8481666384189207071
 Transform:
   m_ObjectHideFlags: 0
