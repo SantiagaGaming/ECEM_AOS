@@ -8,7 +8,7 @@ public class ActionAPI : API
 {
     protected override void Start()
     {
-        LocationName= LocationController.instance.LocationName;
+        LocationName = LocationController.instance.LocationName;
         base.Start();
         OnInvokeEndTween();
     }
