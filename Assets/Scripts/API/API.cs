@@ -36,7 +36,9 @@ public class API : AosObjectBase
     [AosAction(name: "Телепорт")]
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-        SceneChanger.instance.OnTeleportToLocation(location);
+        SceneChanger changer = FindObjectOfType<SceneChanger>();
+        if(changer!=null)
+        changer.OnTeleportToLocation(location);
     }
     [AosAction(name: "Задать текст локации")]
     public virtual void showWelcome(JObject info, JObject nav)

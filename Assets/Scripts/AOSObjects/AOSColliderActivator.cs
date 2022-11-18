@@ -1,20 +1,23 @@
 using AosSdk.Core.Utils;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class AOSColliderActivator : MonoBehaviour
 {
     public static AOSColliderActivator Instance;
-    [SerializeField] private bool _isDevelopment;
+
+    [SerializeField] private DevelopSettings _settings;
+    private bool _isDevelopment;
     private List<BaseObject> _aosSceneObjects = new List<BaseObject>();
     public bool CanTouch { get; set; } = true;
     
-    private AOSColliderActivator() { }
     private void Awake()
     {
         if (Instance == null)
             Instance = this;
+        _isDevelopment = _settings.Develop;
     }
     public void AddBaseObject(BaseObject obj)
     {

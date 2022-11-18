@@ -7,23 +7,19 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public UnityAction SceneChangerEvent;
-    public static SceneChanger instance;
-    
     public string PrevousSceneName { get; private set; }
 
     [SerializeField] private TeleportDoor[] _teleportDoors;
 
-    private void Awake()
+    private void Start()
     {
-        if(instance==null)
-            instance= this;
-        if (AOSColliderActivator.Instance.DevelopMode())
-        {
-            foreach (var door in _teleportDoors)
+            if (AOSColliderActivator.Instance.DevelopMode())
             {
-                door.DoorClickedEvent += OnTeleportToLocation;
+                foreach (var door in _teleportDoors)
+                {
+                    door.DoorClickedEvent += OnTeleportToLocation;
+                }
             }
-        }
         PrevousSceneName = SceneManager.GetActiveScene().name;
     }
     public void OnTeleportToLocation(string locationName)

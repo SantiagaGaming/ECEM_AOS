@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 [AosSdk.Core.Utils.AosObject(name: "Коннект")]
 public class ConnectionChecker : AosObjectBase
 {
-
     [AosEvent(name: "Готов к подключению")]
     public event AosEventHandlerWithAttribute OnReadyToAction;
     public void OnConnect()
