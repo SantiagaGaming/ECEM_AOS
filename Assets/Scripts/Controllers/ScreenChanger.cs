@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class MenuScreenChanger : MonoBehaviour
+public class ScreenChanger : MonoBehaviour
 {
     [SerializeField] private BaseScreenView[] _screens;
     public void EnableScreen(string name)
@@ -14,7 +14,7 @@ public class MenuScreenChanger : MonoBehaviour
         }
  
       BaseScreenView temp = _screens.FirstOrDefault(n => n.GetScreenName == name);
-        if(temp!=null)
+        if (temp != null)
             temp.ActivateScreen(true);
     }
 }

@@ -14,9 +14,9 @@ public class MenuScreenView : BaseScreenView
 
     private string _locationName;
 
-    public void SetLocationText(string text)
+    public void SetLocationText()
     {
-        _currentLocationText.text = text;
+        PlayerPrefs.GetString("Location");
     }
     public void SetTimertext(string text)
     {

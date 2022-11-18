@@ -5,9 +5,13 @@ using UnityEngine;
 public class BaseScreenView : MonoBehaviour
 {
     [SerializeField] private string _screenName;
+
+    [HideInInspector]public Canvas Canvas;
     public void ActivateScreen(bool value)
     {
-        gameObject.SetActive(value);
+    Canvas = GetComponentInChildren<Canvas>();
+        if (Canvas != null)
+            Canvas.enabled = value;
     }
     public string GetScreenName { get => _screenName;}
 }

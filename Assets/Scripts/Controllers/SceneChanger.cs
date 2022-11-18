@@ -7,12 +7,16 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public UnityAction SceneChangerEvent;
+    public static SceneChanger instance;
+    
     public string PrevousSceneName { get; private set; }
 
     [SerializeField] private TeleportDoor[] _teleportDoors;
 
     private void Awake()
     {
+        if(instance==null)
+            instance= this;
         if (AOSColliderActivator.Instance.DevelopMode())
         {
             foreach (var door in _teleportDoors)
