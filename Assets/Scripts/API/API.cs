@@ -12,7 +12,6 @@ using UnityEngine.SceneManagement;
 
 [AosSdk.Core.Utils.AosObject(name: "API")]
 public class API : AosObjectBase
-    
 {
     [AosEvent(name: "Перемещение игрока")]
     public event AosEventHandlerWithAttribute EndTween;
@@ -25,12 +24,13 @@ public class API : AosObjectBase
     [AosEvent(name: "Открыть меню")]
     public event AosEventHandler OnMenu;
     protected WebSocketWrapper Wrapper;
-    protected string LocationName = "Start";
+    protected string LocationName;
     protected virtual void Start()
     {
         Wrapper = FindObjectOfType<WebSocketWrapper>();
         if (Wrapper != null)
             Wrapper.OnClientConnected += OnInvokeEndTween;
+        else Debug.Log("WRAPPER NOT FOUND");
     }
 
     [AosAction(name: "Телепорт")]
@@ -54,10 +54,8 @@ public class API : AosObjectBase
     }
     [AosAction(name: "Обновить место")]
     public  virtual void updatePlace(JArray data)
-    {
-       
+    { 
     }
-
     [AosAction(name: "Показать реакцию")]
     public void showReaction(JObject info, JObject nav)
     {
@@ -67,7 +65,6 @@ public class API : AosObjectBase
     [AosAction(name: "Показать сообщение")]
     public virtual void showMessage(JObject info, JObject nav)
     {
-      
     }
     [AosAction(name: "Показать сообщение")]
     public  virtual void showResult(JObject info, JObject nav)
@@ -81,7 +78,6 @@ public class API : AosObjectBase
     [AosAction(name: "Показать реакцию")]
     public virtual void showTime(string time)
     {
-     
     }
     [AosAction(name: "Показать точки измерения")]
     public virtual void showMeasure(JArray measureDevices, JArray measurePoints)
@@ -105,15 +101,14 @@ public class API : AosObjectBase
     {
         OnMenu?.Invoke();
     }
-    public virtual void OnInvokeEndTween()
+    public void OnInvokeEndTween()
     {
+        Debug.Log(LocationName + "From API START");
         EndTween?.Invoke(LocationName);
-
+        Debug.Log(LocationName + "From API FINISH");
     }
     protected void OnNextButtonClicked(string value)
     {
         navAction.Invoke(value);
     }
-
-
 }

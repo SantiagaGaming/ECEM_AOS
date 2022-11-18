@@ -96,18 +96,18 @@ public class ActionAPI : API
     }
     public override void showMeasure(JArray measureDevices, JArray measurePoints)
     {
-        MeasureButtonsBag.Instance.CurrentButtonsNames = new List<string>();
-        foreach (JObject item in measurePoints)
-        {
-            var tmpArray = item.SelectToken("points");
-            if (tmpArray != null && tmpArray is JArray)
-            {
-                foreach (JObject item2 in tmpArray)
-                {
-                    MeasureButtonsBag.Instance.CurrentButtonsNames.Add(item2.SelectToken("apiId").ToString());
-                }
-            }
-        }
+        //MeasureButtonsBag.Instance.CurrentButtonsNames = new List<string>();
+        //foreach (JObject item in measurePoints)
+        //{
+        //    var tmpArray = item.SelectToken("points");
+        //    if (tmpArray != null && tmpArray is JArray)
+        //    {
+        //        foreach (JObject item2 in tmpArray)
+        //        {
+        //            MeasureButtonsBag.Instance.CurrentButtonsNames.Add(item2.SelectToken("apiId").ToString());
+        //        }
+        //    }
+        //}
     }
 }
 

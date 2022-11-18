@@ -11,7 +11,6 @@ public class MainMenuAndArmTeleportController : MonoBehaviour
     [Space]
     [SerializeField] private CameraFlash _cameraFlash;
     [Space]
-    [SerializeField] private ModeController _modeController;
     [SerializeField] private Transform _menuPosition;
     [SerializeField] private Transform _armPosition;
     [SerializeField] private GameObject[] _menuButtons;
@@ -34,7 +33,6 @@ public class MainMenuAndArmTeleportController : MonoBehaviour
     {
         if (_canTeleport)
         {
-            _currentPlayerPosition = _modeController.GetPlayerTransform().position;
             Player.Instance.TeleportTo(newPosition);
             _descPlayer.transform.rotation = newPosition.rotation;
             _vrPlayer.transform.rotation = newPosition.rotation;

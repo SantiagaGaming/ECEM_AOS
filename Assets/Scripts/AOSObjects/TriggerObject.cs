@@ -33,8 +33,5 @@ public class TriggerObject : BaseObject
         {
             sceneAosObject.InvokeOnClick();
         }
-
-     
     }
-
 }

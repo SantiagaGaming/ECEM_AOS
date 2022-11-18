@@ -59,10 +59,6 @@ public class MenuAPI : API
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
     }
-    public override void OnInvokeEndTween()
-    {
-        base.OnInvokeEndTween();
-    }
 
 }
     

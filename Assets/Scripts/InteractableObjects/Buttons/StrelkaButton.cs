@@ -11,18 +11,17 @@ public class StrelkaButton : BaseButton
     {
         StrelkaAOS strelka = FindObjectOfType<StrelkaAOS>();
         RadioButtonsContainer radioButtonsContainer = FindObjectOfType<RadioButtonsContainer>();
-        LocationTextController locationTextController = FindObjectOfType<LocationTextController>();
         if (_side)
         {
             strelka.TrySwitchStrelkaPlus();
-            AOSRadio button = radioButtonsContainer.GetButtonPlus(locationTextController.GetLocationName());
+            AOSRadio button = radioButtonsContainer.GetButtonPlus(PlayerPrefs.GetString("Location"));
             button.InvokeOnClick();
         }
 
         else
         {
             strelka.TrySwitchStrelkaMinus();
-            AOSRadio button = radioButtonsContainer.GetButtonMinus(locationTextController.GetLocationName());
+            AOSRadio button = radioButtonsContainer.GetButtonMinus(PlayerPrefs.GetString("Location"));
             button.InvokeOnClick();
         }
 
