@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97457b96eb8aa474d9dd6fed5f050846, type: 3}
   m_Name: DevelopSettings
   m_EditorClassIdentifier: 
-  Develop: 1
+  Develop: 0

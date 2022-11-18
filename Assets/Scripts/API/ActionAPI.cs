@@ -14,7 +14,7 @@ public class ActionAPI : API
     }
     public override void showPlace(JObject place, JArray data, JObject nav)
     {
-        Debug.Log(place.SelectToken("apiId").ToString());
+        Debug.Log(place.SelectToken("apiId").ToString()+ "FromShowPlace");
         string location = place.SelectToken("apiId").ToString();
         if (place.SelectToken("name") != null)
         {

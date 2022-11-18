@@ -15,6 +15,8 @@ public class MenuAPI : API
         base.Start();
         if (_nextButton != null)
             _nextButton.NextButtonClickedEvent += OnNextButtonClicked;
+        LocationName = "Start";
+        OnInvokeEndTween();
     }
 
     public override void showWelcome(JObject info, JObject nav)
