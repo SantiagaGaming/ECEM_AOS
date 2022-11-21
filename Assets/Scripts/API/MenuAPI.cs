@@ -26,6 +26,7 @@ public class MenuAPI : API
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
         _startEndScreenView.SetButtonText(nav.SelectToken("ok").SelectToken("caption").ToString());
         _nextButton.ChangeActionOnButton(nav.SelectToken("ok").SelectToken("action").ToString());
+        PlayerPrefs.SetString("MenuScene", "Start");
     }
     public override void showFaultInfo(JObject info, JObject nav)
     {

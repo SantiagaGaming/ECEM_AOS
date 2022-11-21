@@ -18,7 +18,9 @@ public class EscButton : MonoBehaviour
     {
   if(SceneManager.GetActiveScene().name!="Menu")
         {
+            PlayerPrefs.SetString("MenuScene", "Menu");
             _changer.OnTeleportToLocation("Menu");
+         
         }
         else
         {
