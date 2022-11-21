@@ -13,3 +13,15 @@ MonoBehaviour:
   m_Name: DevelopSettings
   m_EditorClassIdentifier: 
   Develop: 1
+  _menuAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Menu
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6124f967-d46e-4eb5-8856-be2df9f88536
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3847075974043942776, guid: c348712bda248c246b8c49b3db54643f, type: 3}

@@ -2,37 +2,29 @@ using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 public class EscButton : MonoBehaviour
 {
-    [SerializeField] private InputActionProperty _menuAction;
+    private SceneChanger _changer;
+    private void Start()
+    {
+        _changer = FindObjectOfType<SceneChanger>();
+        AOSColliderActivator.Instance.Settings.MenuEvent += OnShowMenu;
+    }
 
 
-    private bool _show = false;
-    private void OnEnable()
+    private void OnShowMenu()
     {
-        _menuAction.action.performed += OnShowMenu;
-    }
-    private void OnDisable()
-    {
-        _menuAction.action.performed -= OnShowMenu;
-    }
-    private void OnShowMenu(InputAction.CallbackContext c)
-    {
-        if (!_show)
+  if(SceneManager.GetActiveScene().name!="Menu")
         {
-
-            _show = true;
-          //  _api.OnMenuInvoke();
+            _changer.OnTeleportToLocation("Menu");
         }
         else
         {
-            _show = false;
-
+                _changer.OnTeleportToLocation(PlayerPrefs.GetString("PrevousSceneName"));
         }
 
     }
-    public void ChangeShowValue(bool value)
-    {
-        _show = value;
-    }
+
 }

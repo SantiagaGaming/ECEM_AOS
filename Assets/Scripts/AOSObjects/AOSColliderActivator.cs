@@ -2,6 +2,7 @@ using AosSdk.Core.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class AOSColliderActivator : MonoBehaviour
@@ -47,4 +48,7 @@ public class AOSColliderActivator : MonoBehaviour
     {
         return _isDevelopment;
     }
+    public DevelopSettings Settings => _settings;
+
+
 }

@@ -20,12 +20,15 @@ public class SceneChanger : MonoBehaviour
                     door.DoorClickedEvent += OnTeleportToLocation;
                 }
             }
-        PrevousSceneName = SceneManager.GetActiveScene().name;
+        if (SceneManager.GetActiveScene().name != "Menu")
+            PrevousSceneName = SceneManager.GetActiveScene().name;
+
     }
     public void OnTeleportToLocation(string locationName)
     {
         SceneChangerEvent?.Invoke();
-        PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);
+        if (SceneManager.GetActiveScene().name != "Menu")
+            PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);
         SceneManager.LoadScene(locationName);
     }
 }
