@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Field.unity
     guid: bc4041c1da58f404bbd9089b4ba2dd10
   - enabled: 1
-    path: Assets/Scenes/Rele.unity
+    path: Assets/Scenes/Relay.unity
     guid: 2d666f2f5d92fbc4288e43e9ec52de18
   - enabled: 1
     path: Assets/Scenes/Shn.unity
