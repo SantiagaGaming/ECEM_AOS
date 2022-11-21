@@ -11,7 +11,10 @@ public class SceneAosObject : AosObjectBase
     protected BaseObject baseObject;
     [SerializeField] private bool _button;
     [SerializeField] private bool _place;
-
+    private void Start()
+    {
+        Debug.Log(gameObject.name);
+    }
     public void InvokeOnClick()
     {
         OnClickObject?.Invoke(ObjectId);
