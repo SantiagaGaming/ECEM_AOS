@@ -2,7 +2,7 @@ using AosSdk.Core.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[AosSdk.Core.Utils.AosObject(name: "SP6_anim")]
 public class SP6AOSAnimation : AosObjectBase
 {
     private Animator _anim;
@@ -25,11 +25,13 @@ public class SP6AOSAnimation : AosObjectBase
     public void PlayPlusAnim()
     {
         _anim.SetTrigger("plusAnim");
+
     }
     [AosAction(name: "Проиграть анимацию минус")]
     public void PlayMinusAnim()
     {
         _anim.SetTrigger("minusAnim");
+        Debug.Log("Played");
     }
 
 }
