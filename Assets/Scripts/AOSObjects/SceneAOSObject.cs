@@ -15,4 +15,8 @@ public class SceneAosObject : AosObjectBase
     {
         OnClickObject?.Invoke(ObjectId);
     }
+    public void ActionWithObject(string actionName)
+    {
+        OnClickObject?.Invoke(actionName);
+    }
 }

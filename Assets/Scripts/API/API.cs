@@ -25,20 +25,25 @@ public class API : AosObjectBase
     public event AosEventHandler OnMenu;
     protected WebSocketWrapper Wrapper;
     protected string LocationName;
+    protected SceneChanger sceneChanger;
     protected virtual void Start()
     {
         Wrapper = FindObjectOfType<WebSocketWrapper>();
         if (Wrapper != null)
             Wrapper.OnClientConnected += OnInvokeEndTween;
         else Debug.Log("WRAPPER NOT FOUND");
+        sceneChanger = FindObjectOfType<SceneChanger>();
     }
 
     [AosAction(name: "Телепорт")]
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-        SceneChanger changer = FindObjectOfType<SceneChanger>();
-        if(changer!=null)
-        changer.OnTeleportToLocation(location);
+       
+        if(sceneChanger != null)
+        {
+            sceneChanger.OnTeleportToLocation(location);
+        }
+      
     }
     [AosAction(name: "Задать текст локации")]
     public virtual void showWelcome(JObject info, JObject nav)
@@ -108,6 +113,10 @@ public class API : AosObjectBase
         Debug.Log(LocationName + "From API START");
         EndTween?.Invoke(LocationName);
         Debug.Log(LocationName + "From API FINISH");
+    }
+    public void OnInvokeEndTween(string location)
+    {
+        EndTween?.Invoke(location);
     }
     protected void OnNextButtonClicked(string value)
     {

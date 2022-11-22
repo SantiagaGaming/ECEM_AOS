@@ -19,9 +19,15 @@ public class PlaceObject : BaseObject
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
         else GetComponent<Collider>().enabled= false;
-   
+
         if (AOSColliderActivator.Instance.DevelopMode())
             OnActivateObjectsInPlace(true);
+        else
+        {
+            BackButtonsHandler.Instance.SetBackButtonObject(_backButton);
+            sceneAosObject.InvokeOnClick();
+        }
+          
     }
     private void OnEnable()
     {

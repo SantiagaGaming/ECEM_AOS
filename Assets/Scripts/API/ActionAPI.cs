@@ -11,6 +11,7 @@ public class ActionAPI : API
         LocationName = LocationController.instance.LocationName;
         base.Start();
         OnInvokeEndTween();
+        
     }
     public override void showPlace(JObject place, JArray data, JObject nav)
     {
@@ -34,8 +35,8 @@ public class ActionAPI : API
         if (nav.SelectToken("back") != null && nav.SelectToken("back").SelectToken("action") != null && nav.SelectToken("back").SelectToken("action").ToString() != String.Empty)
         {
             Debug.Log("in nav");
-            //BackButtonsHandler.Instance.EnableCurrentBackButton(true);
-            //BackButtonsHandler.Instance.ActionToInvoke = nav.SelectToken("back").SelectToken("action").ToString();
+            BackButtonsHandler.Instance.EnableCurrentBackButton(true);
+            BackButtonsHandler.Instance.ActionToInvoke = nav.SelectToken("back").SelectToken("action").ToString();
         }
         //StreetCollidersActivator.Instance.ActivateColliders(place.SelectToken("apiId").ToString());
     }
@@ -65,8 +66,10 @@ public class ActionAPI : API
         {
             if (item != null)
             {
+               
                 if (item.SelectToken("tool") != null && item.SelectToken("name") != null)
                 {
+                    MovingButtonsController.Instance.HideAllButtons();
                     if (item.SelectToken("tool").ToString() == "eye")
                     {
                         MovingButtonsController.Instance.ShowWatchButton();
@@ -74,13 +77,29 @@ public class ActionAPI : API
                     }
                     if (item.SelectToken("tool").ToString() == "hand")
                     {
-                        MovingButtonsController.Instance.ShowAdjustButton();
-                        MovingButtonsController.Instance.SetAdjustButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.ShowHandButton();
+                        MovingButtonsController.Instance.SetHandButtonText(item.SelectToken("name").ToString());
+                    }
+
+                    if (item.SelectToken("tool").ToString() == "hand_1")
+                    {
+                        MovingButtonsController.Instance.ShowHand1Button();
+                        MovingButtonsController.Instance.SetHand1ButtonText(item.SelectToken("name").ToString());
+                    }
+                    if (item.SelectToken("tool").ToString() == "hand_2")
+                    {
+                        MovingButtonsController.Instance.ShowHand2Button();
+                        MovingButtonsController.Instance.SetHand2ButtonText(item.SelectToken("name").ToString());
                     }
                     if (item.SelectToken("tool").ToString() == "repair")
                     {
                         MovingButtonsController.Instance.ShowRepairButton();
                         MovingButtonsController.Instance.SetRepairButtonText(item.SelectToken("name").ToString());
+                    }
+                    if (item.SelectToken("tool").ToString() == "pen")
+                    {
+                        MovingButtonsController.Instance.ShowPenButton();
+                        MovingButtonsController.Instance.SetPenButtonText(item.SelectToken("name").ToString());
                     }
                 }
                 else if (item.SelectToken("apiId") != null)

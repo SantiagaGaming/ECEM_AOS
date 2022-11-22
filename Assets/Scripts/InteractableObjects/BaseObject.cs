@@ -32,6 +32,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
             }
              
             AOSColliderActivator.Instance.AddBaseObject(this);
+            sceneAosObject = GetComponent<SceneAosObject>();
         }
     }
 

@@ -22,9 +22,10 @@ public class MovingButtonsController : MonoBehaviour
 
     [SerializeField] private GameObject _watchButton;
     [SerializeField] private GameObject _repairButton;
-    [SerializeField] private GameObject _adjustButton;
-    [SerializeField] private GameObject _bigWatchButton;
-    [SerializeField] private GameObject _pencilButton;
+    [SerializeField] private GameObject _handButton;
+    [SerializeField] private GameObject _handButton_1;
+    [SerializeField] private GameObject _handButton_2;
+    [SerializeField] private GameObject _penButton;
 
     public void SetMovingButtonsPosition(Vector3 position, BaseObject obj)
     {
@@ -47,36 +48,44 @@ public class MovingButtonsController : MonoBehaviour
     {
         _repairButton.SetActive(false);
     }
-    public void ShowAdjustButton()
+    public void ShowHandButton()
     {
-        _adjustButton.SetActive(true);
+        _handButton.SetActive(true);
     }
-    public void HideAdjustButton()
+    public void HideHandButton()
     {
-        _adjustButton.SetActive(false);
+        _handButton.SetActive(false);
     }
-    public void ShowBigWatchButton()
+    public void ShowHand1Button()
     {
-        _bigWatchButton.SetActive(true);
+        _handButton_1.SetActive(true);
     }
-    public void ShowPencilButton()
+    public void HideHand1Button()
     {
-        _pencilButton.SetActive(true);
+        _handButton_1.SetActive(false);
+    }
+    public void ShowHand2Button()
+    {
+        _handButton_2.SetActive(true);
+    }
+    public void HideHand2Button()
+    {
+        _handButton_2.SetActive(false);
+    }
+
+    public void ShowPenButton()
+    {
+        _penButton.SetActive(true);
     }
     public void HideAllButtons()
     {
         _watchButton.SetActive(false);
         _repairButton.SetActive(false);
-        _adjustButton.SetActive(false);
-        _bigWatchButton.SetActive(false);
-        _pencilButton.SetActive(false);
+        _handButton.SetActive(false);
+        _handButton_1.SetActive(false);
+        _handButton_2.SetActive(false);
+        _penButton.SetActive(false);
         ButtonsPositionChanged?.Invoke();
-    }
-    public void ShowAllButtons()
-    {
-        _watchButton.SetActive(true);
-        _repairButton.SetActive(true);
-        _adjustButton.SetActive(true);
     }
     public void SetWatchButtonText(string text)
     {
@@ -89,9 +98,24 @@ public class MovingButtonsController : MonoBehaviour
         _repairButton.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(text);
     }
-    public void SetAdjustButtonText(string text)
+    public void SetHandButtonText(string text)
     {
-        _adjustButton.TryGetComponent(out MovingButton movingButton);
+        _handButton.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
+    }
+    public void SetHand1ButtonText(string text)
+    {
+        _handButton_1.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
+    }
+    public void SetHand2ButtonText(string text)
+    {
+        _handButton_2.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(text);
+    }
+    public void SetPenButtonText(string text)
+    {
+        _penButton.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(text);
     }
     public void SetRepairableObject(RepairableObject obj)

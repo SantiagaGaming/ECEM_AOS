@@ -9,6 +9,6 @@ public class WatchButton : MovingButton
 
     public override void OnClicked(InteractHand interactHand)
     {
-
+        CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("eye");
     }
 }
