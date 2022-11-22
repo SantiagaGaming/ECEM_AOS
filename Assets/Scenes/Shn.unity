@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 573670863}
   - component: {fileID: 573670864}
   - component: {fileID: 573670865}
+  - component: {fileID: 573670866}
   m_Layer: 0
   m_Name: t_shn_t_shn_workplace
   m_TagString: Untagged
@@ -355,6 +356,21 @@ MonoBehaviour:
   - {fileID: 7283962063207193172}
   - {fileID: 8476993383844095899}
   _backButton: {fileID: 7283962064829468304}
+--- !u!114 &573670866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573670862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_shn_t_shn_workplace
+  _button: 0
+  _place: 1
 --- !u!1 &630986466
 GameObject:
   m_ObjectHideFlags: 0

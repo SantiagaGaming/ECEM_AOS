@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 1480319614119636912}
   helperName: 
   actionText: 
   _hand: 2
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 1480319615564835537}
   helperName: 
   actionText: 
   _hand: 1
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 3203245719518001580}
   helperName: 
   actionText: 
 --- !u!114 &3203245720023688340
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 8191790308648284871}
   helperName: 
   actionText: 
 --- !u!1 &8191790307647549492
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 8191790307647549495}
   helperName: 
   actionText: 
 --- !u!114 &3203245719040547148
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: 1
   outlineObjects: []
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 8191790307827035758}
   helperName: 
   actionText: 
   _hand: 0

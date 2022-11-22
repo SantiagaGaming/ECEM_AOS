@@ -12346,6 +12346,7 @@ GameObject:
   - component: {fileID: 5549204532458562773}
   - component: {fileID: 3739357648782990597}
   - component: {fileID: 3739357648782990598}
+  - component: {fileID: 3739357648782990599}
   m_Layer: 0
   m_Name: t_field_pointer_t_field_pointer_boot
   m_TagString: Untagged
@@ -12391,6 +12392,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanOpen: 1
+--- !u!114 &3739357648782990599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739357648782990596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_field_pointer_t_field_pointer_boot
+  _button: 0
+  _place: 1
 --- !u!1 &3740578210306770953
 GameObject:
   m_ObjectHideFlags: 0
@@ -20711,7 +20727,7 @@ MonoBehaviour:
   - {fileID: 7348667040147662553}
   helperPos: {fileID: 7348667038444736727}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _locationName: Hall1
+  _locationName: hall1
 --- !u!33 &7358637873241217083
 MeshFilter:
   m_ObjectHideFlags: 0

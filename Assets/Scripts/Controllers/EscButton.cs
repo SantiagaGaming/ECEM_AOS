@@ -12,21 +12,9 @@ public class EscButton : MonoBehaviour
         _changer = FindObjectOfType<SceneChanger>();
         AOSColliderActivator.Instance.Settings.MenuEvent += OnShowMenu;
     }
-
-
     private void OnShowMenu()
     {
-  if(SceneManager.GetActiveScene().name!="Menu")
-        {
-            PlayerPrefs.SetString("MenuScene", "Menu");
-            _changer.OnTeleportToLocation("Menu");
-         
-        }
-        else
-        {
-                _changer.OnTeleportToLocation(PlayerPrefs.GetString("PrevousSceneName"));
-        }
-
+            _changer.OnTeleportToLocation("menu");
     }
 
 }
