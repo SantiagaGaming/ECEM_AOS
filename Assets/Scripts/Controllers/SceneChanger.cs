@@ -41,6 +41,7 @@ public class SceneChanger : MonoBehaviour
             locationName == "shn" ||
              locationName == "uvk")
         {
+            if(PrevousSceneName!=locationName)
             SceneManager.LoadScene(locationName);
 
         }

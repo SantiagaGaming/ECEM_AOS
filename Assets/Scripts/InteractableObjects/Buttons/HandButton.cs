@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AdjustButton : MovingButton
+public class HandButton : MovingButton
 {
     [SerializeField] private Hands _hand;
     private enum Hands

@@ -6,16 +6,20 @@ using UnityEngine;
 
 public class ActionAPI : API
 {
-    protected override void Start()
+    protected override void Init()
     {
-        LocationName = LocationController.instance.LocationName;
-        base.Start();
-        OnInvokeEndTween();
-        
+        StartCoroutine(EndTweenDelay());
     }
+    private IEnumerator EndTweenDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        LocationName = LocationController.instance.LocationName;
+        OnInvokeEndTween();
+    }
+
     public override void showPlace(JObject place, JArray data, JObject nav)
     {
-        Debug.Log(place.SelectToken("apiId").ToString()+ "FromShowPlace");
+        Debug.Log(place.SelectToken("apiId").ToString() + "FromShowPlace");
         string location = place.SelectToken("apiId").ToString();
         if (place.SelectToken("name") != null)
         {
@@ -30,6 +34,7 @@ public class ActionAPI : API
             if (temp != null)
             {
                 AOSColliderActivator.Instance.ActivateColliders(temp.ToString(), item.SelectToken("name").ToString());
+                Debug.Log(temp.ToString());
             }
         }
         if (nav.SelectToken("back") != null && nav.SelectToken("back").SelectToken("action") != null && nav.SelectToken("back").SelectToken("action").ToString() != String.Empty)
@@ -66,7 +71,7 @@ public class ActionAPI : API
         {
             if (item != null)
             {
-               
+
                 if (item.SelectToken("tool") != null && item.SelectToken("name") != null)
                 {
                     MovingButtonsController.Instance.HideAllButtons();
@@ -128,5 +133,5 @@ public class ActionAPI : API
         //    }
         //}
     }
-}
 
+}

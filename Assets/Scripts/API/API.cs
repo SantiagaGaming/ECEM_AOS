@@ -23,22 +23,21 @@ public class API : AosObjectBase
     public event AosEventHandlerWithAttribute OnReason;
     [AosEvent(name: "Открыть меню")]
     public event AosEventHandler OnMenu;
-    protected WebSocketWrapper Wrapper;
     protected string LocationName;
-    protected SceneChanger sceneChanger;
-    protected virtual void Start()
+    protected void Start()
     {
-        Wrapper = FindObjectOfType<WebSocketWrapper>();
-        if (Wrapper != null)
-            Wrapper.OnClientConnected += OnInvokeEndTween;
-        else Debug.Log("WRAPPER NOT FOUND");
-        sceneChanger = FindObjectOfType<SceneChanger>();
+        Init();
+    }
+    protected virtual void Init()
+    {
+
     }
 
     [AosAction(name: "Телепорт")]
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
        
+        SceneChanger sceneChanger = FindObjectOfType<SceneChanger>();
         if(sceneChanger != null)
         {
             sceneChanger.OnTeleportToLocation(location);
@@ -90,6 +89,11 @@ public class API : AosObjectBase
     public virtual void showMeasure(JArray measureDevices, JArray measurePoints)
     {
     }
+    [AosAction(name: "Показать результат измерения")]
+    public virtual void showMeasureResult(JObject temp, JObject temp1)
+    {
+    }
+
 
     [AosAction(name: "Показать меню")]
     public virtual void showMenu(JObject faultInfo, JObject exitInfo,JObject resons)
@@ -122,4 +126,6 @@ public class API : AosObjectBase
     {
         navAction.Invoke(value);
     }
+
+
 }

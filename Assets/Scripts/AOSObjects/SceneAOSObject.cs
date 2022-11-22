@@ -13,6 +13,7 @@ public class SceneAosObject : AosObjectBase
     [SerializeField] private bool _place;
     public void InvokeOnClick()
     {
+        CurrentAOSObject.Instance.SceneAosObject = this;
         OnClickObject?.Invoke(ObjectId);
     }
     public void ActionWithObject(string actionName)

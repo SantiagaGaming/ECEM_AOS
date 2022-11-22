@@ -10,9 +10,9 @@ public class MenuAPI : API
     [SerializeField] private ScreenChanger _menuScreenChanger;
     [SerializeField] private TimerView _timer;
     [SerializeField] private NextButton _nextButton;
-    protected override void Start()
+    protected override void Init()
     {
-        base.Start();
+        WebSocketWrapper.Instance.OnClientConnected += OnInvokeEndTween;
         if (_nextButton != null)
             _nextButton.NextButtonClickedEvent += OnNextButtonClicked;
         LocationName = "Start";
@@ -62,6 +62,7 @@ public class MenuAPI : API
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
     }
+
 
 }
     

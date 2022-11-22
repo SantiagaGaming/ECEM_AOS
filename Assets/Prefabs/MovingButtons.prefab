@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1480319614293390127}
   - component: {fileID: 1480319614293390120}
   - component: {fileID: 1480319614293390121}
-  - component: {fileID: 1480319614293390122}
+  - component: {fileID: 528599604723916045}
   m_Layer: 0
   m_Name: HandButton_2
   m_TagString: Untagged
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1480319614293390122
+--- !u!114 &528599604723916045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 1480319614791155437}
   - component: {fileID: 1480319614791155438}
   - component: {fileID: 1480319614791155439}
-  - component: {fileID: 1480319614791155432}
+  - component: {fileID: 7310398487958342455}
   m_Layer: 0
   m_Name: HandButton_1
   m_TagString: Untagged
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1480319614791155432
+--- !u!114 &7310398487958342455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 8191790309144033045}
   - component: {fileID: 8191790309144033258}
   - component: {fileID: 3203245719040547147}
-  - component: {fileID: 3203245719040547193}
+  - component: {fileID: 5679887880077869452}
   m_Layer: 0
   m_Name: HandButton
   m_TagString: Untagged
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3203245719040547193
+--- !u!114 &5679887880077869452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

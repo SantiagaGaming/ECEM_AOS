@@ -12,6 +12,5 @@ public class KnifeSwitch : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, -45);
         else if(position ==2)
             transform.localRotation = Quaternion.Euler(0, 0, 45);
-
     }
 }
