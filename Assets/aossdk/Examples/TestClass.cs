@@ -20,7 +20,6 @@ namespace AosSdk.Examples
         [AosAction(name: "Тестовый экшен без параметров")]
         public void TestVoid()
         {
-            Debug.LogError("TEST");
         }
 
         [AosEvent(name: "Тестовое событие")] public event AosEventHandler OnEventHappened;
