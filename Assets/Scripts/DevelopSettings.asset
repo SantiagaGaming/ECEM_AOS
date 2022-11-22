@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97457b96eb8aa474d9dd6fed5f050846, type: 3}
   m_Name: DevelopSettings
   m_EditorClassIdentifier: 
-  Develop: 1
+  Develop: 0
   _menuAction:
     m_UseReference: 1
     m_Action:
@@ -24,4 +24,4 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3847075974043942776, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 1099149295125848350, guid: c348712bda248c246b8c49b3db54643f, type: 3}

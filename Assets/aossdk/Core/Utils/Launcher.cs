@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using AosSdk.Core.Utils.EditorUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AosSdk.Core.Utils
 {
@@ -75,11 +76,17 @@ namespace AosSdk.Core.Utils
 
             Debug.Log($"Launched in {SdkSettings.launchMode.ToString()} mode");
 
-         //   _webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
-
+            //_webSocketWrapper.Init(new IPEndPoint(IPAddress.Parse(_webSocketIpAddress), _webSocketPort));
             _webSocketWrapper.Init(new IPEndPoint(IPAddress.Any, _webSocketPort));
 
             player.LaunchMode = SdkSettings.launchMode;
+
+            SceneManager.sceneUnloaded += SceneManagerOnSceneUnloaded;
+        }
+
+        private void OnDestroy()
+        {
+            SceneManager.sceneUnloaded -= SceneManagerOnSceneUnloaded;
         }
 
         private static void GetBuildInfo(out string buildDate, out int buildNumber, out string buildFingerprint)
@@ -102,6 +109,12 @@ namespace AosSdk.Core.Utils
                 buildNumber = -1;
                 buildFingerprint = "Unknown build fingerprint";
             }
+        }
+
+        private static void SceneManagerOnSceneUnloaded(Scene unloadedScene)
+        {
+            Debug.Log("Cleaning AosObjects list");
+            AosObjectBase.AosObjects.Clear();
         }
     }
 }

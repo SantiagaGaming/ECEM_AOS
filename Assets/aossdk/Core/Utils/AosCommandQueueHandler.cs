@@ -25,15 +25,19 @@ namespace AosSdk.Core.Utils
                 aosObjectToExecuteCommandOn.QueueCommand(command);
 
                 CommandQueue.Remove(command);
-                
+
                 return;
             }
+
+            var errorMessage = $"Object with id {command.objectId} not found on scene";
+
+            Debug.LogError(errorMessage);
 
             WebSocketWrapper.Instance.DoSendMessage(new ServerMessageError
             {
                 objectId = null,
                 type = ServerMessageType.Error.ToString(),
-                errorMessage = $"Object with guid {command.objectId} not found on scene"
+                errorMessage = errorMessage
             });
         }
     }

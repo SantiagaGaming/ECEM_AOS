@@ -18,17 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Feed.unity
     guid: b7bc2667c1a087c48a04b1b39abb3b8d
   - enabled: 1
-    path: Assets/Scenes/Field.unity
-    guid: bc4041c1da58f404bbd9089b4ba2dd10
-  - enabled: 1
     path: Assets/Scenes/Relay.unity
     guid: 2d666f2f5d92fbc4288e43e9ec52de18
   - enabled: 1
     path: Assets/Scenes/Shn.unity
     guid: 762129586d558b140b826a9748814a48
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 12ce501abf8396c44b0cfdd92fd39ebd
+  - enabled: 1
     path: Assets/Scenes/Uvk.unity
     guid: 64aee3c905d47974ab0f461efa9fcbac
+  - enabled: 1
+    path: Assets/Scenes/Field.unity
+    guid: bc4041c1da58f404bbd9089b4ba2dd10
   - enabled: 1
     path: Assets/Scenes/Hall1.unity
     guid: 2d80059f768ec394486d92d4ca5c3471
