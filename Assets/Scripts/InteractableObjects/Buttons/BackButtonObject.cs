@@ -14,8 +14,8 @@ public class BackButtonObject : BaseButton
         base.OnClicked(interactHand);
         BackButtonClickEvent?.Invoke();
         MovingButtonsController.Instance.HideAllButtons();
-        //API api = FindObjectOfType<API>();
-        //api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
+        API api = FindObjectOfType<API>();
+        api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
         //ShupController shup = FindObjectOfType<ShupController>();
         //shup.ResetShupPosition();
 
