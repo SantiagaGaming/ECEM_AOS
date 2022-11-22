@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class AOSColliderActivator : MonoBehaviour
 {
@@ -34,7 +35,6 @@ public class AOSColliderActivator : MonoBehaviour
                 item.EnableObject(true);
                 item.SetHelperName(text);
             }
-
         }
     }
     public void DeactivateAllColliders()
@@ -49,6 +49,4 @@ public class AOSColliderActivator : MonoBehaviour
         return _isDevelopment;
     }
     public DevelopSettings Settings => _settings;
-
-
 }

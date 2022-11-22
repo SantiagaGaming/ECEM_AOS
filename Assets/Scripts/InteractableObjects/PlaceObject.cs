@@ -8,7 +8,6 @@ using AosSdk.Core.PlayerModule.Pointer;
 public class PlaceObject : BaseObject
 {
 
-    [SerializeField] private BaseObject[] _objects;
     [SerializeField] private BackButtonObject _backButton;
 
     public override void OnClicked(InteractHand interactHand)
@@ -19,15 +18,8 @@ public class PlaceObject : BaseObject
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
         else GetComponent<Collider>().enabled= false;
-
-        if (AOSColliderActivator.Instance.DevelopMode())
-            OnActivateObjectsInPlace(true);
-        else
-        {
             BackButtonsHandler.Instance.SetBackButtonObject(_backButton);
             sceneAosObject.InvokeOnClick();
-        }
-          
     }
     private void OnEnable()
     {
@@ -41,27 +33,12 @@ public class PlaceObject : BaseObject
     }
     private void OnBackClick()
     {
-        if (AOSColliderActivator.Instance.DevelopMode())
+        IScriptableAnimationObject scriptableAnimationObject = GetComponent(typeof(IScriptableAnimationObject)) as IScriptableAnimationObject;
+        if (scriptableAnimationObject != null)
         {
-            OnActivateObjectsInPlace(false);
-            IScriptableAnimationObject scriptableAnimationObject = GetComponent(typeof(IScriptableAnimationObject)) as IScriptableAnimationObject;
-            if (scriptableAnimationObject != null)
-            {
-                scriptableAnimationObject.PlayScritableAnimtaion();
-            }
-            else GetComponent<Collider>().enabled= true;
+            scriptableAnimationObject.PlayScritableAnimtaion();
         }
-       
+
     }
 
-    private void OnActivateObjectsInPlace(bool value)
-    {
-        if (AOSColliderActivator.Instance.DevelopMode()&& _objects!=null)
-        {
-            foreach (var item in _objects)
-            {
-                item.EnableObject(value);
-            }
-        }
-    }
 }
