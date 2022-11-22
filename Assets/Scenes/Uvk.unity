@@ -2713,11 +2713,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246824329056555136, guid: 140f756820456294ca03420683ec608d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 7246824329056555136, guid: 140f756820456294ca03420683ec608d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.71
+      value: -2.085
       objectReference: {fileID: 0}
     - target: {fileID: 7246824329056555136, guid: 140f756820456294ca03420683ec608d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6034,8 +6034,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0164118, y: 0, z: 7.173594}
-  m_Center: {x: 2.4770231, y: 0.00000047683716, z: 0.26626796}
+  m_Size: {x: 1.0164118, y: 1.6009824, z: 7.173594}
+  m_Center: {x: 2.4770231, y: -0.80049074, z: 0.26626796}
 --- !u!65 &120688972886694612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6047,8 +6047,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.941095, y: 0, z: 1.2963909}
-  m_Center: {x: 1.0358561, y: 0.00000047683716, z: -2.6723356}
+  m_Size: {x: 3.9410949, y: 1.5777657, z: 1.2963909}
+  m_Center: {x: 1.035856, y: -0.7888823, z: -2.6723356}
 --- !u!65 &120688972886694613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6060,8 +6060,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.954059, y: 0, z: 1.5038143}
-  m_Center: {x: 1.029374, y: 0.00000047683716, z: 3.0934994}
+  m_Size: {x: 3.954059, y: 0.8843755, z: 1.5038143}
+  m_Center: {x: 1.029374, y: -0.44218734, z: 3.0934994}
 --- !u!65 &120688972886694615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6073,8 +6073,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7825067, y: 0, z: 7.164757}
-  m_Center: {x: -2.2867312, y: 0.00000047683716, z: 0.26184678}
+  m_Size: {x: 2.7825067, y: 0.6991564, z: 7.164757}
+  m_Center: {x: -2.2867312, y: -0.34957778, z: 0.26184678}
 --- !u!33 &120688972886694621
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6303,7 +6303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: t_uvk_t_hall
+  <ObjectId>k__BackingField: t_uvk_t_hall2
   _button: 0
   _place: 0
 --- !u!1 &120688973625714632
