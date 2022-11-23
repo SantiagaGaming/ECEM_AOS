@@ -36,13 +36,13 @@ public class API : AosObjectBase
     [AosAction(name: "Телепорт")]
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-       
+        Debug.Log("in teleport");
         SceneChanger sceneChanger = FindObjectOfType<SceneChanger>();
-        if(sceneChanger != null)
+        if (sceneChanger != null)
         {
             sceneChanger.OnTeleportToLocation(location);
+            EndTween?.Invoke(location);
         }
-      
     }
     [AosAction(name: "Задать текст локации")]
     public virtual void showWelcome(JObject info, JObject nav)

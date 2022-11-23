@@ -9764,18 +9764,6 @@ MonoBehaviour:
   - {fileID: 7850148350500884876}
   helperPos: {fileID: 7850148351070872339}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _objects:
-  - {fileID: 653400197}
-  - {fileID: 483836535}
-  - {fileID: 1199836225}
-  - {fileID: 7850148350240009682}
-  - {fileID: 7850148350668024498}
-  - {fileID: 7850148349788439202}
-  - {fileID: 7850148351223393166}
-  - {fileID: 7850148350724276599}
-  - {fileID: 7850148350826459773}
-  - {fileID: 7325950148353068386}
-  - {fileID: 33719333951176740}
   _backButton: {fileID: 653400197}
 --- !u!114 &3003663623108872627
 MonoBehaviour:
@@ -11118,11 +11106,6 @@ MonoBehaviour:
   - {fileID: 7850148349675946108}
   helperPos: {fileID: 7850148349964395012}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _objects:
-  - {fileID: 978365010}
-  - {fileID: 104031139}
-  - {fileID: 418740542}
-  - {fileID: 3124484784969269319}
   _backButton: {fileID: 978365010}
 --- !u!114 &4432666281260248244
 MonoBehaviour:
@@ -14658,11 +14641,6 @@ MonoBehaviour:
   - {fileID: 6707977181893591853}
   helperPos: {fileID: 1675320557}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _objects:
-  - {fileID: 186548937}
-  - {fileID: 2022038443}
-  - {fileID: 1011765213}
-  - {fileID: 29451166}
   _backButton: {fileID: 2022038443}
 --- !u!114 &6707977181893591855
 MonoBehaviour:
@@ -17294,67 +17272,6 @@ MonoBehaviour:
   - {fileID: 7850148349905749396}
   helperPos: {fileID: 7850148350238321769}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _objects:
-  - {fileID: 700107639}
-  - {fileID: 302273996}
-  - {fileID: 1503084319}
-  - {fileID: 7850148351481338072}
-  - {fileID: 7850148349816109263}
-  - {fileID: 7850148351231574712}
-  - {fileID: 7850148351215602436}
-  - {fileID: 7850148349834662257}
-  - {fileID: 7850148351087898041}
-  - {fileID: 7850148351509117467}
-  - {fileID: 7850148350910466601}
-  - {fileID: 7850148351277116035}
-  - {fileID: 7850148350403530218}
-  - {fileID: 7850148351564889724}
-  - {fileID: 7850148349996018871}
-  - {fileID: 7850148351312248128}
-  - {fileID: 7850148350884190920}
-  - {fileID: 7850148351029311684}
-  - {fileID: 7850148350504873018}
-  - {fileID: 7850148350387901010}
-  - {fileID: 7850148350458731758}
-  - {fileID: 7850148349673021630}
-  - {fileID: 7850148350260829996}
-  - {fileID: 7850148350992249173}
-  - {fileID: 7850148350903577161}
-  - {fileID: 7850148350614948710}
-  - {fileID: 7850148351663339335}
-  - {fileID: 7850148351254905770}
-  - {fileID: 7850148349894603278}
-  - {fileID: 7850148351360165459}
-  - {fileID: 7850148351339797127}
-  - {fileID: 7850148350275148882}
-  - {fileID: 7850148351029062241}
-  - {fileID: 7850148350376694014}
-  - {fileID: 7850148350013241464}
-  - {fileID: 7850148350447724672}
-  - {fileID: 7850148350937026942}
-  - {fileID: 7850148351327437013}
-  - {fileID: 7850148351594271633}
-  - {fileID: 7850148351290979806}
-  - {fileID: 7850148350406680881}
-  - {fileID: 7850148350402327713}
-  - {fileID: 7850148351590835365}
-  - {fileID: 7850148350610998569}
-  - {fileID: 7850148351585553736}
-  - {fileID: 7850148351104853053}
-  - {fileID: 7850148350274759835}
-  - {fileID: 7850148349946418747}
-  - {fileID: 7850148350912205442}
-  - {fileID: 7850148350397349988}
-  - {fileID: 7850148351199101245}
-  - {fileID: 7850148350215045698}
-  - {fileID: 7850148350840838574}
-  - {fileID: 7850148351362733134}
-  - {fileID: 7850148350668024498}
-  - {fileID: 7850148351223393166}
-  - {fileID: 7850148350826459773}
-  - {fileID: 7850148350724276599}
-  - {fileID: 7850148349788439202}
-  - {fileID: 7850148350240009682}
   _backButton: {fileID: 700107639}
 --- !u!114 &7117767132151344908
 MonoBehaviour:
@@ -17500,7 +17417,6 @@ MonoBehaviour:
   - {fileID: 7325950148353068391}
   helperPos: {fileID: 7850148350423354107}
   helperName: "\u0410\u0420\u041C"
-  _objects: []
   _backButton: {fileID: 0}
 --- !u!114 &7325950148353068387
 MonoBehaviour:
@@ -23715,29 +23631,13 @@ GameObject:
   - component: {fileID: 7850148349792120315}
   - component: {fileID: 7850148349792120292}
   - component: {fileID: 7850148349792120293}
-  - component: {fileID: 7850148349792120296}
   m_Layer: 0
-  m_Name: uvk_cpu_mip3
+  m_Name: mip3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7850148349792120296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850148349792120295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: uvk_cpu_mip3
-  _button: 0
-  _place: 0
 --- !u!33 &7850148349792120315
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24988,7 +24888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: 
+  <ObjectId>k__BackingField: uvk_uso1_sbs3
   _button: 0
   _place: 0
 --- !u!65 &7850148349834662263
@@ -26630,7 +26530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: 
+  <ObjectId>k__BackingField: uvk_uso1_mbko1k3
   _button: 0
   _place: 0
 --- !u!65 &7850148349946418746
@@ -36921,7 +36821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: uvk_uso1_sbs3
+  <ObjectId>k__BackingField: uvk_uso1_sbs
   _button: 0
   _place: 0
 --- !u!23 &7850148350483620548
@@ -41987,7 +41887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: 
+  <ObjectId>k__BackingField: uvk_cpu_mip3
   _button: 0
   _place: 0
 --- !u!65 &7850148350826459772
@@ -58952,11 +58852,6 @@ MonoBehaviour:
   - {fileID: 7850148351091971529}
   helperPos: {fileID: 7850148349961813132}
   helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _objects:
-  - {fileID: 2146511743}
-  - {fileID: 2089521933}
-  - {fileID: 13769913}
-  - {fileID: 541900537256787482}
   _backButton: {fileID: 2146511743}
 --- !u!114 &8351174229451105923
 MonoBehaviour:
