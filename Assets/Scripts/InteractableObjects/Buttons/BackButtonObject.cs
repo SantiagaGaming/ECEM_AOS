@@ -9,6 +9,11 @@ public class BackButtonObject : BaseButton
     public UnityAction BackButtonClickEvent;
     [SerializeField] private string _locationBackName;
     [SerializeField] private BackTriggerObject _backTriggerObj;
+    protected override void Start()
+    {
+        base.Start();
+        BackButtonsHandler.Instance.AddBackButton(this);
+    }
     public override void OnClicked(InteractHand interactHand)
     {
         base.OnClicked(interactHand);

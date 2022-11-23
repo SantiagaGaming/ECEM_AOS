@@ -6,8 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class BaseButton : BaseObject
 {
-
-    public override void OnClicked(InteractHand interactHand)
+     public override void OnClicked(InteractHand interactHand)
     {
         base.OnClicked(interactHand);
     }

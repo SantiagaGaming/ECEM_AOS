@@ -206,11 +206,6 @@ MonoBehaviour:
   - {fileID: 2379349507007222212}
   helperPos: {fileID: 1481317069}
   helperName: "\u0422\u043E\u043F\u043B\u0438\u0432\u043D\u044B\u0435 \u0411\u0430\u043A\u0438"
-  _objects:
-  - {fileID: 841636545}
-  - {fileID: 939958620}
-  - {fileID: 297895612}
-  - {fileID: 1083193084}
   _backButton: {fileID: 939958620}
 --- !u!65 &188197922
 BoxCollider:
@@ -546,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: dga_aggregates
+  <ObjectId>k__BackingField: dga_control_light
   _button: 0
   _place: 0
 --- !u!65 &324244470
@@ -818,6 +813,7 @@ GameObject:
   - component: {fileID: 540120326}
   - component: {fileID: 540120327}
   - component: {fileID: 540120325}
+  - component: {fileID: 540120328}
   m_Layer: 0
   m_Name: dga_aggregates
   m_TagString: Untagged
@@ -876,6 +872,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.59944916, y: 0.86922026, z: 1.8476791}
   m_Center: {x: -8.289219, y: -5.2397594, z: 16.575018}
+--- !u!114 &540120328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540120324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: dga_aggregates
+  _button: 0
+  _place: 0
 --- !u!1 &609319732
 GameObject:
   m_ObjectHideFlags: 0
@@ -5462,7 +5473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: dga_control
+  <ObjectId>k__BackingField: t_dga_t_dga_control
   _button: 0
   _place: 1
 --- !u!114 &2379349507480784579
@@ -5513,11 +5524,6 @@ MonoBehaviour:
   - {fileID: 2379349507480784579}
   helperPos: {fileID: 4654995483561503531}
   helperName: "\u041A\u043E\u043D\u0442\u0440\u043E\u043B\u044C"
-  _objects:
-  - {fileID: 324244467}
-  - {fileID: 1398820138}
-  - {fileID: 1788031836}
-  - {fileID: 1280452779}
   _backButton: {fileID: 1398820138}
 --- !u!1 &2379349508294430212
 GameObject:
@@ -9676,11 +9682,6 @@ MonoBehaviour:
   - {fileID: 4654995484306390873}
   helperPos: {fileID: 4654995483591591904}
   helperName: "\u0414\u0413\u0410"
-  _objects:
-  - {fileID: 540120325}
-  - {fileID: 8136799454416066051}
-  - {fileID: 8136799453869359815}
-  - {fileID: 8136799455390928113}
   _backButton: {fileID: 8136799454416066051}
 --- !u!114 &4654995484873351400
 MonoBehaviour:

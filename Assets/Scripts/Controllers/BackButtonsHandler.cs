@@ -6,6 +6,7 @@ public class BackButtonsHandler : MonoBehaviour
 {
     public static BackButtonsHandler Instance;
     private BackButtonObject _currentBackButton;
+    private List<BackButtonObject> _backButtons = new List<BackButtonObject>();
     public string ActionToInvoke { get; set; }
     private void Awake()
     {
@@ -26,6 +27,17 @@ public class BackButtonsHandler : MonoBehaviour
     {
         if (_currentBackButton != null)
             _currentBackButton.EnableButton(value);
+    }
+    public void AddBackButton(BackButtonObject backButton)
+    {
+        _backButtons.Add(backButton);
+    }
+    public void DeactivateAllBackButtons()
+    {
+        foreach (var item in _backButtons)
+        {
+            item.EnableButton(false);
+        }
     }
 
 }

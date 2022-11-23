@@ -1598,6 +1598,7 @@ GameObject:
   - component: {fileID: 1767704678}
   - component: {fileID: 1767704679}
   - component: {fileID: 1767704677}
+  - component: {fileID: 1767704680}
   m_Layer: 0
   m_Name: feed_rsch_light
   m_TagString: Untagged
@@ -1674,6 +1675,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.24485922, z: 0.92063797}
   m_Center: {x: 0, y: 0.2915399, z: -0.039681017}
+--- !u!114 &1767704680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767704676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_rsch_light
+  _button: 0
+  _place: 0
 --- !u!1 &1836581461
 GameObject:
   m_ObjectHideFlags: 0
@@ -15840,11 +15856,6 @@ MonoBehaviour:
   - {fileID: 3552296836049630163}
   helperPos: {fileID: 7675993635098632970}
   helperName: 
-  _objects:
-  - {fileID: 712661479}
-  - {fileID: 477979615}
-  - {fileID: 862827485}
-  - {fileID: 1767704677}
   _backButton: {fileID: 712661479}
 --- !u!114 &3552296836049630163
 MonoBehaviour:
@@ -36325,11 +36336,6 @@ MonoBehaviour:
   - {fileID: 7675993636087912037}
   helperPos: {fileID: 7675993635479617815}
   helperName: "\u0428\u043A\u0430\u0444"
-  _objects:
-  - {fileID: 7675993636190305527}
-  - {fileID: 4054688451457025790}
-  - {fileID: 4054688449822691898}
-  - {fileID: 4054688450750536716}
   _backButton: {fileID: 4054688451457025790}
 --- !u!1 &8434470880568433066
 GameObject:

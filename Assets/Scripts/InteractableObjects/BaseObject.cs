@@ -88,7 +88,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
             return GetComponent<AosObjectBase>().ObjectId;
         else return null;
     }
-    public void EnableObject(bool value)
+    public virtual void EnableObject(bool value)
     {
         if (GetComponent<Collider>() != null)
             GetComponent<Collider>().enabled = value;
