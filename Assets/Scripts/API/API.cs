@@ -126,6 +126,10 @@ public class API : AosObjectBase
     {
         navAction.Invoke(value);
     }
+    public void ExitEvent()
+    {
+        navAction.Invoke("exit");
+    }
 
 
 }

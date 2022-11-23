@@ -21,6 +21,7 @@ public class StartAPI : API
 
     public override void showWelcome(JObject info, JObject nav)
     {
+        PlayerPrefs.SetString("Teleport", "true");
         _menuScreenChanger.EnableScreen("Info");
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());

@@ -51,6 +51,7 @@ public class MenuAPI : API
     }
     public override void showResult(JObject info, JObject nav)
     {
+        PlayerPrefs.SetString("Teleport", "false");
         _menuScreenChanger.EnableScreen("info");
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());

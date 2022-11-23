@@ -30,7 +30,9 @@ public class SceneChanger : MonoBehaviour
     }
     public void OnTeleportToLocation(string locationName)
     {
-           if (locationName == "dsp" ||
+        if(PlayerPrefs.GetString("Teleport")!="false")
+        {
+            if (locationName == "dsp" ||
             locationName == "relay" ||
             locationName == "cross" ||
             locationName == "dga" ||
@@ -40,29 +42,31 @@ public class SceneChanger : MonoBehaviour
             locationName == "hall2" ||
             locationName == "shn" ||
              locationName == "uvk")
-        {
-            PrevousSceneName = _sceneName;
-            PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);
-            if (PrevousSceneName != locationName)
+            {
+                PrevousSceneName = _sceneName;
+                PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);
+                if (PrevousSceneName != locationName)
+                    SceneManager.LoadScene(locationName);
+            }
+            else if (locationName == "menu" &&
+            _sceneName != "start" &&
+            _sceneName != "menu")
+            {
+                Debug.Log("PlayerPrefs is not  menu " + PlayerPrefs.GetString("PrevousSceneName"));
                 SceneManager.LoadScene(locationName);
+            }
+            else if (locationName == "menu" &&
+            _sceneName != "start" &&
+             _sceneName == "menu")
+            {
+                SceneManager.LoadScene(PlayerPrefs.GetString("CurrentSceneName"));
+            }
+            else
+            {
+                API api = FindObjectOfType<API>();
+                api.OnInvokeEndTween(locationName);
+            }
         }
-        else if (locationName == "menu" &&
-        _sceneName != "start" &&
-        _sceneName != "menu")
-        {
-            Debug.Log("PlayerPrefs is not  menu " + PlayerPrefs.GetString("PrevousSceneName"));
-            SceneManager.LoadScene(locationName);
-        }
-        else if(locationName == "menu" &&
-        _sceneName != "start" &&
-         _sceneName == "menu")
-        {
-            SceneManager.LoadScene(PlayerPrefs.GetString("CurrentSceneName"));
-        }
-           else
-        {
-            API api = FindObjectOfType<API>();
-            api.OnInvokeEndTween(locationName);
-        }
+           
     }
 }
