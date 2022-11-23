@@ -17,7 +17,6 @@ public class PlaceObject : BaseObject
         {
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
-        else GetComponent<Collider>().enabled= false;
             BackButtonsHandler.Instance.SetBackButtonObject(_backButton);
             sceneAosObject.InvokeOnClick();
     }
@@ -38,7 +37,9 @@ public class PlaceObject : BaseObject
         {
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
-
+        BackButtonObject tempBackButton = BackButtonsHandler.Instance.GetCurrentBackButton();
+        if(tempBackButton!=null)
+        tempBackButton.EnableButton(false);
     }
 
 }

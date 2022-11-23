@@ -31,7 +31,6 @@ public class SP6AOSAnimation : AosObjectBase
     public void PlayMinusAnim()
     {
         _anim.SetTrigger("minusAnim");
-        Debug.Log("Played");
     }
 
 }
