@@ -8278,7 +8278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a0d5a8810ad144899ab182407103ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: 'sp6_anim '
+  <ObjectId>k__BackingField: sp6_anim
 --- !u!1 &2303170520953462403
 GameObject:
   m_ObjectHideFlags: 0
