@@ -33,5 +33,13 @@ public class TriggerObject : BaseObject
         {
             sceneAosObject.InvokeOnClick();
         }
+        }
+    private void OnTriggerExit(Collider col)
+    {
+            var aosObject = col.GetComponentInParent<AosObjectBase>();
+            if (!aosObject)
+                return;
+            if (_exitObject != null)
+                _exitObject.InvokeOnClick();
     }
 }
