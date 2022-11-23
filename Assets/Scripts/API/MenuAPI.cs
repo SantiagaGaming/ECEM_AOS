@@ -15,7 +15,7 @@ public class MenuAPI : API
         WebSocketWrapper.Instance.OnClientConnected += OnInvokeEndTween;
         if (_nextButton != null)
             _nextButton.NextButtonClickedEvent += OnNextButtonClicked;
-        LocationName = "Start";
+        LocationName = "Menu";
         OnInvokeEndTween();
     }
 
@@ -37,6 +37,7 @@ public class MenuAPI : API
     }
     public override void showMenu(JObject faultInfo, JObject exitInfo, JObject resons)
     {
+        _menuScreenChanger.EnableScreen("Menu");
         _startEndScreenView.SetHeaderText(faultInfo.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(faultInfo.SelectToken("text").ToString());
         _startEndScreenView.SetExitSureText(exitInfo.SelectToken("quest").ToString());
@@ -52,15 +53,15 @@ public class MenuAPI : API
     public override void showResult(JObject info, JObject nav)
     {
         PlayerPrefs.SetString("Teleport", "false");
-        _menuScreenChanger.EnableScreen("info");
+        _menuScreenChanger.EnableScreen("Info");
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
-        _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
+        _startEndScreenView.SetCommentText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("text").ToString()));
         _nextButton.ChangeActionOnButton(nav.SelectToken("ok").SelectToken("action").ToString());
     }
     public override void showMessage(JObject info, JObject nav)
     {
-        _menuScreenChanger.EnableScreen("info");
-        _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
+        _menuScreenChanger.EnableScreen("Info");
+        _startEndScreenView.SetHeaderText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("name").ToString()));
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
     }
 

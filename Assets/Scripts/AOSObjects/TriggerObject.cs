@@ -7,8 +7,7 @@ using UnityEngine;
 
 public class TriggerObject : MonoBehaviour
 {
-    [SerializeField] private string _locationName;
-    [SerializeField] private SceneAosObject _exitObject;
+    [SerializeField] private GameObject _anotherCollider;
     private SceneAosObject sceneAosObject;
         private void OnTriggerEnter(Collider col)
         {
@@ -19,14 +18,8 @@ public class TriggerObject : MonoBehaviour
         if (sceneAosObject != null)
         {
             sceneAosObject.InvokeOnClick();
+            _anotherCollider.GetComponent<Collider>().enabled = true;
+            GetComponent<Collider>().enabled = false;
         }
         }
-    private void OnTriggerExit(Collider col)
-    {
-            var aosObject = col.GetComponentInParent<AosObjectBase>();
-            if (!aosObject)
-                return;
-            if (_exitObject != null)
-                _exitObject.InvokeOnClick();
-    }
 }

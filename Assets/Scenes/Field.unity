@@ -2656,6 +2656,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1285187612}
+  - component: {fileID: 1285187615}
+  - component: {fileID: 1285187614}
   - component: {fileID: 1285187613}
   m_Layer: 0
   m_Name: t_field_pointer_t_field
@@ -2671,9 +2673,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285187611}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.23, y: 2.1804383, z: -9.554054}
+  m_LocalScale: {x: 20, y: 5, z: 20}
   m_Children: []
   m_Father: {fileID: 516391520}
   m_RootOrder: 6
@@ -2693,6 +2695,32 @@ MonoBehaviour:
   <ObjectId>k__BackingField: t_field_pointer_t_field
   _button: 0
   _place: 0
+--- !u!114 &1285187614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285187611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35d91a623d1feb41bee6d271fba1ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anotherCollider: {fileID: 792696725926117554}
+--- !u!65 &1285187615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285187611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4665594, y: 1.5838972, z: 0.6064767}
+  m_Center: {x: -0.48171654, y: -0.29194736, z: -0.027426159}
 --- !u!1 &1306114267
 GameObject:
   m_ObjectHideFlags: 0
@@ -4755,12 +4783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35d91a623d1feb41bee6d271fba1ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: 0
-  outlineObjects: []
-  helperPos: {fileID: 0}
-  helperName: 
-  _locationName: 
-  _exitObject: {fileID: 1285187613}
+  _anotherCollider: {fileID: 1285187611}
 --- !u!1 &809893558437921889
 GameObject:
   m_ObjectHideFlags: 0
