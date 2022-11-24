@@ -16,6 +16,7 @@ public class FartukAnimation : BaseAnimationObject
     }
     private IEnumerator RoofRotator(bool value)
     {
+        AOSColliderActivator.Instance.CanTouch = false;
         CanRotate = false;
         if (value)
         {
@@ -41,6 +42,7 @@ public class FartukAnimation : BaseAnimationObject
         }
         CanRotate = true;
         IsClosed = IsClosed ? false : true;
+        AOSColliderActivator.Instance.CanTouch = true;
 
     }
 }

@@ -359,8 +359,8 @@ GameObject:
   - component: {fileID: 3203245720023688328}
   - component: {fileID: 3203245720023688329}
   - component: {fileID: 3203245720023688342}
-  - component: {fileID: 3203245720023688343}
   - component: {fileID: 3203245720023688340}
+  - component: {fileID: 6600910299484879897}
   m_Layer: 0
   m_Name: PenButton
   m_TagString: Untagged
@@ -447,23 +447,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.5600007, z: 0.20000005}
   m_Center: {x: 0, y: -0.000091552734, z: 0.0000038146973}
---- !u!114 &3203245720023688343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3203245720023688341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59a8f35c46dcda45b04e286d25ca193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: 1
-  outlineObjects: []
-  helperPos: {fileID: 3203245719518001580}
-  helperName: 
-  actionText: 
 --- !u!114 &3203245720023688340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +459,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6600910299484879897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3203245720023688341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c48b586d7e1785940b16e18a7b81f31e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  outlineObjects: []
+  helperPos: {fileID: 3203245719518001580}
+  helperName: 
+  actionText: 
 --- !u!1 &8191790307632209108
 GameObject:
   m_ObjectHideFlags: 0

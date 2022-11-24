@@ -21,8 +21,8 @@ public class MoveblePlate : RepairableObject
     {
         if (canMove)
         {
+            AOSColliderActivator.Instance.CanTouch = false;
             canMove = false;
-            GetComponent<Collider>().enabled = false;
             MovingButtonsController.Instance.HideAllButtons();
             int screwZRot = 0;
             if (!_mbko)
@@ -108,8 +108,8 @@ public class MoveblePlate : RepairableObject
             }
             _screwDown.SetActive(false);
             canMove = true;
-            GetComponent<Collider>().enabled = true;
             LampBlinkController.Instance.StartBlink();
+            AOSColliderActivator.Instance.CanTouch = true;
         }
     }
 

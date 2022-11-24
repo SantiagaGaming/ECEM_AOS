@@ -16,6 +16,8 @@ namespace AosSdk.Core.PlayerModule.Pointer
 
         private int _screenWidth;
 
+        private bool _isInFocus;
+
         private PointerState PointerState
         {
             set
@@ -42,6 +44,11 @@ namespace AosSdk.Core.PlayerModule.Pointer
             UpdateCrossHairSize();
         }
 
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            _isInFocus = hasFocus;
+        }
+
         private void UpdateCrossHairSize()
         {
             var size = (float) _screenWidth / 100 * Launcher.Instance.SdkSettings.crossHairSizeMultiplier;
@@ -62,6 +69,11 @@ namespace AosSdk.Core.PlayerModule.Pointer
 
         private void Update()
         {
+            if (!_isInFocus)
+            {
+                return;
+            }
+
             if (!raycaster.TryGetInteractable(Launcher.Instance.SdkSettings.desktopInteractDistance, out _, out _, out var isInteractable) ||
                 isInteractable == null)
             {

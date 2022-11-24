@@ -28,15 +28,15 @@ namespace AosSdk.Core.PlayerModule.Pointer
 
         private void Start()
         {
-            SceneManager.sceneUnloaded += SceneManagerOnsceneUnloaded;
+            SceneManager.sceneUnloaded += SceneManagerOnSceneUnloaded;
         }
 
         private void OnDisable()
         {
-            SceneManager.sceneUnloaded -= SceneManagerOnsceneUnloaded;
+            SceneManager.sceneUnloaded -= SceneManagerOnSceneUnloaded;
         }
 
-        private void SceneManagerOnsceneUnloaded(Scene arg0)
+        private void SceneManagerOnSceneUnloaded(Scene arg0)
         {
             _currentClickAble = null;
             _currentHoverAble = null;

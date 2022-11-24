@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/field.unity
     guid: bc4041c1da58f404bbd9089b4ba2dd10
   - enabled: 1
-    path: Assets/Scenes/hall1.unity
-    guid: 2d80059f768ec394486d92d4ca5c3471
-  - enabled: 1
     path: Assets/Scenes/relay.unity
     guid: 2d666f2f5d92fbc4288e43e9ec52de18
   - enabled: 1
@@ -35,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/uvk.unity
     guid: 64aee3c905d47974ab0f461efa9fcbac
+  - enabled: 1
+    path: Assets/Scenes/hall1.unity
+    guid: 2d80059f768ec394486d92d4ca5c3471
   - enabled: 1
     path: Assets/Scenes/hall2.unity
     guid: 73d504ee0251e7d4985be7f7b8e61cd1

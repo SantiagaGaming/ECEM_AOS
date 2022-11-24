@@ -20,6 +20,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
 
     private IEnumerator RotateDoor(bool value)
     {
+        AOSColliderActivator.Instance.CanTouch = false;
         DoorRotateEvent?.Invoke(true);
         GetComponent<Collider>().enabled = false;
         CanRotate = false;
@@ -120,6 +121,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
         IsClosed = IsClosed ? false : true;
         DoorRotateEvent?.Invoke(false);
         CanRotate = true;
- 
+        AOSColliderActivator.Instance.CanTouch = true;
+
     }
 }

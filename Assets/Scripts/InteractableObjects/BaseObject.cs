@@ -38,44 +38,60 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
 
     public virtual void OnClicked(InteractHand interactHand)
     {
-        sceneAosObject = GetComponent<SceneAosObject>();
-        if (sceneAosObject != null && !AOSColliderActivator.Instance.DevelopMode())
+        if(AOSColliderActivator.Instance.CanTouch)
         {
-            sceneAosObject.InvokeOnClick();
-            MovingButtonsController.Instance.ObjectName = sceneAosObject.ObjectId;
+            sceneAosObject = GetComponent<SceneAosObject>();
+            if (sceneAosObject != null && !AOSColliderActivator.Instance.DevelopMode())
+            {
+                sceneAosObject.InvokeOnClick();
+                MovingButtonsController.Instance.ObjectName = sceneAosObject.ObjectId;
+            }
         }
+   
 
     }
     public virtual void OnHoverIn(InteractHand interactHand)
     {
-        if (helperPos != null)
-            canvasHelper.ShowTextHelper(helperName, helperPos);
-        if (outlineObjects != null)
-            foreach (var obj in outlineObjects)
-            {
-                if(obj!=null)
+        if(AOSColliderActivator.Instance.CanTouch)
+        {
+            if (helperPos != null)
+                canvasHelper.ShowTextHelper(helperName, helperPos);
+            if (outlineObjects != null)
+                foreach (var obj in outlineObjects)
                 {
-                    obj.enabled = true;
-                    obj.OutlineWidth = 3;
+                    if (obj != null)
+                    {
+                        obj.enabled = true;
+                        obj.OutlineWidth = 3;
+                    }
+
                 }
-                
-            }
+        }
+        else canvasHelper.HidetextHelper();
+
     }
     public virtual void OnHoverOut(InteractHand interactHand)
     {
-        if (helperPos != null && canvasHelper!=null)
-            canvasHelper.HidetextHelper();
-        if (outlineObjects != null)
-            foreach (var obj in outlineObjects)
-            {
-                if (obj != null)
+        if(AOSColliderActivator.Instance.CanTouch)
+        {
+            if (helperPos != null && canvasHelper != null)
+                canvasHelper.HidetextHelper();
+            if (outlineObjects != null)
+                foreach (var obj in outlineObjects)
                 {
-                    obj.enabled = false;
-                    obj.OutlineWidth = 0;
+                    if (obj != null)
+                    {
+                        obj.enabled = false;
+                        obj.OutlineWidth = 0;
+
+                    }
 
                 }
-               
-            }
+        }
+        else
+        {
+            canvasHelper.HidetextHelper();
+        }
 
     }
     public void SetHelperName(string value)

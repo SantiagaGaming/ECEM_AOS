@@ -17,18 +17,19 @@ public class BackButtonObject : BaseButton
     public override void OnClicked(InteractHand interactHand)
     {
         base.OnClicked(interactHand);
-        BackButtonClickEvent?.Invoke();
-        MovingButtonsController.Instance.HideAllButtons();
-        API api = FindObjectOfType<API>();
-        api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
-        //ShupController shup = FindObjectOfType<ShupController>();
-        //shup.ResetShupPosition();
+        if(AOSColliderActivator.Instance.CanTouch)
+        {
+            BackButtonClickEvent?.Invoke();
+            MovingButtonsController.Instance.HideAllButtons();
+            API api = FindObjectOfType<API>();
+            api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
+            //ShupController shup = FindObjectOfType<ShupController>();
+            //shup.ResetShupPosition();
+            BackButtonsHandler.Instance.SetBackButtonObject(null);
+            if (_backTriggerObj != null)
+                _backTriggerObj.EnableBackTriggerObject(false);
+        }
 
-        AOSColliderActivator.Instance.CanTouch = true;
-
-        BackButtonsHandler.Instance.SetBackButtonObject(null);
-        if(_backTriggerObj!=null)
-        _backTriggerObj.EnableBackTriggerObject(false);
     }
     public override void EnableButton(bool value)
     {
@@ -38,7 +39,5 @@ public class BackButtonObject : BaseButton
             _backTriggerObj.EnableBackTriggerObject(true);
             _backTriggerObj.SetButtonInvoke(this);
         }
-
-
     }
 }

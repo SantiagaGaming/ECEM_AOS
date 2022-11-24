@@ -18,6 +18,7 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
 
     private IEnumerator ShowNoteBook(bool value)
     {
+        AOSColliderActivator.Instance.CanTouch = false;
         _canRotate = false;
         if (value)
         {
@@ -57,5 +58,6 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
         }
         _isClosed = _isClosed ? false : true;
         _canRotate = true;
+        AOSColliderActivator.Instance.CanTouch = true;
     }
 }

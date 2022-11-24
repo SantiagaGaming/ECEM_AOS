@@ -68,14 +68,15 @@ public class ActionAPI : API
     }
     public override void showPoints(string info, JArray data)
     {
+        MovingButtonsController.Instance.HideAllButtons();
         foreach (JObject item in data)
         {
             if (item != null)
             {
-
+          
                 if (item.SelectToken("tool") != null && item.SelectToken("name") != null)
                 {
-                    MovingButtonsController.Instance.HideAllButtons();
+                 
                     if (item.SelectToken("tool").ToString() == "eye")
                     {
                         MovingButtonsController.Instance.ShowWatchButton();
@@ -97,7 +98,7 @@ public class ActionAPI : API
                         MovingButtonsController.Instance.ShowHand2Button();
                         MovingButtonsController.Instance.SetHand2ButtonText(item.SelectToken("name").ToString());
                     }
-                    if (item.SelectToken("tool").ToString() == "repair")
+                    if (item.SelectToken("tool").ToString() == "tool")
                     {
                         MovingButtonsController.Instance.ShowRepairButton();
                         MovingButtonsController.Instance.SetRepairButtonText(item.SelectToken("name").ToString());
