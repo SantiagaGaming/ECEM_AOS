@@ -20,7 +20,7 @@ public class SchemeButton : BaseButton
     public override void OnClicked(InteractHand interactHand)
     {
         base.OnClicked(interactHand);
-        if (_schemeChanger.GetCondition())
+        if (_schemeChanger.isActiveAndEnabled)
         {
             _schemeChanger.EnableImage(false);
         }

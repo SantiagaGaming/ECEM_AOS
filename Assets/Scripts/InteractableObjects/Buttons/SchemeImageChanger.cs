@@ -8,10 +8,16 @@ using UnityEngine.UI;
 
 public class SchemeImageChanger : MonoBehaviour, IClickAble
 {
-    [SerializeField] private Sprite[] _sprites;
+    private SchemeSpritesController _schemeSprites;
     private int _curSprite;
     public bool IsClickable { get; set; } = true;
     private bool _active = false;
+    private void Start()
+    {
+        _schemeSprites = FindObjectOfType<SchemeSpritesController>();
+        GetComponent<SpriteRenderer>().sprite = _schemeSprites.Sprites[_curSprite];
+      transform.localScale = new Vector3(0.02f, 0.02f, 0.2f);
+    }
     public virtual void OnClicked(InteractHand interactHand)
     {
         ChangeSprite();
@@ -19,9 +25,9 @@ public class SchemeImageChanger : MonoBehaviour, IClickAble
     private void ChangeSprite()
     {
         _curSprite++;
-        if (_curSprite > _sprites.Length - 1)
+        if (_curSprite > _schemeSprites.Sprites.Length - 1)
             _curSprite = 0;
-        GetComponent<SpriteRenderer>().sprite = _sprites[_curSprite];
+        GetComponent<SpriteRenderer>().sprite = _schemeSprites.Sprites[_curSprite];
     }
     public void EnableImage(bool value)
     {
