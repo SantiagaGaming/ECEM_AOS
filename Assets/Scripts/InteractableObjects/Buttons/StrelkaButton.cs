@@ -21,15 +21,12 @@ public class StrelkaButton : BaseButton
         Diet diet = FindObjectOfType<Diet>();
         if(diet!=null)
         {
-            sceneAosObject = GetComponent<SceneAosObject>();
             if (_currentSide == Side.Plus)
-                sceneAosObject.ObjectId = diet.GetPlusID();
+                diet.GetPlusID().InvokeOnClick();
             else if (_currentSide == Side.Minus)
-                sceneAosObject.ObjectId = diet.GetMinusID();
+                diet.GetMinusID().InvokeOnClick();
             else if (_currentSide == Side.Indication)
-                sceneAosObject.ObjectId = diet.GetIndicationID();
-            sceneAosObject.InvokeOnClick();
-            Debug.Log(sceneAosObject.ObjectId);
+                diet.GetIndicationID().InvokeOnClick();
         }
 
 

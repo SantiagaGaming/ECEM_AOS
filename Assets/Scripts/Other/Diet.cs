@@ -12,10 +12,11 @@ public class Diet : MonoBehaviour
     [SerializeField] private StrelkaButton _strelkaMinus;
     [SerializeField] private StrelkaButton _strelkaPlus;
     [SerializeField] private StrelkaButton _indication;
+    [SerializeField] private RadioButtonsContainer _radioContainer;
 
-    private string _minusID;
-    private string _plusID;
-    private string _indicationID;
+    private SceneAosObject _minusID;
+    private SceneAosObject _plusID;
+    private SceneAosObject _indicationID;
 
     public static Diet Instance;
     private void Awake()
@@ -97,7 +98,7 @@ public class Diet : MonoBehaviour
             button == "d_field_pointed_boot_radio_c3")
         {
 
-            _plusID = button;
+            _plusID = _radioContainer.GetRadioButton(button);
             _buttonPlus.SetActive(true);
 
         }
@@ -125,7 +126,7 @@ public class Diet : MonoBehaviour
             )
         {
 
-            _minusID= button;
+            _minusID = _radioContainer.GetRadioButton(button);
             _buttonMinus.SetActive(true);
 
         }
@@ -152,7 +153,7 @@ public class Diet : MonoBehaviour
             button == "d_field_pointed_boot_radio_c1"
      )
         {
-            _indicationID = button;
+            _indicationID = _radioContainer.GetRadioButton(button);
             _buttonIndication.SetActive(true);
         }
         else if (button == null)
@@ -163,15 +164,15 @@ public class Diet : MonoBehaviour
         }
 
     }
-public string GetPlusID()
+public SceneAosObject GetPlusID()
     {
         return _plusID;
     }
-    public string GetMinusID()
+    public SceneAosObject GetMinusID()
     {
         return _minusID;
     }
-    public string GetIndicationID()
+    public SceneAosObject GetIndicationID()
     {
         return _indicationID;
     }

@@ -5,20 +5,12 @@ using UnityEngine;
 
 public class RadioButtonsContainer : MonoBehaviour
 {
-    [SerializeField] private AOSRadio[] _buttons;
-    public AOSRadio GetButtonPlus(string locationName)
+    [SerializeField] private SceneAosObject[] _radioButtons;
+    public SceneAosObject GetRadioButton(string name)
     {
-       var Button =  _buttons.FirstOrDefault(b => (b.Location() == locationName) && b.Side());
-        if (Button != null)
-            return Button;
-        else return null;
-    }
-
-    public AOSRadio GetButtonMinus(string locationName)
-    {
-        var Button = _buttons.FirstOrDefault(b => (b.Location() == locationName) && !b.Side());
-        if (Button != null)
-            return Button;
-        else return null;
+        SceneAosObject obj = _radioButtons.FirstOrDefault(b => b.ObjectId == name);
+        if (obj != null)
+            return obj;
+        return null;
     }
 }
