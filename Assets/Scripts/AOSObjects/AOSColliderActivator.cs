@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class AOSColliderActivator : MonoBehaviour
 {
