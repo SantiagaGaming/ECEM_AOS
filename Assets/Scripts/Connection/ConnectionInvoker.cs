@@ -8,10 +8,9 @@ public class ConnectionInvoker : MonoBehaviour
     private WebSocketWrapper _wrapper;
     [SerializeField] private ConnectionChecker _connectionChecker;
 
-    private void Awake()
+    private void Start()
     {
-        _wrapper = FindObjectOfType<WebSocketWrapper>();
-        _wrapper.OnClientConnected += OnReadyToConnect;
+        StartCoroutine(ConnectionDelay());
     }
     private void OnEnable()
     {
@@ -25,4 +24,11 @@ public class ConnectionInvoker : MonoBehaviour
     {
         _connectionChecker.OnConnect();
     }
+    private IEnumerator ConnectionDelay()
+    {
+        yield return new WaitForSeconds(1);
+        _wrapper = FindObjectOfType<WebSocketWrapper>();
+        _wrapper.OnClientConnected += OnReadyToConnect;
+    }
+
 }

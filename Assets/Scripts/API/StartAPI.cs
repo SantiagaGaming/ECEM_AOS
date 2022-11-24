@@ -12,11 +12,9 @@ public class StartAPI : API
     [SerializeField] private NextButton _nextButton;
     protected override void Init()
     {
-        WebSocketWrapper.Instance.OnClientConnected += OnInvokeEndTween;
         if (_nextButton != null)
             _nextButton.NextButtonClickedEvent += OnNextButtonClicked;
         LocationName = "Start";
-        OnInvokeEndTween();
     }
 
     public override void showWelcome(JObject info, JObject nav)

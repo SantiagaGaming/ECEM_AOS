@@ -23,7 +23,7 @@ public class API : AosObjectBase
     public event AosEventHandlerWithAttribute OnReason;
     [AosEvent(name: "Открыть меню")]
     public event AosEventHandler OnMenu;
-    protected string LocationName;
+    public string LocationName;
     protected void Start()
     {
         Init();

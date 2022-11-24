@@ -16,7 +16,7 @@ public class PushableObject : MonoBehaviour
         _canPush = false;
         GetComponent<Collider>().enabled = false;
         int x = 0;
-            while (x < 10)
+            while (x < 8)
             {
             if(!value)
                 transform.position += new Vector3(-0.001f, 0, 0);
