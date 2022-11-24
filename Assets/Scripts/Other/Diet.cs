@@ -1,3 +1,4 @@
+using AosSdk.Core.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,10 @@ public class Diet : MonoBehaviour
     [SerializeField] private StrelkaButton _strelkaPlus;
     [SerializeField] private StrelkaButton _indication;
 
-    public bool Side;
+    private string _minusID;
+    private string _plusID;
+    private string _indicationID;
+
     public static Diet Instance;
     private void Awake()
     {
@@ -69,7 +73,7 @@ public class Diet : MonoBehaviour
     }
     public void EnablePlusOrMinus(string button)
     {
-
+        Debug.Log(button);
         if (button == "d_dsp_workplace_radio_c3" ||
            button == "d_dsp_shvu_radio_c3" ||
             button == "d_uvk_cpu_radio_c3" ||
@@ -93,7 +97,9 @@ public class Diet : MonoBehaviour
             button == "d_field_pointed_boot_radio_c3")
         {
 
+            _plusID = button;
             _buttonPlus.SetActive(true);
+
         }
         if (button == "d_dsp_workplace_radio_c2" ||
            button == "d_dsp_shvu_radio_c2" ||
@@ -119,7 +125,9 @@ public class Diet : MonoBehaviour
             )
         {
 
+            _minusID= button;
             _buttonMinus.SetActive(true);
+
         }
         if (button == "d_dsp_workplace_radio_c1" ||
     button == "d_dsp_shvu_radio_c1" ||
@@ -144,6 +152,7 @@ public class Diet : MonoBehaviour
             button == "d_field_pointed_boot_radio_c1"
      )
         {
+            _indicationID = button;
             _buttonIndication.SetActive(true);
         }
         else if (button == null)
@@ -154,4 +163,17 @@ public class Diet : MonoBehaviour
         }
 
     }
+public string GetPlusID()
+    {
+        return _plusID;
+    }
+    public string GetMinusID()
+    {
+        return _minusID;
+    }
+    public string GetIndicationID()
+    {
+        return _indicationID;
+    }
+
 }

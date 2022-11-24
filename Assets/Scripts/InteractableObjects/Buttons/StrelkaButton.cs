@@ -4,26 +4,34 @@ using AosSdk.Core.Utils;
 using AosSdk.Core.PlayerModule.Pointer;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
+
 public class StrelkaButton : BaseButton
 {
-    [SerializeField] private bool _side;
+    [SerializeField] private Side _currentSide;
+    private enum Side
+    {
+        Plus,
+        Minus,
+        Indication
+
+    }
     public override void OnClicked(InteractHand interactHand)
     {
-        StrelkaAOS strelka = FindObjectOfType<StrelkaAOS>();
-        RadioButtonsContainer radioButtonsContainer = FindObjectOfType<RadioButtonsContainer>();
-        if (_side)
+        Diet diet = FindObjectOfType<Diet>();
+        if(diet!=null)
         {
-            strelka.TrySwitchStrelkaPlus();
-            AOSRadio button = radioButtonsContainer.GetButtonPlus(PlayerPrefs.GetString("Location"));
-            button.InvokeOnClick();
+            sceneAosObject = GetComponent<SceneAosObject>();
+            if (_currentSide == Side.Plus)
+                sceneAosObject.ObjectId = diet.GetPlusID();
+            else if (_currentSide == Side.Minus)
+                sceneAosObject.ObjectId = diet.GetMinusID();
+            else if (_currentSide == Side.Indication)
+                sceneAosObject.ObjectId = diet.GetIndicationID();
+            sceneAosObject.InvokeOnClick();
+            Debug.Log(sceneAosObject.ObjectId);
         }
 
-        else
-        {
-            strelka.TrySwitchStrelkaMinus();
-            AOSRadio button = radioButtonsContainer.GetButtonMinus(PlayerPrefs.GetString("Location"));
-            button.InvokeOnClick();
-        }
 
     }
 }

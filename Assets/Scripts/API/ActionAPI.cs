@@ -54,13 +54,13 @@ public class ActionAPI : API
             var temp = item.SelectToken("points");
             if (temp != null)
             {
-                //Diet diet = FindObjectOfType<Diet>();
-                //diet.EnablePlusOrMinus(null);
+                Diet diet = FindObjectOfType<Diet>();
+                diet.EnablePlusOrMinus(null);
                 if (temp is JArray)
                 {
                     foreach (var temp2 in temp)
                     {
-                        //diet.EnablePlusOrMinus(temp2.SelectToken("apiId").ToString());
+                        diet.EnablePlusOrMinus(temp2.SelectToken("apiId").ToString());
                     }
                 }
             }
@@ -114,8 +114,8 @@ public class ActionAPI : API
                     Debug.Log("Sucess");
                     string buttonName = item.SelectToken("apiId").ToString();
                     Debug.Log(item.SelectToken("apiId").ToString() + "RADIO");
-                    //Diet diet = FindObjectOfType<Diet>();
-                    //diet.EnablePlusOrMinus(buttonName);
+                    Diet diet = FindObjectOfType<Diet>();
+                    diet.EnablePlusOrMinus(buttonName);
                 }
             }
         }
