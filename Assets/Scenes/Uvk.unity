@@ -860,7 +860,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 1831301237}
   _vertical: 0
   _movingObject: {fileID: 0}
-  _pencil: 0
 --- !u!65 &186548938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2297,6 +2296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc69634cf6b3d2440a65099a1606f7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _backButton: {fileID: 0}
 --- !u!1 &978365009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,6 +4950,113 @@ Transform:
   m_Father: {fileID: 17032375}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2040011110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040011111}
+  - component: {fileID: 2040011115}
+  - component: {fileID: 2040011114}
+  - component: {fileID: 2040011113}
+  - component: {fileID: 2040011112}
+  m_Layer: 5
+  m_Name: indicator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2040011111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040011110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6697162467467134470}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00555, y: -0.0686}
+  m_SizeDelta: {x: 0.16549, y: 0.035}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2040011112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040011110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32237b0fbaddf83409b64f5c93130756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  outlineObjects: []
+  helperPos: {fileID: 0}
+  helperName: 
+  _side: 1
+--- !u!65 &2040011113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040011110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16466859, y: 0.03370317, z: 0.0029253825}
+  m_Center: {x: -0.00035135818, y: -0.00091614947, z: -0.00015326568}
+--- !u!114 &2040011114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040011110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a137b975cb2b10f4ab6c7ed7d7f8aecb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2040011115
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040011110}
+  m_CullTransparentMesh: 1
 --- !u!1 &2089521929
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,7 +5395,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349773362217}
   _vertical: 0
   _movingObject: {fileID: 0}
-  _pencil: 0
 --- !u!65 &33719333951176741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6912,7 +7018,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351120177216}
   _vertical: 0
   _movingObject: {fileID: 0}
-  _pencil: 0
 --- !u!114 &541900537256787483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8592,7 +8697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1920876299427216350
 GameObject:
   m_ObjectHideFlags: 0
@@ -10021,7 +10126,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350269069843}
   _vertical: 0
   _movingObject: {fileID: 0}
-  _pencil: 0
 --- !u!114 &3139766855990516181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14159,8 +14263,10 @@ MonoBehaviour:
   _diet: {fileID: 1898639391118679118}
   _buttonPlus: {fileID: 6697162467242887642}
   _buttonMinus: {fileID: 6697162467535823760}
+  _buttonIndication: {fileID: 0}
   _strelkaMinus: {fileID: 6697162467535823762}
   _strelkaPlus: {fileID: 6697162467242887644}
+  _indication: {fileID: 0}
   Side: 0
 --- !u!4 &6697162466649756947
 Transform:
@@ -14353,6 +14459,7 @@ RectTransform:
   m_Children:
   - {fileID: 6697162467242887643}
   - {fileID: 6697162467535823761}
+  - {fileID: 2040011111}
   m_Father: {fileID: 6697162467560623422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -21800,7 +21907,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349549632521}
   _vertical: 0
   _movingObject: {fileID: 7850148349673021629}
-  _pencil: 0
 --- !u!4 &7850148349673021631
 Transform:
   m_ObjectHideFlags: 0
@@ -23351,7 +23457,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350744635667}
   _vertical: 0
   _movingObject: {fileID: 7850148349788439201}
-  _pencil: 0
 --- !u!4 &7850148349788439203
 Transform:
   m_ObjectHideFlags: 0
@@ -24499,7 +24604,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349739334879}
   _vertical: 0
   _movingObject: {fileID: 7850148349816109256}
-  _pencil: 0
 --- !u!33 &7850148349818259074
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24840,7 +24944,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350053571214}
   _vertical: 0
   _movingObject: {fileID: 7850148349834662256}
-  _pencil: 0
 --- !u!4 &7850148349834662258
 Transform:
   m_ObjectHideFlags: 0
@@ -25697,7 +25800,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350275700029}
   _vertical: 0
   _movingObject: {fileID: 7850148349894603279}
-  _pencil: 0
 --- !u!114 &7850148349894603279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26567,7 +26669,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350232217745}
   _vertical: 0
   _movingObject: {fileID: 7850148349946418724}
-  _pencil: 0
 --- !u!4 &7850148349948329112
 Transform:
   m_ObjectHideFlags: 0
@@ -27463,7 +27564,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350595324253}
   _vertical: 0
   _movingObject: {fileID: 7850148349996018870}
-  _pencil: 0
 --- !u!23 &7850148349996126144
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27991,7 +28091,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350424287519}
   _vertical: 0
   _movingObject: {fileID: 7850148350013241465}
-  _pencil: 0
 --- !u!114 &7850148350013241465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31502,7 +31601,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351559184461}
   _vertical: 0
   _movingObject: {fileID: 7850148350215045699}
-  _pencil: 0
 --- !u!114 &7850148350215045699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31699,7 +31797,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 606693933}
   _vertical: 0
   _movingObject: {fileID: 0}
-  _pencil: 0
 --- !u!65 &7850148350219593056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32317,7 +32414,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351025905076}
   _vertical: 0
   _movingObject: {fileID: 7850148350240009681}
-  _pencil: 0
 --- !u!4 &7850148350240009683
 Transform:
   m_ObjectHideFlags: 0
@@ -32577,7 +32673,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349910440249}
   _vertical: 0
   _movingObject: {fileID: 7850148350260829987}
-  _pencil: 0
 --- !u!4 &7850148350260829997
 Transform:
   m_ObjectHideFlags: 0
@@ -32992,7 +33087,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350550673380}
   _vertical: 0
   _movingObject: {fileID: 7850148350274759812}
-  _pencil: 0
 --- !u!65 &7850148350275148881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33028,7 +33122,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349790616584}
   _vertical: 0
   _movingObject: {fileID: 7850148350275148883}
-  _pencil: 0
 --- !u!114 &7850148350275148883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34831,7 +34924,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351675218708}
   _vertical: 0
   _movingObject: {fileID: 7850148350376694015}
-  _pencil: 0
 --- !u!114 &7850148350376694015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35007,7 +35099,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349553552481}
   _vertical: 0
   _movingObject: {fileID: 7850148350387901009}
-  _pencil: 0
 --- !u!4 &7850148350387901011
 Transform:
   m_ObjectHideFlags: 0
@@ -35079,7 +35170,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349621856344}
   _vertical: 0
   _movingObject: {fileID: 7850148350397349989}
-  _pencil: 0
 --- !u!114 &7850148350397349989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35227,7 +35317,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349568287978}
   _vertical: 0
   _movingObject: {fileID: 7850148350402327714}
-  _pencil: 0
 --- !u!114 &7850148350402327714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35388,7 +35477,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350873974296}
   _vertical: 0
   _movingObject: {fileID: 7850148350403530217}
-  _pencil: 0
 --- !u!4 &7850148350403530219
 Transform:
   m_ObjectHideFlags: 0
@@ -35574,7 +35662,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351361913453}
   _vertical: 0
   _movingObject: {fileID: 7850148350406680882}
-  _pencil: 0
 --- !u!114 &7850148350406680882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36366,7 +36453,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350983627883}
   _vertical: 0
   _movingObject: {fileID: 7850148350447724673}
-  _pencil: 0
 --- !u!114 &7850148350447724673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36570,7 +36656,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351358608744}
   _vertical: 0
   _movingObject: {fileID: 7850148350458731757}
-  _pencil: 0
 --- !u!4 &7850148350458731759
 Transform:
   m_ObjectHideFlags: 0
@@ -37202,7 +37287,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350048922538}
   _vertical: 0
   _movingObject: {fileID: 7850148350504873017}
-  _pencil: 0
 --- !u!4 &7850148350504873019
 Transform:
   m_ObjectHideFlags: 0
@@ -38205,7 +38289,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350402041485}
   _vertical: 0
   _movingObject: {fileID: 7850148350610998570}
-  _pencil: 0
 --- !u!114 &7850148350610998570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38768,7 +38851,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350183030678}
   _vertical: 0
   _movingObject: {fileID: 7850148350614948711}
-  _pencil: 0
 --- !u!114 &7850148350614948711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39470,7 +39552,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350501052707}
   _vertical: 0
   _movingObject: {fileID: 7850148350668024499}
-  _pencil: 0
 --- !u!114 &7850148350668024499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40428,7 +40509,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351271514566}
   _vertical: 0
   _movingObject: {fileID: 7850148350724276598}
-  _pencil: 0
 --- !u!114 &7850148350724577136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41925,7 +42005,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351215390453}
   _vertical: 0
   _movingObject: {fileID: 7850148350826459774}
-  _pencil: 0
 --- !u!114 &7850148350826459774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42045,7 +42124,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350871528268}
   _vertical: 0
   _movingObject: {fileID: 7850148350840838575}
-  _pencil: 0
 --- !u!114 &7850148350840838575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42640,7 +42718,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351577216005}
   _vertical: 0
   _movingObject: {fileID: 7850148350884190927}
-  _pencil: 0
 --- !u!4 &7850148350884190921
 Transform:
   m_ObjectHideFlags: 0
@@ -43266,7 +43343,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351229092674}
   _vertical: 0
   _movingObject: {fileID: 7850148350903577162}
-  _pencil: 0
 --- !u!114 &7850148350903577162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43573,7 +43649,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350676347955}
   _vertical: 0
   _movingObject: {fileID: 7850148350910466600}
-  _pencil: 0
 --- !u!4 &7850148350910466602
 Transform:
   m_ObjectHideFlags: 0
@@ -43671,7 +43746,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349559734943}
   _vertical: 0
   _movingObject: {fileID: 7850148350912205443}
-  _pencil: 0
 --- !u!114 &7850148350912205443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44262,7 +44336,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351343349770}
   _vertical: 0
   _movingObject: {fileID: 7850148350937026943}
-  _pencil: 0
 --- !u!114 &7850148350937026943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45238,7 +45311,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349899277730}
   _vertical: 0
   _movingObject: {fileID: 7850148350992249174}
-  _pencil: 0
 --- !u!114 &7850148350992249174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46023,7 +46095,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351236227986}
   _vertical: 0
   _movingObject: {fileID: 7850148351029062242}
-  _pencil: 0
 --- !u!114 &7850148351029062242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46116,7 +46187,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350167571355}
   _vertical: 0
   _movingObject: {fileID: 7850148351029311707}
-  _pencil: 0
 --- !u!4 &7850148351029311685
 Transform:
   m_ObjectHideFlags: 0
@@ -47031,7 +47101,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350152871698}
   _vertical: 0
   _movingObject: {fileID: 7850148351087898040}
-  _pencil: 0
 --- !u!4 &7850148351087898042
 Transform:
   m_ObjectHideFlags: 0
@@ -47512,7 +47581,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350609570664}
   _vertical: 0
   _movingObject: {fileID: 7850148351104853054}
-  _pencil: 0
 --- !u!114 &7850148351104853054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48564,7 +48632,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350641317771}
   _vertical: 0
   _movingObject: {fileID: 7850148351199101246}
-  _pencil: 0
 --- !u!114 &7850148351199101246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49175,7 +49242,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350302610899}
   _vertical: 0
   _movingObject: {fileID: 7850148351215602459}
-  _pencil: 0
 --- !u!4 &7850148351215602437
 Transform:
   m_ObjectHideFlags: 0
@@ -49344,7 +49410,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351049732021}
   _vertical: 0
   _movingObject: {fileID: 7850148351223393167}
-  _pencil: 0
 --- !u!114 &7850148351223393167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49615,7 +49680,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349810628425}
   _vertical: 0
   _movingObject: {fileID: 7850148351231574719}
-  _pencil: 0
 --- !u!4 &7850148351231574713
 Transform:
   m_ObjectHideFlags: 0
@@ -49875,7 +49939,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349711626053}
   _vertical: 0
   _movingObject: {fileID: 7850148351254905771}
-  _pencil: 0
 --- !u!114 &7850148351254905771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50238,7 +50301,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351560458064}
   _vertical: 0
   _movingObject: {fileID: 7850148351277116034}
-  _pencil: 0
 --- !u!4 &7850148351277116044
 Transform:
   m_ObjectHideFlags: 0
@@ -50567,7 +50629,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349794700136}
   _vertical: 0
   _movingObject: {fileID: 7850148351290979807}
-  _pencil: 0
 --- !u!114 &7850148351290979807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50721,7 +50782,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351624280490}
   _vertical: 0
   _movingObject: {fileID: 7850148351312248135}
-  _pencil: 0
 --- !u!4 &7850148351312248129
 Transform:
   m_ObjectHideFlags: 0
@@ -51118,7 +51178,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350666473029}
   _vertical: 0
   _movingObject: {fileID: 7850148351327437014}
-  _pencil: 0
 --- !u!114 &7850148351327437014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51389,7 +51448,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351028744507}
   _vertical: 0
   _movingObject: {fileID: 7850148351339797120}
-  _pencil: 0
 --- !u!4 &7850148351343349770
 Transform:
   m_ObjectHideFlags: 0
@@ -52084,7 +52142,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350507884908}
   _vertical: 0
   _movingObject: {fileID: 7850148351360165468}
-  _pencil: 0
 --- !u!114 &7850148351360165468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52350,7 +52407,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350581033138}
   _vertical: 0
   _movingObject: {fileID: 7850148351362733135}
-  _pencil: 0
 --- !u!114 &7850148351362733135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53608,7 +53664,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148349567530126}
   _vertical: 0
   _movingObject: {fileID: 7850148351481338073}
-  _pencil: 0
 --- !u!114 &7850148351481338073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54154,7 +54209,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351102400348}
   _vertical: 0
   _movingObject: {fileID: 7850148351509117466}
-  _pencil: 0
 --- !u!4 &7850148351510166962
 Transform:
   m_ObjectHideFlags: 0
@@ -54768,7 +54822,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148351250518445}
   _vertical: 0
   _movingObject: {fileID: 7850148351564889715}
-  _pencil: 0
 --- !u!4 &7850148351564889725
 Transform:
   m_ObjectHideFlags: 0
@@ -55377,7 +55430,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350140400947}
   _vertical: 0
   _movingObject: {fileID: 7850148351585553737}
-  _pencil: 0
 --- !u!114 &7850148351585553737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55946,7 +55998,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350772748965}
   _vertical: 0
   _movingObject: {fileID: 7850148351590835366}
-  _pencil: 0
 --- !u!114 &7850148351590835366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56017,7 +56068,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350921851787}
   _vertical: 0
   _movingObject: {fileID: 7850148351594271634}
-  _pencil: 0
 --- !u!114 &7850148351594271634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56788,7 +56838,6 @@ MonoBehaviour:
   _buttonsPos: {fileID: 7850148350309529105}
   _vertical: 0
   _movingObject: {fileID: 7850148351663339328}
-  _pencil: 0
 --- !u!4 &7850148351666311203
 Transform:
   m_ObjectHideFlags: 0

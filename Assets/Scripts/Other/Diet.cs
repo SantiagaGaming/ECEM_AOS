@@ -7,8 +7,10 @@ public class Diet : MonoBehaviour
     [SerializeField] private GameObject _diet;
     [SerializeField] private GameObject _buttonPlus;
     [SerializeField] private GameObject _buttonMinus;
+    [SerializeField] private GameObject _buttonIndication;
     [SerializeField] private StrelkaButton _strelkaMinus;
     [SerializeField] private StrelkaButton _strelkaPlus;
+    [SerializeField] private StrelkaButton _indication;
 
     public bool Side;
     public static Diet Instance;
@@ -24,6 +26,7 @@ public class Diet : MonoBehaviour
         {
             _strelkaMinus.GetComponent<Collider>().enabled = true;
             _strelkaPlus.GetComponent<Collider>().enabled = true;
+            _indication.GetComponent<Collider>().enabled = true;
             _diet.transform.position = position.position;
             _diet.transform.rotation = position.rotation;
         }
@@ -36,6 +39,7 @@ public class Diet : MonoBehaviour
 
             _buttonMinus.SetActive(false);
             _buttonPlus.SetActive(false);
+            _buttonIndication.SetActive(false);
         }
 
         int x = 0;
@@ -50,6 +54,7 @@ public class Diet : MonoBehaviour
             {
                 _buttonPlus.SetActive(false);
                 _buttonMinus.SetActive(false);
+                _buttonIndication.SetActive(false);
                 _diet.transform.position -= new Vector3(0, 0.0125f, 0);
             }
             yield return new WaitForSeconds(0.02f);
@@ -59,53 +64,93 @@ public class Diet : MonoBehaviour
         {
             _diet.SetActive(false);
         }
-        else
-        {
-            if (Side)
-            {
-                _buttonPlus.SetActive(true);
-            }
-            else
-                _buttonMinus.SetActive(true);
-        }
+
 
     }
     public void EnablePlusOrMinus(string button)
     {
 
-        if (button == "d_clutch_radio_c2" ||
-           button == "d_e_drive_radio_c2" ||
-            button == "d_apron_radio_c2" ||
-             button == "d_rod_radio_c2" ||
-              button == "d_hollow_left_radio_c2" ||
-               button == "d_hollow_right_radio_c2" ||
-                button == "d_board_front_radio_c2" ||
-                 button == "d_board_back_radio_c2" ||
-                  button == "d_stativ_front_radio_c2" ||
-                   button == "d_stativ_back_radio_c2")
+        if (button == "d_dsp_workplace_radio_c3" ||
+           button == "d_dsp_shvu_radio_c3" ||
+            button == "d_uvk_cpu_radio_c3" ||
+             button == "d_uvk_uso1_radio_c3" ||
+              button == "d_uvk_uso2_radio_c3" ||
+               button == "d_uvk_kp1_radio_c3" ||
+                button == "d_uvk_kp2_radio_c3" ||
+                 button == "d_shn_workplace_radio_c3" ||
+                  button == "d_relay_radio_c3" ||
+                   button == "d_relay_221_radio_c3" ||
+            button == "d_relay_231_radio_c3" ||
+            button == "d_cross_211_radio_c3" ||
+            button == "d_feed_tsch_radio_c3" ||
+            button == "d_feed_rsch_radio_c3"||
+            button == "d_dga_device_radio_c3"||
+            button == "d_dga_control_radio_c3" ||
+            button == "d_dga_fueltanks_radio_c3" ||
+            button == "d_field_pointed_witl_radio_c3" ||
+            button == "d_field_pointed_witd_radio_c3" ||
+            button == "d_field_pointed_draft_radio_c3" ||
+            button == "d_field_pointed_boot_radio_c3")
         {
-            Side = true;
+
             _buttonPlus.SetActive(true);
         }
-        else if (button == "d_clutch_radio_c1" ||
-           button == "d_e_drive_radio_c1" ||
-            button == "d_apron_radio_c1" ||
-             button == "d_rod_radio_c1" ||
-              button == "d_hollow_left_radio_c1" ||
-               button == "d_hollow_right_radio_c1" ||
-                button == "d_board_front_radio_c1" ||
-                 button == "d_board_back_radio_c1" ||
-                  button == "d_stativ_front_radio_c1" ||
-                   button == "d_stativ_back_radio_c1"
+        if (button == "d_dsp_workplace_radio_c2" ||
+           button == "d_dsp_shvu_radio_c2" ||
+            button == "d_uvk_cpu_radio_c2" ||
+             button == "d_uvk_uso1_radio_c2" ||
+              button == "d_uvk_uso2_radio_c2" ||
+               button == "d_uvk_kp1_radio_c2" ||
+                button == "d_uvk_kp2_radio_c2" ||
+                 button == "d_shn_workplace_radio_c2" ||
+                  button == "d_relay_radio_c2" ||
+                   button == "d_relay_221_radio_c2" ||
+            button == "d_relay_231_radio_c2" ||
+            button == "d_cross_211_radio_c2" ||
+            button == "d_feed_tsch_radio_c2" ||
+            button == "d_feed_rsch_radio_c2" ||
+            button == "d_dga_device_radio_c2" ||
+            button == "d_dga_control_radio_c2" ||
+            button == "d_dga_fueltanks_radio_c2" ||
+            button == "d_field_pointed_witl_radio_c2" ||
+            button == "d_field_pointed_witd_radio_c2" ||
+            button == "d_field_pointed_draft_radio_c2" ||
+            button == "d_field_pointed_boot_radio_c2"
             )
         {
-            Side = false;
+
             _buttonMinus.SetActive(true);
+        }
+        if (button == "d_dsp_workplace_radio_c1" ||
+    button == "d_dsp_shvu_radio_c1" ||
+     button == "d_uvk_cpu_radio_c1" ||
+      button == "d_uvk_uso1_radio_c1" ||
+       button == "d_uvk_uso2_radio_c1" ||
+        button == "d_uvk_kp1_radio_c1" ||
+         button == "d_uvk_kp2_radio_c1" ||
+          button == "d_shn_workplace_radio_c1" ||
+           button == "d_relay_radio_c1" ||
+            button == "d_relay_221_radio_c1" ||
+            button == "d_relay_231_radio_c1" ||
+            button == "d_cross_211_radio_c1" ||
+            button == "d_feed_tsch_radio_c1" ||
+            button == "d_feed_rsch_radio_c1" ||
+            button == "d_dga_device_radio_c1" ||
+            button == "d_dga_control_radio_c1" ||
+            button == "d_dga_fueltanks_radio_c1" ||
+            button == "d_field_pointed_witl_radio_c1"||
+            button == "d_field_pointed_witd_radio_c1"||
+            button == "d_field_pointed_draft_radio_c1"||
+            button == "d_field_pointed_boot_radio_c1"
+     )
+        {
+            _buttonIndication.SetActive(true);
         }
         else if (button == null)
         {
             _buttonMinus.SetActive(false);
             _buttonPlus.SetActive(false);
+            _buttonIndication.SetActive(false);
         }
 
     }
