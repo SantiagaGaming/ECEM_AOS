@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class KnifeSwitch : MonoBehaviour
 {
-    public void ChangeKnifePosition(int position)
+    [SerializeField] private HandButton[] _handButtons;
+    private void Start()
     {
-        if(position ==0)
-           transform.localRotation = Quaternion.Euler(0, 0, 0);
-        else if(position ==1)
-            transform.localRotation = Quaternion.Euler(0, 0, -45);
-        else if(position ==2)
-            transform.localRotation = Quaternion.Euler(0, 0, 45);
+        foreach (var handButton in _handButtons)
+        {
+            handButton.ButtonNumberEvent += OnChangeKnifePosition;
+        }
+    }
+    public void OnChangeKnifePosition(int position)
+    {
+        if(CurrentAOSObject.Instance.SceneAosObject.ObjectId== "dsp_shvu_switch")
+        {
+            if (position == 0)
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            else if (position == 1)
+                transform.localRotation = Quaternion.Euler(0, 0, -45);
+            else if (position == 2)
+                transform.localRotation = Quaternion.Euler(0, 0, 45);
+
+        }
+       
     }
 }

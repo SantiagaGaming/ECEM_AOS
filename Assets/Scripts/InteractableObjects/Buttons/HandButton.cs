@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class HandButton : MovingButton
 {
+    public UnityAction<int> ButtonNumberEvent;
     [SerializeField] private Hands _hand;
     private enum Hands
     {
@@ -19,10 +20,20 @@ public class HandButton : MovingButton
         {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("hand");
             MovingButtonsController.Instance.PushPushableObject();
+            ButtonNumberEvent?.Invoke(1);
         }
         else if(_hand == Hands.Hand_1)
+        {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("hand_1");
+            ButtonNumberEvent?.Invoke(0);
+        }
+        
         else if (_hand == Hands.Hand_2)
+        {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("hand_2");
+            ButtonNumberEvent?.Invoke(2);
+
+        }
+          
     }
 }

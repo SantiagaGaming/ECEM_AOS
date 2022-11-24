@@ -29,6 +29,7 @@ public class MovingButtonsController : MonoBehaviour
 
     public void SetMovingButtonsPosition(Vector3 position, BaseObject obj)
     {
+        HideAllButtons();
         transform.position = position;
         CurrentBaseObject = obj;
     }
