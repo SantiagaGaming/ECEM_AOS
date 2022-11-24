@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class NextButton : MonoBehaviour
 {
-    [SerializeField] private API _api;
     public UnityAction <string> NextButtonClickedEvent;
     private string _actionOnButton;
 
@@ -17,6 +16,7 @@ public class NextButton : MonoBehaviour
     private void Start()
     {
         _button= GetComponent<Button>();
+        if(_button!=null)
         _button.onClick.AddListener(ButtonAction);
     }
     private void ButtonAction()

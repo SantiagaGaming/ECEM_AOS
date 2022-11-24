@@ -8,6 +8,7 @@ public class MenuAPI : API
 {
     [SerializeField] private StartEndScreenView _startEndScreenView;
     [SerializeField] private ScreenChanger _menuScreenChanger;
+    [SerializeField] private StartEndScreenView _startEndScreen;
     [SerializeField] private TimerView _timer;
     [SerializeField] private NextButton _nextButton;
     protected override void Init()
@@ -61,6 +62,8 @@ public class MenuAPI : API
     public override void showMessage(JObject info, JObject nav)
     {
         _menuScreenChanger.EnableScreen("Info");
+        _startEndScreen.EnableNextButton(false);
+        _startEndScreen.EnableBackButton(true);
         _startEndScreenView.SetHeaderText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("name").ToString()));
         _startEndScreenView.SetCommentText(info.SelectToken("text").ToString());
     }

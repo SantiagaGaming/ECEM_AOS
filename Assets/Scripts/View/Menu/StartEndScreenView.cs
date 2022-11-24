@@ -13,6 +13,9 @@ public class StartEndScreenView : BaseScreenView
     [SerializeField] private TextMeshProUGUI _exitSureText;
     [SerializeField] private TextMeshProUGUI _exitText;
     [SerializeField] private TextMeshProUGUI _warnText;
+    [SerializeField] private GameObject _backButton;
+    [SerializeField] private GameObject _nextButton;
+
 
     public void SetHeaderText(string text)
     {
@@ -37,5 +40,13 @@ public class StartEndScreenView : BaseScreenView
     public void SetWarnText(string text)
     {
         _warnText.text = text;
+    }
+    public void EnableBackButton(bool value)
+    {
+        _backButton.SetActive(value);
+    }
+    public void EnableNextButton(bool value)
+    {
+        _nextButton.SetActive(value);
     }
 }
