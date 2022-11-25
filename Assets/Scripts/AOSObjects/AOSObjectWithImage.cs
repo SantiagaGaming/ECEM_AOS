@@ -11,6 +11,7 @@ public class AOSObjectWithImage : AosObjectBase
     private void Start()
     {
         _img= GetComponent<Image>();
+        AOSImageContainer.Instance.AddAOSObjectWithImage(this);
     }
     public void DisableObject()
     {

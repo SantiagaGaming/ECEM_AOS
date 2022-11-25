@@ -111,11 +111,18 @@ public class ActionAPI : API
                 }
                 else if (item.SelectToken("apiId") != null)
                 {
-                    Debug.Log("Sucess");
                     string buttonName = item.SelectToken("apiId").ToString();
-                    Debug.Log(item.SelectToken("apiId").ToString() + "RADIO");
                     Diet diet = FindObjectOfType<Diet>();
                     diet.EnablePlusOrMinus(buttonName);
+                }
+                if(item.SelectToken("view") != null&& AOSImageContainer.Instance!=null)
+                {
+                    var temp = item.SelectToken("view");
+                    if (temp.SelectToken("apiId")!=null)
+                    { string name = temp.SelectToken("apiId").ToString();
+                        AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
+                        tempObj.EnableObject(name);
+                    }
                 }
             }
         }
