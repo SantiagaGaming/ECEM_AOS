@@ -14,6 +14,7 @@ public class AOSImageContainer : MonoBehaviour
     public void AddAOSObjectWithImage(AOSObjectWithImage obj)
     {
         _images.Add(obj);
+        Debug.Log(obj.ObjectId);
     }
     public AOSObjectWithImage GetAOSObjectWithImage(string name)
     {

@@ -40,7 +40,6 @@ public class AOSColliderActivator : MonoBehaviour
     {
         foreach (var item in _aosSceneObjects)
         {
-            Debug.Log(item.name);
             item.EnableObject(false);
         }
         BackButtonsHandler.Instance.DeactivateAllBackButtons();

@@ -35,7 +35,21 @@ public class ActionAPI : API
             if (temp != null)
             {
                 AOSColliderActivator.Instance.ActivateColliders(temp.ToString(), item.SelectToken("name").ToString());
-                Debug.Log(temp.ToString());
+            }
+            if (item.SelectToken("view") != null && AOSImageContainer.Instance != null)
+            {
+                var temp2 = item.SelectToken("view");
+                if (temp2!= null)
+                {
+                        if (temp2.SelectToken("apiId") != null)
+                        {
+                        string name = temp2.SelectToken("apiId").ToString();
+                            AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
+                        if (tempObj != null) {
+                            tempObj.EnableObject(name);
+                        }
+                     }
+                  } 
             }
         }
         if (nav.SelectToken("back") != null && nav.SelectToken("back").SelectToken("action") != null && nav.SelectToken("back").SelectToken("action").ToString() != String.Empty)
@@ -44,6 +58,7 @@ public class ActionAPI : API
             BackButtonsHandler.Instance.EnableCurrentBackButton(true);
             BackButtonsHandler.Instance.ActionToInvoke = nav.SelectToken("back").SelectToken("action").ToString();
         }
+
         //StreetCollidersActivator.Instance.ActivateColliders(place.SelectToken("apiId").ToString());
     }
     public override void updatePlace(JArray data)
@@ -115,16 +130,7 @@ public class ActionAPI : API
                     Diet diet = FindObjectOfType<Diet>();
                     diet.EnablePlusOrMinus(buttonName);
                 }
-                if(item.SelectToken("view") != null&& AOSImageContainer.Instance!=null)
-                {
-                    var temp = item.SelectToken("view");
-                    if (temp.SelectToken("apiId")!=null)
-                    { string name = temp.SelectToken("apiId").ToString();
-                        AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
-                        tempObj.EnableObject(name);
-                        Debug.Log(name + "  ARM");
-                    }
-                }
+        
             }
         }
     }
