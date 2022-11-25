@@ -122,6 +122,7 @@ public class ActionAPI : API
                     { string name = temp.SelectToken("apiId").ToString();
                         AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
                         tempObj.EnableObject(name);
+                        Debug.Log(name + "  ARM");
                     }
                 }
             }

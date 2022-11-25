@@ -12,14 +12,6 @@ public class ConnectionInvoker : MonoBehaviour
     {
         StartCoroutine(ConnectionDelay());
     }
-    private void OnEnable()
-    {
-        _wrapper.OnClientConnected += OnReadyToConnect;
-    }
-    private void OnDisable()
-    {
-        _wrapper.OnClientConnected -= OnReadyToConnect;
-    }
     private void OnReadyToConnect()
     {
         _connectionChecker.OnConnect();
