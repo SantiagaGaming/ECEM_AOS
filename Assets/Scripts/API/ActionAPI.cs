@@ -34,6 +34,7 @@ public class ActionAPI : API
             var temp = item.SelectToken("apiId");
             if (temp != null)
             {
+                Debug.Log(temp.ToString() + " From apiId");
                 AOSColliderActivator.Instance.ActivateColliders(temp.ToString(), item.SelectToken("name").ToString());
             }
             if (item.SelectToken("view") != null && AOSImageContainer.Instance != null)
