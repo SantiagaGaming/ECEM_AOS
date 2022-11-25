@@ -3009,7 +3009,7 @@ GameObject:
   - component: {fileID: 507574857}
   - component: {fileID: 507574859}
   m_Layer: 0
-  m_Name: ARMActivator_1
+  m_Name: t_dsp_workplace_t_arm_dsp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3060,11 +3060,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507574855}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.062509544, y: 0.45643964, z: 0.26452178}
-  m_Center: {x: -0.00451816, y: 0.0034322985, z: 0.18334258}
+  m_Size: {x: 0.062509544, y: 0.45643967, z: 0.23285373}
+  m_Center: {x: -0.0045181536, y: 0.0034322883, z: 0.19917662}
 --- !u!114 &507574859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10452,8 +10452,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.030071678, y: 0.45255518, z: 0.34975436}
-  m_Center: {x: 0.03275987, y: -0.0074363872, z: 0.13194211}
+  m_Size: {x: 0.055179406, y: 0.48699504, z: 0.060208876}
+  m_Center: {x: -0.01934745, y: 0.009783089, z: -0.0128309345}
 --- !u!114 &1888733504
 MonoBehaviour:
   m_ObjectHideFlags: 0
