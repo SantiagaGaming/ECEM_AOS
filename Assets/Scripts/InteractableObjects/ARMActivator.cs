@@ -6,14 +6,20 @@ using UnityEngine;
 public class ARMActivator : BaseObject
 {
     [SerializeField] private Canvas _arm;
-    [SerializeField] private GameObject _tempImage;
+    [SerializeField] private GameObject []_tempImages;
     [SerializeField] private GameObject _backButton;
     
     public override void OnClicked(InteractHand interactHand)
     {
       _arm.enabled= true;
-        _tempImage.SetActive(false);
-        GetComponent<Collider>().enabled = false;
+       if(_tempImages!=null)
+        {
+            foreach (var item in _tempImages)
+            {
+                item.SetActive(false);
+            }
+        }
+        sceneAosObject.InvokeOnClick();
         _backButton.SetActive(true);
     }
     private void OnEnable()
@@ -29,9 +35,14 @@ public class ARMActivator : BaseObject
 
     private void OnBackClick()
     {
-        _tempImage.SetActive(true);
+        if (_tempImages != null)
+        {
+            foreach (var item in _tempImages)
+            {
+                item.SetActive(true);
+            }
+        }
         _arm.enabled = false;
-        GetComponent<Collider>().enabled = true;
         _backButton.SetActive(false);
     }
 }
