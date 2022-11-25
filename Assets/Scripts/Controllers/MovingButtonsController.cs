@@ -36,7 +36,6 @@ public class MovingButtonsController : MonoBehaviour
     public void ShowWatchButton()
     {
         _watchButton.SetActive(true);
-        Debug.Log(_watchButton.activeSelf);
     }
     public void HideWatchButton()
     {

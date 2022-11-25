@@ -20,6 +20,7 @@ public class ARMActivator : BaseObject
             }
         }
         sceneAosObject.InvokeOnClick();
+        BackButtonsHandler.Instance.GetCurrentBackButton().EnableButton(false);
         _backButton.SetActive(true);
     }
     private void OnEnable()
