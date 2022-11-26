@@ -21,7 +21,7 @@ public class AbtcDoorAnimation : BaseAnimationObject
         {
             GetComponent<Collider>().enabled = false;
             int y = -197;
-            while (y <= -70)
+            while (y <= -50)
             {
                 transform.localRotation = Quaternion.Euler(-90, y, 17.137f);
                 y++;
@@ -33,14 +33,13 @@ public class AbtcDoorAnimation : BaseAnimationObject
         {
             MovingButtonsController.Instance.HideAllButtons();
 
-            int y = -70;
+            int y = -50;
             while (y >= -197)
             {
                 transform.localRotation = Quaternion.Euler(-90, y, 17.137f);
                 y--;
                 yield return new WaitForSeconds(0.01f);
             }
-            GetComponent<Collider>().enabled = true;
         }
         CanRotate = true;
   

@@ -2025,7 +2025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &284512566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3006,8 +3006,8 @@ GameObject:
   m_Component:
   - component: {fileID: 507574856}
   - component: {fileID: 507574858}
-  - component: {fileID: 507574857}
   - component: {fileID: 507574859}
+  - component: {fileID: 507574857}
   m_Layer: 0
   m_Name: t_dsp_workplace_t_arm_dsp
   m_TagString: Untagged
@@ -3038,20 +3038,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 507574855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c603e40c6b4cb1240a3f600ed44c11cb, type: 3}
+  m_Script: {fileID: 11500000, guid: dc66c47f7a3969444ab3458b43117880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 0
   outlineObjects:
   - {fileID: 1888733504}
   helperPos: {fileID: 15379850}
-  helperName: "\u0410\u0420\u041C"
-  _arm: {fileID: 1409188715}
-  _tempImages:
-  - {fileID: 284512565}
-  - {fileID: 909812868}
-  - {fileID: 1625250153}
-  _backButton: {fileID: 1472963868}
+  helperName: 
+  _backButton: {fileID: 1472963871}
 --- !u!65 &507574858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4901,6 +4896,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!114 &862635878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5298,7 +5294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &909812869
 Transform:
   m_ObjectHideFlags: 0
@@ -8092,7 +8088,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409188714}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -8460,7 +8456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1472963869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8482,7 +8478,7 @@ BoxCollider:
   m_GameObject: {fileID: 1472963868}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.560001, y: 2.56, z: 0.2091314}
   m_Center: {x: 0.0000029806154, y: -4.1121623e-11, z: -0.004568701}
@@ -8504,6 +8500,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 5842121956885910426}
 --- !u!212 &1472963872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8511,7 +8508,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472963868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -9370,7 +9367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1625250154
 Transform:
   m_ObjectHideFlags: 0
@@ -9848,7 +9845,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782217630}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -10160,7 +10157,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855094421}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -28389,8 +28386,9 @@ MonoBehaviour:
   outlineObjects: []
   helperPos: {fileID: 5842121958042089986}
   helperName: "\u041D\u0430\u0437\u0430\u0434"
-  _locationBackName: uvk
+  _locationBackName: dsp_workplace
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!1 &5842121956885910427
 GameObject:
   m_ObjectHideFlags: 0
@@ -30854,7 +30852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4759446557714172348}
   m_LocalRotation: {x: -0.49999994, y: 0.5000001, z: 0.5000001, w: -0.49999994}
-  m_LocalPosition: {x: 2.9178667, y: 0.9382744, z: -2.7035046}
+  m_LocalPosition: {x: 2.9124, y: 0.9382744, z: -2.7035046}
   m_LocalScale: {x: 1.0329999, y: 1.033, z: 1.0329998}
   m_Children:
   - {fileID: 7977327344141487031}

@@ -9,6 +9,7 @@ public class BackButtonObject : BaseButton
     public UnityAction BackButtonClickEvent;
     [SerializeField] private string _locationBackName;
     [SerializeField] private BackTriggerObject _backTriggerObj;
+    [SerializeField] private BackButtonObject _parentArmButton;
     protected override void Start()
     {
         base.Start();
@@ -28,6 +29,8 @@ public class BackButtonObject : BaseButton
             BackButtonsHandler.Instance.SetBackButtonObject(null);
             if (_backTriggerObj != null)
                 _backTriggerObj.EnableBackTriggerObject(false);
+            if (_parentArmButton != null)
+                BackButtonsHandler.Instance.SetBackButtonObject(_parentArmButton);
         }
 
     }

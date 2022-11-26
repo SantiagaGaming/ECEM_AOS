@@ -11,6 +11,7 @@ public class MenuAPI : API
     [SerializeField] private StartEndScreenView _startEndScreen;
     [SerializeField] private TimerView _timer;
     [SerializeField] private NextButton _nextButton;
+    [SerializeField] private GameObject _exitButton;
     protected override void Init()
     {
         WebSocketWrapper.Instance.OnClientConnected += OnInvokeEndTween;
@@ -57,7 +58,11 @@ public class MenuAPI : API
         _menuScreenChanger.EnableScreen("Info");
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
         _startEndScreenView.SetCommentText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("text").ToString()));
-        _nextButton.ChangeActionOnButton(nav.SelectToken("ok").SelectToken("action").ToString());
+
+        //_nextButton.ChangeActionOnButton(nav.SelectToken("ok").SelectToken("action").ToString());
+        _nextButton.enabled = false;
+        _exitButton.SetActive(true);
+
     }
     public override void showMessage(JObject info, JObject nav)
     {

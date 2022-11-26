@@ -45,6 +45,7 @@ public class ActionAPI : API
                         if (temp2.SelectToken("apiId") != null)
                         {
                         string name = temp2.SelectToken("apiId").ToString();
+                        Debug.Log(name + "       from view");
                             AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
                         if (tempObj != null) {
                             tempObj.EnableObject(name);

@@ -14,7 +14,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
 
     public override void PlayScritableAnimtaion()
     {
-           if (CanRotate && CanOpen)
+        if (CanRotate && CanOpen)
             StartCoroutine(RotateDoor(IsClosed));
     }
 
@@ -36,7 +36,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
                 else
                     _key.transform.localPosition += new Vector3(0, 0, 0.001f);
                 keyX++;
-                yield return new WaitForSeconds(0.005f);
+                yield return new WaitForSeconds(0.003f);
             }
             int keyXRot = -90;
             while (keyXRot > -180)
@@ -46,7 +46,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
                 else
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 90, 0);
                 keyXRot--;
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.003f);
             }
             if (!_inside)
             {
@@ -103,7 +103,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
                 else
                     _key.transform.localRotation = Quaternion.Euler(keyXRot, 90, 0);
                 keyXRot++;
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.003f);
             }
             int keyX = 40;
             while (keyX > 0)
@@ -113,7 +113,7 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
                 else
                     _key.transform.localPosition -= new Vector3(0, 0, 0.001f);
                 keyX--;
-                yield return new WaitForSeconds(0.01f);
+                yield return new WaitForSeconds(0.003f);
             }
             _key.SetActive(false);
             GetComponent<Collider>().enabled = true;

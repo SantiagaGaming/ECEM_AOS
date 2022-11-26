@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64862641}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.483, y: -0.2794001, z: 0.36119998}
+  m_LocalPosition: {x: 0.056, y: 0.213, z: 0.36119998}
   m_LocalScale: {x: 0.039999995, y: 0.04, z: 0.10000002}
   m_Children: []
   m_Father: {fileID: 226610341}
@@ -402,7 +402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158751015}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.483, y: -0.2794001, z: 0.36119998}
+  m_LocalPosition: {x: 0.291, y: 0.213, z: 0.266}
   m_LocalScale: {x: 0.039999995, y: 0.04, z: 0.10000002}
   m_Children: []
   m_Father: {fileID: 1789012787}
@@ -634,6 +634,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!114 &401686057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,6 +1158,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!114 &540441667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,6 +1250,50 @@ Transform:
   m_Father: {fileID: 226610341}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &560095730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560095731}
+  - component: {fileID: 560095732}
+  m_Layer: 0
+  m_Name: StrelkaPositionTaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560095731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560095730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6313574520439807334}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560095732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560095730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24a3284b5e1f9a4daafbc5a05e74c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sp6Anim: {fileID: 3458781666301738120}
 --- !u!1 &594218204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: api
+  LocationName: 
 --- !u!4 &594218206
 Transform:
   m_ObjectHideFlags: 0
@@ -1654,8 +1701,8 @@ GameObject:
   - component: {fileID: 846955285}
   - component: {fileID: 846955284}
   - component: {fileID: 846955283}
-  - component: {fileID: 846955282}
   - component: {fileID: 846955281}
+  - component: {fileID: 846955282}
   m_Layer: 0
   m_Name: field_pointer_witr_stone
   m_TagString: Untagged
@@ -1703,14 +1750,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 846955279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483f60971106ac7488f6ce9c0d6931e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7497556b0384a8348bdf207354796c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 0
   outlineObjects:
   - {fileID: 846955283}
   helperPos: {fileID: 665969280}
-  helperName: "\u041A\u0430\u043C\u0435\u043D\u044C"
+  helperName: 
   _buttonsPos: {fileID: 981727960}
   _vertical: 0
   _movingObject: {fileID: 0}
@@ -1741,7 +1788,7 @@ BoxCollider:
   m_GameObject: {fileID: 846955279}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.4882038, y: 2.635459, z: 2.5538318}
   m_Center: {x: 0, y: 0.5160883, z: 0.00024409965}
@@ -1752,7 +1799,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846955279}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2469,6 +2516,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!114 &1195242948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3479,7 +3527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813306957}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.483, y: -0.2794001, z: 0.36119998}
+  m_LocalPosition: {x: 0.151, y: 0.213, z: 0.283}
   m_LocalScale: {x: 0.039999995, y: 0.04, z: 0.10000002}
   m_Children: []
   m_Father: {fileID: 2094897096}
@@ -5894,6 +5942,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!1 &1453387328781646013
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453387329074920938}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.004, y: -0.2794001, z: 0.481}
+  m_LocalPosition: {x: -0.084, y: 0.213, z: 0.215}
   m_LocalScale: {x: 0.039999995, y: 0.04, z: 0.10000002}
   m_Children: []
   m_Father: {fileID: 1453387328869307835}
@@ -9035,7 +9084,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3084982429000008673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -9082,8 +9131,8 @@ GameObject:
   - component: {fileID: 3084982429000008672}
   - component: {fileID: 5549204532561351126}
   - component: {fileID: 5549204532561351128}
-  - component: {fileID: 5549204532561351127}
   - component: {fileID: 3084982429000008674}
+  - component: {fileID: 3084982429000008675}
   m_Layer: 0
   m_Name: field_pointer_witl_stone
   m_TagString: Untagged
@@ -9106,6 +9155,26 @@ MonoBehaviour:
   <ObjectId>k__BackingField: field_pointer_witl_stone
   _button: 0
   _place: 0
+--- !u!114 &3084982429000008675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084982429000008673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7497556b0384a8348bdf207354796c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  outlineObjects:
+  - {fileID: 5549204532561351128}
+  helperPos: {fileID: 5549204533877689074}
+  helperName: 
+  _buttonsPos: {fileID: 5549204532699910834}
+  _vertical: 0
+  _movingObject: {fileID: 0}
 --- !u!4 &3084982429000008678
 Transform:
   m_ObjectHideFlags: 0
@@ -14389,30 +14458,10 @@ BoxCollider:
   m_GameObject: {fileID: 3084982429000008673}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.4882038, y: 2.635459, z: 2.5538318}
   m_Center: {x: 0, y: 0.5160883, z: 0.00024409965}
---- !u!114 &5549204532561351127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3084982429000008673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 483f60971106ac7488f6ce9c0d6931e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: 0
-  outlineObjects:
-  - {fileID: 5549204532561351128}
-  helperPos: {fileID: 5549204533877689074}
-  helperName: "\u041A\u0430\u043C\u0435\u043D\u044C"
-  _buttonsPos: {fileID: 5549204532699910834}
-  _vertical: 0
-  _movingObject: {fileID: 0}
 --- !u!114 &5549204532561351128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16961,6 +17010,7 @@ Transform:
   - {fileID: 8457602300621014322}
   - {fileID: 1198300140}
   - {fileID: 1200446805}
+  - {fileID: 560095731}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21691,6 +21741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: connection
+  _api: {fileID: 0}
 --- !u!114 &8911660082531424970
 MonoBehaviour:
   m_ObjectHideFlags: 0

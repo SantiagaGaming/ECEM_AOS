@@ -22,13 +22,19 @@ public class StrelkaButton : BaseButton
         if(diet!=null)
         {
             if (_currentSide == Side.Plus)
+            {
                 diet.GetPlusID().InvokeOnClick();
+                PlayerPrefs.SetString("Strelka", "plus");
+            }
+          
             else if (_currentSide == Side.Minus)
+            {
                 diet.GetMinusID().InvokeOnClick();
+                PlayerPrefs.SetString("Strelka", "minus");
+            }
+               
             else if (_currentSide == Side.Indication)
                 diet.GetIndicationID().InvokeOnClick();
         }
-
-
     }
 }

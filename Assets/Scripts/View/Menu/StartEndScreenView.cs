@@ -23,7 +23,7 @@ public class StartEndScreenView : BaseScreenView
     }
     public void SetCommentText(string text)
     {
-        _commentText.text = text;
+        _commentText.text = HtmlToText.Instance.HTMLToTextReplace(text);
     }
     public void SetButtonText(string text)
     {
