@@ -19,9 +19,12 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
     private IEnumerator ShowNoteBook(bool value)
     {
         AOSColliderActivator.Instance.CanTouch = false;
+ 
         _canRotate = false;
         if (value)
         {
+            AOSColliderActivator.Instance.UVKDoor = false;
+            BackButtonsHandler.Instance.GetCurrentBackButton().EnableButton(false);
             int z = 0;
             while (z <= 35)
             {
@@ -36,10 +39,12 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
                 x--;
                 yield return new WaitForSeconds(0.01f);
             }
+            BackButtonsHandler.Instance.GetCurrentBackButton().EnableButton(true);
+
         }
         else
         {
-
+           
             int x = 0;
             while (x <= 95)
             {
@@ -59,5 +64,6 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
         _isClosed = _isClosed ? false : true;
         _canRotate = true;
         AOSColliderActivator.Instance.CanTouch = true;
+        AOSColliderActivator.Instance.UVKDoor = true;
     }
 }

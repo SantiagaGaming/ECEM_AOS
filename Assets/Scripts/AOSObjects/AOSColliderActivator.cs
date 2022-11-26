@@ -10,6 +10,7 @@ public class AOSColliderActivator : MonoBehaviour
     public static AOSColliderActivator Instance;
 
     [SerializeField] private DevelopSettings _settings;
+    [HideInInspector]public bool UVKDoor = true;
     private bool _isDevelopment;
     private List<BaseObject> _aosSceneObjects = new List<BaseObject>();
     public bool CanTouch { get; set; } = true;

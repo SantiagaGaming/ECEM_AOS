@@ -34,7 +34,6 @@ public class ActionAPI : API
             var temp = item.SelectToken("apiId");
             if (temp != null)
             {
-                Debug.Log(temp.ToString() + " From apiId");
                 AOSColliderActivator.Instance.ActivateColliders(temp.ToString(), item.SelectToken("name").ToString());
             }
             if (item.SelectToken("view") != null && AOSImageContainer.Instance != null)
@@ -45,7 +44,6 @@ public class ActionAPI : API
                         if (temp2.SelectToken("apiId") != null)
                         {
                         string name = temp2.SelectToken("apiId").ToString();
-                        Debug.Log(name + "       from view");
                             AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
                         if (tempObj != null) {
                             tempObj.EnableObject(name);
@@ -56,7 +54,6 @@ public class ActionAPI : API
         }
         if (nav.SelectToken("back") != null && nav.SelectToken("back").SelectToken("action") != null && nav.SelectToken("back").SelectToken("action").ToString() != String.Empty)
         {
-            Debug.Log("in nav");
             BackButtonsHandler.Instance.EnableCurrentBackButton(true);
             BackButtonsHandler.Instance.ActionToInvoke = nav.SelectToken("back").SelectToken("action").ToString();
         }

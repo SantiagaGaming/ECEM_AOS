@@ -91,33 +91,33 @@ public class MovingButtonsController : MonoBehaviour
     public void SetWatchButtonText(string text)
     {
         _watchButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
 
     public void SetRepairButtonText(string text)
     {
         _repairButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
     public void SetHandButtonText(string text)
     {
         _handButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
     public void SetHand1ButtonText(string text)
     {
         _handButton_1.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
     public void SetHand2ButtonText(string text)
     {
         _handButton_2.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
     public void SetPenButtonText(string text)
     {
         _penButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(text);
+        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
     }
     public void SetRepairableObject(RepairableObject obj)
     {

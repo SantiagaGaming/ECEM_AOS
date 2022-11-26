@@ -1068,6 +1068,49 @@ Transform:
   m_Father: {fileID: 1398820134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &761901889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761901890}
+  - component: {fileID: 761901891}
+  m_Layer: 0
+  m_Name: HtmlToText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761901890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761901889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1786130692151567631}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &761901891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761901889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0324600f43a5f4089b892b2175f2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &764498772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1248,6 +1291,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: dga
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!114 &939958621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2419,6 +2463,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!1 &1479639553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: api
+  LocationName: 
 --- !u!4 &1857263734
 Transform:
   m_ObjectHideFlags: 0
@@ -4072,6 +4118,7 @@ Transform:
   - {fileID: 4181801773286210907}
   - {fileID: 1135790185}
   - {fileID: 1508255728}
+  - {fileID: 761901890}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4194,6 +4241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: connection
+  _api: {fileID: 0}
 --- !u!4 &1914186103380859281
 Transform:
   m_ObjectHideFlags: 0
@@ -10195,6 +10243,7 @@ MonoBehaviour:
   helperName: "\u041D\u0430\u0437\u0430\u0434"
   _locationBackName: uvk
   _backTriggerObj: {fileID: 0}
+  _parentArmButton: {fileID: 0}
 --- !u!4 &8136799454416066062
 Transform:
   m_ObjectHideFlags: 0

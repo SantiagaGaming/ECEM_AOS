@@ -17,21 +17,25 @@ public class BackButtonObject : BaseButton
     }
     public override void OnClicked(InteractHand interactHand)
     {
-        base.OnClicked(interactHand);
-        if(AOSColliderActivator.Instance.CanTouch)
+        if(AOSColliderActivator.Instance.UVKDoor)
         {
-            BackButtonClickEvent?.Invoke();
-            MovingButtonsController.Instance.HideAllButtons();
-            API api = FindObjectOfType<API>();
-            api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
-            //ShupController shup = FindObjectOfType<ShupController>();
-            //shup.ResetShupPosition();
-            BackButtonsHandler.Instance.SetBackButtonObject(null);
-            if (_backTriggerObj != null)
-                _backTriggerObj.EnableBackTriggerObject(false);
-            if (_parentArmButton != null)
-                BackButtonsHandler.Instance.SetBackButtonObject(_parentArmButton);
+            base.OnClicked(interactHand);
+            if (AOSColliderActivator.Instance.CanTouch)
+            {
+                BackButtonClickEvent?.Invoke();
+                MovingButtonsController.Instance.HideAllButtons();
+                API api = FindObjectOfType<API>();
+                api.InvokeNavActionBack(BackButtonsHandler.Instance.ActionToInvoke);
+                //ShupController shup = FindObjectOfType<ShupController>();
+                //shup.ResetShupPosition();
+                BackButtonsHandler.Instance.SetBackButtonObject(null);
+                if (_backTriggerObj != null)
+                    _backTriggerObj.EnableBackTriggerObject(false);
+                if (_parentArmButton != null)
+                    BackButtonsHandler.Instance.SetBackButtonObject(_parentArmButton);
+            }
         }
+ 
 
     }
     public override void EnableButton(bool value)

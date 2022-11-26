@@ -96,7 +96,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public void SetHelperName(string value)
     {
-        helperName = value;
+        helperName = HtmlToText.Instance.HTMLToTextReplace(value);
     }
     public string GetAOSName()
     {
