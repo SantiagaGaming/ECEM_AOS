@@ -57,8 +57,7 @@ public class MenuAPI : API
         PlayerPrefs.SetString("Teleport", "false");
         _menuScreenChanger.EnableScreen("Info");
         _startEndScreenView.SetHeaderText(info.SelectToken("name").ToString());
-        _startEndScreenView.SetCommentText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("text").ToString()));
-
+        _startEndScreenView.SetCommentText(HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("eval").ToString()) + "\n" + HtmlToText.Instance.HTMLToTextReplace(info.SelectToken("text").ToString()));
         //_nextButton.ChangeActionOnButton(nav.SelectToken("ok").SelectToken("action").ToString());
         _nextButton.enabled = false;
         _exitButton.SetActive(true);
