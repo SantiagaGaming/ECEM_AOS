@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class StartStrelkaPosition : AosObjectBase
 {
-    public void PlayRockEngineMinusAnim()
+    [AosAction(name: "Проиграть анимацию плюс")]
+    public void PlayPlusAnim()
     {
         PlayerPrefs.SetString("Strelka", "minus");
     }
-    [AosAction(name: "Проиграть анимацию Камень двигатель плюс")]
-    public void PlayRockEnginePlusAnim()
+    [AosAction(name: "Проиграть анимацию минус")]
+    public void PlayMinusAnim()
     {
         PlayerPrefs.SetString("Strelka", "plus");
     }

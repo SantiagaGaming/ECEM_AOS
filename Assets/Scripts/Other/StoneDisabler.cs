@@ -5,6 +5,14 @@ using UnityEngine;
 public class StoneDisabler : MonoBehaviour
 {
     [SerializeField] private HandButton _handButton;
+    private void Start()
+    {
+        if (PlayerPrefs.GetString("Stone") == "false")
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
+        }
+    }
 
     private void OnEnable()
     {
@@ -17,6 +25,7 @@ public class StoneDisabler : MonoBehaviour
     private void OnDisableStone(int value)
     {
         GetComponent<MeshRenderer>().enabled = false;
-        GetComponent<Collider>().enabled = true;
+        GetComponent<Collider>().enabled = false;
+        PlayerPrefs.SetString("Stone", "false");
     }
 }

@@ -8,8 +8,17 @@ public class StrelkaPositionTaker : MonoBehaviour
     private void Start()
     {
         if (PlayerPrefs.GetString("Strelka") == "minus")
+        {
             _sp6Anim.SetTrigger("fastMinus");
+            Debug.Log("FASTMINUS");
+
+        }
+
         else if (PlayerPrefs.GetString("Strelka") == "plus")
+        {
             _sp6Anim.SetTrigger("fastPlus");
+            Debug.Log("FASTPlus");
+
+        }
     }
 }

@@ -12,6 +12,7 @@ public class MenuScreenView : BaseScreenView
     [SerializeField] private TextMeshProUGUI _currentLocationText;
     [SerializeField] private TextMeshProUGUI _timertext;
 
+
     private string _locationName;
 
     public void SetLocationText()
@@ -22,6 +23,7 @@ public class MenuScreenView : BaseScreenView
     {
         _timertext.text = text;
     }
+
     public void ActivateMenuScreen(string name)
     {
         DeactivateAllObjects();

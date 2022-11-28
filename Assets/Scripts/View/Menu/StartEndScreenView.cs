@@ -9,6 +9,7 @@ public class StartEndScreenView : BaseScreenView
     [SerializeField] private GameObject _startScreen;
     [SerializeField] private TextMeshProUGUI _headerText;
     [SerializeField] private TextMeshProUGUI _commentText;
+    [SerializeField] private TextMeshProUGUI _resultText;
     [SerializeField] private TextMeshProUGUI _nextButtonText;
     [SerializeField] private TextMeshProUGUI _exitSureText;
     [SerializeField] private TextMeshProUGUI _exitText;
@@ -24,6 +25,10 @@ public class StartEndScreenView : BaseScreenView
     public void SetCommentText(string text)
     {
         _commentText.text = HtmlToText.Instance.HTMLToTextReplace(text);
+    }
+    public void SetResultText(string text)
+    {
+        _resultText.text = HtmlToText.Instance.HTMLToTextReplace(text);
     }
     public void SetButtonText(string text)
     {

@@ -47,6 +47,7 @@ public class ActionAPI : API
                             AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
                         if (tempObj != null) {
                             tempObj.EnableObject(name);
+                            Debug.Log("Sucess + " + name);
                         }
                      }
                   } 
