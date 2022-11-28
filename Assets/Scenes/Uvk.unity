@@ -2652,7 +2652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2ad79f07b92a43916742751180564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: arm_shn_cpu_sbs_1k_yel
+  <ObjectId>k__BackingField: arm_shn_cpu_sbs_2k_on
   _sameImages: []
 --- !u!114 &412133324
 MonoBehaviour:
