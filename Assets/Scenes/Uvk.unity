@@ -4340,6 +4340,7 @@ GameObject:
   - component: {fileID: 658550546}
   - component: {fileID: 658550545}
   - component: {fileID: 658550544}
+  - component: {fileID: 658550548}
   m_Layer: 5
   m_Name: YvkRAButton
   m_TagString: Untagged
@@ -4386,6 +4387,7 @@ MonoBehaviour:
   - {fileID: 28126427}
   - {fileID: 1398251682}
   - {fileID: 658550542}
+  _arm: 1
 --- !u!114 &658550545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4468,6 +4470,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658550542}
   m_CullTransparentMesh: 1
+--- !u!114 &658550548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658550542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_arm_shn_st_t_arm_shn_uvk
+  _button: 0
+  _place: 0
 --- !u!1 &669606127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4898,7 @@ GameObject:
   - component: {fileID: 748385662}
   - component: {fileID: 748385661}
   - component: {fileID: 748385664}
+  - component: {fileID: 748385665}
   m_Layer: 5
   m_Name: StationButton
   m_TagString: Untagged
@@ -4927,6 +4945,7 @@ MonoBehaviour:
   - {fileID: 8296821406040531300}
   - {fileID: 1880466177}
   - {fileID: 748385659}
+  _arm: 1
 --- !u!114 &748385662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5009,6 +5028,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &748385665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748385659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_arm_shn_uvk_t_arm_shn_st
+  _button: 0
+  _place: 0
 --- !u!1 &754626371
 GameObject:
   m_ObjectHideFlags: 0
@@ -10156,6 +10190,7 @@ GameObject:
   - component: {fileID: 1398251686}
   - component: {fileID: 1398251685}
   - component: {fileID: 1398251684}
+  - component: {fileID: 1398251688}
   m_Layer: 5
   m_Name: msiMVUButton
   m_TagString: Untagged
@@ -10201,6 +10236,7 @@ MonoBehaviour:
   - {fileID: 28126427}
   - {fileID: 1398251682}
   - {fileID: 658550542}
+  _arm: 1
 --- !u!114 &1398251685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10283,6 +10319,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398251682}
   m_CullTransparentMesh: 1
+--- !u!114 &1398251688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398251682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_arm_shn_st_t_arm_shn_msi-mvu
+  _button: 0
+  _place: 0
 --- !u!1 &1402684386
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,6 +13515,7 @@ GameObject:
   - component: {fileID: 1880466180}
   - component: {fileID: 1880466179}
   - component: {fileID: 1880466182}
+  - component: {fileID: 1880466183}
   m_Layer: 5
   m_Name: MVUButton
   m_TagString: Untagged
@@ -13509,6 +13561,7 @@ MonoBehaviour:
   - {fileID: 8296821406040531300}
   - {fileID: 1880466177}
   - {fileID: 748385659}
+  _arm: 1
 --- !u!114 &1880466180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13591,6 +13644,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1880466183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880466177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_arm_shn_uvk_t_arm_shn_msi-mvu
+  _button: 0
+  _place: 0
 --- !u!1 &1895199883
 GameObject:
   m_ObjectHideFlags: 0
@@ -66532,6 +66600,7 @@ MonoBehaviour:
   _imgToHide:
   - {fileID: 8296821405087282439}
   - {fileID: 8296821406967447606}
+  _arm: 1
 --- !u!224 &8296821406967447605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66564,6 +66633,7 @@ GameObject:
   - component: {fileID: 8296821406967447594}
   - component: {fileID: 8296821406967447595}
   - component: {fileID: 8296821406967447604}
+  - component: {fileID: 8296821406967447607}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -66571,6 +66641,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8296821406967447607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296821406967447606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: t_arm_shn_msi-mvu_t_arm_shn_st
+  _button: 0
+  _place: 0
 --- !u!1 &8307571682892302386
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class ActionAPI : API
         }
         else Debug.Log("нету");
         AOSColliderActivator.Instance.DeactivateAllColliders();
+
         foreach (JObject item in data)
         {
             var temp = item.SelectToken("apiId");

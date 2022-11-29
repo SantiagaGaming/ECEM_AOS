@@ -9,6 +9,7 @@ public class ARMButton : MonoBehaviour
 {
     [SerializeField] private GameObject[] _imgToShow;
     [SerializeField] private GameObject[] _imgToHide;
+    [SerializeField] private bool _arm;
     private Button _button;
 
     private void Start()
@@ -18,6 +19,8 @@ public class ARMButton : MonoBehaviour
     }
     private void ShowImage()
     {
+        AOSImageContainer.Instance.DeactivateAllImages();
+        AOSARMEnabler();
         foreach (var item in _imgToShow)
         {
             if (item.GetComponent<Image>() != null)
@@ -31,6 +34,15 @@ public class ARMButton : MonoBehaviour
                 item.GetComponent<Image>().enabled = false;
             if (item.GetComponent<Button>() != null)
                 item.GetComponent<Button>().enabled = false;
+        }
+    }
+    private void AOSARMEnabler()
+    {
+        if(_arm)
+        {
+            SceneAosObject obj = GetComponent<SceneAosObject>();
+            if (obj != null)
+                obj.InvokeOnClick();
         }
     }
 }

@@ -24,4 +24,12 @@ public class AOSImageContainer : MonoBehaviour
         else return null;
         
     }
+    public void DeactivateAllImages()
+    {
+        foreach (var obj in _images)
+        {
+            if(obj!=null)
+            obj.DisableObject();
+        }
+    }
 }
