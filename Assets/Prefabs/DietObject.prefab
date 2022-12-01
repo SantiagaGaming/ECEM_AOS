@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_boot_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &159076880929563236
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,8 +88,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_fueltanks_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &661342654378784556
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,8 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp2_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &724541242724087770
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,8 +392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_device_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &1396891552642079565
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,8 +436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witd_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &1435176713973920821
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,8 +480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_boot_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &1462241243536311234
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,7 +629,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a137b975cb2b10f4ab6c7ed7d7f8aecb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4228cf2380996c4e89c02b37646dca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -737,8 +725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_fueltanks_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &1954472139943032308
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,8 +769,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_221_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &2121142741648801745
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,8 +894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_fueltanks_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &2509883035988705985
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,8 +938,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &2536466045527471286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,8 +1063,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_shn_workplace_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &2631881288718866408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,8 +1107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_tsch_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &2763346919314045546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,8 +1151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &2837788602044996031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,8 +1357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp2_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &3198219095558758216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,8 +1401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_shvu_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &3254994550627441401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,8 +1445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &3270694777801875340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,8 +1489,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso1_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &3337205706052881104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,8 +1533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_cross_211_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &3357022754797175140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,8 +1658,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp1_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &3515114334167830771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,8 +1702,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_draft_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &3672177552818746367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,8 +1746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_workplace_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &3676220604953746848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,8 +1871,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_workplace_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &3805750615064705928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,8 +1996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_231_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &3941783337201417235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,8 +2040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_221_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &4061357780415869569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,8 +2084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_rsch_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &4322951466407304301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,8 +2128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_draft_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &4385162200736668546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,8 +2253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_boot_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &4649720737336810827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2351,8 +2297,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_control_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &4760107634741464750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2397,8 +2341,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witl_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &4771179879310000374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,8 +2385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_231_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &4792699658507177940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,8 +2429,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_rsch_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &4827550067215505344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,8 +2643,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_tsch_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &4967353513919528898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,8 +2687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_cross_211_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &4987690535971555528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,8 +2731,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso2_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &5052483014133041516
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,8 +2775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_shn_workplace_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &5061163708254567468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,8 +2819,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_device_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &5162229262280540771
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,8 +2863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witl_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &5269885227430645104
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,8 +3069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witl_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &5464140481263243567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c25005d36d408544ab3164fbf6157bcc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5b400782c4589a4da62394da2b21c80, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3511,7 +3435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bceab5e90915f7248b149183afff89c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30272bc24a6a69a4c86741218503ce8e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3660,8 +3584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_cpu_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &5824521459427827785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3706,8 +3628,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_221_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &5908590030845407015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,8 +3672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso1_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &5923296921038202902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,8 +3716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_shvu_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &6013241992481268645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3844,8 +3760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_cross_211_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &6098934106087931967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,8 +3804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_control_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &6353828877963154379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,8 +3848,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_tsch_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &6442918137716244623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,8 +3892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_shvu_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &6479917156045603180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,8 +3936,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_device_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &6617319055356607087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,8 +3980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_shn_workplace_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &6621808859692656841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,8 +4024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_cpu_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &6848843544682479842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,8 +4149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dsp_workplace_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &7080072901266898728
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,8 +4193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso2_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &7322733925986009990
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,8 +4237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp1_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &7886800169064585569
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,8 +4281,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso1_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &7948975381237153085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,8 +4325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_cpu_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &8097857566530915382
 GameObject:
   m_ObjectHideFlags: 0
@@ -4640,8 +4532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_relay_231_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &8157053273426830576
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,8 +4576,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_dga_control_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &8211112452597551915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4732,8 +4620,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witd_radio_c3
-  _button: 0
-  _place: 0
 --- !u!1 &8304359316963664905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4778,8 +4664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_draft_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &8382179465752570439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4824,8 +4708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_field_pointed_witd_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &8389038469248082823
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,8 +4752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp1_radio_c1
-  _button: 0
-  _place: 0
 --- !u!1 &8462613877591675461
 GameObject:
   m_ObjectHideFlags: 0
@@ -4997,8 +4877,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_feed_rsch_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &8618457445971931795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,8 +5165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_kp2_radio_c2
-  _button: 0
-  _place: 0
 --- !u!1 &8749323328824611760
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,5 +5452,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: d_uvk_uso2_radio_c2
-  _button: 0
-  _place: 0

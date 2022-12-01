@@ -13,7 +13,7 @@ public class ObjectWithButton : BaseObject
     public override void OnClicked(InteractHand interactHand)
     {
             base.OnClicked(interactHand);
-        if(AOSColliderActivator.Instance.CanTouch)
+        if(SceneSettings.Instance.CanTouch)
         {
             if (_buttonsPos == null && !_vertical)
                 MovingButtonsController.Instance.SetMovingButtonsPosition(transform.position + new Vector3(0f, 0.12f, 0), this);
@@ -25,12 +25,12 @@ public class ObjectWithButton : BaseObject
 
             _pushableObject = GetComponent<PushableObject>();
             if (_pushableObject != null)
-                MovingButtonsController.Instance.SetPushableObject(_pushableObject);
-            else MovingButtonsController.Instance.SetPushableObject(null);
+                MovingButtonsController.Instance.SetPushObject(_pushableObject);
+            else MovingButtonsController.Instance.SetPushObject(null);
 
             if (_movingObject != null)
-                MovingButtonsController.Instance.SetRepairableObject(_movingObject);
-            else MovingButtonsController.Instance.SetRepairableObject(null);
+                MovingButtonsController.Instance.SetToolObject(_movingObject);
+            else MovingButtonsController.Instance.SetToolObject(null);
         }
           
 

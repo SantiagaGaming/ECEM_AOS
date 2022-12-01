@@ -6,67 +6,58 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public UnityAction SceneChangerEvent;
-    public UnityAction PlaceChangedEvent;
-    public string PrevousSceneName { get; private set; }
-
-    [SerializeField] private TeleportDoor[] _teleportDoors;
     private string _sceneName;
-
     private void Start()
     {
-            if (AOSColliderActivator.Instance.DevelopMode())
-            {
-                foreach (var door in _teleportDoors)
-                {
-                    door.DoorClickedEvent += OnTeleportToLocation;
-                }
-            }
         _sceneName = SceneManager.GetActiveScene().name;
-        if (SceneManager.GetActiveScene().name != "menu")
+        if (_sceneName != TagsHelper.MENU_LOCATION)
         {
-            PlayerPrefs.SetString("CurrentSceneName", _sceneName);
+            SceneSettings.Instance.Memory.PrevousLocation = SceneSettings.Instance.Memory.CurrentLocation;
+            SceneSettings.Instance.Memory.CurrentLocation = _sceneName;
         }
     }
-    public void OnTeleportToLocation(string locationName)
+    public void TeleportToLocation(string locationName)
     {
-        if(PlayerPrefs.GetString("Teleport")!="false")
-        {
-            if (locationName == "dsp" ||
-            locationName == "relay" ||
-            locationName == "cross" ||
-            locationName == "dga" ||
-            locationName == "feed" ||
-            locationName == "field" ||
-            locationName == "hall1" ||
-            locationName == "hall2" ||
-            locationName == "shn" ||
-             locationName == "uvk")
+        if (!SceneSettings.Instance.Memory.Teleport)
+            return;
+
+            if (locationName == TagsHelper.DSP_LOCATION||
+            locationName == TagsHelper.RELAY_LOCATION ||
+            locationName == TagsHelper.CROSS_LOCATION ||
+            locationName == TagsHelper.DGA_LOCATION ||
+            locationName == TagsHelper.FEED_LOCATION ||
+            locationName == TagsHelper.FIELD_LOCATION ||
+            locationName == TagsHelper.HALL1_LOCATION ||
+            locationName == TagsHelper.HALL2_LOCATION ||
+            locationName == TagsHelper.SHN_LOCATION ||
+             locationName == TagsHelper.UVK_LOCATION)
             {
-                PrevousSceneName = _sceneName;
-                PlayerPrefs.SetString("PrevousSceneName", PrevousSceneName);
-                if (PrevousSceneName != locationName)
-                    SceneManager.LoadScene(locationName);
-            }
-            else if (locationName == "menu" &&
-            _sceneName != "start" &&
-            _sceneName != "menu")
+                if (_sceneName != locationName)
             {
-                Debug.Log("PlayerPrefs is not  menu " + PlayerPrefs.GetString("PrevousSceneName"));
                 SceneManager.LoadScene(locationName);
+                Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from if");
             }
-            else if (locationName == "menu" &&
-            _sceneName != "start" &&
-             _sceneName == "menu")
+            
+            }
+            else if (locationName == TagsHelper.MENU_LOCATION &&
+            _sceneName != TagsHelper.MENU_LOCATION )
             {
-                SceneManager.LoadScene(PlayerPrefs.GetString("CurrentSceneName"));
+            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else if");
+            SceneManager.LoadScene(locationName);
+            }
+            else if (locationName == TagsHelper.MENU_LOCATION &&
+             _sceneName == TagsHelper.MENU_LOCATION)
+        {
+            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else else if");
+            SceneManager.LoadScene(SceneSettings.Instance.Memory.CurrentLocation);
             }
             else
             {
-                API api = FindObjectOfType<API>();
-                api.OnInvokeEndTween(locationName);
+            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else");
+            API api = FindObjectOfType<API>();
+                api.OnEndTweenInvoke(locationName);
             }
         }
            
     }
-}
+

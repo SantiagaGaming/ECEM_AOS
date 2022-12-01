@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KnifeSwitch : MonoBehaviour
 {
-    [SerializeField] private HandButton[] _handButtons;
+    [SerializeField] private MovingButtonWithAction[] _handButtons;
     private void Start()
     {
         foreach (var handButton in _handButtons)

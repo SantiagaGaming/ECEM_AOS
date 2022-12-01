@@ -20,28 +20,27 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     [SerializeField] protected Transform helperPos;
     [SerializeField] protected string helperName;
 
+    protected Collider Collider;
+
     protected virtual void Start()
     {
         canvasHelper = FindObjectOfType<CanvasObjectHelperController>();
+        Collider = GetComponent<Collider>();
         if (!Button)
         {
-            var collider = gameObject.GetComponent<Collider>();
-            if (collider != null&& !AOSColliderActivator.Instance.DevelopMode())
-            {
-                collider.enabled = false;
-            }
-             
-            AOSColliderActivator.Instance.AddBaseObject(this);
+            if(Collider != null)
+                Collider.enabled = false;
+            ControllersHandler.Instance.GetAOSColliderActivator().AddBaseObject(this);
             sceneAosObject = GetComponent<SceneAosObject>();
         }
     }
 
     public virtual void OnClicked(InteractHand interactHand)
     {
-        if(AOSColliderActivator.Instance.CanTouch)
+        if(SceneSettings.Instance.CanTouch)
         {
             sceneAosObject = GetComponent<SceneAosObject>();
-            if (sceneAosObject != null && !AOSColliderActivator.Instance.DevelopMode())
+            if (sceneAosObject != null)
             {
                 sceneAosObject.InvokeOnClick();
                 MovingButtonsController.Instance.ObjectName = sceneAosObject.ObjectId;
@@ -52,17 +51,17 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void OnHoverIn(InteractHand interactHand)
     {
-        if(AOSColliderActivator.Instance.CanTouch)
+        if(SceneSettings.Instance.CanTouch)
         {
             if (helperPos != null)
                 canvasHelper.ShowTextHelper(helperName, helperPos);
             if (outlineObjects != null)
-                foreach (var obj in outlineObjects)
+                foreach (var outline in outlineObjects)
                 {
-                    if (obj != null)
+                    if (outline != null)
                     {
-                        obj.enabled = true;
-                        obj.OutlineWidth = 3;
+                        outline.enabled = true;
+                        outline.OutlineWidth = 3;
                     }
 
                 }
@@ -72,17 +71,17 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void OnHoverOut(InteractHand interactHand)
     {
-        if(AOSColliderActivator.Instance.CanTouch)
+        if(SceneSettings.Instance.CanTouch)
         {
             if (helperPos != null && canvasHelper != null)
                 canvasHelper.HidetextHelper();
             if (outlineObjects != null)
-                foreach (var obj in outlineObjects)
+                foreach (var outline in outlineObjects)
                 {
-                    if (obj != null)
+                    if (outline != null)
                     {
-                        obj.enabled = false;
-                        obj.OutlineWidth = 0;
+                        outline.enabled = false;
+                        outline.OutlineWidth = 0;
 
                     }
 
@@ -96,7 +95,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public void SetHelperName(string value)
     {
-        helperName = HtmlToText.Instance.HTMLToTextReplace(value);
+        helperName = ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(value);
     }
     public string GetAOSName()
     {
@@ -106,8 +105,8 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void EnableObject(bool value)
     {
-        if (GetComponent<Collider>() != null)
-            GetComponent<Collider>().enabled = value;
+        if (Collider != null)
+            Collider.enabled = value;
         if (GetComponent<SpriteRenderer>())
             GetComponent<SpriteRenderer>().enabled = value;
     }

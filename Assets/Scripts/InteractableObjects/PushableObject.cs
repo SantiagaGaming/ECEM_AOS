@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushableObject : MonoBehaviour
+public class PushableObject : MonoBehaviour, IScriptableAnimationObject
 {
     private bool _pushed = true;
     private bool _canPush = true;
-    public void StartPush()
+
+    public void PlayScritableAnimtaion()
     {
-        if(_canPush)
-        StartCoroutine(Push(_pushed));
+        if (_canPush)
+            StartCoroutine(Push(_pushed));
     }
+
     private IEnumerator Push(bool value)
     {
         _canPush = false;

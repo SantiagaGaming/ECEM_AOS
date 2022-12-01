@@ -6,13 +6,6 @@ using UnityEngine;
 
 public class HtmlToText : MonoBehaviour
 {
-    public static HtmlToText Instance;
-    private HtmlToText() { }
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-    }
     public string HTMLToTextReplace(string HTMLCode)
     {
         // Remove new lines since they are not visible in HTML

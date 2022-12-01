@@ -15,9 +15,9 @@ public class LampBlinker : MonoBehaviour
     public void EnableBlink(bool value)
     {
         if (value)
-            StartCoroutine("Blink");
+            StartCoroutine(TagsHelper.BLINK);
         else
-            StopCoroutine("Blink");
+            StopCoroutine(TagsHelper.BLINK);
 
     }
     private IEnumerator Blink()
@@ -25,6 +25,6 @@ public class LampBlinker : MonoBehaviour
         int rnd = Random.Range(0, 2);
         GetComponent<Renderer>().material.color = rnd > 0 ?  _greyColor : _currentColor;
         yield return new WaitForSeconds(Random.Range(0, 1f));
-        StartCoroutine("Blink");
+        StartCoroutine(TagsHelper.BLINK);
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class StoneDisabler : MonoBehaviour
 {
-    [SerializeField] private HandButton _handButton;
+    [SerializeField] private MovingButtonWithAction _handButton;
     private void Start()
     {
-        if (PlayerPrefs.GetString("Stone") == "false")
+        if (!SceneSettings.Instance.Memory.Stone)
         {
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
@@ -26,6 +26,6 @@ public class StoneDisabler : MonoBehaviour
     {
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
-        PlayerPrefs.SetString("Stone", "false");
+        SceneSettings.Instance.Memory.Stone = false;
     }
 }

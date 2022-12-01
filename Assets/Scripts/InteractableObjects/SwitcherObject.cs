@@ -5,8 +5,8 @@ using UnityEngine;
 public class SwitcherObject : RepairableObject
 {
     [SerializeField] private GameObject _switcher;
-    [SerializeField] private HandButton _buttonOn;
-    [SerializeField] private HandButton _buttonOff;
+    [SerializeField] private MovingButtonWithAction _buttonOn;
+    [SerializeField] private MovingButtonWithAction _buttonOff;
     private bool _canRotate = true;
     private bool _side = true;
     private void OnEnable()

@@ -13,7 +13,7 @@ public class AOSObjectWithImage : AosObjectBase
     private void Start()
     {
         _img= GetComponent<Image>();
-        AOSImageContainer.Instance.AddAOSObjectWithImage(this);
+        ControllersHandler.Instance.GetAOSImageContainer().AddAOSObjectWithImage(this);
     }
     public void DisableObject()
     {
@@ -36,7 +36,6 @@ public class AOSObjectWithImage : AosObjectBase
             {
                 item.GetComponent<Image>().enabled = value;
             }
-        }
-          
+        } 
     }
 }

@@ -10,14 +10,17 @@ public class HallPositionChanger : MonoBehaviour
     private string _prevousLocation;
     private void Start()
     {
-        _prevousLocation = PlayerPrefs.GetString("PrevousSceneName");
-        Debug.Log("FROM START " + _prevousLocation);
+        _prevousLocation = SceneSettings.Instance.Memory.PrevousLocation;
         if (_prevousLocation != null)
         {
             Transform newPlayerPos = _playerPositions.FirstOrDefault(t => t.name == _prevousLocation);
             if (newPlayerPos != null)
+            {
                 Player.Instance.TeleportTo(newPlayerPos);
-            Debug.Log(newPlayerPos + "Pos Name");
+                Debug.Log(_prevousLocation + "FROM HALL POSITIONS");
+            }
+            else Debug.Log("Not found  " + newPlayerPos + _prevousLocation);
+               
         }
     }
 }

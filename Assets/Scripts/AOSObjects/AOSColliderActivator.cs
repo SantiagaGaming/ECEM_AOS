@@ -7,20 +7,8 @@ using UnityEngine;
 
 public class AOSColliderActivator : MonoBehaviour
 {
-    public static AOSColliderActivator Instance;
-
-    [SerializeField] private DevelopSettings _settings;
-    [HideInInspector]public bool UVKDoor = true;
-    private bool _isDevelopment;
     private List<BaseObject> _aosSceneObjects = new List<BaseObject>();
-    public bool CanTouch { get; set; } = true;
-    
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        _isDevelopment = _settings.Develop;
-    }
+
     public void AddBaseObject(BaseObject obj)
     {
         _aosSceneObjects.Add(obj);
@@ -43,11 +31,7 @@ public class AOSColliderActivator : MonoBehaviour
         {
             item.EnableObject(false);
         }
-        BackButtonsHandler.Instance.DeactivateAllBackButtons();
+        ControllersHandler.Instance.GetBackButtonsHandler().DeactivateAllBackButtons();
     }
-    public bool DevelopMode()
-    {
-        return _isDevelopment;
-    }
-    public DevelopSettings Settings => _settings;
+
 }

@@ -8,6 +8,6 @@ public class VRWatchButton : BaseButton
     public override void OnClicked(InteractHand interactHand)
     {
       SceneChanger changer = FindObjectOfType<SceneChanger>();
-        changer.OnTeleportToLocation("menu");
+        changer.TeleportToLocation("menu");
     }
 }

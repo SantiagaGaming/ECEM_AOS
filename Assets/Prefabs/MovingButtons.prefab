@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1480319614293390127}
   - component: {fileID: 1480319614293390120}
   - component: {fileID: 1480319614293390121}
-  - component: {fileID: 528599604723916045}
+  - component: {fileID: 2043913391471115780}
   m_Layer: 0
   m_Name: HandButton_2
   m_TagString: Untagged
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &528599604723916045
+--- !u!114 &2043913391471115780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480319614293390132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709d7dd6b6530734395d1ea99b15657b, type: 3}
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
@@ -158,7 +158,7 @@ MonoBehaviour:
   helperPos: {fileID: 1480319614119636912}
   helperName: 
   actionText: 
-  _hand: 2
+  _currentAction: 2
 --- !u!1 &1480319614791155434
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 1480319614791155437}
   - component: {fileID: 1480319614791155438}
   - component: {fileID: 1480319614791155439}
-  - component: {fileID: 7310398487958342455}
+  - component: {fileID: 7410012382201941804}
   m_Layer: 0
   m_Name: HandButton_1
   m_TagString: Untagged
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7310398487958342455
+--- !u!114 &7410012382201941804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480319614791155434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709d7dd6b6530734395d1ea99b15657b, type: 3}
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
   helperPos: {fileID: 1480319615564835537}
   helperName: 
   actionText: 
-  _hand: 1
+  _currentAction: 1
 --- !u!1 &1480319615564835538
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3203245720023688329}
   - component: {fileID: 3203245720023688342}
   - component: {fileID: 3203245720023688340}
-  - component: {fileID: 6600910299484879897}
+  - component: {fileID: 6936178116257258155}
   m_Layer: 0
   m_Name: PenButton
   m_TagString: Untagged
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6600910299484879897
+--- !u!114 &6936178116257258155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3203245720023688341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48b586d7e1785940b16e18a7b81f31e, type: 3}
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
@@ -476,6 +476,7 @@ MonoBehaviour:
   helperPos: {fileID: 3203245719518001580}
   helperName: 
   actionText: 
+  _currentAction: 5
 --- !u!1 &8191790307632209108
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,9 +489,9 @@ GameObject:
   - component: {fileID: 8191790307632209105}
   - component: {fileID: 8191790307632209110}
   - component: {fileID: 3203245719040547146}
-  - component: {fileID: 3203245719040547192}
+  - component: {fileID: 7527779916504815099}
   m_Layer: 0
-  m_Name: RepairButton
+  m_Name: ToolButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3203245719040547192
+--- !u!114 &7527779916504815099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8191790307632209108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f330ebb5222fdc14d8f90fe11f2d431d, type: 3}
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
@@ -604,6 +605,7 @@ MonoBehaviour:
   helperPos: {fileID: 8191790308648284871}
   helperName: 
   actionText: 
+  _currentAction: 4
 --- !u!1 &8191790307647549492
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,10 +715,10 @@ GameObject:
   - component: {fileID: 8191790307752660358}
   - component: {fileID: 8191790307752660359}
   - component: {fileID: 8191790307752660356}
-  - component: {fileID: 3203245719040547149}
   - component: {fileID: 3203245719040547148}
+  - component: {fileID: 513891206202329964}
   m_Layer: 0
-  m_Name: WatchButton
+  m_Name: EyeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,23 +803,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.5600007, z: 0.20000005}
   m_Center: {x: 0, y: -0.000091552734, z: 0.0000038146973}
---- !u!114 &3203245719040547149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8191790307752660378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d59a8f35c46dcda45b04e286d25ca193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Button: 1
-  outlineObjects: []
-  helperPos: {fileID: 8191790307647549495}
-  helperName: 
-  actionText: 
 --- !u!114 &3203245719040547148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,6 +815,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &513891206202329964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8191790307752660378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 1
+  outlineObjects: []
+  helperPos: {fileID: 8191790307647549495}
+  helperName: 
+  actionText: 
+  _currentAction: 3
 --- !u!1 &8191790307827035759
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +905,7 @@ GameObject:
   - component: {fileID: 8191790309144033045}
   - component: {fileID: 8191790309144033258}
   - component: {fileID: 3203245719040547147}
-  - component: {fileID: 5679887880077869452}
+  - component: {fileID: 5585133208744856061}
   m_Layer: 0
   m_Name: HandButton
   m_TagString: Untagged
@@ -1001,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b906be5f8c9ae6646bd0f15300fc7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5679887880077869452
+--- !u!114 &5585133208744856061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1010,7 +1013,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8191790309144033256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 709d7dd6b6530734395d1ea99b15657b, type: 3}
+  m_Script: {fileID: 11500000, guid: 370ccb8feffffaa41b4515011d3faef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: 1
@@ -1018,4 +1021,4 @@ MonoBehaviour:
   helperPos: {fileID: 8191790307827035758}
   helperName: 
   actionText: 
-  _hand: 0
+  _currentAction: 0

@@ -14,13 +14,17 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
 
     public override void PlayScritableAnimtaion()
     {
-        if (CanRotate && CanOpen)
-            StartCoroutine(RotateDoor(IsClosed));
+        NoteBookAnimation notebook = FindObjectOfType<NoteBookAnimation>();
+        if(notebook!=null)
+        {
+            if (CanRotate && CanOpen && notebook.IsClosed)
+                StartCoroutine(RotateDoor(IsClosed));
+        }
     }
 
     private IEnumerator RotateDoor(bool value)
     {
-        AOSColliderActivator.Instance.CanTouch = false;
+        SceneSettings.Instance.CanTouch = false;
         DoorRotateEvent?.Invoke(true);
         GetComponent<Collider>().enabled = false;
         CanRotate = false;
@@ -121,7 +125,6 @@ public class UVKDoorAnimation : BaseAnimationObject, IScriptableAnimationObject
         IsClosed = IsClosed ? false : true;
         DoorRotateEvent?.Invoke(false);
         CanRotate = true;
-        AOSColliderActivator.Instance.CanTouch = true;
-
+        SceneSettings.Instance.CanTouch = true;
     }
 }

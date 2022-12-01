@@ -9,11 +9,11 @@ public class StartStrelkaPosition : AosObjectBase
     [AosAction(name: "Проиграть анимацию плюс")]
     public void PlayPlusAnim()
     {
-        PlayerPrefs.SetString("Strelka", "minus");
+        SceneSettings.Instance.Memory.StrelkPosition = true;
     }
     [AosAction(name: "Проиграть анимацию минус")]
     public void PlayMinusAnim()
     {
-        PlayerPrefs.SetString("Strelka", "plus");
+        SceneSettings.Instance.Memory.StrelkPosition = false;
     }
 }

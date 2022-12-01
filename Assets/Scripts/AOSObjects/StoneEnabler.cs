@@ -10,8 +10,8 @@ public class StoneEnabler : AosObjectBase
     public void SetCondition(bool value)
     {
         if (value == true)
-            PlayerPrefs.SetString("Stone", "true");
+            SceneSettings.Instance.Memory.Stone = true;
         else
-            PlayerPrefs.SetString("Stone", "false");
+            SceneSettings.Instance.Memory.Stone = false;
     }
 }

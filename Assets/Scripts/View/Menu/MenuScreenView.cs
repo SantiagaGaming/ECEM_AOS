@@ -11,36 +11,48 @@ public class MenuScreenView : BaseScreenView
     [SerializeField] private MenuScreenObject[] _menuScreens;
     [SerializeField] private TextMeshProUGUI _currentLocationText;
     [SerializeField] private TextMeshProUGUI _timertext;
+    [SerializeField] private TextMeshProUGUI _commentText;
+    [SerializeField] private TextMeshProUGUI _exitText;
+    [SerializeField] private TextMeshProUGUI _warnText;
 
 
-    private string _locationName;
+    private string _currentScreenName;
 
-    public void SetLocationText()
-    {
-        PlayerPrefs.GetString("Location");
-    }
     public void SetTimertext(string text)
     {
         _timertext.text = text;
     }
+    public void SetOtkazText(string text)
+    {
+        _commentText.text= text;
+    }
+
+    public void SetExitText(string text)
+    {
+        _exitText.text = text;
+    }
+    public void SetWarnText(string text)
+    {
+        _warnText.text = text;
+    }
 
     public void ActivateMenuScreen(string name)
     {
-        DeactivateAllObjects();
+        DeactivateAllScreens();
         var tempMenuScreen = _menuScreens.FirstOrDefault(n => n.GetScreenName() == name);
         tempMenuScreen.EnableScreenObject(true);
-        _locationName = name;
+        _currentScreenName = name;
     }
-    private void DeactivateAllObjects()
+    private void DeactivateAllScreens()
     {
-        foreach (var item in _menuScreens)
+        foreach (var screen in _menuScreens)
         {
-            item.EnableScreenObject(false);
+            screen.EnableScreenObject(false);
         }
     }
-    public string GetCurrentLocationName()
+    public string GetCurrentScreenName()
     {
-        return _locationName;
+        return _currentScreenName;
     }
 
 }

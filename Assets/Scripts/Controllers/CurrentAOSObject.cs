@@ -12,5 +12,4 @@ public class CurrentAOSObject : MonoBehaviour
             Instance = this;
     }
     public SceneAosObject SceneAosObject { get; set; }
-    public IScriptableAnimationObject IScriptObject { get; set; }
 }

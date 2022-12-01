@@ -7,24 +7,22 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
 {
     [SerializeField] private GameObject _noteBook;
     [SerializeField] private GameObject _lid;
-    private bool _isClosed = true;
-    private bool _canRotate = true;
+    [HideInInspector]public bool IsClosed { get; private set; } = true;
 
+    private bool _canRotate = true;
     public void PlayScritableAnimtaion()
     {
         if (_canRotate)
-           StartCoroutine(ShowNoteBook(_isClosed));
+           StartCoroutine(ShowNoteBook(IsClosed));
     }
 
     private IEnumerator ShowNoteBook(bool value)
     {
-        AOSColliderActivator.Instance.CanTouch = false;
- 
+        SceneSettings.Instance.CanTouch = false;
         _canRotate = false;
         if (value)
         {
-            AOSColliderActivator.Instance.UVKDoor = false;
-            BackButtonsHandler.Instance.GetCurrentBackButton().EnableButton(false);
+            ControllersHandler.Instance.GetBackButtonsHandler().GetCurrentBackButton().EnableObject(false);
             int z = 0;
             while (z <= 35)
             {
@@ -39,8 +37,7 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
                 x--;
                 yield return new WaitForSeconds(0.01f);
             }
-            BackButtonsHandler.Instance.GetCurrentBackButton().EnableButton(true);
-
+            ControllersHandler.Instance.GetBackButtonsHandler().GetCurrentBackButton().EnableObject(true);
         }
         else
         {
@@ -59,11 +56,9 @@ public class NoteBookAnimation : MonoBehaviour, IScriptableAnimationObject
                 z--;
                 yield return new WaitForSeconds(0.01f);
             }
-
         }
-        _isClosed = _isClosed ? false : true;
+        IsClosed = IsClosed ? false : true;
         _canRotate = true;
-        AOSColliderActivator.Instance.CanTouch = true;
-        AOSColliderActivator.Instance.UVKDoor = true;
+        SceneSettings.Instance.CanTouch = true;
     }
 }

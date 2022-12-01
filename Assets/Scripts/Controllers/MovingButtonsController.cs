@@ -12,8 +12,9 @@ public class MovingButtonsController : MonoBehaviour
 
     public BaseObject CurrentBaseObject { get; set;}
     private MovingButtonsController() { }
-    private RepairableObject _tempRepairableObject;
-    private PushableObject _tempPushableObject;
+
+    private IScriptableAnimationObject _tempRepairableObject;
+    private IScriptableAnimationObject _tempPushableObject;
     private void Awake()
     {
         if (Instance == null)
@@ -91,51 +92,51 @@ public class MovingButtonsController : MonoBehaviour
     public void SetWatchButtonText(string text)
     {
         _watchButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
 
     public void SetRepairButtonText(string text)
     {
         _repairButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
     public void SetHandButtonText(string text)
     {
         _handButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
     public void SetHand1ButtonText(string text)
     {
         _handButton_1.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
     public void SetHand2ButtonText(string text)
     {
         _handButton_2.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
     public void SetPenButtonText(string text)
     {
         _penButton.TryGetComponent(out MovingButton movingButton);
-        movingButton.SetActionText(HtmlToText.Instance.HTMLToTextReplace(text));
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
-    public void SetRepairableObject(RepairableObject obj)
+    public void SetToolObject(RepairableObject obj)
     {
         _tempRepairableObject = obj;
     }
-    public void PlayRepairAnimation()
+    public void PlayToolAnimation()
     {
         if(_tempRepairableObject!=null)
         _tempRepairableObject.PlayScritableAnimtaion();
     }
-    public void SetPushableObject(PushableObject obj)
+    public void SetPushObject(PushableObject obj)
     {
         _tempPushableObject = obj;
     }
-    public void PushPushableObject()
+    public void PlayPushAnimation()
     {
         if (_tempPushableObject != null)
-            _tempPushableObject.StartPush();
+            _tempPushableObject.PlayScritableAnimtaion();
     }
 
 }

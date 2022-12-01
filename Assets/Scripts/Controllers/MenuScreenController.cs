@@ -6,7 +6,6 @@ public class MenuScreenController : MonoBehaviour
 {
     [SerializeField] private MenuScreenView _menuScreenView;
     private string _tempMenuScreenObject;
-
     public static MenuScreenController Instance;
     private void Awake()
     {
@@ -16,25 +15,24 @@ public class MenuScreenController : MonoBehaviour
 
     public void EnableMenuScreen(string value)
     {
-        if(value !="back")
+        if(value !=TagsHelper.BACK)
         {
            _menuScreenView.ActivateMenuScreen(value);
             _tempMenuScreenObject = value;
         }
-       
         else
         {
-           if(_menuScreenView.GetCurrentLocationName()== "otkazInfo"|| _menuScreenView.GetCurrentLocationName() == "otkazi"|| _menuScreenView.GetCurrentLocationName() == "exit")
+           if(_menuScreenView.GetCurrentScreenName()== TagsHelper.OTKAZI_INFO|| _menuScreenView.GetCurrentScreenName() == TagsHelper.OTKAZI || _menuScreenView.GetCurrentScreenName() == TagsHelper.EXIT)
             {
-                _menuScreenView.ActivateMenuScreen("main");
+                _menuScreenView.ActivateMenuScreen(TagsHelper.MAIN);
             }
-           else if(_menuScreenView.GetCurrentLocationName() == "uvk"||
-                    _menuScreenView.GetCurrentLocationName() == "field" ||
-                    _menuScreenView.GetCurrentLocationName() == "feed" ||
-                _menuScreenView.GetCurrentLocationName() == "dsp"||
-                _menuScreenView.GetCurrentLocationName() == "relay")
+           else if(_menuScreenView.GetCurrentScreenName() == TagsHelper.UVK_LOCATION ||
+                    _menuScreenView.GetCurrentScreenName() == TagsHelper.FIELD_LOCATION ||
+                    _menuScreenView.GetCurrentScreenName() == TagsHelper.FEED_LOCATION ||
+                _menuScreenView.GetCurrentScreenName() == TagsHelper.DSP_LOCATION ||
+                _menuScreenView.GetCurrentScreenName() == TagsHelper.RELAY_LOCATION)
             {
-                _menuScreenView.ActivateMenuScreen("otkazi");
+                _menuScreenView.ActivateMenuScreen(TagsHelper.OTKAZI);
             }
         }
     }

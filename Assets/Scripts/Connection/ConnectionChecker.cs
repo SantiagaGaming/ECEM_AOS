@@ -5,22 +5,17 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-[AosSdk.Core.Utils.AosObject(name: "Коннект")]
+[AosSdk.Core.Utils.AosObject(name: "Connection")]
 public class ConnectionChecker : AosObjectBase
 {
-    [AosEvent(name: "Готов к подключению")]
+    [AosEvent(name: "Ready to Action")]
     public event AosEventHandlerWithAttribute OnReadyToAction;
     [SerializeField] private API _api;
     public void OnConnect()
     {
         OnReadyToAction.Invoke("Ready to Action");
         if(_api!=null)
-        _api.OnInvokeEndTween("Start");
-        else
-        {
-            _api = FindObjectOfType<API>();
-            _api.OnInvokeEndTween(_api.LocationName);
-        }
+        _api.OnEndTweenInvoke(SceneSettings.Instance.LocationName);
     }
 
 

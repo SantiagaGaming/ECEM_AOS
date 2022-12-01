@@ -19,11 +19,10 @@ public class API : AosObjectBase
     public event AosEventHandlerWithAttribute navAction;
     [AosEvent(name: "Результат измерения")]
     public event AosEventHandlerWithAttribute OnMeasure;
-    [AosEvent(name: "Результат измерения")]
+    [AosEvent(name: "Результат причины")]
     public event AosEventHandlerWithAttribute OnReason;
     [AosEvent(name: "Открыть меню")]
     public event AosEventHandler OnMenu;
-    public string LocationName;
     protected void Start()
     {
         Init();
@@ -36,13 +35,8 @@ public class API : AosObjectBase
     [AosAction(name: "Телепорт")]
     public void Teleport([AosParameter("Задать локацию для перемещения")] string location)
     {
-        Debug.Log("in teleport");
-        SceneChanger sceneChanger = FindObjectOfType<SceneChanger>();
-        if (sceneChanger != null)
-        {
-            sceneChanger.OnTeleportToLocation(location);
+        ControllersHandler.Instance.GetSceneChanger().TeleportToLocation(location);
             EndTween?.Invoke(location);
-        }
     }
     [AosAction(name: "Задать текст локации")]
     public virtual void showWelcome(JObject info, JObject nav)
@@ -94,12 +88,11 @@ public class API : AosObjectBase
     {
     }
 
-
     [AosAction(name: "Показать меню")]
     public virtual void showMenu(JObject faultInfo, JObject exitInfo,JObject resons)
     {
     }
-    public void InvokeNavActionBack(string value)
+    public void OnNavActionInvoke(string value)
     {
         navAction?.Invoke(value);
     }
@@ -112,24 +105,9 @@ public class API : AosObjectBase
     {
         OnMenu?.Invoke();
     }
-    public void OnInvokeEndTween()
-    {
-        Debug.Log(LocationName + "From API START");
-        EndTween?.Invoke(LocationName);
-        Debug.Log(LocationName + "From API FINISH");
-    }
-    public void OnInvokeEndTween(string location)
+    public void OnEndTweenInvoke(string location)
     {
         EndTween?.Invoke(location);
     }
-    protected void OnNextButtonClicked(string value)
-    {
-        navAction.Invoke(value);
-    }
-    public void ExitEvent()
-    {
-        navAction.Invoke("exit");
-    }
-
 
 }

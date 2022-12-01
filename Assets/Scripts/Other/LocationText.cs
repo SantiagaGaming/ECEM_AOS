@@ -8,6 +8,6 @@ public class LocationText : MonoBehaviour
    [SerializeField] private TextMeshProUGUI _locationText;
     private void Start()
     {
-        _locationText.text = PlayerPrefs.GetString("Location");
+        _locationText.text = SceneSettings.Instance.Memory.LocationText;
     }
 }

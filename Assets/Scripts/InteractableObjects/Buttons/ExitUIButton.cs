@@ -16,6 +16,6 @@ public class ExitUIButton : MonoBehaviour
     private void ExitGame()
     {
         API api = FindObjectOfType<API>();
-        api.ExitEvent();
+        api.OnNavActionInvoke(TagsHelper.EXIT);
     }
 }

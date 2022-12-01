@@ -17,8 +17,8 @@ public class PlaceObject : BaseObject
         {
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
-            BackButtonsHandler.Instance.SetBackButtonObject(_backButton);
             sceneAosObject.InvokeOnClick();
+        ControllersHandler.Instance.GetBackButtonsHandler().SetBackButtonObject(_backButton);
     }
     private void OnEnable()
     {
@@ -37,9 +37,7 @@ public class PlaceObject : BaseObject
         {
             scriptableAnimationObject.PlayScritableAnimtaion();
         }
-        BackButtonObject tempBackButton = BackButtonsHandler.Instance.GetCurrentBackButton();
-        if(tempBackButton!=null)
-        tempBackButton.EnableButton(false);
+;
     }
 
 }

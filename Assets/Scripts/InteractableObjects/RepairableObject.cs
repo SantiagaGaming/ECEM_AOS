@@ -18,7 +18,8 @@ public class RepairableObject : MonoBehaviour, IScriptableAnimationObject
     }
 
     private IEnumerator Move()
-    { if(canMove)
+    { 
+        if(canMove)
         {
             GetComponent<Collider>().enabled = false;
             MovingButtonsController.Instance.HideAllButtons();

@@ -24,13 +24,13 @@ public class StrelkaButton : BaseButton
             if (_currentSide == Side.Plus)
             {
                 diet.GetPlusID().InvokeOnClick();
-                PlayerPrefs.SetString("Strelka", "plus");
+                SceneSettings.Instance.Memory.StrelkPosition = true;
             }
           
             else if (_currentSide == Side.Minus)
             {
                 diet.GetMinusID().InvokeOnClick();
-                PlayerPrefs.SetString("Strelka", "minus");
+                SceneSettings.Instance.Memory.StrelkPosition = false;
             }
                
             else if (_currentSide == Side.Indication)

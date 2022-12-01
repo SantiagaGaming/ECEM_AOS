@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class BackButtonsHandler : MonoBehaviour
 {
-    public static BackButtonsHandler Instance;
+
     private BackButtonObject _currentBackButton;
     private List<BackButtonObject> _backButtons = new List<BackButtonObject>();
     public string ActionToInvoke { get; set; }
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-    }
     public void SetBackButtonObject(BackButtonObject backButtonObject)
     {
         _currentBackButton = backButtonObject;
@@ -26,7 +21,7 @@ public class BackButtonsHandler : MonoBehaviour
     public void EnableCurrentBackButton(bool value)
     {
         if (_currentBackButton != null)
-            _currentBackButton.EnableButton(value);
+            _currentBackButton.EnableObject(value);
     }
     public void AddBackButton(BackButtonObject backButton)
     {
@@ -36,7 +31,7 @@ public class BackButtonsHandler : MonoBehaviour
     {
         foreach (var item in _backButtons)
         {
-            item.EnableButton(false);
+            item.EnableObject(false);
         }
     }
 

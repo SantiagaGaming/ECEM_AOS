@@ -12,13 +12,13 @@ public class EscButton : MonoBehaviour
     private void Start()
     {
         _changer = FindObjectOfType<SceneChanger>();
-        AOSColliderActivator.Instance.Settings.MenuEvent += OnShowMenu;
+        SceneSettings.Instance.Memory.MenuEvent += OnShowMenu;
         if(_backButton!=null)
         _backButton.onClick.AddListener(OnShowMenu);
     }
     private void OnShowMenu()
     {
-            _changer.OnTeleportToLocation("menu");
+       _changer.TeleportToLocation(TagsHelper.MENU_LOCATION);
     }
 
 }

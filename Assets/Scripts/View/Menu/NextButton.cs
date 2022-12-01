@@ -27,6 +27,10 @@ public class NextButton : MonoBehaviour
     {
         _actionOnButton= value;
     }
+    public void EnableButton(bool value)
+    {
+        _button.enabled = value;
+    }
     
 
 

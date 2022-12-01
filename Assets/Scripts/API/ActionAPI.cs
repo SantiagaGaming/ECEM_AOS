@@ -14,38 +14,42 @@ public class ActionAPI : API
     private IEnumerator EndTweenDelay()
     {
         yield return new WaitForSeconds(0.2f);
-        LocationName = LocationController.instance.LocationName;
-        OnInvokeEndTween();
+
+        OnEndTweenInvoke(SceneSettings.Instance.LocationName);
+        Debug.Log("ENDTWEEN FORM API!");
     }
 
     public override void showPlace(JObject place, JArray data, JObject nav)
     {
-        Debug.Log(place.SelectToken("apiId").ToString() + "FromShowPlace");
-        string location = place.SelectToken("apiId").ToString();
-        if (place.SelectToken("name") != null)
+        BackButtonObject tempBackButton = ControllersHandler.Instance.GetBackButtonsHandler().GetCurrentBackButton();
+        if (tempBackButton != null)
+            tempBackButton.EnableObject(false);
+        Debug.Log(place.SelectToken(TagsHelper.API_ID).ToString() + "FromShowPlace");
+        string location = place.SelectToken(TagsHelper.API_ID).ToString();
+        if (place.SelectToken(TagsHelper.NAME) != null)
         {
-            string locationText = place.SelectToken("name").ToString();
-            PlayerPrefs.SetString("Location", locationText);
+            string locationText = place.SelectToken(TagsHelper.NAME).ToString();
+            Debug.Log(locationText + "Text location");
+           SceneSettings.Instance.Memory.LocationText = locationText;
         }
-        else Debug.Log("нету");
-        AOSColliderActivator.Instance.DeactivateAllColliders();
+        ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
 
         foreach (JObject item in data)
         {
-            var temp = item.SelectToken("apiId");
-            if (temp != null)
+            var baseObject = item.SelectToken(TagsHelper.API_ID);
+            if (baseObject != null)
             {
-                AOSColliderActivator.Instance.ActivateColliders(temp.ToString(), item.SelectToken("name").ToString());
+                ControllersHandler.Instance.GetAOSColliderActivator().ActivateColliders(baseObject.ToString(), item.SelectToken(TagsHelper.NAME).ToString());
             }
-            if (item.SelectToken("view") != null && AOSImageContainer.Instance != null)
+            if (item.SelectToken(TagsHelper.VIEW) != null && ControllersHandler.Instance.GetSceneChanger() != null)
             {
-                var temp2 = item.SelectToken("view");
-                if (temp2!= null)
+                var aosObjectWithImage = item.SelectToken(TagsHelper.VIEW);
+                if (aosObjectWithImage!= null)
                 {
-                        if (temp2.SelectToken("apiId") != null)
+                        if (aosObjectWithImage.SelectToken(TagsHelper.API_ID) != null)
                         {
-                        string name = temp2.SelectToken("apiId").ToString();
-                            AOSObjectWithImage tempObj = AOSImageContainer.Instance.GetAOSObjectWithImage(name);
+                        string name = aosObjectWithImage.SelectToken(TagsHelper.API_ID).ToString();
+                            AOSObjectWithImage tempObj = ControllersHandler.Instance.GetAOSImageContainer().GetAOSObjectWithImage(name);
                         if (tempObj != null) {
                             tempObj.EnableObject(name);
                             Debug.Log("Sucess + " + name);
@@ -54,29 +58,26 @@ public class ActionAPI : API
                   } 
             }
         }
-        if (nav.SelectToken("back") != null && nav.SelectToken("back").SelectToken("action") != null && nav.SelectToken("back").SelectToken("action").ToString() != String.Empty)
+        if (nav.SelectToken(TagsHelper.BACK) != null && nav.SelectToken(TagsHelper.BACK).SelectToken(TagsHelper.ACTION) != null && nav.SelectToken(TagsHelper.BACK).SelectToken(TagsHelper.ACTION).ToString() != String.Empty)
         {
-            BackButtonsHandler.Instance.EnableCurrentBackButton(true);
-            BackButtonsHandler.Instance.ActionToInvoke = nav.SelectToken("back").SelectToken("action").ToString();
+            ControllersHandler.Instance.GetBackButtonsHandler().EnableCurrentBackButton(true);
+            ControllersHandler.Instance.GetBackButtonsHandler().ActionToInvoke = nav.SelectToken(TagsHelper.BACK).SelectToken(TagsHelper.ACTION).ToString();
         }
-
-        //StreetCollidersActivator.Instance.ActivateColliders(place.SelectToken("apiId").ToString());
     }
     public override void updatePlace(JArray data)
     {
-        Debug.Log("Enter UpdatePlace");
         foreach (JObject item in data)
         {
-            var temp = item.SelectToken("points");
-            if (temp != null)
+            var points = item.SelectToken(TagsHelper.POINTS);
+            if (points != null)
             {
                 Diet diet = FindObjectOfType<Diet>();
                 diet.EnablePlusOrMinus(null);
-                if (temp is JArray)
+                if (points is JArray)
                 {
-                    foreach (var temp2 in temp)
+                    foreach (var point in points)
                     {
-                        diet.EnablePlusOrMinus(temp2.SelectToken("apiId").ToString());
+                        diet.EnablePlusOrMinus(point.SelectToken(TagsHelper.API_ID).ToString());
                     }
                 }
             }
@@ -85,70 +86,55 @@ public class ActionAPI : API
     public override void showPoints(string info, JArray data)
     {
         MovingButtonsController.Instance.HideAllButtons();
-        foreach (JObject item in data)
+        foreach (JObject button in data)
         {
-            if (item != null)
+            if (button != null)
             {
           
-                if (item.SelectToken("tool") != null && item.SelectToken("name") != null)
+                if (button.SelectToken(TagsHelper.TOOL) != null && button.SelectToken(TagsHelper.NAME) != null)
                 {
                  
-                    if (item.SelectToken("tool").ToString() == "eye")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.EYE)
                     {
                         MovingButtonsController.Instance.ShowWatchButton();
-                        MovingButtonsController.Instance.SetWatchButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetWatchButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
-                    if (item.SelectToken("tool").ToString() == "hand")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.HAND)
                     {
                         MovingButtonsController.Instance.ShowHandButton();
-                        MovingButtonsController.Instance.SetHandButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetHandButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
 
-                    if (item.SelectToken("tool").ToString() == "hand_1")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.HAND_1)
                     {
                         MovingButtonsController.Instance.ShowHand1Button();
-                        MovingButtonsController.Instance.SetHand1ButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetHand1ButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
-                    if (item.SelectToken("tool").ToString() == "hand_2")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.HAND_2)
                     {
                         MovingButtonsController.Instance.ShowHand2Button();
-                        MovingButtonsController.Instance.SetHand2ButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetHand2ButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
-                    if (item.SelectToken("tool").ToString() == "tool")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.TOOL)
                     {
                         MovingButtonsController.Instance.ShowRepairButton();
-                        MovingButtonsController.Instance.SetRepairButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetRepairButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
-                    if (item.SelectToken("tool").ToString() == "pen")
+                    if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.PEN)
                     {
                         MovingButtonsController.Instance.ShowPenButton();
-                        MovingButtonsController.Instance.SetPenButtonText(item.SelectToken("name").ToString());
+                        MovingButtonsController.Instance.SetPenButtonText(button.SelectToken(TagsHelper.NAME).ToString());
                     }
                 }
-                else if (item.SelectToken("apiId") != null)
+                else if (button.SelectToken(TagsHelper.API_ID) != null)
                 {
-                    string buttonName = item.SelectToken("apiId").ToString();
+                    string buttonName = button.SelectToken(TagsHelper.API_ID).ToString();
                     Diet diet = FindObjectOfType<Diet>();
                     diet.EnablePlusOrMinus(buttonName);
                 }
         
             }
         }
-    }
-    public override void showMeasure(JArray measureDevices, JArray measurePoints)
-    {
-        //MeasureButtonsBag.Instance.CurrentButtonsNames = new List<string>();
-        //foreach (JObject item in measurePoints)
-        //{
-        //    var tmpArray = item.SelectToken("points");
-        //    if (tmpArray != null && tmpArray is JArray)
-        //    {
-        //        foreach (JObject item2 in tmpArray)
-        //        {
-        //            MeasureButtonsBag.Instance.CurrentButtonsNames.Add(item2.SelectToken("apiId").ToString());
-        //        }
-        //    }
-        //}
     }
 
 }

@@ -22,18 +22,5 @@ public class BaseButton : BaseObject
         base.OnHoverOut(interactHand);
         transform.localScale /= 1.5f;
     }
-    public void DisableButton()
-    {
-        gameObject.SetActive(false);
-    }
-    public virtual void EnableButton(bool value)
-    {
-        Collider collider = GetComponent<Collider>();
-        if (collider != null)
-            collider.enabled = value;
-        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        if (sprite != null)
-            sprite.enabled = value;
-    }
 
 }

@@ -7,18 +7,14 @@ public class StrelkaPositionTaker : MonoBehaviour
     [SerializeField]private Animator _sp6Anim;
     private void Start()
     {
-        if (PlayerPrefs.GetString("Strelka") == "minus")
+        if (!SceneSettings.Instance.Memory.StrelkPosition)
         {
             _sp6Anim.SetTrigger("fastMinus");
-            Debug.Log("FASTMINUS");
-
         }
 
-        else if (PlayerPrefs.GetString("Strelka") == "plus")
+        else if (SceneSettings.Instance.Memory.StrelkPosition)
         {
             _sp6Anim.SetTrigger("fastPlus");
-            Debug.Log("FASTPlus");
-
         }
     }
 }
