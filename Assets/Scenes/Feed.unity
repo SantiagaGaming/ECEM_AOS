@@ -386,6 +386,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _backButton: {fileID: 0}
+--- !u!1 &420616322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420616323}
+  m_Layer: 0
+  m_Name: ReactionHelperPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420616323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420616322}
+  m_LocalRotation: {x: -0.5005967, y: -0.49940258, z: -0.49940258, w: 0.5005967}
+  m_LocalPosition: {x: -0.95, y: 1.417, z: 0.399}
+  m_LocalScale: {x: 100.000046, y: 100, z: 100.000015}
+  m_Children: []
+  m_Father: {fileID: 635033287198177463}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437741673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1524,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72ed550234522da408602f7e9fa06ec3, type: 3}
+--- !u!1 &1522315449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522315450}
+  m_Layer: 0
+  m_Name: ReactionHelperPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522315450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522315449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.00127, y: -0.00816, z: 0.01111}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3380425555680768622}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1573014712
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,6 +5564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7675993635098632970}
+  - {fileID: 420616323}
   m_Father: {fileID: 1345404760}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14610,6 +14671,7 @@ Transform:
   m_LocalScale: {x: 100.00002, y: 100, z: 100}
   m_Children:
   - {fileID: 7675993635479617815}
+  - {fileID: 1522315450}
   m_Father: {fileID: 1345404760}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: -107, z: 17.137}
@@ -15192,6 +15254,7 @@ MonoBehaviour:
   helperPos: {fileID: 7675993635098632970}
   helperName: 
   _backButton: {fileID: 712661479}
+  _reactionHelerPosition: {fileID: 420616323}
 --- !u!114 &3552296836049630163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33888,6 +33951,7 @@ MonoBehaviour:
   helperPos: {fileID: 7675993635479617815}
   helperName: "\u0428\u043A\u0430\u0444"
   _backButton: {fileID: 4054688451457025790}
+  _reactionHelerPosition: {fileID: 1522315450}
 --- !u!1 &8434470880568433066
 GameObject:
   m_ObjectHideFlags: 0

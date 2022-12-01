@@ -39,6 +39,8 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     {
         if(SceneSettings.Instance.CanTouch)
         {
+            ControllersHandler.Instance.GetReactionHelper().EnableReactionHelper(false);
+            ControllersHandler.Instance.GetReactionHelper().ChangeReactionHelperText("");
             sceneAosObject = GetComponent<SceneAosObject>();
             if (sceneAosObject != null)
             {

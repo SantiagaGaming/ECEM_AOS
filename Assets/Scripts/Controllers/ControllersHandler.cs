@@ -10,6 +10,7 @@ public class ControllersHandler : MonoBehaviour
     [SerializeField] private SceneChanger _sceneChanger;
     [SerializeField] private AOSImageContainer _aosImageContainer;
     [SerializeField] private HtmlToText _htmlToText;
+    [SerializeField] private ReactionHelper _reactionHelper;
     private ControllersHandler() { }
    
     private void Awake()
@@ -22,4 +23,5 @@ public class ControllersHandler : MonoBehaviour
     public SceneChanger GetSceneChanger() => _sceneChanger;
     public AOSImageContainer GetAOSImageContainer()  => _aosImageContainer;
     public HtmlToText GetHtmlToText() => _htmlToText;
+    public ReactionHelper GetReactionHelper() => _reactionHelper;
 }

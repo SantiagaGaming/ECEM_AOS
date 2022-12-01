@@ -14,9 +14,7 @@ public class ActionAPI : API
     private IEnumerator EndTweenDelay()
     {
         yield return new WaitForSeconds(0.2f);
-
         OnEndTweenInvoke(SceneSettings.Instance.LocationName);
-        Debug.Log("ENDTWEEN FORM API!");
     }
 
     public override void showPlace(JObject place, JArray data, JObject nav)
@@ -24,12 +22,10 @@ public class ActionAPI : API
         BackButtonObject tempBackButton = ControllersHandler.Instance.GetBackButtonsHandler().GetCurrentBackButton();
         if (tempBackButton != null)
             tempBackButton.EnableObject(false);
-        Debug.Log(place.SelectToken(TagsHelper.API_ID).ToString() + "FromShowPlace");
         string location = place.SelectToken(TagsHelper.API_ID).ToString();
         if (place.SelectToken(TagsHelper.NAME) != null)
         {
             string locationText = place.SelectToken(TagsHelper.NAME).ToString();
-            Debug.Log(locationText + "Text location");
            SceneSettings.Instance.Memory.LocationText = locationText;
         }
         ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
@@ -52,7 +48,6 @@ public class ActionAPI : API
                             AOSObjectWithImage tempObj = ControllersHandler.Instance.GetAOSImageContainer().GetAOSObjectWithImage(name);
                         if (tempObj != null) {
                             tempObj.EnableObject(name);
-                            Debug.Log("Sucess + " + name);
                         }
                      }
                   } 
@@ -134,6 +129,16 @@ public class ActionAPI : API
                 }
         
             }
+        }
+    }
+    public override void showReaction(JObject info, JObject nav)
+    {
+      if(info.SelectToken(TagsHelper.TEXT)!=null)
+       {
+                var reactionText = info.SelectToken(TagsHelper.TEXT);
+                ControllersHandler.Instance.GetReactionHelper().EnableReactionHelper(true);
+                ControllersHandler.Instance.GetReactionHelper().ChangeReactionHelperText(reactionText.ToString());
+                Debug.Log("in show reaction   "+ reactionText.ToString());
         }
     }
 

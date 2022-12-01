@@ -10,6 +10,11 @@ public class HallPositionChanger : MonoBehaviour
     private string _prevousLocation;
     private void Start()
     {
+        StartCoroutine(TeleportDelay());
+    }
+    private IEnumerator TeleportDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
         _prevousLocation = SceneSettings.Instance.Memory.PrevousLocation;
         if (_prevousLocation != null)
         {
@@ -20,7 +25,7 @@ public class HallPositionChanger : MonoBehaviour
                 Debug.Log(_prevousLocation + "FROM HALL POSITIONS");
             }
             else Debug.Log("Not found  " + newPlayerPos + _prevousLocation);
-               
+
         }
     }
 }

@@ -266,6 +266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 2}
   m_Children:
   - {fileID: 881330716}
+  - {fileID: 1703766624}
   m_Father: {fileID: 1346694770}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -300,6 +301,7 @@ MonoBehaviour:
   helperPos: {fileID: 881330716}
   helperName: "\u041C\u0435\u0441\u0442\u043E"
   _backButton: {fileID: 7283962064829468304}
+  _reactionHelerPosition: {fileID: 1703766624}
 --- !u!114 &573670866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,6 +1249,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _backButton: {fileID: 0}
+--- !u!1 &1703766623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703766624}
+  m_Layer: 0
+  m_Name: ReactionHelperTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703766624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703766623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.158, y: 0.009, z: 0.517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 573670863}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846126783
 GameObject:
   m_ObjectHideFlags: 0

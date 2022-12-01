@@ -57,7 +57,7 @@ public class API : AosObjectBase
     { 
     }
     [AosAction(name: "Показать реакцию")]
-    public void showReaction(JObject info, JObject nav)
+    public virtual void showReaction(JObject info, JObject nav)
     {
         navAction?.Invoke("msgClose");
     }

@@ -26,6 +26,7 @@ public class TagsHelper
     public const string EVAL = "eval";
     public const string OTKAZI = "otkazi";
     public const string OTKAZI_INFO = "otkazInfo";
+    public const string REACTION = "reaction";
 
     public const string BLINK = "Blink";
 
