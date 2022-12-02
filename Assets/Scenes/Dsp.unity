@@ -3079,7 +3079,7 @@ MonoBehaviour:
   helperPos: {fileID: 15379850}
   helperName: 
   _backButton: {fileID: 1472963871}
-  _reactionHelerPosition: {fileID: 0}
+  _reactionHelerPosition: {fileID: 141588750}
 --- !u!65 &507574858
 BoxCollider:
   m_ObjectHideFlags: 0
