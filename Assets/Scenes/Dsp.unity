@@ -25520,6 +25520,7 @@ GameObject:
   - component: {fileID: 8127724415274632739}
   - component: {fileID: 4409520299667070131}
   - component: {fileID: 4409520299667070132}
+  - component: {fileID: 4409520299667070133}
   m_Layer: 0
   m_Name: Box393
   m_TagString: Untagged
@@ -25558,6 +25559,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &4409520299667070133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4409520299667070130}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9076936, y: 0.90480363, z: 2.2694547}
+  m_Center: {x: 0.98336655, y: -4.043908, z: 1.1347264}
 --- !u!33 &4416986115951169745
 MeshFilter:
   m_ObjectHideFlags: 0

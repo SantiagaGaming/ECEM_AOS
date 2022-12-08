@@ -14,7 +14,6 @@ public class StrelkaButton : BaseButton
         Plus,
         Minus,
         Indication
-
     }
     public override void OnClicked(InteractHand interactHand)
     {
@@ -22,17 +21,9 @@ public class StrelkaButton : BaseButton
         if(diet!=null)
         {
             if (_currentSide == Side.Plus)
-            {
                 diet.GetPlusID().InvokeOnClick();
-                SceneSettings.Instance.Memory.StrelkPosition = true;
-            }
-          
             else if (_currentSide == Side.Minus)
-            {
                 diet.GetMinusID().InvokeOnClick();
-                SceneSettings.Instance.Memory.StrelkPosition = false;
-            }
-               
             else if (_currentSide == Side.Indication)
                 diet.GetIndicationID().InvokeOnClick();
         }

@@ -652,6 +652,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: feed_rsch_radio
+--- !u!1 &591006337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591006338}
+  m_Layer: 0
+  m_Name: HelperPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591006338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591006337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.087, y: 0.207, z: 0.184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1846500459}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712661478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1138,36 @@ Transform:
   m_Father: {fileID: 244748583}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1023503062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023503063}
+  m_Layer: 0
+  m_Name: ButtonsPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023503063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023503062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08700054, y: 0.035, z: 0.184}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1846500459}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1132759649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1228,7 @@ Transform:
   - {fileID: 566057331198399264}
   - {fileID: 3235176911087491773}
   - {fileID: 1767704678}
+  - {fileID: 1846500459}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1264,6 +1325,87 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1308354368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1308354369}
+  - component: {fileID: 1308354371}
+  - component: {fileID: 1308354370}
+  m_Layer: 7
+  m_Name: porozhek
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1308354369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308354368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0572, y: -0.0024, z: -0.127}
+  m_LocalScale: {x: 0.15, y: 0.005, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 566057331198399264}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1308354370
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308354368}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1308354371
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308354368}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1328012008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,8 +1607,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7493582, y: 1, z: 1}
-  m_Center: {x: -0.12532091, y: 0, z: 0}
+  m_Size: {x: 0.7493582, y: 1, z: 0.9595717}
+  m_Center: {x: -0.12532091, y: 0, z: 0.020214338}
 --- !u!1001 &1431359738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1842,6 +1984,131 @@ Transform:
   m_Father: {fileID: 862827482}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1846500458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1846500459}
+  - component: {fileID: 1846500462}
+  - component: {fileID: 1846500461}
+  - component: {fileID: 1846500460}
+  m_Layer: 0
+  m_Name: feed_tsch_light_qf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846500459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846500458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.101, y: 0, z: 0.499}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 591006338}
+  - {fileID: 1023503063}
+  m_Father: {fileID: 1193741499}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1846500460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846500458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483f60971106ac7488f6ce9c0d6931e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: 0
+  outlineObjects:
+  - {fileID: 3519050550479037792}
+  - {fileID: 2931754159820998122}
+  - {fileID: 1997387945642818567}
+  - {fileID: 7652401738760353141}
+  - {fileID: 918480346078558383}
+  - {fileID: 7232652919608827266}
+  - {fileID: 7372369060059636069}
+  - {fileID: 2331552805541537292}
+  - {fileID: 6010230458507362153}
+  - {fileID: 2845534415543624682}
+  - {fileID: 2900930292221384399}
+  - {fileID: 2341509504407169262}
+  - {fileID: 6669791888893105516}
+  - {fileID: 4931140576377506502}
+  - {fileID: 8780813141284110750}
+  - {fileID: 3576731530673361559}
+  - {fileID: 9185514326310976249}
+  - {fileID: 5829964526713541150}
+  - {fileID: 1011033675010236707}
+  - {fileID: 5346032985458275709}
+  - {fileID: 305413681020197104}
+  - {fileID: 462574167640228582}
+  - {fileID: 6245500870213933277}
+  - {fileID: 1048007670086450722}
+  - {fileID: 7548692024695185631}
+  - {fileID: 75115903639302045}
+  - {fileID: 5143538784767098564}
+  - {fileID: 6093327540746474241}
+  - {fileID: 1235594069416533521}
+  - {fileID: 5205811705183374004}
+  - {fileID: 6181302043117152143}
+  - {fileID: 645914762217601100}
+  - {fileID: 5442250524008311534}
+  - {fileID: 5348261191419701798}
+  - {fileID: 75371727656966110}
+  - {fileID: 3332430079939094921}
+  - {fileID: 5331655729913385810}
+  - {fileID: 1360290108130837326}
+  - {fileID: 1460633823318248561}
+  - {fileID: 6411873620778428433}
+  - {fileID: 7315918437550721545}
+  - {fileID: 6504216914756643332}
+  - {fileID: 2276875522862422825}
+  - {fileID: 7445571323788804501}
+  - {fileID: 4687151243900283697}
+  helperPos: {fileID: 591006338}
+  helperName: 
+  _buttonsPos: {fileID: 1023503063}
+  _vertical: 0
+  _movingObject: {fileID: 0}
+--- !u!114 &1846500461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846500458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: feed_tsch_light_qf
+--- !u!65 &1846500462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846500458}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.029096603, y: 0.5274253, z: 0.61672497}
+  m_Center: {x: -0.031875134, y: 0.23628736, z: 0.14635098}
 --- !u!1001 &1931075270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2121,7 +2388,7 @@ Transform:
   m_LocalScale: {x: 2.9310262, y: 2.4141197, z: 2.9310262}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 128
+  m_RootOrder: 127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &19014703283136398
 Transform:
@@ -2353,6 +2620,7 @@ GameObject:
   - component: {fileID: 3447288094765918097}
   - component: {fileID: 2585719930300336133}
   - component: {fileID: 7338632741698448625}
+  - component: {fileID: 75115903639302045}
   m_Layer: 0
   m_Name: Plane.028
   m_TagString: Untagged
@@ -2360,6 +2628,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &75115903639302045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75115903639302044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &75371727656966109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,6 +2657,7 @@ GameObject:
   - component: {fileID: 4031163636068828903}
   - component: {fileID: 245051481724229066}
   - component: {fileID: 3633406733963468623}
+  - component: {fileID: 75371727656966110}
   m_Layer: 0
   m_Name: Plane.037
   m_TagString: Untagged
@@ -2378,6 +2665,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &75371727656966110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75371727656966109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &77898107177871366
 Transform:
   m_ObjectHideFlags: 0
@@ -3149,7 +3454,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 156
+  m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &249933517910264451
 GameObject:
@@ -3320,7 +3625,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 163
+  m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &289067417906344381
 MeshFilter:
@@ -3359,6 +3664,7 @@ GameObject:
   - component: {fileID: 6951886603982245804}
   - component: {fileID: 6856551866575167060}
   - component: {fileID: 1092185394868553331}
+  - component: {fileID: 305413681020197104}
   m_Layer: 0
   m_Name: Plane.023
   m_TagString: Untagged
@@ -3366,6 +3672,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &305413681020197104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305413681020197103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &319376538625901686
 Transform:
   m_ObjectHideFlags: 0
@@ -3911,6 +4235,7 @@ GameObject:
   - component: {fileID: 9047025967970335129}
   - component: {fileID: 7128277877452992958}
   - component: {fileID: 674308045242897776}
+  - component: {fileID: 462574167640228582}
   m_Layer: 0
   m_Name: Plane.024
   m_TagString: Untagged
@@ -3918,6 +4243,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &462574167640228582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462574167640228581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &464900132316781147
 Transform:
   m_ObjectHideFlags: 0
@@ -4286,13 +4629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acce169346461c14fb53e4431720e6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: 0
-  outlineObjects:
-  - {fileID: 566057330256768001}
-  - {fileID: 566057331811313472}
-  helperPos: {fileID: 0}
-  helperName: "\u0414\u0432\u0435\u0440\u044C"
-  _locationName: 
 --- !u!1 &566057330256768006
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,6 +5119,7 @@ Transform:
   - {fileID: 566057330131925927}
   - {fileID: 566057330539666460}
   - {fileID: 7675993634813606373}
+  - {fileID: 1308354369}
   m_Father: {fileID: 1193741499}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5615,6 +5952,7 @@ GameObject:
   - component: {fileID: 3585937492464555702}
   - component: {fileID: 1246751208312350969}
   - component: {fileID: 5072703510390011647}
+  - component: {fileID: 645914762217601100}
   m_Layer: 0
   m_Name: Plane.034
   m_TagString: Untagged
@@ -5622,6 +5960,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &645914762217601100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645914762217601099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &656294406645267658
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6693,6 +7049,7 @@ GameObject:
   - component: {fileID: 6706035259461178125}
   - component: {fileID: 2275545782059107089}
   - component: {fileID: 721543427654741783}
+  - component: {fileID: 918480346078558383}
   m_Layer: 0
   m_Name: Plane.007
   m_TagString: Untagged
@@ -6700,6 +7057,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &918480346078558383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918480346078558382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &935928354343577819
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6946,6 +7321,7 @@ GameObject:
   - component: {fileID: 6668326074947402197}
   - component: {fileID: 8380359296803699655}
   - component: {fileID: 661624412912748540}
+  - component: {fileID: 1011033675010236707}
   m_Layer: 0
   m_Name: Plane.021
   m_TagString: Untagged
@@ -6953,6 +7329,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1011033675010236707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011033675010236706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &1016074411552225504
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7073,6 +7467,7 @@ GameObject:
   - component: {fileID: 1268368211148352868}
   - component: {fileID: 894040598097992623}
   - component: {fileID: 6913262998802515099}
+  - component: {fileID: 1048007670086450722}
   m_Layer: 0
   m_Name: Plane.026
   m_TagString: Untagged
@@ -7080,6 +7475,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1048007670086450722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048007670086450721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &1049127314890652218
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7865,6 +8278,7 @@ GameObject:
   - component: {fileID: 247541059800258530}
   - component: {fileID: 5526110527487983435}
   - component: {fileID: 8650534926415221130}
+  - component: {fileID: 1235594069416533521}
   m_Layer: 0
   m_Name: Plane.031
   m_TagString: Untagged
@@ -7872,6 +8286,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1235594069416533521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235594069416533520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &1246751208312350969
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7961,7 +8393,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 151
+  m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1271463681583345266
 Transform:
@@ -7975,7 +8407,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 150
+  m_RootOrder: 149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276455415548201000
 GameObject:
@@ -8043,7 +8475,7 @@ Transform:
   m_LocalScale: {x: -23.657064, y: -1.2668611, z: -13.591475}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 172
+  m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1293905612640236895
 MeshRenderer:
@@ -8230,6 +8662,7 @@ GameObject:
   - component: {fileID: 1997690547810146909}
   - component: {fileID: 8813412628785389984}
   - component: {fileID: 6915711159759980651}
+  - component: {fileID: 1360290108130837326}
   m_Layer: 0
   m_Name: Plane.040
   m_TagString: Untagged
@@ -8237,6 +8670,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1360290108130837326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360290108130837325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &1366644108565845197
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8493,7 +8944,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 164
+  m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1434643938261044711
 Transform:
@@ -8575,6 +9026,7 @@ GameObject:
   - component: {fileID: 6133454154220535726}
   - component: {fileID: 1107653350613406213}
   - component: {fileID: 2381144711728669865}
+  - component: {fileID: 1460633823318248561}
   m_Layer: 0
   m_Name: Plane.041
   m_TagString: Untagged
@@ -8582,6 +9034,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1460633823318248561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460633823318248560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1466162147971086668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8780,7 +9250,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 139
+  m_RootOrder: 138
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1507382407414240925
 Transform:
@@ -9614,7 +10084,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 143
+  m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1767405328353139267
 Transform:
@@ -9901,7 +10371,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 144
+  m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1913363472067096340
 Transform:
@@ -10108,6 +10578,7 @@ GameObject:
   - component: {fileID: 2094936655090253262}
   - component: {fileID: 6926121465875604845}
   - component: {fileID: 1595169320295772186}
+  - component: {fileID: 1997387945642818567}
   m_Layer: 0
   m_Name: Plane.005
   m_TagString: Untagged
@@ -10115,6 +10586,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1997387945642818567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997387945642818566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &1997690547810146909
 Transform:
   m_ObjectHideFlags: 0
@@ -10127,7 +10616,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 165
+  m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2021349649971944467
 Transform:
@@ -10171,7 +10660,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 137
+  m_RootOrder: 136
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2049775954223224575
 MeshRenderer:
@@ -10334,7 +10823,7 @@ Transform:
   m_LocalScale: {x: 2.9310262, y: 2.4141197, z: 2.9310262}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 130
+  m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2095385091022222288
 MeshRenderer:
@@ -10389,7 +10878,7 @@ Transform:
   m_LocalScale: {x: 0.94874865, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 131
+  m_RootOrder: 130
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2105435143591473345
 MeshRenderer:
@@ -10485,7 +10974,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 138
+  m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128841368774144157
 GameObject:
@@ -10941,6 +11430,7 @@ GameObject:
   - component: {fileID: 8457976332409873606}
   - component: {fileID: 5202597517578257589}
   - component: {fileID: 2906416016775889218}
+  - component: {fileID: 2276875522862422825}
   m_Layer: 0
   m_Name: Plane.045
   m_TagString: Untagged
@@ -10948,6 +11438,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2276875522862422825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2276875522862422824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &2281217291998375126
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11519,6 +12027,7 @@ GameObject:
   - component: {fileID: 5660217522868162213}
   - component: {fileID: 876823641545883856}
   - component: {fileID: 610854597381702363}
+  - component: {fileID: 2331552805541537292}
   m_Layer: 0
   m_Name: Plane.010
   m_TagString: Untagged
@@ -11526,6 +12035,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2331552805541537292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331552805541537291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2341509504407169261
 GameObject:
   m_ObjectHideFlags: 0
@@ -11537,6 +12064,7 @@ GameObject:
   - component: {fileID: 1506556658007096775}
   - component: {fileID: 9044301447544272637}
   - component: {fileID: 1130611504425790420}
+  - component: {fileID: 2341509504407169262}
   m_Layer: 0
   m_Name: Plane.014
   m_TagString: Untagged
@@ -11544,6 +12072,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2341509504407169262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341509504407169261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &2349157423546574205
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13195,6 +13741,7 @@ GameObject:
   - component: {fileID: 2027959092831501646}
   - component: {fileID: 437404102041469295}
   - component: {fileID: 5395426225216422836}
+  - component: {fileID: 2845534415543624682}
   m_Layer: 0
   m_Name: Plane.012
   m_TagString: Untagged
@@ -13202,6 +13749,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2845534415543624682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845534415543624681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &2880008361158120186
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13237,6 +13802,7 @@ GameObject:
   - component: {fileID: 2127249649759664690}
   - component: {fileID: 9107095201027819400}
   - component: {fileID: 5463792996498262521}
+  - component: {fileID: 2900930292221384399}
   m_Layer: 0
   m_Name: Plane.013
   m_TagString: Untagged
@@ -13244,6 +13810,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2900930292221384399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900930292221384398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &2906416016775889218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13312,6 +13896,7 @@ GameObject:
   - component: {fileID: 4188404692742167497}
   - component: {fileID: 5871804296167747080}
   - component: {fileID: 8359612241247710138}
+  - component: {fileID: 2931754159820998122}
   m_Layer: 0
   m_Name: Plane.004
   m_TagString: Untagged
@@ -13319,6 +13904,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2931754159820998122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931754159820998121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2932150467776025418
 GameObject:
   m_ObjectHideFlags: 0
@@ -13920,6 +14523,7 @@ GameObject:
   - component: {fileID: 2297104258488500223}
   - component: {fileID: 7114546771513132489}
   - component: {fileID: 3568957514684479792}
+  - component: {fileID: 3007188490764455405}
   m_Layer: 0
   m_Name: SHVPU
   m_TagString: Untagged
@@ -13927,6 +14531,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &3007188490764455405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007188490764455404}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.501361, y: 1.9694147, z: 0.6884958}
+  m_Center: {x: -0.11960453, y: 0.99063873, z: 0.13562855}
 --- !u!1 &3007188490773344162
 GameObject:
   m_ObjectHideFlags: 0
@@ -14307,7 +14924,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 160
+  m_RootOrder: 159
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3160342759000978458
 MeshRenderer:
@@ -14545,24 +15162,6 @@ Transform:
   m_Father: {fileID: 7857693896381346225}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3310953273634780493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8252843670090480388}
-  - component: {fileID: 3923796397375866376}
-  - component: {fileID: 7402633387394992415}
-  m_Layer: 0
-  m_Name: Plane.001
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!33 &3318199614371378332
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14596,6 +15195,7 @@ GameObject:
   - component: {fileID: 286959295555042964}
   - component: {fileID: 7335547933893163458}
   - component: {fileID: 6125574366611150307}
+  - component: {fileID: 3332430079939094921}
   m_Layer: 0
   m_Name: Plane.038
   m_TagString: Untagged
@@ -14603,6 +15203,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3332430079939094921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332430079939094920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &3348093646226470362
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14849,7 +15467,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 153
+  m_RootOrder: 152
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3452089769498410042
 MeshRenderer:
@@ -15108,6 +15726,7 @@ GameObject:
   - component: {fileID: 9320149365279913}
   - component: {fileID: 7893076699087107901}
   - component: {fileID: 1106823027193715582}
+  - component: {fileID: 3519050550479037792}
   m_Layer: 0
   m_Name: Plane.002
   m_TagString: Untagged
@@ -15115,6 +15734,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3519050550479037792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3519050550479037791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &3520391267900921704
 Transform:
   m_ObjectHideFlags: 0
@@ -15127,7 +15764,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 136
+  m_RootOrder: 135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3523941903504932732
 GameObject:
@@ -16016,6 +16653,7 @@ GameObject:
   - component: {fileID: 1767165300558253143}
   - component: {fileID: 4667123754759819782}
   - component: {fileID: 7539568932514335196}
+  - component: {fileID: 3576731530673361559}
   m_Layer: 0
   m_Name: Plane.018
   m_TagString: Untagged
@@ -16023,6 +16661,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3576731530673361559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576731530673361558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &3585937492464555702
 Transform:
   m_ObjectHideFlags: 0
@@ -16035,7 +16691,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 159
+  m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3587305579436059168
 MeshFilter:
@@ -16065,7 +16721,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 161
+  m_RootOrder: 160
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3615661592710363232
 Transform:
@@ -17184,14 +17840,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643384507402578353}
   m_Mesh: {fileID: -6754778275692061762, guid: 8172a1999ddfc444a8618110551a9027, type: 3}
---- !u!33 &3923796397375866376
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3310953273634780493}
-  m_Mesh: {fileID: 4579454407841743219, guid: e754edda4ecd3964994ba52099fa68bc, type: 3}
 --- !u!4 &3930229381192293880
 Transform:
   m_ObjectHideFlags: 0
@@ -17344,7 +17992,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 169
+  m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3954813502559691921
 Transform:
@@ -17602,7 +18250,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 162
+  m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4038344516371839472
 GameObject:
@@ -18683,7 +19331,7 @@ Transform:
   m_LocalScale: {x: 2.9310262, y: 2.4141197, z: 2.9310262}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 129
+  m_RootOrder: 128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4191177368087936001
 GameObject:
@@ -20308,7 +20956,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 154
+  m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4675154532645006381
 MeshRenderer:
@@ -20444,6 +21092,7 @@ GameObject:
   - component: {fileID: 1291435555864512473}
   - component: {fileID: 2515492665084151589}
   - component: {fileID: 8604256373093368482}
+  - component: {fileID: 4687151243900283697}
   m_Layer: 0
   m_Name: Plane.047
   m_TagString: Untagged
@@ -20451,6 +21100,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4687151243900283697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687151243900283696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4706639130935450796
 GameObject:
   m_ObjectHideFlags: 0
@@ -20990,6 +21657,7 @@ GameObject:
   - component: {fileID: 6595483820426763184}
   - component: {fileID: 2968763316692877497}
   - component: {fileID: 6388975133287046404}
+  - component: {fileID: 4931140576377506502}
   m_Layer: 0
   m_Name: Plane.016
   m_TagString: Untagged
@@ -20997,6 +21665,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4931140576377506502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4931140576377506501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &4953981089674832300
 Transform:
   m_ObjectHideFlags: 0
@@ -21092,7 +21778,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 134
+  m_RootOrder: 133
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4992035953906099716
 MeshFilter:
@@ -21791,6 +22477,7 @@ GameObject:
   - component: {fileID: 4673014360678897038}
   - component: {fileID: 8576409582265005478}
   - component: {fileID: 9028052687317354495}
+  - component: {fileID: 5143538784767098564}
   m_Layer: 0
   m_Name: Plane.029
   m_TagString: Untagged
@@ -21798,6 +22485,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5143538784767098564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143538784767098563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &5162638352748217267
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21969,6 +22674,7 @@ GameObject:
   - component: {fileID: 6847443755700350566}
   - component: {fileID: 9117923573025675166}
   - component: {fileID: 2193357796832463804}
+  - component: {fileID: 5205811705183374004}
   m_Layer: 0
   m_Name: Plane.032
   m_TagString: Untagged
@@ -21976,6 +22682,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5205811705183374004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5205811705183374003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &5212789984268797661
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22282,6 +23006,7 @@ GameObject:
   - component: {fileID: 1432245080958544735}
   - component: {fileID: 402383071546078523}
   - component: {fileID: 6165699755511455779}
+  - component: {fileID: 5331655729913385810}
   m_Layer: 0
   m_Name: Plane.039
   m_TagString: Untagged
@@ -22289,6 +23014,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5331655729913385810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331655729913385809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5346032985458275708
 GameObject:
   m_ObjectHideFlags: 0
@@ -22300,6 +23043,7 @@ GameObject:
   - component: {fileID: 8528359839434064739}
   - component: {fileID: 2580518080387635816}
   - component: {fileID: 1067726719335108743}
+  - component: {fileID: 5346032985458275709}
   m_Layer: 0
   m_Name: Plane.022
   m_TagString: Untagged
@@ -22307,6 +23051,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5346032985458275709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346032985458275708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &5348261191419701797
 GameObject:
   m_ObjectHideFlags: 0
@@ -22318,6 +23080,7 @@ GameObject:
   - component: {fileID: 3602052253255588094}
   - component: {fileID: 1075592016347494772}
   - component: {fileID: 2713247476691626418}
+  - component: {fileID: 5348261191419701798}
   m_Layer: 0
   m_Name: Plane.036
   m_TagString: Untagged
@@ -22325,6 +23088,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5348261191419701798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5348261191419701797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &5355108567928884521
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22345,7 +23126,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 168
+  m_RootOrder: 167
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5387087139590340629
 GameObject:
@@ -22526,7 +23307,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 158
+  m_RootOrder: 157
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5436451400857109357
 MeshFilter:
@@ -22588,6 +23369,7 @@ GameObject:
   - component: {fileID: 3153705218167845390}
   - component: {fileID: 3060896394283630917}
   - component: {fileID: 9189424901904750684}
+  - component: {fileID: 5442250524008311534}
   m_Layer: 0
   m_Name: Plane.035
   m_TagString: Untagged
@@ -22595,6 +23377,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5442250524008311534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5442250524008311533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &5443171946423286670
 Transform:
   m_ObjectHideFlags: 0
@@ -23270,7 +24070,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 135
+  m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &5661874078628218379
 MeshRenderer:
@@ -23723,6 +24523,7 @@ GameObject:
   - component: {fileID: 7283610231263403005}
   - component: {fileID: 2710535131902658969}
   - component: {fileID: 5608857364200206918}
+  - component: {fileID: 5829964526713541150}
   m_Layer: 0
   m_Name: Plane.020
   m_TagString: Untagged
@@ -23730,6 +24531,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5829964526713541150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829964526713541149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &5832795428861592089
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24561,6 +25380,7 @@ GameObject:
   - component: {fileID: 3520391267900921704}
   - component: {fileID: 7036949295065102742}
   - component: {fileID: 6471692616438778452}
+  - component: {fileID: 6010230458507362153}
   m_Layer: 0
   m_Name: Plane.011
   m_TagString: Untagged
@@ -24568,6 +25388,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6010230458507362153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010230458507362152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &6035306395685482333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24926,6 +25764,7 @@ GameObject:
   - component: {fileID: 7017412213413716307}
   - component: {fileID: 6810298360156621800}
   - component: {fileID: 1476889974301429122}
+  - component: {fileID: 6093327540746474241}
   m_Layer: 0
   m_Name: Plane.030
   m_TagString: Untagged
@@ -24933,6 +25772,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6093327540746474241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093327540746474240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &6102299281824343610
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25024,7 +25881,7 @@ Transform:
   m_LocalScale: {x: -23.657064, y: -1.2668611, z: -13.591475}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 171
+  m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6130208827591329758
 MeshFilter:
@@ -25087,7 +25944,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 166
+  m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6134889441085809162
 MeshRenderer:
@@ -25328,6 +26185,7 @@ GameObject:
   - component: {fileID: 5426063100592452946}
   - component: {fileID: 3066246655178545248}
   - component: {fileID: 1293905612640236895}
+  - component: {fileID: 6181302043117152143}
   m_Layer: 0
   m_Name: Plane.033
   m_TagString: Untagged
@@ -25335,6 +26193,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6181302043117152143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181302043117152142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &6200157677951106936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25574,6 +26450,7 @@ GameObject:
   - component: {fileID: 1271463681583345266}
   - component: {fileID: 7368621987523862340}
   - component: {fileID: 1684164041038229206}
+  - component: {fileID: 6245500870213933277}
   m_Layer: 0
   m_Name: Plane.025
   m_TagString: Untagged
@@ -25581,6 +26458,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6245500870213933277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6245500870213933276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &6250262817607498245
 Transform:
   m_ObjectHideFlags: 0
@@ -25999,7 +26894,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 140
+  m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6391644771376362757
 MeshFilter:
@@ -26060,6 +26955,7 @@ GameObject:
   - component: {fileID: 6998581578376418291}
   - component: {fileID: 445414113648905201}
   - component: {fileID: 5287602985695368589}
+  - component: {fileID: 6411873620778428433}
   m_Layer: 0
   m_Name: Plane.042
   m_TagString: Untagged
@@ -26067,6 +26963,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6411873620778428433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411873620778428432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &6423428007944224447
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26498,6 +27412,7 @@ GameObject:
   - component: {fileID: 3948415468280007655}
   - component: {fileID: 7120536041092861696}
   - component: {fileID: 6473497139810779938}
+  - component: {fileID: 6504216914756643332}
   m_Layer: 0
   m_Name: Plane.044
   m_TagString: Untagged
@@ -26505,6 +27420,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6504216914756643332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6504216914756643331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &6509071963994559875
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26863,7 +27796,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 141
+  m_RootOrder: 140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6612622863147083034
 GameObject:
@@ -27055,7 +27988,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 146
+  m_RootOrder: 145
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6669791888893105515
 GameObject:
@@ -27068,6 +28001,7 @@ GameObject:
   - component: {fileID: 6391303430553707721}
   - component: {fileID: 7200905406090195018}
   - component: {fileID: 5212789984268797661}
+  - component: {fileID: 6669791888893105516}
   m_Layer: 0
   m_Name: Plane.015
   m_TagString: Untagged
@@ -27075,6 +28009,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6669791888893105516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669791888893105515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &6674477904969132252
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27145,7 +28097,7 @@ Transform:
   m_LocalScale: {x: 0.9487126, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 132
+  m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &6710832722357154241
 MeshRenderer:
@@ -27581,7 +28533,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 157
+  m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6850300201429832175
 MeshFilter:
@@ -27715,7 +28667,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 142
+  m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6890391018777503741
 Transform:
@@ -28137,7 +29089,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 148
+  m_RootOrder: 147
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6980231926431540130
 MeshFilter:
@@ -28173,7 +29125,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 167
+  m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7003012946114777637
 GameObject:
@@ -28245,7 +29197,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 155
+  m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7036949295065102742
 MeshFilter:
@@ -29402,6 +30354,7 @@ GameObject:
   - component: {fileID: 9178349669835235439}
   - component: {fileID: 2083405520136963828}
   - component: {fileID: 2281217291998375126}
+  - component: {fileID: 7232652919608827266}
   m_Layer: 0
   m_Name: Plane.008
   m_TagString: Untagged
@@ -29409,6 +30362,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7232652919608827266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7232652919608827265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &7235895825667377793
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29445,7 +30416,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 145
+  m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7286224253722187561
 MeshRenderer:
@@ -29576,6 +30547,7 @@ GameObject:
   - component: {fileID: 5377429665091407491}
   - component: {fileID: 4263024904460398515}
   - component: {fileID: 629245560663416119}
+  - component: {fileID: 7315918437550721545}
   m_Layer: 0
   m_Name: Plane.043
   m_TagString: Untagged
@@ -29583,6 +30555,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7315918437550721545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315918437550721544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &7316559670870286912
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29956,6 +30946,7 @@ GameObject:
   - component: {fileID: 4991484226100347763}
   - component: {fileID: 4252690626082206089}
   - component: {fileID: 2608771191883004961}
+  - component: {fileID: 7372369060059636069}
   m_Layer: 0
   m_Name: Plane.009
   m_TagString: Untagged
@@ -29963,6 +30954,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7372369060059636069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7372369060059636068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!33 &7397876429784341818
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30028,47 +31037,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803197044798644491}
   m_Mesh: {fileID: 444379742239392865, guid: 4ea015819e9f0ce4b82ae621fc5741e9, type: 3}
---- !u!23 &7402633387394992415
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3310953273634780493}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: f123791051203bb4095dc68596062f7f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!23 &7416208698494180009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30184,6 +31152,7 @@ GameObject:
   - component: {fileID: 6129497916997854453}
   - component: {fileID: 3496447248993125537}
   - component: {fileID: 627561452474144595}
+  - component: {fileID: 7445571323788804501}
   m_Layer: 0
   m_Name: Plane.046
   m_TagString: Untagged
@@ -30191,6 +31160,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7445571323788804501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445571323788804500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &7452612200274706423
 Transform:
   m_ObjectHideFlags: 0
@@ -30571,6 +31558,7 @@ GameObject:
   - component: {fileID: 8094589542033180172}
   - component: {fileID: 3685133604180134165}
   - component: {fileID: 7688744208734576666}
+  - component: {fileID: 7548692024695185631}
   m_Layer: 0
   m_Name: Plane.027
   m_TagString: Untagged
@@ -30578,6 +31566,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7548692024695185631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548692024695185630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &7566335492710957253
 Transform:
   m_ObjectHideFlags: 0
@@ -30917,6 +31923,7 @@ GameObject:
   - component: {fileID: 2102718196415670630}
   - component: {fileID: 6265969804211975175}
   - component: {fileID: 7605276601238357379}
+  - component: {fileID: 7652401738760353141}
   m_Layer: 0
   m_Name: Plane.006
   m_TagString: Untagged
@@ -30924,6 +31931,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7652401738760353141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7652401738760353140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7659125648556564442
 GameObject:
   m_ObjectHideFlags: 0
@@ -32155,7 +33180,6 @@ Transform:
   - {fileID: 8119248087348106064}
   - {fileID: 4964252721743319250}
   - {fileID: 19014703283136398}
-  - {fileID: 8252843670090480388}
   - {fileID: 9320149365279913}
   - {fileID: 4188404692742167497}
   - {fileID: 2094936655090253262}
@@ -32783,7 +33807,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 152
+  m_RootOrder: 151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8100750981060207322
 MeshFilter:
@@ -33118,20 +34142,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647226832135984309}
   m_Mesh: {fileID: -9113989305804840133, guid: 7f11b4f45cc6256448dd6f10a5b2ca5b, type: 3}
---- !u!4 &8252843670090480388
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3310953273634780493}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 3.9262984, y: 2.6181548, z: -0.07718539}
-  m_LocalScale: {x: 755.2935, y: 100, z: 100}
-  m_Children: []
-  m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 127
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &8261848690007428958
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34113,7 +35123,7 @@ Transform:
   m_LocalScale: {x: -10.852869, y: -1.2668611, z: -13.591475}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 170
+  m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8480971633706048557
 MeshFilter:
@@ -34212,7 +35222,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 147
+  m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8535170189211712173
 GameObject:
@@ -34831,6 +35841,7 @@ GameObject:
   - component: {fileID: 6872937887696426935}
   - component: {fileID: 9003846591447990880}
   - component: {fileID: 4648048199118562834}
+  - component: {fileID: 8780813141284110750}
   m_Layer: 0
   m_Name: Plane.017
   m_TagString: Untagged
@@ -34838,6 +35849,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8780813141284110750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780813141284110749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &8783972453736960581
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35536,7 +36565,7 @@ Transform:
   m_LocalScale: {x: 0.9169198, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 149
+  m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9050025526545384893
 MeshFilter:
@@ -35996,7 +37025,7 @@ Transform:
   m_LocalScale: {x: 0.9664093, y: 0.53331983, z: 1.1531516}
   m_Children: []
   m_Father: {fileID: 7857693896381346225}
-  m_RootOrder: 133
+  m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9185514326310976248
 GameObject:
@@ -36009,6 +37038,7 @@ GameObject:
   - component: {fileID: 1885782297938593349}
   - component: {fileID: 6359709476091225176}
   - component: {fileID: 1607981149588168851}
+  - component: {fileID: 9185514326310976249}
   m_Layer: 0
   m_Name: Plane.019
   m_TagString: Untagged
@@ -36016,6 +37046,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9185514326310976249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185514326310976248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e1b4f6e9351f246a2aaced7723efb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineModeL: 0
+  outlineColor: {r: 0.33232188, g: 1, b: 0, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!23 &9189424901904750684
 MeshRenderer:
   m_ObjectHideFlags: 0

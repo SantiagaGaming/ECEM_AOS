@@ -6077,7 +6077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852779957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.313, z: 0.44}
+  m_LocalPosition: {x: -0, y: 1.313, z: 0.488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2702611518708792847}
@@ -10325,7 +10325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411235667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.205, z: 0.44}
+  m_LocalPosition: {x: 0, y: 1.205, z: 0.488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2702611518708792847}
@@ -16194,8 +16194,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0164118, y: 1.6009824, z: 7.173594}
-  m_Center: {x: 2.4770231, y: -0.80049074, z: 0.26626796}
+  m_Size: {x: 1.1593599, y: 1.6009824, z: 7.173594}
+  m_Center: {x: 2.9040856, y: -0.80049074, z: 0.26626796}
 --- !u!65 &120688972886694612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16207,8 +16207,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9410949, y: 1.5777657, z: 1.2963909}
-  m_Center: {x: 1.035856, y: -0.7888823, z: -2.6723356}
+  m_Size: {x: 3.9410949, y: 1.5777657, z: 0.8573525}
+  m_Center: {x: 1.035856, y: -0.7888823, z: -2.8918548}
 --- !u!65 &120688972886694613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16220,8 +16220,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.954059, y: 0.8843755, z: 1.5038143}
-  m_Center: {x: 1.029374, y: -0.44218734, z: 3.0934994}
+  m_Size: {x: 3.954059, y: 0.8843755, z: 1.3170085}
+  m_Center: {x: 1.029374, y: -0.44218734, z: 3.1869023}
 --- !u!65 &120688972886694615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16233,8 +16233,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7825067, y: 0.6991564, z: 7.164757}
-  m_Center: {x: -2.2867312, y: -0.34957778, z: 0.26184678}
+  m_Size: {x: 2.3538873, y: 0.6991564, z: 7.164757}
+  m_Center: {x: -2.0724204, y: -0.34957778, z: 0.26184678}
 --- !u!33 &120688972886694621
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25926,9 +25926,9 @@ MonoBehaviour:
   Button: 0
   outlineObjects:
   - {fileID: 7486080104062655675}
-  helperPos: {fileID: 0}
+  helperPos: {fileID: 852779958}
   helperName: 
-  _buttonsPos: {fileID: 0}
+  _buttonsPos: {fileID: 1411235668}
   _vertical: 0
   _movingObject: {fileID: 0}
 --- !u!65 &7486080104062655677
