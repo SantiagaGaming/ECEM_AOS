@@ -1675,7 +1675,7 @@ GameObject:
   - component: {fileID: 234413844}
   - component: {fileID: 234413843}
   m_Layer: 5
-  m_Name: arm_shn_cpu_mbkc_1k2_red
+  m_Name: arm_shn_cpu_mbko_1k2_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2ad79f07b92a43916742751180564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: arm_shn_cpu_mbkc_1k2_red
+  <ObjectId>k__BackingField: arm_shn_cpu_mbko_1k2_red
   _sameImages: []
 --- !u!114 &234413844
 MonoBehaviour:
@@ -6789,7 +6789,7 @@ GameObject:
   - component: {fileID: 946479869}
   - component: {fileID: 946479868}
   m_Layer: 5
-  m_Name: c_arm_shn_cpu_msi_3k3_red
+  m_Name: arm_shn_cpu_msi_3k3_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6826,7 +6826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa2ad79f07b92a43916742751180564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <ObjectId>k__BackingField: c_arm_shn_cpu_msi_3k3_red
+  <ObjectId>k__BackingField: arm_shn_cpu_msi_3k3_red
   _sameImages: []
 --- !u!114 &946479869
 MonoBehaviour:
