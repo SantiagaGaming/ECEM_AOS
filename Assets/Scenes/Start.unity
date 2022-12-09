@@ -287,6 +287,7 @@ Transform:
   - {fileID: 506193533}
   - {fileID: 812629489}
   - {fileID: 2052020877}
+  - {fileID: 1730755563}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1267,6 +1268,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590668105}
   m_CullTransparentMesh: 1
+--- !u!1 &1730755562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1730755563}
+  - component: {fileID: 1730755564}
+  m_Layer: 0
+  m_Name: condition_feed_tsch_qf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1730755563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730755562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 189529773}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1730755564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730755562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e1a74d40bfdf048ae2df768131b63b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: condition_feed_tsch_qf
 --- !u!1 &1830459173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1403,7 +1448,7 @@ GameObject:
   - component: {fileID: 2052020877}
   - component: {fileID: 2052020878}
   m_Layer: 0
-  m_Name: UvkUpLampLights
+  m_Name: uvk_uso_1_light_cabinets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

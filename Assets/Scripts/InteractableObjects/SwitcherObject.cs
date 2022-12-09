@@ -16,8 +16,6 @@ public class SwitcherObject : RepairableObject
             _side = true;
             _switcher.transform.localRotation = Quaternion.Euler(-20, 0, 0);
         }
-        Debug.Log(SceneSettings.Instance.Memory.QfCondition);
-
     }
     private void OnEnable()
     {
