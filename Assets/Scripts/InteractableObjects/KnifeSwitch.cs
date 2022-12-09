@@ -14,6 +14,7 @@ public class KnifeSwitch : MonoBehaviour
     }
     public void OnChangeKnifePosition(int position)
     {
+      
         if(CurrentAOSObject.Instance.SceneAosObject.ObjectId== "dsp_shvu_switch")
         {
             if (position == 0)
@@ -22,8 +23,6 @@ public class KnifeSwitch : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(0, 0, -45);
             else if (position == 2)
                 transform.localRotation = Quaternion.Euler(0, 0, 45);
-
         }
-       
     }
 }

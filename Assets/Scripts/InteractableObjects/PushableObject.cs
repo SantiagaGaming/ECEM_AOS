@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PushableObject : MonoBehaviour, IScriptableAnimationObject
 {
+    [SerializeField] private GameObject _plomb;
     private bool _pushed = true;
     private bool _canPush = true;
 
@@ -15,6 +16,8 @@ public class PushableObject : MonoBehaviour, IScriptableAnimationObject
 
     private IEnumerator Push(bool value)
     {
+        if(_plomb!=null)
+            _plomb.SetActive(false);
         _canPush = false;
         GetComponent<Collider>().enabled = false;
         int x = 0;

@@ -71,6 +71,8 @@ public class SwitcherObject : RepairableObject
     }
     public void OnMoveButton(int value)
     {
+        if (CurrentAOSObject.Instance.SceneAosObject.ObjectId != "feed_tsch_qf")
+            return;
 if(value==0)
             StartCoroutine(Rotate(_side));
 else if(value==1)
