@@ -4,14 +4,14 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MoveblePlateAnimation : RepairableObject
+public class MovablePlateAnimation : RepairableObject
 {
     [SerializeField] private bool _mbko;
-    [SerializeField] private GameObject _plate;
-    [SerializeField] private GameObject _screwUp;
-    [SerializeField] private GameObject _screwDown;
-    [SerializeField] private GameObject _scpuTop;
-    [SerializeField] private GameObject _scpuBot;
+    [SerializeField] protected GameObject plate;
+    [SerializeField] protected GameObject screwUp;
+    [SerializeField] protected GameObject screwDown;
+    [SerializeField] protected GameObject scpuTop;
+    [SerializeField] protected GameObject scpuBot;
  
     public override void PlayScritableAnimtaion()
     {
@@ -27,32 +27,32 @@ public class MoveblePlateAnimation : RepairableObject
             int screwZRot = 0;
             if (!_mbko)
             {
-                _screwUp.SetActive(true);
+                screwUp.SetActive(true);
    
                 while (screwZRot > -36)
                 {
-                    _screwUp.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
+                    screwUp.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
                     screwZRot--;
                     yield return new WaitForSeconds(0.01f);
                 }
-                    _screwUp.SetActive(false);
+                    screwUp.SetActive(false);
             }
 
-            _screwDown.SetActive(true);
+            screwDown.SetActive(true);
              screwZRot = 0;
             while (screwZRot > -36)
             {
-                _screwDown.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
+                screwDown.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
                 screwZRot--;
                 yield return new WaitForSeconds(0.01f);
             }
-            _screwDown.SetActive(false);
+            screwDown.SetActive(false);
             int scpuXRot = 0;
             while (scpuXRot < 45)
             {
                 if (!_mbko)
-                    _scpuTop.transform.localRotation = Quaternion.Euler(-scpuXRot,0 , 0);
-                _scpuBot.transform.localRotation = Quaternion.Euler(scpuXRot, 0, 0);
+                    scpuTop.transform.localRotation = Quaternion.Euler(-scpuXRot,0 , 0);
+                scpuBot.transform.localRotation = Quaternion.Euler(scpuXRot, 0, 0);
                 scpuXRot++;
                 yield return new WaitForSeconds(0.01f);
             }
@@ -60,19 +60,19 @@ public class MoveblePlateAnimation : RepairableObject
 
             while (x <= 32)
             {
-                    _plate.transform.position -= new Vector3(0.012f, 0, 0);
+                    plate.transform.position -= new Vector3(0.012f, 0, 0);
                 yield return new WaitForSeconds(0.02f);
                 x++;
             }
-            _plate.SetActive(false);
+            plate.SetActive(false);
           yield return new WaitForSeconds(0.5f);
-            _plate.SetActive(true);
+            plate.SetActive(true);
             while (x > 0)
             {
                 if (!_yPoz)
-                    _plate.transform.position += new Vector3(0.012f, 0, 0);
+                    plate.transform.position += new Vector3(0.012f, 0, 0);
                 else
-                    _plate.transform.position += new Vector3(0, 0.012f, 0);
+                    plate.transform.position += new Vector3(0, 0.012f, 0);
                 yield return new WaitForSeconds(0.02f);
                 x--;
             }
@@ -80,33 +80,33 @@ public class MoveblePlateAnimation : RepairableObject
             while (scpuXRot >= 0)
             {
                 if (!_mbko)
-                    _scpuTop.transform.localRotation = Quaternion.Euler(-scpuXRot, 0, 0);
-                _scpuBot.transform.localRotation = Quaternion.Euler(scpuXRot, 0, 0);
+                    scpuTop.transform.localRotation = Quaternion.Euler(-scpuXRot, 0, 0);
+                scpuBot.transform.localRotation = Quaternion.Euler(scpuXRot, 0, 0);
                 scpuXRot--;
                 yield return new WaitForSeconds(0.01f);
             }
             if (!_mbko)
             {
-                _screwUp.SetActive(true);
+                screwUp.SetActive(true);
                 screwZRot = 0;
                 while (screwZRot < 36)
                 {
-                    _screwUp.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
+                    screwUp.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
                     screwZRot++;
                     yield return new WaitForSeconds(0.01f);
                 }
-                _screwUp.SetActive(false);
+                screwUp.SetActive(false);
             }
           
-            _screwDown.SetActive(true);
+            screwDown.SetActive(true);
             screwZRot = 0;
             while (screwZRot < 36)
             {
-                _screwDown.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
+                screwDown.transform.localRotation = Quaternion.Euler(0, 180, screwZRot);
                 screwZRot++;
                 yield return new WaitForSeconds(0.01f);
             }
-            _screwDown.SetActive(false);
+            screwDown.SetActive(false);
             canMove = true;
             LampBlinkController.Instance.StartBlink();
             SceneSettings.Instance.CanTouch = true;

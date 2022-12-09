@@ -14,6 +14,7 @@ public class ProjectMemory : ScriptableObject
     [HideInInspector] public string PrevousLocation { get; set; }
     [HideInInspector] public string CurrentLocation { get; set; } = "Start";
     [HideInInspector] public string LocationText { get; set; }
+    [HideInInspector] public bool ScpuBroken { get; set; } = false;
 
     public UnityAction MenuEvent;
     private void OnEnable()

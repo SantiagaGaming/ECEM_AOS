@@ -19,5 +19,4 @@ public class SceneSettings : MonoBehaviour
             Instance = this;
         LocationName = SceneManager.GetActiveScene().name;
     }
-    
 }
