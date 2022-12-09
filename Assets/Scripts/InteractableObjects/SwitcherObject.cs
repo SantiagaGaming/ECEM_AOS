@@ -29,6 +29,7 @@ public class SwitcherObject : RepairableObject
     }
     public override void PlayScritableAnimtaion()
     {
+     
         if (_canRotate)
         {
             StartCoroutine(Rotate(_side));
@@ -74,6 +75,7 @@ if(value==0)
             StartCoroutine(Rotate(_side));
 else if(value==1)
             StartCoroutine(Rotate(!_side));
+        SceneSettings.Instance.Memory.QfCondition = false;
 
     }
 }
