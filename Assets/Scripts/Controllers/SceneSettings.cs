@@ -19,4 +19,15 @@ public class SceneSettings : MonoBehaviour
             Instance = this;
         LocationName = SceneManager.GetActiveScene().name;
     }
+public void SetMemory()
+    {
+        _memory.StrelkPosition = true;
+        _memory.Stone = false;
+        _memory.Teleport = false;
+        _memory.PrevousLocation = "";
+        _memory.LocationText = "";
+        _memory.ScpuBroken = false;
+        _memory.LampLights = 0;
+        _memory.QfCondition = false;
+}
 }

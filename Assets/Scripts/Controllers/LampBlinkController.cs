@@ -11,7 +11,6 @@ public class LampBlinkController : MonoBehaviour
         if(Instance ==null)
             Instance = this;
         _lamps = new List<LampBlinker>();
-
     }
 
     private void Start()
@@ -22,6 +21,7 @@ public class LampBlinkController : MonoBehaviour
     {
         foreach (var item in _lamps)
         {
+            if(item.isActiveAndEnabled)
             item.EnableBlink(true);
         }
     }
@@ -29,7 +29,8 @@ public class LampBlinkController : MonoBehaviour
     {
         foreach (var item in _lamps)
         {
-            item.EnableBlink(false);
+            if (item.isActiveAndEnabled)
+                item.EnableBlink(false);
         }
     }
     public void AddLampBlinker(LampBlinker blinker)

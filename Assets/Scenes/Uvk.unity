@@ -2930,6 +2930,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3961011, y: 1, z: 1.0942068}
   m_Center: {x: 0.19805044, y: 0, z: 0.046288967}
+--- !u!1 &458681335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458681336}
+  - component: {fileID: 458681337}
+  - component: {fileID: 458681338}
+  m_Layer: 0
+  m_Name: up_lamps_lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458681336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458681335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1285288465}
+  m_RootOrder: 64
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &458681337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458681335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2593970d35aa844a4ef0ddde17b432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lampMaterialChanger: {fileID: 120688972597034997}
+--- !u!114 &458681338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458681335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3cb74359107bd468dd11345c8b7e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: uvk_uso_1_light_cabinets
 --- !u!1 &470646225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,6 +9673,7 @@ Transform:
   - {fileID: 3274424162953947487}
   - {fileID: 186548936}
   - {fileID: 5199147633911032682}
+  - {fileID: 458681336}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16031,6 +16090,7 @@ GameObject:
   - component: {fileID: 120688972597034994}
   - component: {fileID: 120688972597035004}
   - component: {fileID: 120688972597035005}
+  - component: {fileID: 120688972597034997}
   - component: {fileID: 120688972597034996}
   m_Layer: 0
   m_Name: lamp
@@ -16057,6 +16117,20 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &120688972597034997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120688972597034995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d06706aca754ae4aba3e0cc1030bb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _normalMat: {fileID: 2100000, guid: 43860367000e5864e958aa5a9a22da8d, type: 2}
+  _brokenMat: {fileID: 2100000, guid: 3a99eed2e0879394fb1427a478873c15, type: 2}
 --- !u!33 &120688972597035004
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16084,7 +16158,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a99eed2e0879394fb1427a478873c15, type: 2}
+  - {fileID: 2100000, guid: 43860367000e5864e958aa5a9a22da8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39804,7 +39878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a99eed2e0879394fb1427a478873c15, type: 2}
+  - {fileID: 2100000, guid: 43860367000e5864e958aa5a9a22da8d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

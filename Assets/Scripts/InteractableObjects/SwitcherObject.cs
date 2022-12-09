@@ -9,6 +9,16 @@ public class SwitcherObject : RepairableObject
     [SerializeField] private MovingButtonWithAction _buttonOff;
     private bool _canRotate = true;
     private bool _side = true;
+    private void Start()
+    {
+        if (SceneSettings.Instance.Memory.QfCondition)
+        {
+            _side = true;
+            _switcher.transform.localRotation = Quaternion.Euler(-20, 0, 0);
+        }
+        Debug.Log(SceneSettings.Instance.Memory.QfCondition);
+
+    }
     private void OnEnable()
     {
         _buttonOn.ButtonNumberEvent += OnMoveButton;

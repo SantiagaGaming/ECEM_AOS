@@ -12,6 +12,7 @@ public class StartAPI : API
     {
         if (_nextButton != null)
             _nextButton.NextButtonClickedEvent += OnNavActionInvoke;
+        SceneSettings.Instance.SetMemory();
     }
     public override void showWelcome(JObject info, JObject nav)
     {

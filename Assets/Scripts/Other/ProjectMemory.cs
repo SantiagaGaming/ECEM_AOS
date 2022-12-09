@@ -8,13 +8,15 @@ using UnityEngine.InputSystem;
 public class ProjectMemory : ScriptableObject
 {
     [SerializeField] private InputActionProperty _menuAction;
-    [HideInInspector] public bool StrelkPosition { get; set; } = true;
-    [HideInInspector] public bool Stone { get; set; } = false;
-    [HideInInspector] public bool Teleport { get; set; } = false;
+    [HideInInspector] public bool StrelkPosition { get; set; }
+    [HideInInspector] public bool Stone { get; set; } 
+    [HideInInspector] public bool Teleport { get; set; } 
     [HideInInspector] public string PrevousLocation { get; set; }
     [HideInInspector] public string CurrentLocation { get; set; } = "Start";
     [HideInInspector] public string LocationText { get; set; }
-    [HideInInspector] public bool ScpuBroken { get; set; } = false;
+    [HideInInspector] public bool ScpuBroken { get; set; } 
+    [HideInInspector] public int LampLights { get; set; }
+    [HideInInspector] public bool QfCondition { get; set; }
 
     public UnityAction MenuEvent;
     private void OnEnable()
