@@ -21,6 +21,7 @@ public class SceneSettings : MonoBehaviour
     }
 public void SetMemory()
     {
+        _memory.CurrentLocation = "Start";
         _memory.StrelkPosition = true;
         _memory.Stone = false;
         _memory.Teleport = false;

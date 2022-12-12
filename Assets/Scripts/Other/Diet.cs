@@ -74,7 +74,6 @@ public class Diet : MonoBehaviour
     }
     public void EnablePlusOrMinus(string button)
     {
-        Debug.Log(button);
         if (button == "d_dsp_workplace_radio_c3" ||
            button == "d_dsp_shvu_radio_c3" ||
             button == "d_uvk_cpu_radio_c3" ||

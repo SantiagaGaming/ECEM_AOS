@@ -14,23 +14,27 @@ public class SP6AOSAnimation : AosObjectBase
     public void PlayRockEngineMinusAnim()
     {
         _anim.SetTrigger("otkazRockEngineMinus");
+        Debug.Log("strelkanim");
     }
     [AosAction(name: "Проиграть анимацию Камень двигатель плюс")]
     public void PlayRockEnginePlusAnim()
     {
         _anim.SetTrigger("otkazRockEnginePlus");
+        Debug.Log("strelkanim");
     }
 
     [AosAction(name: "Проиграть анимацию плюс")]
     public void PlayPlusAnim()
     {
         _anim.SetTrigger("plusAnim");
+        SceneSettings.Instance.Memory.StrelkPosition = true;
 
     }
     [AosAction(name: "Проиграть анимацию минус")]
     public void PlayMinusAnim()
     {
         _anim.SetTrigger("minusAnim");
+        SceneSettings.Instance.Memory.StrelkPosition = false;
     }
 
 }

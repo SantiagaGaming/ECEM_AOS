@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScpuBrokenAnimation : MovablePlateAnimation
 {
-    [SerializeField] private MovablePlateAnimation _movebleAnim;
     [SerializeField] private GameObject[] _lampBlinkers;
     private void Start()
     {
@@ -13,19 +12,16 @@ public class ScpuBrokenAnimation : MovablePlateAnimation
             scpuTop.transform.localRotation = Quaternion.Euler(-45, 0, 0);
             scpuBot.transform.localRotation = Quaternion.Euler(45, 0, 0);
             plate.transform.position += new Vector3(-0.02f, 0,0);
-            _movebleAnim.enabled= false;
             EnableLampBlinkers(false);
-        }
-        else
-        {
-            enabled = false;
         }
     }
     public override void PlayScritableAnimtaion()
     {
-        StartCoroutine(Move());
+        if (SceneSettings.Instance.Memory.ScpuBroken)
+            StartCoroutine(BrokenMove());
+        else StartCoroutine(Move());
     }
-    private IEnumerator Move()
+    private IEnumerator BrokenMove()
     {
         if (canMove)
         {

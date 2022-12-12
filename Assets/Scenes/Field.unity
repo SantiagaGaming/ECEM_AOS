@@ -1137,6 +1137,7 @@ Transform:
   - {fileID: 792696725926117553}
   - {fileID: 1285187612}
   - {fileID: 2103433445}
+  - {fileID: 1484501698048493703}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6794,8 +6795,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2292845412854616637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.556862, y: -3.9595616, z: -9.554054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 249240998590805549}
@@ -6823,7 +6824,7 @@ Transform:
   - {fileID: 6406555303644325485}
   - {fileID: 2048132033512111607}
   - {fileID: 2461869126357890709}
-  m_Father: {fileID: 4139173452579067352}
+  m_Father: {fileID: 516391520}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &1484577755482863000
@@ -7921,7 +7922,7 @@ GameObject:
   - component: {fileID: 3458781666301738120}
   - component: {fileID: 2292845412854616638}
   m_Layer: 0
-  m_Name: sp6_animat
+  m_Name: sp6_anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12143,7 +12144,6 @@ Transform:
   - {fileID: 4538490629484016201}
   - {fileID: 919393743352053017}
   - {fileID: 3690319395460955857}
-  - {fileID: 1484501698048493703}
   m_Father: {fileID: 5510297413394229211}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

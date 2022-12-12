@@ -17,7 +17,7 @@ public class MovablePlateAnimation : RepairableObject
     {
         StartCoroutine(Move());
     }
-    private IEnumerator Move()
+    protected IEnumerator Move()
     {
         if (canMove)
         {

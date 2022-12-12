@@ -8960,7 +8960,7 @@ GameObject:
   - component: {fileID: 1202711778}
   - component: {fileID: 1202711777}
   m_Layer: 5
-  m_Name: arm_shn_cpu_scpu_1k_on (1)
+  m_Name: arm_shn_cpu_scpu_1k_yel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31578,26 +31578,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.043819856, y: 0.2665469, z: 0.25378108}
   m_Center: {x: 0.00018562563, y: 0.00000052154064, z: -0.015047401}
---- !u!114 &7850148349788439201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7850148349788439212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f55ff6d4ccf85146b990ab23cfbabae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _yPoz: 0
-  _child: {fileID: 0}
-  _mbko: 0
-  plate: {fileID: 7850148350503231427}
-  screwUp: {fileID: 6931107465965384464}
-  screwDown: {fileID: 6931107465982393915}
-  scpuTop: {fileID: 7850148350724577138}
-  scpuBot: {fileID: 7850148351255869312}
 --- !u!114 &7850148349788439202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31623,7 +31603,7 @@ MonoBehaviour:
   helperName: "\u041F\u043B\u0430\u0442\u0430 \u0421\u0411\u0421"
   _buttonsPos: {fileID: 7850148350744635667}
   _vertical: 0
-  _movingObject: {fileID: 7850148349788439201}
+  _movingObject: {fileID: 7850148349788439214}
 --- !u!4 &7850148349788439203
 Transform:
   m_ObjectHideFlags: 0
@@ -31650,7 +31630,6 @@ GameObject:
   - component: {fileID: 7850148349788439203}
   - component: {fileID: 7850148349788439200}
   - component: {fileID: 7850148349788439214}
-  - component: {fileID: 7850148349788439201}
   - component: {fileID: 7850148349788439202}
   - component: {fileID: 7850148349788439213}
   m_Layer: 0
@@ -31693,7 +31672,6 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465982393915}
   scpuTop: {fileID: 7850148350724577138}
   scpuBot: {fileID: 7850148351255869312}
-  _movebleAnim: {fileID: 7850148349788439201}
   _lampBlinkers:
   - {fileID: 7850148350092953176}
   - {fileID: 7850148349777538654}

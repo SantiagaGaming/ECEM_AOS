@@ -18,6 +18,6 @@ public class ReactionHelper : MonoBehaviour
     }
     public void ChangeReactionHelperText(string text)
     {
-        _reactionText.text = text;
+        _reactionText.text = ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text);
     }
 }
