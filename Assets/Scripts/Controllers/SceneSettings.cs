@@ -11,7 +11,6 @@ public class SceneSettings : MonoBehaviour
 
     [SerializeField] private ProjectMemory _memory;
     public string LocationName { get; private set; }
-    private UvkLightsSetter _lightsSetter;
     private SceneSettings() { }
 
     private void Awake()
@@ -38,7 +37,29 @@ public void SetMemory()
         _memory.Monitor2 = true;
         _memory.Monitor3 = false;
         _memory.UvkLights = new Dictionary<string, int>();
-        _lightsSetter= new UvkLightsSetter(_memory.UvkLights);
-        _memory.UvkLights = _lightsSetter.GetLights();
+        FillUvkLights();
+        Debug.Log(_memory.UvkLights["uvk_cpu_scpu1_light"] + "Sucess");
+    }
+    private void FillUvkLights()
+    {
+        _memory.UvkLights.Add("uvk_cpu_scpu1_light", 0);
+        _memory.UvkLights.Add("uvk_cpu_scpu2_light", 0);
+        _memory.UvkLights.Add("uvk_cpu_scpu3_light", 0);
+        _memory.UvkLights.Add("uvk_cpu_mip2_light", 0);
+        _memory.UvkLights.Add("uvk_cpu_mip3_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_sbs1_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_sbs2_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mip2k_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_msi1k3_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_msi2k3_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_msi3k3_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_msi3k4_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mvu1k2_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mvu2k5_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mbko1k2_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mbko3k2_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mbko2k3_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mbko3k4_light", 0);
+        _memory.UvkLights.Add("uvk_uso1_mbko2k5_light", 0);
     }
 }

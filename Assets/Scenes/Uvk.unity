@@ -29384,8 +29384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: uvk_cpu_scpu3_light
-  _greenLight: {fileID: 1467607088}
-  _redLight: {fileID: 1566383133}
+  _greenLight: {fileID: 1981067853}
+  _redLight: {fileID: 1793897086}
 --- !u!1 &1037663704877754117
 GameObject:
   m_ObjectHideFlags: 0
