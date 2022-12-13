@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class UvkUpLampLightsCondition : AosObjectBase
 {
-    [AosAction(name: "Сменить состояние объекта true - активен, false - неактивен")]
+    [AosAction(name: "Сменить состояние объекта")]
     public void SetCondition(int condition)
     {
         SceneSettings.Instance.Memory.LampLights = condition;

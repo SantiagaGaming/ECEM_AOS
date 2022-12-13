@@ -11,6 +11,7 @@ public class SceneSettings : MonoBehaviour
 
     [SerializeField] private ProjectMemory _memory;
     public string LocationName { get; private set; }
+    private UvkLightsSetter _lightsSetter;
     private SceneSettings() { }
 
     private void Awake()
@@ -36,5 +37,8 @@ public void SetMemory()
         _memory.Monitor1 = true;
         _memory.Monitor2 = true;
         _memory.Monitor3 = false;
+        _memory.UvkLights = new Dictionary<string, int>();
+        _lightsSetter= new UvkLightsSetter(_memory.UvkLights);
+        _memory.UvkLights = _lightsSetter.GetLights();
     }
 }
