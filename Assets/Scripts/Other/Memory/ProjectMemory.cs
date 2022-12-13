@@ -20,6 +20,9 @@ public class ProjectMemory : ScriptableObject
     [HideInInspector] public bool DspShvuKey0 { get; set; }
     [HideInInspector] public bool DspShvuKey3 { get; set; }
     [HideInInspector] public int KnifePosition { get; set; }
+    [HideInInspector] public bool Monitor1 { get; set; }
+    [HideInInspector] public bool Monitor2 { get; set; }
+    [HideInInspector] public bool Monitor3 { get; set; }
 
     public UnityAction MenuEvent;
     private void OnEnable()

@@ -33,5 +33,8 @@ public void SetMemory()
         _memory.DspShvuKey0 = false;
         _memory.DspShvuKey3 = false;
         _memory.KnifePosition= 0;
+        _memory.Monitor1 = true;
+        _memory.Monitor2 = true;
+        _memory.Monitor3 = false;
     }
 }
