@@ -20,6 +20,10 @@ public class LampBlinker : MonoBehaviour
             StopCoroutine(TagsHelper.BLINK);
 
     }
+    public void DisableBlink()
+    {
+        GetComponent<Renderer>().material.color = _greyColor;
+    }
     private IEnumerator Blink()
     {
         int rnd = Random.Range(0, 2);

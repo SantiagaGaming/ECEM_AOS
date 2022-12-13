@@ -635,7 +635,7 @@ MonoBehaviour:
   helperPos: {fileID: 3203245719518001580}
   helperName: 
   actionText: 
-  _currentAction: 5
+  _currentAction: 6
 --- !u!1 &8191790307632209108
 GameObject:
   m_ObjectHideFlags: 0

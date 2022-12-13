@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class DspMonitorEnabler : MonoBehaviour
 {
+    [SerializeField] private bool _monitor1;
     public UnityAction<bool> OnEnableMonitor;
     [SerializeField] private MovingButtonWithAction _hand1;
     [SerializeField] private MovingButtonWithAction _hand2;
@@ -41,15 +42,32 @@ public class DspMonitorEnabler : MonoBehaviour
     }
     public void OnStartMonitor(bool value)
     {
-        if (value)
+        if(!_monitor1)
         {
-            _onCanvas.enabled = true;
-            _offCanvas.enabled = false;
+            if (value)
+            {
+                _onCanvas.enabled = true;
+                _offCanvas.enabled = false;
+            }
+            else
+            {
+                _onCanvas.enabled = false;
+                _offCanvas.enabled = true;
+            }
         }
-        else
+        else if(_monitor1)
         {
-            _onCanvas.enabled = false;
-            _offCanvas.enabled = true;
+            if (value && SceneSettings.Instance.Memory.Monitor1Enabler)
+            {
+                _onCanvas.enabled = true;
+                _offCanvas.enabled = false;
+            }
+            else if (value && SceneSettings.Instance.Memory.Monitor1Enabler)
+            {
+                _onCanvas.enabled = false;
+                _offCanvas.enabled = true;
+            }
         }
     }
+
 }

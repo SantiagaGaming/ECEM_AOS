@@ -9,6 +9,7 @@ public class UvkLightSetCondition : AosObjectBase
 {
     [SerializeField] private GameObject _greenLight;
     [SerializeField] private GameObject _redLight;
+    [SerializeField] private LampBlinker[] _blinkers;
     private bool _blink = false;
     private void Start()
     {
@@ -37,23 +38,27 @@ public class UvkLightSetCondition : AosObjectBase
         {
             _greenLight.SetActive(true);
             _redLight.SetActive(false);
+            EnableBlinkers(true);
             _blink= false;
         }
         else if(value==1)
         {
             _greenLight.SetActive(false);
             _redLight.SetActive(true);
+            EnableBlinkers(false);
             _blink = false;
         }
         else if(value ==2)
         {
             _greenLight.SetActive(false);
             _redLight.SetActive(false);
+            EnableBlinkers(false);
             _blink = false;
         }
         else if(value==3)
         {
             _blink = true;
+            EnableBlinkers(false);
             StartCoroutine(Blinker());
         }
     }
@@ -67,5 +72,26 @@ public class UvkLightSetCondition : AosObjectBase
         yield return new WaitForSeconds(Random.Range(0.1f, 1.2f));
         if(_blink)
         StartCoroutine(Blinker());
+    }
+    private void EnableBlinkers(bool value)
+    {
+        if (_blinkers == null)
+            return;
+        if(value)
+        {
+            foreach (var blinker in _blinkers)
+            {
+                blinker.EnableBlink(true);
+            }
+        }
+        else
+        {
+            foreach (var blinker in _blinkers)
+            {
+                blinker.DisableBlink();
+            }
+
+        }
+            
     }
 }

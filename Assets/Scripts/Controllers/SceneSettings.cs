@@ -36,9 +36,9 @@ public void SetMemory()
         _memory.Monitor1 = true;
         _memory.Monitor2 = true;
         _memory.Monitor3 = false;
+        _memory.Monitor1Enabler = true;
         _memory.UvkLights = new Dictionary<string, int>();
         FillUvkLights();
-        Debug.Log(_memory.UvkLights["uvk_cpu_scpu1_light"] + "Sucess");
     }
     private void FillUvkLights()
     {

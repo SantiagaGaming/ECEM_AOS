@@ -1174,6 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _monitor1: 1
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
   _offCanvas: {fileID: 1858373104}
@@ -2673,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6936178116257258155, guid: bc159caff7fa69f4296f557dd9f5afe3, type: 3}
+      propertyPath: _currentAction
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8191790307632209108, guid: bc159caff7fa69f4296f557dd9f5afe3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3873,6 +3878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _monitor1: 0
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
   _offCanvas: {fileID: 399237508}
@@ -7877,6 +7883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _monitor1: 0
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
   _offCanvas: {fileID: 922492558}
@@ -13456,8 +13463,8 @@ GameObject:
   - component: {fileID: 1888733505}
   - component: {fileID: 1888733504}
   - component: {fileID: 1888733503}
-  - component: {fileID: 1888733502}
   - component: {fileID: 1888733501}
+  - component: {fileID: 1888733502}
   m_Layer: 0
   m_Name: dsp_workplace_mon1
   m_TagString: Untagged
@@ -13474,7 +13481,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1888733500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Script: {fileID: 11500000, guid: 933ceeaae0ab3ef4584d5a0543c0951e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: dsp_workplace_mon1
