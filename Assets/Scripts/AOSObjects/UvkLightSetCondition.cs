@@ -19,16 +19,14 @@ public class UvkLightSetCondition : AosObjectBase
             EnableLight(SceneSettings.Instance.Memory.UvkLights[ObjectId]);
             Debug.Log("LIGHT" + SceneSettings.Instance.Memory.UvkLights[ObjectId]);
         }
-         
     }
-
     [AosAction(name: "Сменить состояние объекта")]
     public void SetCondition(int condition)
     {
         if (SceneSettings.Instance.Memory.UvkLights.ContainsKey(ObjectId))
         {
             SceneSettings.Instance.Memory.UvkLights[ObjectId] = condition;
-            SetCondition(condition);
+            EnableLight(condition);
         }
     }
     private void EnableLight(int value)
