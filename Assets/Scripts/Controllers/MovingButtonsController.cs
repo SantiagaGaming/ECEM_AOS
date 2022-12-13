@@ -23,6 +23,7 @@ public class MovingButtonsController : MonoBehaviour
 
     [SerializeField] private GameObject _watchButton;
     [SerializeField] private GameObject _repairButton;
+    [SerializeField] private GameObject _repairButton_1;
     [SerializeField] private GameObject _handButton;
     [SerializeField] private GameObject _handButton_1;
     [SerializeField] private GameObject _handButton_2;
@@ -38,43 +39,26 @@ public class MovingButtonsController : MonoBehaviour
     {
         _watchButton.SetActive(true);
     }
-    public void HideWatchButton()
-    {
-        _watchButton.SetActive(false);
-    }
     public void ShowRepairButton()
     {
         _repairButton.SetActive(true);
     }
-    public void HideRepairButton()
+    public void ShowRepair1Button()
     {
-        _repairButton.SetActive(false);
+        _repairButton_1.SetActive(true);
     }
     public void ShowHandButton()
     {
         _handButton.SetActive(true);
     }
-    public void HideHandButton()
-    {
-        _handButton.SetActive(false);
-    }
     public void ShowHand1Button()
     {
         _handButton_1.SetActive(true);
-    }
-    public void HideHand1Button()
-    {
-        _handButton_1.SetActive(false);
     }
     public void ShowHand2Button()
     {
         _handButton_2.SetActive(true);
     }
-    public void HideHand2Button()
-    {
-        _handButton_2.SetActive(false);
-    }
-
     public void ShowPenButton()
     {
         _penButton.SetActive(true);
@@ -87,6 +71,7 @@ public class MovingButtonsController : MonoBehaviour
         _handButton_1.SetActive(false);
         _handButton_2.SetActive(false);
         _penButton.SetActive(false);
+        _repairButton_1.SetActive(false);
         ButtonsPositionChanged?.Invoke();
     }
     public void SetWatchButtonText(string text)
@@ -94,10 +79,14 @@ public class MovingButtonsController : MonoBehaviour
         _watchButton.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
-
     public void SetRepairButtonText(string text)
     {
         _repairButton.TryGetComponent(out MovingButton movingButton);
+        movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
+    }
+    public void SetRepair1ButtonText(string text)
+    {
+        _repairButton_1.TryGetComponent(out MovingButton movingButton);
         movingButton.SetActionText(ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text));
     }
     public void SetHandButtonText(string text)

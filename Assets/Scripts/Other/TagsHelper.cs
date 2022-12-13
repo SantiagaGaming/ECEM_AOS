@@ -10,6 +10,7 @@ public class TagsHelper
     public const string POINTS = "points";
 
     public const string TOOL = "tool";
+    public const string TOOL_1 = "tool_1";
     public const string EYE = "eye";
     public const string HAND = "hand";
     public const string HAND_1 = "hand_1";

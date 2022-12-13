@@ -153,6 +153,11 @@ public class ActionAPI : API
                 MovingButtonsController.Instance.ShowRepairButton();
                 MovingButtonsController.Instance.SetRepairButtonText(button.SelectToken(TagsHelper.NAME).ToString());
             }
+            if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.TOOL_1)
+            {
+                MovingButtonsController.Instance.ShowRepair1Button();
+                MovingButtonsController.Instance.SetRepair1ButtonText(button.SelectToken(TagsHelper.NAME).ToString());
+            }
             if (button.SelectToken(TagsHelper.TOOL).ToString() == TagsHelper.PEN)
             {
                 MovingButtonsController.Instance.ShowPenButton();

@@ -15,6 +15,7 @@ public class MovingButtonWithAction : MovingButton
         Hand_2,
         Eye,
         Tool,
+        Tool_1,
         Pen,
     }
     public override void OnClicked(InteractHand interactHand)
@@ -44,6 +45,11 @@ public class MovingButtonWithAction : MovingButton
         else if (_currentAction == ButtonActionName.Tool)
         {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("tool");
+            MovingButtonsController.Instance.PlayToolAnimation();
+        }
+        else if (_currentAction == ButtonActionName.Tool_1)
+        {
+            CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("tool_1");
             MovingButtonsController.Instance.PlayToolAnimation();
         }
         else if (_currentAction == ButtonActionName.Pen)
