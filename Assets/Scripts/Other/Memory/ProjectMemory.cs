@@ -17,6 +17,9 @@ public class ProjectMemory : ScriptableObject
     [HideInInspector] public bool ScpuBroken { get; set; } 
     [HideInInspector] public int LampLights { get; set; }
     [HideInInspector] public bool QfCondition { get; set; }
+    [HideInInspector] public bool DspShvuKey0 { get; set; }
+    [HideInInspector] public bool DspShvuKey3 { get; set; }
+    [HideInInspector] public int KnifePosition { get; set; }
 
     public UnityAction MenuEvent;
     private void OnEnable()

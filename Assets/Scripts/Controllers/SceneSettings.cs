@@ -30,5 +30,8 @@ public void SetMemory()
         _memory.ScpuBroken = false;
         _memory.LampLights = 0;
         _memory.QfCondition = false;
-}
+        _memory.DspShvuKey0 = false;
+        _memory.DspShvuKey3 = false;
+        _memory.KnifePosition= 0;
+    }
 }
