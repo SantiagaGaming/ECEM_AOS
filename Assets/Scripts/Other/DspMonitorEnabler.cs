@@ -27,23 +27,40 @@ public class DspMonitorEnabler : MonoBehaviour
     {
         if (CurrentAOSObject.Instance.SceneAosObject.ObjectId != _id)
             return;
-        if (_offCanvas.isActiveAndEnabled)
+        if (!_monitor1)
         {
-            OnEnableMonitor?.Invoke(true);
-            _onCanvas.enabled = true;
-            _offCanvas.enabled = false;
+            if (_offCanvas.isActiveAndEnabled)
+            {
+                OnEnableMonitor?.Invoke(true);
+                _onCanvas.enabled = true;
+                _offCanvas.enabled = false;
+            }
+            else
+            {
+                OnEnableMonitor?.Invoke(false);
+                _onCanvas.enabled = false;
+                _offCanvas.enabled = true;
+            }
+
         }
-        else
+        else if(_monitor1 && SceneSettings.Instance.Memory.Monitor1Enabler)
         {
-            OnEnableMonitor?.Invoke(false);
-            _onCanvas.enabled = false;
-            _offCanvas.enabled = true;
+            if (_offCanvas.isActiveAndEnabled)
+            {
+                OnEnableMonitor?.Invoke(true);
+                _onCanvas.enabled = true;
+                _offCanvas.enabled = false;
+            }
+            else
+            {
+                OnEnableMonitor?.Invoke(false);
+                _onCanvas.enabled = false;
+                _offCanvas.enabled = true;
+            }
         }
     }
     public void OnStartMonitor(bool value)
     {
-        if(!_monitor1)
-        {
             if (value)
             {
                 _onCanvas.enabled = true;
@@ -55,19 +72,4 @@ public class DspMonitorEnabler : MonoBehaviour
                 _offCanvas.enabled = true;
             }
         }
-        else if(_monitor1)
-        {
-            if (value && SceneSettings.Instance.Memory.Monitor1Enabler)
-            {
-                _onCanvas.enabled = true;
-                _offCanvas.enabled = false;
-            }
-            else if (value && SceneSettings.Instance.Memory.Monitor1Enabler)
-            {
-                _onCanvas.enabled = false;
-                _offCanvas.enabled = true;
-            }
-        }
     }
-
-}

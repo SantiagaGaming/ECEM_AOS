@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class LampBlinkController : MonoBehaviour
 {
-    public static LampBlinkController Instance;
-     private List<LampBlinker> _lamps;
+     public static LampBlinkController Instance;
+
+     [SerializeField]private LampBlinker[] _lamps;
     private void Awake()
     {
         if(Instance ==null)
             Instance = this;
-        _lamps = new List<LampBlinker>();
+
     }
 
     private void Start()
@@ -32,10 +33,6 @@ public class LampBlinkController : MonoBehaviour
             if (item.isActiveAndEnabled)
                 item.EnableBlink(false);
         }
-    }
-    public void AddLampBlinker(LampBlinker blinker)
-    {
-        _lamps.Add(blinker);
     }
     private IEnumerator CoolDownBlink()
     {
