@@ -4720,18 +4720,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &566057330256768002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566057330256768006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acce169346461c14fb53e4431720e6a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &566057330256768006
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,7 +4733,6 @@ GameObject:
   - component: {fileID: 566057330256768027}
   - component: {fileID: 566057330256768000}
   - component: {fileID: 566057330256768001}
-  - component: {fileID: 566057330256768002}
   m_Layer: 7
   m_Name: OrdinaryDoor (1)
   m_TagString: Untagged
@@ -14816,6 +14803,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko2k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186913995569887
 GameObject:
   m_ObjectHideFlags: 0
@@ -14879,6 +14867,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_sbs1_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914090308716
 GameObject:
   m_ObjectHideFlags: 0
@@ -14925,6 +14914,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_mip3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914223578849
 GameObject:
   m_ObjectHideFlags: 0
@@ -14971,6 +14961,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mvu1k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914270645496
 GameObject:
   m_ObjectHideFlags: 0
@@ -15017,6 +15008,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko3k4_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!114 &3047186914315672984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15032,6 +15024,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914315672990
 GameObject:
   m_ObjectHideFlags: 0
@@ -15158,6 +15151,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi2k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!4 &3047186914630698592
 Transform:
   m_ObjectHideFlags: 0
@@ -15187,6 +15181,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko1k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914630698599
 GameObject:
   m_ObjectHideFlags: 0
@@ -15250,6 +15245,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu1_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914796873768
 GameObject:
   m_ObjectHideFlags: 0
@@ -15296,6 +15292,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi1k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186914873836929
 GameObject:
   m_ObjectHideFlags: 0
@@ -15342,6 +15339,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko2k5_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915047250648
 GameObject:
   m_ObjectHideFlags: 0
@@ -15388,6 +15386,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_mip2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!114 &3047186915182038232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15403,6 +15402,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mvu2k5_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915182038238
 GameObject:
   m_ObjectHideFlags: 0
@@ -15463,6 +15463,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915300679079
 GameObject:
   m_ObjectHideFlags: 0
@@ -15526,6 +15527,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko3k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915662869477
 GameObject:
   m_ObjectHideFlags: 0
@@ -15572,6 +15574,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi3k4_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!4 &3047186915672367400
 Transform:
   m_ObjectHideFlags: 0
@@ -15601,6 +15604,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mip2k_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915672367407
 GameObject:
   m_ObjectHideFlags: 0
@@ -15647,6 +15651,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_sbs2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &3047186915777431863
 GameObject:
   m_ObjectHideFlags: 0
@@ -15710,6 +15715,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi3k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!33 &3052372357199218213
 MeshFilter:
   m_ObjectHideFlags: 0

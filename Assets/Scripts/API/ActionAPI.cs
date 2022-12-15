@@ -31,7 +31,7 @@ public class ActionAPI : API
             SceneSettings.Instance.Memory.LocationText = locationText;
         }
         ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
-        ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
+        //ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
 
         foreach (JObject item in data)
         {
@@ -74,7 +74,7 @@ public class ActionAPI : API
                 diet.EnablePlusOrMinus(null);
                 if (points is JArray)
                 {
-                    MovingButtonsController.Instance.HideAllButtons(); 
+                    MovingButtonsController.Instance.HideAllButtons();
                     foreach (var point in points)
                     {
                         diet.EnablePlusOrMinus(point.SelectToken(TagsHelper.API_ID).ToString());
@@ -97,7 +97,7 @@ public class ActionAPI : API
                                 MovingButtonsController.Instance.SetHand2ButtonText(point.SelectToken(TagsHelper.NAME).ToString());
                             }
                         }
-            
+
                     }
                 }
             }
@@ -175,4 +175,3 @@ public class ActionAPI : API
         }
     }
 }
-
