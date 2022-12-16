@@ -72,7 +72,7 @@ public class UvkLightSetCondition : AosObjectBase
         if(_blink)
         StartCoroutine(Blinker());
     }
-    private void EnableBlinkers(bool value)
+    public void EnableBlinkers(bool value)
     {
         if (_blinkers == null)
             return;

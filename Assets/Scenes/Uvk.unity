@@ -42696,9 +42696,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467921055071}
   scpuTop: {fileID: 7850148351585739103}
   scpuBot: {fileID: 7850148350893514678}
-  _lamps:
-  - {fileID: 612197596}
-  - {fileID: 171169364}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148349673021630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44322,9 +44320,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465982393915}
   scpuTop: {fileID: 7850148350724577138}
   scpuBot: {fileID: 7850148351255869312}
-  _lamps:
-  - {fileID: 1467607088}
-  - {fileID: 1566383133}
+  _uvkCondition: {fileID: 1037663703816600556}
   _lampBlinkers:
   - {fileID: 7850148350092953176}
   - {fileID: 7850148349777538654}
@@ -45347,9 +45343,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465934297841}
   scpuTop: {fileID: 8251825621789579315}
   scpuBot: {fileID: 720647475311046717}
-  _lamps:
-  - {fileID: 1095144707}
-  - {fileID: 1298641907}
+  _uvkCondition: {fileID: 0}
 --- !u!65 &7850148349816109257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45747,8 +45741,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467198596340}
   scpuTop: {fileID: 7850148350921699733}
   scpuBot: {fileID: 7850148350131837566}
-  _lamps:
-  - {fileID: 1244213152}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148349834662257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46650,8 +46643,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466377498762}
   scpuTop: {fileID: 7850148350263880812}
   scpuBot: {fileID: 7850148350356452021}
-  _lamps:
-  - {fileID: 1098986823}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148349899277730
 Transform:
   m_ObjectHideFlags: 0
@@ -47418,8 +47410,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467006403807}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349798571595}
-  _lamps:
-  - {fileID: 1559931345}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148349946418725
 Transform:
   m_ObjectHideFlags: 0
@@ -48374,8 +48365,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466588653469}
   scpuTop: {fileID: 7850148349932083279}
   scpuBot: {fileID: 7850148351502867489}
-  _lamps:
-  - {fileID: 1359187219}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148349996018871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48945,8 +48935,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467941749817}
   scpuTop: {fileID: 7850148350002852287}
   scpuBot: {fileID: 7850148350875492371}
-  _lamps:
-  - {fileID: 762754901}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350013241466
 Transform:
   m_ObjectHideFlags: 0
@@ -52463,8 +52452,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466548787293}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349583337372}
-  _lamps:
-  - {fileID: 1924180600}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350215045708
 Transform:
   m_ObjectHideFlags: 0
@@ -53253,9 +53241,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466725167866}
   scpuTop: {fileID: 7850148350611070449}
   scpuBot: {fileID: 7850148351569207225}
-  _lamps:
-  - {fileID: 552644284}
-  - {fileID: 1505516367}
+  _uvkCondition: {fileID: 1037663704610350264}
 --- !u!114 &7850148350240009682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53517,9 +53503,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467742352696}
   scpuTop: {fileID: 7850148351589331425}
   scpuBot: {fileID: 7850148350741593183}
-  _lamps:
-  - {fileID: 314751939}
-  - {fileID: 1875726726}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350260829996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53870,8 +53854,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467557615995}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349953712571}
-  _lamps:
-  - {fileID: 1359862011}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350274759813
 Transform:
   m_ObjectHideFlags: 0
@@ -54009,8 +53992,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467477239350}
   scpuTop: {fileID: 7850148351185857046}
   scpuBot: {fileID: 7850148351229204116}
-  _lamps:
-  - {fileID: 505685618}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350275148892
 Transform:
   m_ObjectHideFlags: 0
@@ -55812,8 +55794,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465996054561}
   scpuTop: {fileID: 7850148350381844507}
   scpuBot: {fileID: 7850148350195002542}
-  _lamps:
-  - {fileID: 283072137}
+  _uvkCondition: {fileID: 0}
 --- !u!23 &7850148350381844504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55947,8 +55928,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466479411735}
   scpuTop: {fileID: 7850148351657673813}
   scpuBot: {fileID: 7850148349680598474}
-  _lamps:
-  - {fileID: 1095403362}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350387901010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56060,8 +56040,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466530495499}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351288997669}
-  _lamps:
-  - {fileID: 1690358839}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350397349990
 Transform:
   m_ObjectHideFlags: 0
@@ -56207,9 +56186,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467755715177}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350313970516}
-  _lamps:
-  - {fileID: 544313249}
-  - {fileID: 296293862}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350402327715
 Transform:
   m_ObjectHideFlags: 0
@@ -56324,8 +56301,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466657174829}
   scpuTop: {fileID: 7850148350523518576}
   scpuBot: {fileID: 7850148350004365954}
-  _lamps:
-  - {fileID: 1622334423}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350403530218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56554,8 +56530,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466172708241}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351010633763}
-  _lamps:
-  - {fileID: 1375183924}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350406680883
 Transform:
   m_ObjectHideFlags: 0
@@ -57348,8 +57323,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467700562470}
   scpuTop: {fileID: 7850148350069551147}
   scpuBot: {fileID: 7850148351204809399}
-  _lamps:
-  - {fileID: 1911729913}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350447724674
 Transform:
   m_ObjectHideFlags: 0
@@ -57507,8 +57481,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467713324870}
   scpuTop: {fileID: 7850148349996126147}
   scpuBot: {fileID: 7850148350649683417}
-  _lamps:
-  - {fileID: 848879200}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350458731758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58140,8 +58113,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466603424101}
   scpuTop: {fileID: 7850148351099601509}
   scpuBot: {fileID: 7850148350266780982}
-  _lamps:
-  - {fileID: 1545114597}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350504873018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59187,8 +59159,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467583901819}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349868597370}
-  _lamps:
-  - {fileID: 1089278409}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350610998571
 Transform:
   m_ObjectHideFlags: 0
@@ -59748,8 +59719,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466070295771}
   scpuTop: {fileID: 7850148350709828818}
   scpuBot: {fileID: 7850148350160680981}
-  _lamps:
-  - {fileID: 656090925}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350615950832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60451,8 +60421,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467286050318}
   scpuTop: {fileID: 7850148351339770603}
   scpuBot: {fileID: 7850148351590595675}
-  _lamps:
-  - {fileID: 1455112934}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350668024508
 Transform:
   m_ObjectHideFlags: 0
@@ -61360,9 +61329,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467528051043}
   scpuTop: {fileID: 7850148350611067815}
   scpuBot: {fileID: 7850148351156724104}
-  _lamps:
-  - {fileID: 1981067853}
-  - {fileID: 1793897086}
+  _uvkCondition: {fileID: 1037663704733973461}
 --- !u!114 &7850148350724276599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62905,9 +62872,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466644520977}
   scpuTop: {fileID: 7850148350192260766}
   scpuBot: {fileID: 7850148349723498680}
-  _lamps:
-  - {fileID: 1750324137}
-  - {fileID: 1673229706}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350826459775
 Transform:
   m_ObjectHideFlags: 0
@@ -63025,9 +62990,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466048975156}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350904699328}
-  _lamps:
-  - {fileID: 1257211984}
-  - {fileID: 2095662092}
+  _uvkCondition: {fileID: 0}
 --- !u!23 &7850148350843363236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -63683,8 +63646,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466699483025}
   scpuTop: {fileID: 7850148351036351516}
   scpuBot: {fileID: 7850148350883197627}
-  _lamps:
-  - {fileID: 1792647881}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350888465688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64248,8 +64210,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466216895553}
   scpuTop: {fileID: 7850148350712166209}
   scpuBot: {fileID: 7850148349793167134}
-  _lamps:
-  - {fileID: 1988998007}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350903577163
 Transform:
   m_ObjectHideFlags: 0
@@ -64512,9 +64473,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466489168435}
   scpuTop: {fileID: 7850148350361457126}
   scpuBot: {fileID: 7850148349652710700}
-  _lamps:
-  - {fileID: 651387427}
-  - {fileID: 488902181}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148350910466601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64652,9 +64611,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467327556738}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349800348198}
-  _lamps:
-  - {fileID: 258390865}
-  - {fileID: 852971762}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350912205452
 Transform:
   m_ObjectHideFlags: 0
@@ -65241,8 +65198,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465986378996}
   scpuTop: {fileID: 7850148349854150083}
   scpuBot: {fileID: 7850148349706137117}
-  _lamps:
-  - {fileID: 1808928079}
+  _uvkCondition: {fileID: 0}
 --- !u!23 &7850148350943391560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66219,8 +66175,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466152047204}
   scpuTop: {fileID: 7850148350698770540}
   scpuBot: {fileID: 7850148350366237671}
-  _lamps:
-  - {fileID: 115526893}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148350992249175
 Transform:
   m_ObjectHideFlags: 0
@@ -67005,8 +66960,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467877412148}
   scpuTop: {fileID: 7850148351077301885}
   scpuBot: {fileID: 7850148350969461683}
-  _lamps:
-  - {fileID: 1975947883}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351029062243
 Transform:
   m_ObjectHideFlags: 0
@@ -67158,8 +67112,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467509185296}
   scpuTop: {fileID: 7850148349641323360}
   scpuBot: {fileID: 7850148350843363239}
-  _lamps:
-  - {fileID: 200261163}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351032464118
 Transform:
   m_ObjectHideFlags: 0
@@ -67969,8 +67922,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467640675441}
   scpuTop: {fileID: 7850148349837276565}
   scpuBot: {fileID: 7850148350965080997}
-  _lamps:
-  - {fileID: 429984442}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148351087898041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68491,8 +68443,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466620806825}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349681692014}
-  _lamps:
-  - {fileID: 723565367}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351104853055
 Transform:
   m_ObjectHideFlags: 0
@@ -69547,8 +69498,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466630814528}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350888465690}
-  _lamps:
-  - {fileID: 1254893153}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351199101247
 Transform:
   m_ObjectHideFlags: 0
@@ -70222,9 +70172,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465888964274}
   scpuTop: {fileID: 7850148351141782587}
   scpuBot: {fileID: 7850148350790447653}
-  _lamps:
-  - {fileID: 168433979}
-  - {fileID: 1953707216}
+  _uvkCondition: {fileID: 1037663705613807429}
 --- !u!4 &7850148351223393160
 Transform:
   m_ObjectHideFlags: 0
@@ -70328,9 +70276,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467406380577}
   scpuTop: {fileID: 7850148350515145250}
   scpuBot: {fileID: 7850148351565320597}
-  _lamps:
-  - {fileID: 593617776}
-  - {fileID: 1777275259}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351227741048
 Transform:
   m_ObjectHideFlags: 0
@@ -70662,9 +70608,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467624982015}
   scpuTop: {fileID: 6664353361179652867}
   scpuBot: {fileID: 894706840480163290}
-  _lamps:
-  - {fileID: 1921277241}
-  - {fileID: 1254005139}
+  _uvkCondition: {fileID: 1037663704103260359}
 --- !u!1 &7850148351235632612
 GameObject:
   m_ObjectHideFlags: 0
@@ -70861,8 +70805,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466904530797}
   scpuTop: {fileID: 7850148349890181221}
   scpuBot: {fileID: 7850148351582748306}
-  _lamps:
-  - {fileID: 611061715}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351254905812
 Transform:
   m_ObjectHideFlags: 0
@@ -71182,8 +71125,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465853260143}
   scpuTop: {fileID: 7850148349829525070}
   scpuBot: {fileID: 7850148350925497042}
-  _lamps:
-  - {fileID: 115552924}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148351277116035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71550,9 +71492,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466738768753}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 8989845502416336331}
-  _lamps:
-  - {fileID: 1371831837}
-  - {fileID: 1481365000}
+  _uvkCondition: {fileID: 0}
 --- !u!1 &7850148351302064864
 GameObject:
   m_ObjectHideFlags: 0
@@ -71767,9 +71707,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467354388917}
   scpuTop: {fileID: 7850148349978965734}
   scpuBot: {fileID: 7850148350697923492}
-  _lamps:
-  - {fileID: 1950547805}
-  - {fileID: 779455818}
+  _uvkCondition: {fileID: 0}
 --- !u!33 &7850148351312798944
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -72101,8 +72039,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466753604202}
   scpuTop: {fileID: 7850148350628766728}
   scpuBot: {fileID: 7850148349805904015}
-  _lamps:
-  - {fileID: 1103717482}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351327437015
 Transform:
   m_ObjectHideFlags: 0
@@ -72268,9 +72205,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467694367514}
   scpuTop: {fileID: 7850148350787508974}
   scpuBot: {fileID: 7850148350891162151}
-  _lamps:
-  - {fileID: 902167653}
-  - {fileID: 1719474421}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351339797121
 Transform:
   m_ObjectHideFlags: 0
@@ -73069,8 +73004,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465912860578}
   scpuTop: {fileID: 7850148350201653580}
   scpuBot: {fileID: 7850148350998112411}
-  _lamps:
-  - {fileID: 549029109}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351360165469
 Transform:
   m_ObjectHideFlags: 0
@@ -73332,8 +73266,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466406443383}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351012676612}
-  _lamps:
-  - {fileID: 1393592080}
+  _uvkCondition: {fileID: 0}
 --- !u!23 &7850148351363079844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -74594,9 +74527,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466576900534}
   scpuTop: {fileID: 8824471355145169420}
   scpuBot: {fileID: 3139766855990516182}
-  _lamps:
-  - {fileID: 1555992294}
-  - {fileID: 1309310849}
+  _uvkCondition: {fileID: 0}
 --- !u!65 &7850148351481338074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75098,8 +75029,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107467436085012}
   scpuTop: {fileID: 7850148351046708092}
   scpuBot: {fileID: 7850148350612877615}
-  _lamps:
-  - {fileID: 1740807394}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148351509117467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75715,8 +75645,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465905202163}
   scpuTop: {fileID: 7850148350064546781}
   scpuBot: {fileID: 7850148349910704822}
-  _lamps:
-  - {fileID: 1478927034}
+  _uvkCondition: {fileID: 0}
 --- !u!114 &7850148351564889724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76367,9 +76296,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466442783190}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350348087413}
-  _lamps:
-  - {fileID: 196793479}
-  - {fileID: 624472323}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351585553738
 Transform:
   m_ObjectHideFlags: 0
@@ -76936,8 +76863,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466685181895}
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350950466287}
-  _lamps:
-  - {fileID: 1077767735}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351590835367
 Transform:
   m_ObjectHideFlags: 0
@@ -77008,8 +76934,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465936676341}
   scpuTop: {fileID: 7850148351523602700}
   scpuBot: {fileID: 7850148350552156903}
-  _lamps:
-  - {fileID: 1208416055}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351594271635
 Transform:
   m_ObjectHideFlags: 0
@@ -77676,8 +77601,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107466800324015}
   scpuTop: {fileID: 7850148351490828243}
   scpuBot: {fileID: 7850148350169921098}
-  _lamps:
-  - {fileID: 1582200748}
+  _uvkCondition: {fileID: 0}
 --- !u!4 &7850148351663339329
 Transform:
   m_ObjectHideFlags: 0

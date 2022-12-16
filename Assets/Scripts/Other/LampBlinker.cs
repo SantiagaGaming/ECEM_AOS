@@ -9,7 +9,7 @@ public class LampBlinker : MonoBehaviour
     private void Start()
     {
         _currentColor = Color.yellow;
-        _greyColor = Color.black;
+        _greyColor = Color.grey;
     }
     public void EnableBlink(bool value)
     {
