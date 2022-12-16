@@ -20,7 +20,6 @@ public class ActionAPI : API
 
     public override void showPlace(JObject place, JArray data, JObject nav)
     {
-
         BackButtonObject tempBackButton = ControllersHandler.Instance.GetBackButtonsHandler().GetCurrentBackButton();
         if (tempBackButton != null)
             tempBackButton.EnableObject(false);
@@ -31,7 +30,7 @@ public class ActionAPI : API
             SceneSettings.Instance.Memory.LocationText = locationText;
         }
         ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
-        //ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
+        ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
 
         foreach (JObject item in data)
         {
@@ -45,6 +44,7 @@ public class ActionAPI : API
                 var aosObjectWithImage = item.SelectToken(TagsHelper.VIEW);
                 if (aosObjectWithImage != null)
                 {
+
                     if (aosObjectWithImage.SelectToken(TagsHelper.API_ID) != null)
                     {
                         string name = aosObjectWithImage.SelectToken(TagsHelper.API_ID).ToString();

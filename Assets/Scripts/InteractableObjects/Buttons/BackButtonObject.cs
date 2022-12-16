@@ -29,7 +29,6 @@ public class BackButtonObject : BaseButton
                     _backTriggerObj.EnableBackTriggerObject(false);
                 if (_parentArmButton != null)
                     ControllersHandler.Instance.GetBackButtonsHandler().SetBackButtonObject(_parentArmButton);
-            ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
         }
     }
     public override void EnableObject(bool value)

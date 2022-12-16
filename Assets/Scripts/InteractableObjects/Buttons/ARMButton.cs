@@ -19,7 +19,7 @@ public class ARMButton : MonoBehaviour
     }
     private void ShowImage()
     {
-        ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
+        //ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
         AOSARMEnabler();
         foreach (var item in _imgToShow)
         {
