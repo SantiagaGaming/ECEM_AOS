@@ -47,9 +47,8 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
                 sceneAosObject.InvokeOnClick();
                 MovingButtonsController.Instance.ObjectName = sceneAosObject.ObjectId;
             }
+            EnableOutlines(false);
         }
-   
-
     }
     public virtual void OnHoverIn(InteractHand interactHand)
     {
@@ -57,16 +56,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         {
             if (helperPos != null)
                 canvasHelper.ShowTextHelper(helperName, helperPos);
-            if (outlineObjects != null)
-                foreach (var outline in outlineObjects)
-                {
-                    if (outline != null)
-                    {
-                        outline.enabled = true;
-                        outline.OutlineWidth = 3;
-                    }
-
-                }
+            EnableOutlines(true);
         }
         else canvasHelper.HidetextHelper();
 
@@ -77,17 +67,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         {
             if (helperPos != null && canvasHelper != null)
                 canvasHelper.HidetextHelper();
-            if (outlineObjects != null)
-                foreach (var outline in outlineObjects)
-                {
-                    if (outline != null)
-                    {
-                        outline.enabled = false;
-                        outline.OutlineWidth = 0;
-
-                    }
-
-                }
+            EnableOutlines(false);
         }
         else
         {
@@ -112,5 +92,16 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         if (GetComponent<SpriteRenderer>())
             GetComponent<SpriteRenderer>().enabled = value;
     }
-
+    protected void EnableOutlines(bool value)
+    {
+        if (outlineObjects != null)
+            foreach (var outline in outlineObjects)
+            {
+                if (outline != null)
+                {
+                    outline.enabled = value;
+                    outline.OutlineWidth = 3;
+                }
+            }
+    }
 }

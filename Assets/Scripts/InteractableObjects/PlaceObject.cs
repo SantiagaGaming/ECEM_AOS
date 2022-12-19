@@ -28,6 +28,7 @@ public class PlaceObject : BaseObject
         else
             ControllersHandler.Instance.GetReactionHelper().ChangeReactionHelperPosition(transform);
         ControllersHandler.Instance.GetBackButtonsHandler().SetBackButtonObject(_backButton);
+        EnableOutlines(false);
     }
     private void OnEnable()
     {

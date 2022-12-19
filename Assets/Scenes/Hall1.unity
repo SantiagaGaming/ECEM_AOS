@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 152338999}
   - component: {fileID: 152338998}
   m_Layer: 7
-  m_Name: Cube
+  m_Name: DoorPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,12 +365,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152338996}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: -0}
-  m_LocalPosition: {x: 0.1241, y: -0.0037, z: -0.0011}
-  m_LocalScale: {x: 0.027999997, y: 0.003, z: 0.24499997}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -2.213069, y: 0.23725891, z: 0.54601717}
+  m_LocalScale: {x: 0.26246077, y: 0.03, z: 2.3522937}
   m_Children: []
-  m_Father: {fileID: 6705330493846320927}
-  m_RootOrder: 5
+  m_Father: {fileID: 4229061059314162951}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &152338998
 BoxCollider:
@@ -5716,6 +5716,7 @@ Transform:
   - {fileID: 2537021010334250584}
   - {fileID: 246482773803486821}
   - {fileID: 2678109296735424917}
+  - {fileID: 152338997}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8729,7 +8730,6 @@ Transform:
   - {fileID: 6705330494648882187}
   - {fileID: 6705330492802668299}
   - {fileID: 280813330}
-  - {fileID: 152338997}
   m_Father: {fileID: 1998875344}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
