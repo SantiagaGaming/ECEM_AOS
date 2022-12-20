@@ -9,6 +9,7 @@ public class DspMonitorEnabler : MonoBehaviour
     public UnityAction<bool> OnEnableMonitor;
     [SerializeField] private MovingButtonWithAction _hand1;
     [SerializeField] private MovingButtonWithAction _hand2;
+    [SerializeField] private MonitorEnabler _monitorEnabler;
 
     [SerializeField] private Canvas _offCanvas;
     [SerializeField] private Canvas _onCanvas;
@@ -17,11 +18,15 @@ public class DspMonitorEnabler : MonoBehaviour
     {
         _hand1.ButtonNumberEvent += OnMonitor;
         _hand2.ButtonNumberEvent += OnMonitor;
+        if(_monitorEnabler!=null)
+        _monitorEnabler.OnMonitorConditionChanged += OnStartMonitor;
     }
     private void OnDisable()
     {
         _hand1.ButtonNumberEvent -= OnMonitor;
         _hand2.ButtonNumberEvent -= OnMonitor;
+        if (_monitorEnabler != null)
+            _monitorEnabler.OnMonitorConditionChanged -= OnStartMonitor;
     }
     private void OnMonitor(int value)
     {

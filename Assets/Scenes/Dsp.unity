@@ -1313,6 +1313,7 @@ MonoBehaviour:
   _monitor1: 1
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
+  _monitorEnabler: {fileID: 1888733501}
   _offCanvas: {fileID: 1858373104}
   _onCanvas: {fileID: 1409188715}
   _id: dsp_workplace_mon1
@@ -2020,7 +2021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196370993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.000143, z: 0.000318}
+  m_LocalPosition: {x: -0.000047, y: 0.000185, z: 0.000318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1941857569}
@@ -2541,7 +2542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269062894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000318}
+  m_LocalPosition: {x: -0.000047, y: 0.000042, z: 0.000318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1941857569}
@@ -4017,6 +4018,7 @@ MonoBehaviour:
   _monitor1: 0
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
+  _monitorEnabler: {fileID: 1314030210}
   _offCanvas: {fileID: 399237508}
   _onCanvas: {fileID: 1782217634}
   _id: dsp_workplace_mon3
@@ -8022,6 +8024,7 @@ MonoBehaviour:
   _monitor1: 0
   _hand1: {fileID: 343316449}
   _hand2: {fileID: 343316448}
+  _monitorEnabler: {fileID: 1513076884}
   _offCanvas: {fileID: 922492558}
   _onCanvas: {fileID: 1855094422}
   _id: dsp_workplace_mon2
@@ -9792,8 +9795,8 @@ GameObject:
   - component: {fileID: 1314030214}
   - component: {fileID: 1314030213}
   - component: {fileID: 1314030212}
-  - component: {fileID: 1314030211}
   - component: {fileID: 1314030210}
+  - component: {fileID: 1314030211}
   m_Layer: 0
   m_Name: dsp_workplace_mon3
   m_TagString: Untagged
@@ -9829,10 +9832,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1314030208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Script: {fileID: 11500000, guid: 933ceeaae0ab3ef4584d5a0543c0951e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: dsp_workplace_mon3
+  _currentMonitor: 2
 --- !u!114 &1314030211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11312,8 +11316,8 @@ GameObject:
   - component: {fileID: 1513076887}
   - component: {fileID: 1513076883}
   - component: {fileID: 1513076886}
-  - component: {fileID: 1513076885}
   - component: {fileID: 1513076884}
+  - component: {fileID: 1513076885}
   m_Layer: 0
   m_Name: dsp_workplace_mon2
   m_TagString: Untagged
@@ -11367,10 +11371,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1513076881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5c17e9c2a097d43ba5d8180bc9146b, type: 3}
+  m_Script: {fileID: 11500000, guid: 933ceeaae0ab3ef4584d5a0543c0951e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: dsp_workplace_mon2
+  _currentMonitor: 1
 --- !u!114 &1513076885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13621,6 +13626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: dsp_workplace_mon1
+  _currentMonitor: 0
 --- !u!114 &1888733502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14090,7 +14096,7 @@ GameObject:
   - component: {fileID: 1941857571}
   - component: {fileID: 1941857570}
   m_Layer: 0
-  m_Name: ups002 (2)
+  m_Name: dsp_workplace_ubp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38264,8 +38270,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13531706, y: 0.024989937, z: 0.10334893}
-  m_Center: {x: -0.10388316, y: -0.058412325, z: 1.0855399}
+  m_Size: {x: 0.13531706, y: 0.016269332, z: 0.10334893}
+  m_Center: {x: -0.10388316, y: -0.062772624, z: 1.0855399}
 --- !u!114 &8679183610175675507
 MonoBehaviour:
   m_ObjectHideFlags: 0

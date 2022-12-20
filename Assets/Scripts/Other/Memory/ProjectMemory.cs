@@ -23,7 +23,9 @@ public class ProjectMemory : ScriptableObject
     [HideInInspector] public bool Monitor1 { get; set; }
     [HideInInspector] public bool Monitor1Enabler { get; set; }
     [HideInInspector] public bool Monitor2 { get; set; }
+    [HideInInspector] public bool Monitor2Enabler { get; set; }
     [HideInInspector] public bool Monitor3 { get; set; }
+    [HideInInspector] public bool Monitor3Enabler { get; set; }
     [HideInInspector] public Dictionary<string,int> UvkLights { get; set; }
 
     public UnityAction MenuEvent;

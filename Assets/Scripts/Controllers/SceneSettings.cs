@@ -37,6 +37,8 @@ public void SetMemory()
         _memory.Monitor2 = true;
         _memory.Monitor3 = false;
         _memory.Monitor1Enabler = true;
+        _memory.Monitor2Enabler = true;
+        _memory.Monitor3Enabler = true;
         _memory.UvkLights = new Dictionary<string, int>();
         FillUvkLights();
     }

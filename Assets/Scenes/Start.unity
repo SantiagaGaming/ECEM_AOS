@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &61855237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 61855238}
+  - component: {fileID: 61855239}
+  m_Layer: 0
+  m_Name: Monitor3Enabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &61855238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61855237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 189529773}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &61855239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61855237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933ceeaae0ab3ef4584d5a0543c0951e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: dsp_workplace_mon3
+  _currentMonitor: 2
 --- !u!1 &78948805
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +214,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko3k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &170051207
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +382,8 @@ Transform:
   - {fileID: 1730755563}
   - {fileID: 1154661449}
   - {fileID: 1616657410}
+  - {fileID: 1644383982}
+  - {fileID: 61855238}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,6 +433,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &349267050
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +480,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mvu2k5_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &405244213
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +571,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_mip2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &500888275
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +1034,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_sbs2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &810943189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1081,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi3k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &812629488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1172,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi3k4_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &933955995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1219,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mip2k_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1095796272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1266,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi2k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1154661448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1362,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1244111948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1409,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko3k4_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1001 &1255076249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1637,6 +1695,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mvu1k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1441266904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1742,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_mip3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1448959493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1789,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_sbs1_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1536758379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1836,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko2k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1562898029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2082,7 @@ GameObject:
   - component: {fileID: 1616657410}
   - component: {fileID: 1616657411}
   m_Layer: 0
-  m_Name: MonitorEnabler
+  m_Name: Monitor1Enabler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2053,6 +2115,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <ObjectId>k__BackingField: dsp_workplace_mon1
+  _currentMonitor: 0
+--- !u!1 &1644383981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1644383982}
+  - component: {fileID: 1644383983}
+  m_Layer: 0
+  m_Name: Monitor2Enabler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1644383982
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644383981}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 189529773}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1644383983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644383981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 933ceeaae0ab3ef4584d5a0543c0951e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ObjectId>k__BackingField: dsp_workplace_mon2
+  _currentMonitor: 1
 --- !u!1 &1714662709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2099,6 +2207,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko2k5_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1730755562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2298,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_msi1k3_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1830459173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,6 +2424,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_cpu_scpu1_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &1975365331
 GameObject:
   m_ObjectHideFlags: 0
@@ -2360,6 +2471,7 @@ MonoBehaviour:
   <ObjectId>k__BackingField: uvk_uso1_mbko1k2_light
   _greenLight: {fileID: 0}
   _redLight: {fileID: 0}
+  _blinkers: []
 --- !u!1 &2035529638
 GameObject:
   m_ObjectHideFlags: 0
