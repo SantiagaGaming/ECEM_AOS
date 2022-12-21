@@ -11,6 +11,7 @@ public class MonitorEnabler : SceneAosObject
     public UnityAction<bool> OnMonitorConditionChanged;
 
     [SerializeField] private CurrentMonitor _currentMonitor;
+    public CurrentMonitor CurrentM => _currentMonitor;
     [AosAction(name: "Сменить состояние объекта")]
     public void SetCondition(bool condition)
     {

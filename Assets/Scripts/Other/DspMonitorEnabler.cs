@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class DspMonitorEnabler : MonoBehaviour
 {
-    [SerializeField] private bool _monitor1;
     public UnityAction<bool> OnEnableMonitor;
     [SerializeField] private MovingButtonWithAction _hand1;
     [SerializeField] private MovingButtonWithAction _hand2;
@@ -32,36 +31,33 @@ public class DspMonitorEnabler : MonoBehaviour
     {
         if (CurrentAOSObject.Instance.SceneAosObject.ObjectId != _id)
             return;
-        if (!_monitor1)
+        if (_monitorEnabler.CurrentM==CurrentMonitor.MONITOR_1 && SceneSettings.Instance.Memory.Monitor1Enabler)
         {
-            if (_offCanvas.isActiveAndEnabled)
-            {
-                OnEnableMonitor?.Invoke(true);
-                _onCanvas.enabled = true;
-                _offCanvas.enabled = false;
-            }
-            else
-            {
-                OnEnableMonitor?.Invoke(false);
-                _onCanvas.enabled = false;
-                _offCanvas.enabled = true;
-            }
+            EnablerMonitor();
 
         }
-        else if(_monitor1 && SceneSettings.Instance.Memory.Monitor1Enabler)
+        else if(_monitorEnabler.CurrentM == CurrentMonitor.MONITOR_2 && SceneSettings.Instance.Memory.Monitor2Enabler)
         {
-            if (_offCanvas.isActiveAndEnabled)
-            {
-                OnEnableMonitor?.Invoke(true);
-                _onCanvas.enabled = true;
-                _offCanvas.enabled = false;
-            }
-            else
-            {
-                OnEnableMonitor?.Invoke(false);
-                _onCanvas.enabled = false;
-                _offCanvas.enabled = true;
-            }
+            EnablerMonitor();
+        }
+        else if(_monitorEnabler.CurrentM == CurrentMonitor.MONITOR_3 && SceneSettings.Instance.Memory.Monitor3Enabler)
+        {
+            EnablerMonitor();
+        }
+    }
+    private void EnablerMonitor()
+    {
+        if (_offCanvas.isActiveAndEnabled)
+        {
+            OnEnableMonitor?.Invoke(true);
+            _onCanvas.enabled = true;
+            _offCanvas.enabled = false;
+        }
+        else
+        {
+            OnEnableMonitor?.Invoke(false);
+            _onCanvas.enabled = false;
+            _offCanvas.enabled = true;
         }
     }
     public void OnStartMonitor(bool value)

@@ -108,7 +108,7 @@ public class MovablePlateAnimation : RepairableObject
                 yield return new WaitForSeconds(0.01f);
             }
             screwDown.SetActive(false);
-            if (_uvkCondition != null)
+            if (_uvkCondition != null && _uvkCondition.Blink)
                 _uvkCondition.EnableBlinkers(true);
             else LampBlinkController.Instance.StartBlink();
             canMove = true;
