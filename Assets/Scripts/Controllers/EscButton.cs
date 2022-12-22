@@ -16,7 +16,7 @@ public class EscButton : MonoBehaviour
         if(_backButton!=null)
         _backButton.onClick.AddListener(OnShowMenu);
     }
-    private void OnShowMenu()
+    public void OnShowMenu()
     {
        _changer.TeleportToLocation(TagsHelper.MENU_LOCATION);
     }
