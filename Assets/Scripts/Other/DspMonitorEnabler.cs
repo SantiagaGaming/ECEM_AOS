@@ -33,27 +33,27 @@ public class DspMonitorEnabler : MonoBehaviour
             return;
         if (_monitorEnabler.CurrentM==CurrentMonitor.MONITOR_1 && SceneSettings.Instance.Memory.Monitor1Enabler)
         {
-            EnablerMonitor();
+            EnablerMonitor(value);
 
         }
         else if(_monitorEnabler.CurrentM == CurrentMonitor.MONITOR_2 && SceneSettings.Instance.Memory.Monitor2Enabler)
         {
-            EnablerMonitor();
+            EnablerMonitor(value);
         }
         else if(_monitorEnabler.CurrentM == CurrentMonitor.MONITOR_3 && SceneSettings.Instance.Memory.Monitor3Enabler)
         {
-            EnablerMonitor();
+            EnablerMonitor(value);
         }
     }
-    private void EnablerMonitor()
+    private void EnablerMonitor(int value)
     {
-        if (_offCanvas.isActiveAndEnabled)
+        if (value==1)
         {
             OnEnableMonitor?.Invoke(true);
             _onCanvas.enabled = true;
             _offCanvas.enabled = false;
         }
-        else
+        else if(value == 0)
         {
             OnEnableMonitor?.Invoke(false);
             _onCanvas.enabled = false;
