@@ -384,8 +384,6 @@ namespace AosSdk.Core.Utils
                 return;
             }
 
-            //Debug.Log($"Disconnecting socket");
-
             ResetSocket();
         }
 

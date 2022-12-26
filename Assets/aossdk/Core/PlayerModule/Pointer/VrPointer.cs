@@ -13,8 +13,6 @@ namespace AosSdk.Core.PlayerModule.Pointer
 
         private LineRenderer _lineRenderer;
 
-        private bool _isInFocus;
-
         private PointerState PointerState
         {
             set
@@ -39,18 +37,8 @@ namespace AosSdk.Core.PlayerModule.Pointer
             _lineRenderer.enabled = false;
         }
 
-        private void OnApplicationFocus(bool hasFocus)
-        {
-            _isInFocus = hasFocus;
-        }
-
         private void Update()
         {
-            if (!_isInFocus)
-            {
-                return;
-            }
-
             if (!raycaster.TryGetInteractable(Launcher.Instance.SdkSettings.vrInteractDistance, out var hitPoint, out var hitNormal, out var isInteractable) ||
                 isInteractable == null)
             {

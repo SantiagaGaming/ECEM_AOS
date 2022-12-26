@@ -5,6 +5,7 @@ using AosSdk.Core.Utils;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace AosSdk.Examples
 {
@@ -79,18 +80,20 @@ namespace AosSdk.Examples
 
         public void OnClicked(InteractHand interactHand)
         {
-            Debug.Log($"{gameObject.name} clicked");
+            // Debug.Log($"{gameObject.name} clicked");
+            //
+            // if (!_grabbed)
+            // {
+            //     Player.Instance.GrabObject("Wrench", 0);
+            //     _grabbed = true;
+            // }
+            // else
+            // {
+            //     Player.Instance.DropObject(0);
+            //     _grabbed = false;
+            // }
 
-            if (!_grabbed)
-            {
-                Player.Instance.GrabObject("Wrench", 0);
-                _grabbed = true;
-            }
-            else
-            {
-                Player.Instance.DropObject(0);
-                _grabbed = false;
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name == "UIInteraction" ? "22" : "UIInteraction");
         }
 
         public bool IsClickable { get; set; } = true;

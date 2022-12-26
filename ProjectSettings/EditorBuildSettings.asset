@@ -6,23 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/start.unity
-    guid: 12ce501abf8396c44b0cfdd92fd39ebd
-  - enabled: 1
     path: Assets/Scenes/cross.unity
     guid: 8cbf853c8ba5a5c4e81600c7add9a548
   - enabled: 1
     path: Assets/Scenes/dga.unity
     guid: 494164925cb17514baf2d14c0fa8c046
-  - enabled: 1
-    path: Assets/Scenes/relay.unity
-    guid: 2d666f2f5d92fbc4288e43e9ec52de18
-  - enabled: 1
-    path: Assets/Scenes/shn.unity
-    guid: 762129586d558b140b826a9748814a48
-  - enabled: 1
-    path: Assets/Scenes/uvk.unity
-    guid: 64aee3c905d47974ab0f461efa9fcbac
   - enabled: 1
     path: Assets/Scenes/dsp.unity
     guid: f861d99bd6fe0c84aa65040fd1c4b0a6
@@ -32,6 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/field.unity
     guid: bc4041c1da58f404bbd9089b4ba2dd10
+  - enabled: 1
+    path: Assets/Scenes/relay.unity
+    guid: 2d666f2f5d92fbc4288e43e9ec52de18
+  - enabled: 1
+    path: Assets/Scenes/shn.unity
+    guid: 762129586d558b140b826a9748814a48
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 12ce501abf8396c44b0cfdd92fd39ebd
+  - enabled: 1
+    path: Assets/Scenes/uvk.unity
+    guid: 64aee3c905d47974ab0f461efa9fcbac
   - enabled: 1
     path: Assets/Scenes/hall1.unity
     guid: 2d80059f768ec394486d92d4ca5c3471
