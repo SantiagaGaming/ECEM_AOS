@@ -5605,7 +5605,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.7
+  m_Height: 1.6
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -5640,7 +5640,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 3060870262189715448, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   jumpAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Jump
       m_Type: 0
