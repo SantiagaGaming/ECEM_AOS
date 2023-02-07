@@ -11,6 +11,7 @@ public class UvkLightSetCondition : AosObjectBase
     [SerializeField] private GameObject _redLight;
     [SerializeField] private LampBlinker[] _blinkers;
     private bool _blink = false;
+    public int Condition { get; private set; }
     public bool Blink { get; set; } = false;
     private void Start()
     {
@@ -28,6 +29,7 @@ public class UvkLightSetCondition : AosObjectBase
         {
             SceneSettings.Instance.Memory.UvkLights[ObjectId] = condition;
             EnableLight(condition);
+            Condition = condition;
         }
     }
     private void EnableLight(int value)
@@ -89,10 +91,13 @@ public class UvkLightSetCondition : AosObjectBase
         {
             foreach (var blinker in _blinkers)
             {
-                blinker.DisableBlink();
+                blinker.EnableBlink(false);
             }
-
-        }
-            
+        }   
     }
+    public void EnableLamps(bool value)
+    {
+        _redLight.SetActive(value);
+        _greenLight.SetActive(value);
+    }    
 }
