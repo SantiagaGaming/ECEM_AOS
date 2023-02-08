@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.InputSystem.Controls.AxisControl;
 
 public class ScpuBrokenAnimation : MovablePlateAnimation
 {
@@ -27,6 +28,7 @@ public class ScpuBrokenAnimation : MovablePlateAnimation
         {
             SceneSettings.Instance.CanTouch = false;
             canMove = false;
+      
             MovingButtonsController.Instance.HideAllButtons();
             int scpuRot = 45;
             int plateX = 0;

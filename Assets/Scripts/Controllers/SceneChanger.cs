@@ -35,25 +35,21 @@ public class SceneChanger : MonoBehaviour
                 if (_sceneName != locationName)
             {
                 SceneManager.LoadScene(locationName);
-                Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from if");
             }
             
             }
             else if (locationName == TagsHelper.MENU_LOCATION &&
             _sceneName != TagsHelper.MENU_LOCATION )
             {
-            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else if");
             SceneManager.LoadScene(locationName);
             }
             else if (locationName == TagsHelper.MENU_LOCATION &&
              _sceneName == TagsHelper.MENU_LOCATION)
         {
-            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else else if");
             SceneManager.LoadScene(SceneSettings.Instance.Memory.CurrentLocation);
             }
             else
             {
-            Debug.Log(_sceneName + " Scene name " + "Location name " + locationName + " from else");
             API api = FindObjectOfType<API>();
                 api.OnEndTweenInvoke(locationName);
             }

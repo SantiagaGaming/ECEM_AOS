@@ -10,6 +10,7 @@ public class LampBlinker : BaseLamp
     {
         CurrentColor = Color.yellow;
         _greyColor = Color.grey;
+        GetComponent<Renderer>().material.color = _greyColor;
     }
     public override void EnableLamp(bool value)
     {

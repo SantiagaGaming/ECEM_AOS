@@ -12,8 +12,8 @@ public class MovablePlateAnimation : RepairableObject
     [SerializeField] protected GameObject screwDown;
     [SerializeField] protected GameObject scpuTop;
     [SerializeField] protected GameObject scpuBot;
-    [SerializeField] private UvkLightSetCondition _currentCondition;
-    [SerializeField] private BaseLamp[] _lamps;
+    [SerializeField] protected UvkLightSetCondition _currentCondition;
+    [SerializeField] protected BaseLamp[] Lamps;
     public override void PlayScritableAnimtaion()
     {
         StartCoroutine(Move());
@@ -26,7 +26,7 @@ public class MovablePlateAnimation : RepairableObject
             SceneSettings.Instance.CanTouch = false;
             canMove = false;
             MovingButtonsController.Instance.HideAllButtons();
-            foreach (var lamp in _lamps)
+            foreach (var lamp in Lamps)
             {
                 lamp.EnableLamp(false);
             }
@@ -118,7 +118,7 @@ public class MovablePlateAnimation : RepairableObject
             {
                 _currentCondition.SetCondition(_currentCondition.Condition);
                 if(_currentCondition.Condition ==0)
-                    foreach (var lamp in _lamps)
+                    foreach (var lamp in Lamps)
                     {
                         lamp.EnableLamp(true);
                     }
@@ -126,7 +126,7 @@ public class MovablePlateAnimation : RepairableObject
        
             else
             {
-                foreach (var lamp in _lamps)
+                foreach (var lamp in Lamps)
                 {
                     lamp.EnableLamp(true);
                 }
