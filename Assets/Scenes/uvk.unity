@@ -1692,6 +1692,7 @@ GameObject:
   - component: {fileID: 115526894}
   - component: {fileID: 115526896}
   - component: {fileID: 115526895}
+  - component: {fileID: 115526897}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -1762,6 +1763,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115526893}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &115526897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115526893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &115552924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1786,7 @@ GameObject:
   - component: {fileID: 115552925}
   - component: {fileID: 115552927}
   - component: {fileID: 115552926}
+  - component: {fileID: 115552928}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -1843,6 +1857,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115552924}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &115552928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115552924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &134235666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2299,7 @@ GameObject:
   - component: {fileID: 168433980}
   - component: {fileID: 168433982}
   - component: {fileID: 168433981}
+  - component: {fileID: 168433983}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -2343,6 +2370,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168433979}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &168433983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168433979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &171169364
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2393,7 @@ GameObject:
   - component: {fileID: 171169365}
   - component: {fileID: 171169367}
   - component: {fileID: 171169366}
+  - component: {fileID: 171169368}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -2424,6 +2464,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171169364}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &171169368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171169364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &176438728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2807,6 +2859,7 @@ GameObject:
   - component: {fileID: 196793480}
   - component: {fileID: 196793482}
   - component: {fileID: 196793481}
+  - component: {fileID: 196793483}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -2877,6 +2930,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196793479}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &196793483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196793479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &200261163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,6 +2953,7 @@ GameObject:
   - component: {fileID: 200261164}
   - component: {fileID: 200261166}
   - component: {fileID: 200261165}
+  - component: {fileID: 200261167}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -2958,6 +3024,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200261163}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &200261167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200261163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &203776926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,6 +3380,7 @@ GameObject:
   - component: {fileID: 258390866}
   - component: {fileID: 258390868}
   - component: {fileID: 258390867}
+  - component: {fileID: 258390869}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -3372,6 +3451,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258390865}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &258390869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258390865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &275799030
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,6 +3735,7 @@ GameObject:
   - component: {fileID: 283072138}
   - component: {fileID: 283072140}
   - component: {fileID: 283072139}
+  - component: {fileID: 283072141}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -3714,6 +3806,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283072137}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &283072141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283072137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &283712667
 GameObject:
   m_ObjectHideFlags: 0
@@ -3815,6 +3919,7 @@ GameObject:
   - component: {fileID: 296293863}
   - component: {fileID: 296293865}
   - component: {fileID: 296293864}
+  - component: {fileID: 296293866}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -3885,6 +3990,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296293862}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &296293866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296293862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &302273992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4156,7 @@ GameObject:
   - component: {fileID: 314751940}
   - component: {fileID: 314751942}
   - component: {fileID: 314751941}
+  - component: {fileID: 314751943}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -4109,6 +4227,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314751939}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &314751943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314751939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &328669870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,6 +5346,7 @@ GameObject:
   - component: {fileID: 429984443}
   - component: {fileID: 429984445}
   - component: {fileID: 429984444}
+  - component: {fileID: 429984446}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -5286,6 +5417,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429984442}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &429984446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429984442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &437352021
 GameObject:
   m_ObjectHideFlags: 0
@@ -5649,6 +5792,7 @@ GameObject:
   - component: {fileID: 488902182}
   - component: {fileID: 488902184}
   - component: {fileID: 488902183}
+  - component: {fileID: 488902185}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -5719,6 +5863,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488902181}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &488902185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488902181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &505685618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5730,6 +5886,7 @@ GameObject:
   - component: {fileID: 505685619}
   - component: {fileID: 505685621}
   - component: {fileID: 505685620}
+  - component: {fileID: 505685622}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -5800,6 +5957,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505685618}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &505685622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505685618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &529689465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6282,6 +6451,7 @@ GameObject:
   - component: {fileID: 544313250}
   - component: {fileID: 544313252}
   - component: {fileID: 544313251}
+  - component: {fileID: 544313253}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -6352,6 +6522,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544313249}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &544313253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544313249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &549029109
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,6 +6545,7 @@ GameObject:
   - component: {fileID: 549029110}
   - component: {fileID: 549029112}
   - component: {fileID: 549029111}
+  - component: {fileID: 549029113}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -6433,6 +6616,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549029109}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &549029113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549029109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552644284
 GameObject:
   m_ObjectHideFlags: 0
@@ -7214,6 +7409,7 @@ GameObject:
   - component: {fileID: 611061716}
   - component: {fileID: 611061718}
   - component: {fileID: 611061717}
+  - component: {fileID: 611061719}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -7284,6 +7480,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611061715}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &611061719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611061715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612197596
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,6 +7503,7 @@ GameObject:
   - component: {fileID: 612197597}
   - component: {fileID: 612197599}
   - component: {fileID: 612197598}
+  - component: {fileID: 612197600}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -7365,6 +7574,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612197596}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &612197600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612197596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &624472323
 GameObject:
   m_ObjectHideFlags: 0
@@ -7376,6 +7597,7 @@ GameObject:
   - component: {fileID: 624472324}
   - component: {fileID: 624472326}
   - component: {fileID: 624472325}
+  - component: {fileID: 624472327}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -7446,6 +7668,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624472323}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &624472327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624472323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &651387427
 GameObject:
   m_ObjectHideFlags: 0
@@ -7457,6 +7691,7 @@ GameObject:
   - component: {fileID: 651387428}
   - component: {fileID: 651387430}
   - component: {fileID: 651387429}
+  - component: {fileID: 651387431}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -7527,6 +7762,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651387427}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &651387431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651387427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &652574021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7757,6 +8004,7 @@ GameObject:
   - component: {fileID: 656090926}
   - component: {fileID: 656090928}
   - component: {fileID: 656090927}
+  - component: {fileID: 656090929}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -7827,6 +8075,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656090925}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &656090929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656090925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &658550542
 GameObject:
   m_ObjectHideFlags: 0
@@ -8810,6 +9070,7 @@ GameObject:
   - component: {fileID: 723565368}
   - component: {fileID: 723565370}
   - component: {fileID: 723565369}
+  - component: {fileID: 723565371}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -8880,6 +9141,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723565367}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &723565371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723565367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &734185443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9218,6 +9491,7 @@ GameObject:
   - component: {fileID: 762754902}
   - component: {fileID: 762754904}
   - component: {fileID: 762754903}
+  - component: {fileID: 762754905}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -9288,6 +9562,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762754901}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &762754905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762754901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &764603415
 GameObject:
   m_ObjectHideFlags: 0
@@ -9710,6 +9996,7 @@ GameObject:
   - component: {fileID: 779455819}
   - component: {fileID: 779455821}
   - component: {fileID: 779455820}
+  - component: {fileID: 779455822}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -9780,6 +10067,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779455818}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &779455822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779455818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &784657111
 GameObject:
   m_ObjectHideFlags: 0
@@ -10703,6 +11002,7 @@ GameObject:
   - component: {fileID: 848879201}
   - component: {fileID: 848879203}
   - component: {fileID: 848879202}
+  - component: {fileID: 848879204}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -10773,6 +11073,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848879200}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &848879204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848879200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &852779957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10814,6 +11126,7 @@ GameObject:
   - component: {fileID: 852971763}
   - component: {fileID: 852971765}
   - component: {fileID: 852971764}
+  - component: {fileID: 852971766}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -10884,6 +11197,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852971762}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &852971766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852971762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &866945742
 GameObject:
   m_ObjectHideFlags: 0
@@ -11288,6 +11613,7 @@ GameObject:
   - component: {fileID: 902167654}
   - component: {fileID: 902167656}
   - component: {fileID: 902167655}
+  - component: {fileID: 902167657}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -11358,6 +11684,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902167653}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &902167657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902167653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &903938647
 GameObject:
   m_ObjectHideFlags: 0
@@ -12763,6 +13101,7 @@ GameObject:
   - component: {fileID: 1077767736}
   - component: {fileID: 1077767738}
   - component: {fileID: 1077767737}
+  - component: {fileID: 1077767739}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -12833,6 +13172,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077767735}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1077767739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077767735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1089255274
 GameObject:
   m_ObjectHideFlags: 0
@@ -12934,6 +13285,7 @@ GameObject:
   - component: {fileID: 1089278410}
   - component: {fileID: 1089278412}
   - component: {fileID: 1089278411}
+  - component: {fileID: 1089278413}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -13004,6 +13356,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089278409}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1089278413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089278409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1091708014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13153,6 +13517,7 @@ GameObject:
   - component: {fileID: 1095144708}
   - component: {fileID: 1095144710}
   - component: {fileID: 1095144709}
+  - component: {fileID: 1095144711}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -13223,6 +13588,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095144707}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1095144711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095144707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095403362
 GameObject:
   m_ObjectHideFlags: 0
@@ -13234,6 +13611,7 @@ GameObject:
   - component: {fileID: 1095403363}
   - component: {fileID: 1095403365}
   - component: {fileID: 1095403364}
+  - component: {fileID: 1095403366}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -13304,6 +13682,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095403362}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1095403366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095403362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1098986823
 GameObject:
   m_ObjectHideFlags: 0
@@ -13315,6 +13705,7 @@ GameObject:
   - component: {fileID: 1098986824}
   - component: {fileID: 1098986826}
   - component: {fileID: 1098986825}
+  - component: {fileID: 1098986827}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -13385,6 +13776,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098986823}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1098986827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098986823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1103717482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13396,6 +13799,7 @@ GameObject:
   - component: {fileID: 1103717483}
   - component: {fileID: 1103717485}
   - component: {fileID: 1103717484}
+  - component: {fileID: 1103717486}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -13466,6 +13870,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103717482}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1103717486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103717482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1108984981
 GameObject:
   m_ObjectHideFlags: 0
@@ -14807,6 +15223,7 @@ GameObject:
   - component: {fileID: 1208416056}
   - component: {fileID: 1208416058}
   - component: {fileID: 1208416057}
+  - component: {fileID: 1208416059}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -14877,6 +15294,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208416055}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1208416059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208416055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1233489088
 GameObject:
   m_ObjectHideFlags: 0
@@ -15008,6 +15437,7 @@ GameObject:
   - component: {fileID: 1244213153}
   - component: {fileID: 1244213155}
   - component: {fileID: 1244213154}
+  - component: {fileID: 1244213156}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -15078,6 +15508,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244213152}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1244213156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244213152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1250334659
 GameObject:
   m_ObjectHideFlags: 0
@@ -15170,6 +15612,7 @@ GameObject:
   - component: {fileID: 1254005140}
   - component: {fileID: 1254005142}
   - component: {fileID: 1254005141}
+  - component: {fileID: 1254005143}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -15240,6 +15683,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254005139}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1254005143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254005139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1254112150
 GameObject:
   m_ObjectHideFlags: 0
@@ -15286,6 +15741,7 @@ GameObject:
   - component: {fileID: 1254893154}
   - component: {fileID: 1254893156}
   - component: {fileID: 1254893155}
+  - component: {fileID: 1254893157}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -15356,6 +15812,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254893153}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1254893157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254893153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257211984
 GameObject:
   m_ObjectHideFlags: 0
@@ -15367,6 +15835,7 @@ GameObject:
   - component: {fileID: 1257211985}
   - component: {fileID: 1257211987}
   - component: {fileID: 1257211986}
+  - component: {fileID: 1257211988}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -15437,6 +15906,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257211984}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1257211988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257211984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1259752691
 GameObject:
   m_ObjectHideFlags: 0
@@ -16177,6 +16658,7 @@ GameObject:
   - component: {fileID: 1298641908}
   - component: {fileID: 1298641910}
   - component: {fileID: 1298641909}
+  - component: {fileID: 1298641911}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -16247,6 +16729,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298641907}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1298641911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298641907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306265811
 GameObject:
   m_ObjectHideFlags: 0
@@ -16288,6 +16782,7 @@ GameObject:
   - component: {fileID: 1309310850}
   - component: {fileID: 1309310852}
   - component: {fileID: 1309310851}
+  - component: {fileID: 1309310853}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -16358,6 +16853,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309310849}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1309310853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309310849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1310956677
 GameObject:
   m_ObjectHideFlags: 0
@@ -17077,6 +17584,7 @@ GameObject:
   - component: {fileID: 1359187220}
   - component: {fileID: 1359187222}
   - component: {fileID: 1359187221}
+  - component: {fileID: 1359187223}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -17147,6 +17655,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359187219}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1359187223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359187219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1359862011
 GameObject:
   m_ObjectHideFlags: 0
@@ -17158,6 +17678,7 @@ GameObject:
   - component: {fileID: 1359862012}
   - component: {fileID: 1359862014}
   - component: {fileID: 1359862013}
+  - component: {fileID: 1359862015}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -17228,6 +17749,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359862011}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1359862015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359862011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1371831837
 GameObject:
   m_ObjectHideFlags: 0
@@ -17239,6 +17772,7 @@ GameObject:
   - component: {fileID: 1371831838}
   - component: {fileID: 1371831840}
   - component: {fileID: 1371831839}
+  - component: {fileID: 1371831841}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -17309,6 +17843,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371831837}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1371831841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371831837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1375183924
 GameObject:
   m_ObjectHideFlags: 0
@@ -17320,6 +17866,7 @@ GameObject:
   - component: {fileID: 1375183925}
   - component: {fileID: 1375183927}
   - component: {fileID: 1375183926}
+  - component: {fileID: 1375183928}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -17390,6 +17937,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375183924}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1375183928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375183924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1381008312
 GameObject:
   m_ObjectHideFlags: 0
@@ -17683,6 +18242,7 @@ GameObject:
   - component: {fileID: 1393592081}
   - component: {fileID: 1393592083}
   - component: {fileID: 1393592082}
+  - component: {fileID: 1393592084}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -17753,6 +18313,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393592080}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1393592084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393592080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398251682
 GameObject:
   m_ObjectHideFlags: 0
@@ -18938,6 +19510,7 @@ GameObject:
   - component: {fileID: 1478927035}
   - component: {fileID: 1478927037}
   - component: {fileID: 1478927036}
+  - component: {fileID: 1478927038}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -19008,6 +19581,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478927034}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1478927038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478927034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1481365000
 GameObject:
   m_ObjectHideFlags: 0
@@ -19019,6 +19604,7 @@ GameObject:
   - component: {fileID: 1481365001}
   - component: {fileID: 1481365003}
   - component: {fileID: 1481365002}
+  - component: {fileID: 1481365004}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -19089,6 +19675,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481365000}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1481365004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481365000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1495726714
 GameObject:
   m_ObjectHideFlags: 0
@@ -19767,6 +20365,7 @@ GameObject:
   - component: {fileID: 1545114598}
   - component: {fileID: 1545114600}
   - component: {fileID: 1545114599}
+  - component: {fileID: 1545114601}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -19837,6 +20436,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545114597}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1545114601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545114597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1552633503
 GameObject:
   m_ObjectHideFlags: 0
@@ -19938,6 +20549,7 @@ GameObject:
   - component: {fileID: 1555992295}
   - component: {fileID: 1555992297}
   - component: {fileID: 1555992296}
+  - component: {fileID: 1555992298}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -20008,6 +20620,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555992294}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1555992298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555992294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1559931345
 GameObject:
   m_ObjectHideFlags: 0
@@ -20019,6 +20643,7 @@ GameObject:
   - component: {fileID: 1559931346}
   - component: {fileID: 1559931348}
   - component: {fileID: 1559931347}
+  - component: {fileID: 1559931349}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -20089,6 +20714,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559931345}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1559931349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559931345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1561178487
 GameObject:
   m_ObjectHideFlags: 0
@@ -20525,6 +21162,7 @@ GameObject:
   - component: {fileID: 1582200749}
   - component: {fileID: 1582200751}
   - component: {fileID: 1582200750}
+  - component: {fileID: 1582200752}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -20595,6 +21233,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582200748}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1582200752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582200748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589595185
 GameObject:
   m_ObjectHideFlags: 0
@@ -21077,6 +21727,7 @@ GameObject:
   - component: {fileID: 1622334424}
   - component: {fileID: 1622334426}
   - component: {fileID: 1622334425}
+  - component: {fileID: 1622334427}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -21147,6 +21798,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622334423}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1622334427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622334423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667543173
 GameObject:
   m_ObjectHideFlags: 0
@@ -21317,6 +21980,7 @@ GameObject:
   - component: {fileID: 1690358840}
   - component: {fileID: 1690358842}
   - component: {fileID: 1690358841}
+  - component: {fileID: 1690358843}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -21387,6 +22051,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690358839}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1690358843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690358839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1691346184
 GameObject:
   m_ObjectHideFlags: 0
@@ -21578,6 +22254,7 @@ GameObject:
   - component: {fileID: 1719474422}
   - component: {fileID: 1719474424}
   - component: {fileID: 1719474423}
+  - component: {fileID: 1719474425}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -21648,6 +22325,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719474421}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1719474425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719474421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1722475398
 GameObject:
   m_ObjectHideFlags: 0
@@ -22036,6 +22725,7 @@ GameObject:
   - component: {fileID: 1740807395}
   - component: {fileID: 1740807397}
   - component: {fileID: 1740807396}
+  - component: {fileID: 1740807398}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -22106,6 +22796,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740807394}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1740807398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740807394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750324137
 GameObject:
   m_ObjectHideFlags: 0
@@ -22866,6 +23568,7 @@ GameObject:
   - component: {fileID: 1792647882}
   - component: {fileID: 1792647884}
   - component: {fileID: 1792647883}
+  - component: {fileID: 1792647885}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -22936,6 +23639,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792647881}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1792647885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792647881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1793897086
 GameObject:
   m_ObjectHideFlags: 0
@@ -23071,6 +23786,7 @@ GameObject:
   - component: {fileID: 1808928080}
   - component: {fileID: 1808928082}
   - component: {fileID: 1808928081}
+  - component: {fileID: 1808928083}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -23141,6 +23857,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808928079}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1808928083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808928079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1809346844
 GameObject:
   m_ObjectHideFlags: 0
@@ -23767,6 +24495,7 @@ GameObject:
   - component: {fileID: 1875726727}
   - component: {fileID: 1875726729}
   - component: {fileID: 1875726728}
+  - component: {fileID: 1875726730}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -23837,6 +24566,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875726726}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1875726730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875726726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1880466177
 GameObject:
   m_ObjectHideFlags: 0
@@ -24119,6 +24860,7 @@ GameObject:
   - component: {fileID: 1911729914}
   - component: {fileID: 1911729916}
   - component: {fileID: 1911729915}
+  - component: {fileID: 1911729917}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -24189,6 +24931,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911729913}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1911729917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911729913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1915653929
 GameObject:
   m_ObjectHideFlags: 0
@@ -24281,6 +25035,7 @@ GameObject:
   - component: {fileID: 1921277242}
   - component: {fileID: 1921277244}
   - component: {fileID: 1921277243}
+  - component: {fileID: 1921277245}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -24351,6 +25106,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921277241}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1921277245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921277241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1924180600
 GameObject:
   m_ObjectHideFlags: 0
@@ -24362,6 +25129,7 @@ GameObject:
   - component: {fileID: 1924180601}
   - component: {fileID: 1924180603}
   - component: {fileID: 1924180602}
+  - component: {fileID: 1924180604}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -24432,6 +25200,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924180600}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1924180604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924180600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1928380406
 GameObject:
   m_ObjectHideFlags: 0
@@ -24625,6 +25405,7 @@ GameObject:
   - component: {fileID: 1950547806}
   - component: {fileID: 1950547808}
   - component: {fileID: 1950547807}
+  - component: {fileID: 1950547809}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -24695,6 +25476,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950547805}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1950547809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950547805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1952385232
 GameObject:
   m_ObjectHideFlags: 0
@@ -24787,6 +25580,7 @@ GameObject:
   - component: {fileID: 1953707217}
   - component: {fileID: 1953707219}
   - component: {fileID: 1953707218}
+  - component: {fileID: 1953707220}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -24857,6 +25651,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953707216}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1953707220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953707216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975947883
 GameObject:
   m_ObjectHideFlags: 0
@@ -24868,6 +25674,7 @@ GameObject:
   - component: {fileID: 1975947884}
   - component: {fileID: 1975947886}
   - component: {fileID: 1975947885}
+  - component: {fileID: 1975947887}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -24938,6 +25745,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975947883}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1975947887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975947883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1981067853
 GameObject:
   m_ObjectHideFlags: 0
@@ -25258,6 +26077,7 @@ GameObject:
   - component: {fileID: 1988998008}
   - component: {fileID: 1988998010}
   - component: {fileID: 1988998009}
+  - component: {fileID: 1988998011}
   m_Layer: 0
   m_Name: GreenLamp
   m_TagString: Untagged
@@ -25328,6 +26148,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988998007}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1988998011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988998007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1997860116
 GameObject:
   m_ObjectHideFlags: 0
@@ -27039,6 +27871,7 @@ GameObject:
   - component: {fileID: 2095662093}
   - component: {fileID: 2095662095}
   - component: {fileID: 2095662094}
+  - component: {fileID: 2095662096}
   m_Layer: 0
   m_Name: RedLamp
   m_TagString: Untagged
@@ -27109,6 +27942,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095662092}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2095662096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095662092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6896ebde55c42b4f910f582f1d13cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105478601
 GameObject:
   m_ObjectHideFlags: 0
@@ -43114,7 +43959,9 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351585739103}
   scpuBot: {fileID: 7850148350893514678}
   _currentCondition: {fileID: 1037663705613945879}
-  Lamps: []
+  Lamps:
+  - {fileID: 171169368}
+  - {fileID: 612197600}
 --- !u!114 &7850148349673021630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45771,7 +46618,9 @@ MonoBehaviour:
   scpuTop: {fileID: 8251825621789579315}
   scpuBot: {fileID: 720647475311046717}
   _currentCondition: {fileID: 1037663705152105132}
-  Lamps: []
+  Lamps:
+  - {fileID: 1095144711}
+  - {fileID: 1298641911}
 --- !u!65 &7850148349816109257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46170,7 +47019,14 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350921699733}
   scpuBot: {fileID: 7850148350131837566}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 7850148350225643976}
+  - {fileID: 7850148350207733367}
+  - {fileID: 7850148350966210519}
+  - {fileID: 7850148350163074697}
+  - {fileID: 7850148349995571187}
+  - {fileID: 7850148349905260395}
+  - {fileID: 1244213156}
 --- !u!114 &7850148349834662257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47073,7 +47929,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350263880812}
   scpuBot: {fileID: 7850148350356452021}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1098986827}
 --- !u!4 &7850148349899277730
 Transform:
   m_ObjectHideFlags: 0
@@ -47841,7 +48698,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349798571595}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1559931349}
 --- !u!4 &7850148349946418725
 Transform:
   m_ObjectHideFlags: 0
@@ -48797,7 +49655,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349932083279}
   scpuBot: {fileID: 7850148351502867489}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1359187223}
 --- !u!114 &7850148349996018871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49368,7 +50227,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350002852287}
   scpuBot: {fileID: 7850148350875492371}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 762754905}
 --- !u!4 &7850148350013241466
 Transform:
   m_ObjectHideFlags: 0
@@ -52886,7 +53746,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349583337372}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1924180604}
 --- !u!4 &7850148350215045708
 Transform:
   m_ObjectHideFlags: 0
@@ -53947,7 +54808,9 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351589331425}
   scpuBot: {fileID: 7850148350741593183}
   _currentCondition: {fileID: 1037663705690625427}
-  Lamps: []
+  Lamps:
+  - {fileID: 314751943}
+  - {fileID: 1875726730}
 --- !u!114 &7850148350260829996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54299,7 +55162,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349953712571}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1359862015}
 --- !u!4 &7850148350274759813
 Transform:
   m_ObjectHideFlags: 0
@@ -54438,7 +55302,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351185857046}
   scpuBot: {fileID: 7850148351229204116}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 505685622}
 --- !u!4 &7850148350275148892
 Transform:
   m_ObjectHideFlags: 0
@@ -56241,7 +57106,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350381844507}
   scpuBot: {fileID: 7850148350195002542}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 283072141}
 --- !u!23 &7850148350381844504
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56376,7 +57242,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351657673813}
   scpuBot: {fileID: 7850148349680598474}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1095403366}
 --- !u!114 &7850148350387901010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56489,7 +57356,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351288997669}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1690358843}
 --- !u!4 &7850148350397349990
 Transform:
   m_ObjectHideFlags: 0
@@ -56636,7 +57504,9 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350313970516}
   _currentCondition: {fileID: 1037663703889108141}
-  Lamps: []
+  Lamps:
+  - {fileID: 544313253}
+  - {fileID: 296293866}
 --- !u!4 &7850148350402327715
 Transform:
   m_ObjectHideFlags: 0
@@ -56752,7 +57622,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350523518576}
   scpuBot: {fileID: 7850148350004365954}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1622334427}
 --- !u!114 &7850148350403530218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56982,7 +57853,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351010633763}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1375183928}
 --- !u!4 &7850148350406680883
 Transform:
   m_ObjectHideFlags: 0
@@ -57776,7 +58648,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350069551147}
   scpuBot: {fileID: 7850148351204809399}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1911729917}
 --- !u!4 &7850148350447724674
 Transform:
   m_ObjectHideFlags: 0
@@ -57935,7 +58808,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349996126147}
   scpuBot: {fileID: 7850148350649683417}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 848879204}
 --- !u!114 &7850148350458731758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58568,7 +59442,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351099601509}
   scpuBot: {fileID: 7850148350266780982}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1545114601}
 --- !u!114 &7850148350504873018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59615,7 +60490,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349868597370}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1089278413}
 --- !u!4 &7850148350610998571
 Transform:
   m_ObjectHideFlags: 0
@@ -60176,7 +61052,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350709828818}
   scpuBot: {fileID: 7850148350160680981}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 656090929}
 --- !u!114 &7850148350615950832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63478,7 +64355,9 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350904699328}
   _currentCondition: {fileID: 1037663704365851639}
-  Lamps: []
+  Lamps:
+  - {fileID: 1257211988}
+  - {fileID: 2095662096}
 --- !u!23 &7850148350843363236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64135,7 +65014,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351036351516}
   scpuBot: {fileID: 7850148350883197627}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1792647885}
 --- !u!114 &7850148350888465688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64700,7 +65580,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350712166209}
   scpuBot: {fileID: 7850148349793167134}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1988998011}
 --- !u!4 &7850148350903577163
 Transform:
   m_ObjectHideFlags: 0
@@ -64964,7 +65845,9 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350361457126}
   scpuBot: {fileID: 7850148349652710700}
   _currentCondition: {fileID: 1037663704161930846}
-  Lamps: []
+  Lamps:
+  - {fileID: 651387431}
+  - {fileID: 488902185}
 --- !u!114 &7850148350910466601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65103,7 +65986,9 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349800348198}
   _currentCondition: {fileID: 1037663703628966542}
-  Lamps: []
+  Lamps:
+  - {fileID: 258390869}
+  - {fileID: 852971766}
 --- !u!4 &7850148350912205452
 Transform:
   m_ObjectHideFlags: 0
@@ -65691,7 +66576,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349854150083}
   scpuBot: {fileID: 7850148349706137117}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1808928083}
 --- !u!23 &7850148350943391560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66669,7 +67555,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350698770540}
   scpuBot: {fileID: 7850148350366237671}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 115526897}
 --- !u!4 &7850148350992249175
 Transform:
   m_ObjectHideFlags: 0
@@ -67455,7 +68342,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351077301885}
   scpuBot: {fileID: 7850148350969461683}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1975947887}
 --- !u!4 &7850148351029062243
 Transform:
   m_ObjectHideFlags: 0
@@ -67608,7 +68496,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349641323360}
   scpuBot: {fileID: 7850148350843363239}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 200261167}
 --- !u!4 &7850148351032464118
 Transform:
   m_ObjectHideFlags: 0
@@ -68419,7 +69308,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349837276565}
   scpuBot: {fileID: 7850148350965080997}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 429984446}
 --- !u!114 &7850148351087898041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68941,7 +69831,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148349681692014}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 723565371}
 --- !u!4 &7850148351104853055
 Transform:
   m_ObjectHideFlags: 0
@@ -69997,7 +70888,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350888465690}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1254893157}
 --- !u!4 &7850148351199101247
 Transform:
   m_ObjectHideFlags: 0
@@ -70672,7 +71564,15 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351141782587}
   scpuBot: {fileID: 7850148350790447653}
   _currentCondition: {fileID: 1037663705613807429}
-  Lamps: []
+  Lamps:
+  - {fileID: 7850148350755164872}
+  - {fileID: 7850148349948329119}
+  - {fileID: 7850148350098885314}
+  - {fileID: 7850148350983269123}
+  - {fileID: 7850148349912381595}
+  - {fileID: 7850148349616334921}
+  - {fileID: 168433983}
+  - {fileID: 1953707220}
 --- !u!4 &7850148351223393160
 Transform:
   m_ObjectHideFlags: 0
@@ -71120,7 +72020,15 @@ MonoBehaviour:
   scpuTop: {fileID: 6664353361179652867}
   scpuBot: {fileID: 894706840480163290}
   _currentCondition: {fileID: 1037663704103260359}
-  Lamps: []
+  Lamps:
+  - {fileID: 7850148350436421380}
+  - {fileID: 7850148351227741055}
+  - {fileID: 7850148351202632321}
+  - {fileID: 7850148350518655604}
+  - {fileID: 7850148349797421540}
+  - {fileID: 7850148351542034701}
+  - {fileID: 1921277245}
+  - {fileID: 1254005143}
 --- !u!1 &7850148351235632612
 GameObject:
   m_ObjectHideFlags: 0
@@ -71318,7 +72226,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349890181221}
   scpuBot: {fileID: 7850148351582748306}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 611061719}
 --- !u!4 &7850148351254905812
 Transform:
   m_ObjectHideFlags: 0
@@ -71639,7 +72548,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349829525070}
   scpuBot: {fileID: 7850148350925497042}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 115552928}
 --- !u!114 &7850148351277116035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72007,7 +72917,9 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 8989845502416336331}
   _currentCondition: {fileID: 1037663704591949845}
-  Lamps: []
+  Lamps:
+  - {fileID: 1371831841}
+  - {fileID: 1481365004}
 --- !u!1 &7850148351302064864
 GameObject:
   m_ObjectHideFlags: 0
@@ -72223,7 +73135,9 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148349978965734}
   scpuBot: {fileID: 7850148350697923492}
   _currentCondition: {fileID: 1037663703717759218}
-  Lamps: []
+  Lamps:
+  - {fileID: 1950547809}
+  - {fileID: 779455822}
 --- !u!33 &7850148351312798944
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -72556,7 +73470,27 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350628766728}
   scpuBot: {fileID: 7850148349805904015}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1103717486}
+  - {fileID: 1808928083}
+  - {fileID: 1911729917}
+  - {fileID: 762754905}
+  - {fileID: 283072141}
+  - {fileID: 1975947887}
+  - {fileID: 1545114601}
+  - {fileID: 314751943}
+  - {fileID: 1875726730}
+  - {fileID: 612197600}
+  - {fileID: 171169368}
+  - {fileID: 1095403366}
+  - {fileID: 848879204}
+  - {fileID: 1244213156}
+  - {fileID: 7850148350225643976}
+  - {fileID: 7850148350207733367}
+  - {fileID: 7850148350966210519}
+  - {fileID: 7850148350163074697}
+  - {fileID: 7850148349995571187}
+  - {fileID: 7850148349905260395}
 --- !u!4 &7850148351327437015
 Transform:
   m_ObjectHideFlags: 0
@@ -72723,7 +73657,9 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350787508974}
   scpuBot: {fileID: 7850148350891162151}
   _currentCondition: {fileID: 1037663703657298071}
-  Lamps: []
+  Lamps:
+  - {fileID: 902167657}
+  - {fileID: 1719474425}
 --- !u!4 &7850148351339797121
 Transform:
   m_ObjectHideFlags: 0
@@ -73523,7 +74459,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350201653580}
   scpuBot: {fileID: 7850148350998112411}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 549029113}
 --- !u!4 &7850148351360165469
 Transform:
   m_ObjectHideFlags: 0
@@ -73786,7 +74723,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148351012676612}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1393592084}
 --- !u!23 &7850148351363079844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -75048,7 +75986,29 @@ MonoBehaviour:
   scpuTop: {fileID: 8824471355145169420}
   scpuBot: {fileID: 3139766855990516182}
   _currentCondition: {fileID: 1037663705700124509}
-  Lamps: []
+  Lamps:
+  - {fileID: 1309310853}
+  - {fileID: 1555992298}
+  - {fileID: 1582200752}
+  - {fileID: 656090929}
+  - {fileID: 1988998011}
+  - {fileID: 115526897}
+  - {fileID: 1298641911}
+  - {fileID: 1095144711}
+  - {fileID: 200261167}
+  - {fileID: 1792647885}
+  - {fileID: 1950547809}
+  - {fileID: 779455822}
+  - {fileID: 1478927038}
+  - {fileID: 1359187223}
+  - {fileID: 168433983}
+  - {fileID: 1953707220}
+  - {fileID: 7850148350755164872}
+  - {fileID: 7850148349948329119}
+  - {fileID: 7850148350098885314}
+  - {fileID: 7850148350983269123}
+  - {fileID: 7850148349912381595}
+  - {fileID: 7850148349616334921}
 --- !u!65 &7850148351481338074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75551,7 +76511,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351046708092}
   scpuBot: {fileID: 7850148350612877615}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1740807398}
 --- !u!114 &7850148351509117467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76168,7 +77129,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148350064546781}
   scpuBot: {fileID: 7850148349910704822}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1478927038}
 --- !u!114 &7850148351564889724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76820,7 +77782,9 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350348087413}
   _currentCondition: {fileID: 1037663704877754119}
-  Lamps: []
+  Lamps:
+  - {fileID: 624472327}
+  - {fileID: 196793483}
 --- !u!4 &7850148351585553738
 Transform:
   m_ObjectHideFlags: 0
@@ -77388,7 +78352,8 @@ MonoBehaviour:
   scpuTop: {fileID: 0}
   scpuBot: {fileID: 7850148350950466287}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1077767739}
 --- !u!4 &7850148351590835367
 Transform:
   m_ObjectHideFlags: 0
@@ -77459,8 +78424,29 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465936676341}
   scpuTop: {fileID: 7850148351523602700}
   scpuBot: {fileID: 7850148350552156903}
-  _currentCondition: {fileID: 0}
-  Lamps: []
+  _currentCondition: {fileID: 1037663704103260359}
+  Lamps:
+  - {fileID: 1208416059}
+  - {fileID: 505685622}
+  - {fileID: 902167657}
+  - {fileID: 1719474425}
+  - {fileID: 549029113}
+  - {fileID: 1098986827}
+  - {fileID: 611061719}
+  - {fileID: 1622334427}
+  - {fileID: 115552928}
+  - {fileID: 651387431}
+  - {fileID: 488902185}
+  - {fileID: 429984446}
+  - {fileID: 1740807398}
+  - {fileID: 1921277245}
+  - {fileID: 1254005143}
+  - {fileID: 7850148350436421380}
+  - {fileID: 7850148351227741055}
+  - {fileID: 7850148351202632321}
+  - {fileID: 7850148350518655604}
+  - {fileID: 7850148349797421540}
+  - {fileID: 7850148351542034701}
 --- !u!4 &7850148351594271635
 Transform:
   m_ObjectHideFlags: 0
@@ -78128,7 +79114,8 @@ MonoBehaviour:
   scpuTop: {fileID: 7850148351490828243}
   scpuBot: {fileID: 7850148350169921098}
   _currentCondition: {fileID: 0}
-  Lamps: []
+  Lamps:
+  - {fileID: 1582200752}
 --- !u!4 &7850148351663339329
 Transform:
   m_ObjectHideFlags: 0
