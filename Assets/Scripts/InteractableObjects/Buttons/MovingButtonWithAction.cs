@@ -24,12 +24,12 @@ public class MovingButtonWithAction : MovingButton
         {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("hand");
             MovingButtonsController.Instance.PlayPushAnimation();
-            ButtonNumberEvent?.Invoke(1);
+            ButtonNumberEvent?.Invoke(0);
         }
         else if (_currentAction == ButtonActionName.Hand_1)
         {
             CurrentAOSObject.Instance.SceneAosObject.ActionWithObject("hand_1");
-            ButtonNumberEvent?.Invoke(0);
+            ButtonNumberEvent?.Invoke(1);
         }
 
         else if (_currentAction == ButtonActionName.Hand_2)
