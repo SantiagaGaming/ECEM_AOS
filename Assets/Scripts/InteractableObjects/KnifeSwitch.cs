@@ -19,21 +19,21 @@ public class KnifeSwitch : MonoBehaviour
         if(CurrentAOSObject.Instance.SceneAosObject.ObjectId== "dsp_shvu_switch")
         {
             if (position == 0)
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                transform.localRotation = Quaternion.Euler(180, 0, 180);
             else if (position == 1)
-                transform.localRotation = Quaternion.Euler(0, 0, -45);
+                transform.localRotation = Quaternion.Euler(180, 0, -45);
             else if (position == 2)
-                transform.localRotation = Quaternion.Euler(0, 0, 45);
+                transform.localRotation = Quaternion.Euler(180, 0, 45);
             OnKnifePositionCjanged?.Invoke(position);
         }
     }
     public void OnStartChangeKnifePosition(int position)
     {
             if (position == 0)
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                transform.localRotation = Quaternion.Euler(180, 0, 180);
             else if (position == 1)
-                transform.localRotation = Quaternion.Euler(0, 0, -45);
+                transform.localRotation = Quaternion.Euler(180, 0, -45);
             else if (position == 2)
-                transform.localRotation = Quaternion.Euler(0, 0, 45);        
+                transform.localRotation = Quaternion.Euler(180, 0, 45);        
     }
 }
