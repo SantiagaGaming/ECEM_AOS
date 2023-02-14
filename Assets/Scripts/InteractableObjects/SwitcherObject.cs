@@ -45,7 +45,7 @@ public class SwitcherObject : RepairableObject
         _canRotate = false;
         MovingButtonsController.Instance.HideAllButtons();
 
-        if (value)
+        if (!value)
         {
              int x = 56;
             while (x >= -34)
@@ -64,7 +64,7 @@ public class SwitcherObject : RepairableObject
                 x++;
                 yield return new WaitForSeconds(0.01f);
             }
-        }
+         }
 
         _canRotate = true;
         GetComponent<Collider>().enabled = true;
