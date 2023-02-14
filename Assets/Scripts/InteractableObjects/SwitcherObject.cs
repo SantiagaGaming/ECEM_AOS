@@ -14,7 +14,7 @@ public class SwitcherObject : RepairableObject
         if (SceneSettings.Instance.Memory.QfCondition)
         {
             _side = true;
-            _switcher.transform.localRotation = Quaternion.Euler(-20, 0, 0);
+            _switcher.transform.localRotation = Quaternion.Euler(56, 0, 0);
         }
     }
     private void OnEnable()
@@ -48,7 +48,7 @@ public class SwitcherObject : RepairableObject
         if (value)
         {
              int x = 56;
-            while (x >= -20)
+            while (x >= -34)
             {
                 _switcher.transform.localRotation = Quaternion.Euler(x,0, 0);
                 x--;
@@ -57,7 +57,7 @@ public class SwitcherObject : RepairableObject
         }
         else
         {
-            int x = -20;
+            int x = -34;
             while (x <= 56)
             {
                 _switcher.transform.localRotation = Quaternion.Euler(x,0, 0);
