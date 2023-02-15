@@ -117,19 +117,43 @@ public class MovablePlateAnimation : RepairableObject
             if (_currentCondition != null)
             {
                 _currentCondition.SetCondition(_currentCondition.Condition);
-                if(_currentCondition.Condition ==0)
+                foreach (var lamp in Lamps)
+                {
+                    if (lamp.IsRed)
+                        lamp.enabled = true;
+                }
+                yield return new WaitForSeconds(1f);
+         
+                if (_currentCondition.Condition ==0)
                     foreach (var lamp in Lamps)
                     {
                         lamp.EnableLamp(true);
                     }
+                foreach (var lamp in Lamps)
+                {
+                    if (lamp.IsRed)
+                        lamp.enabled = false;
+                }
             }    
        
             else
             {
                 foreach (var lamp in Lamps)
                 {
+                    if (lamp.IsRed)
+                        lamp.enabled = true;
+                }
+                yield return new WaitForSeconds(1f);
+                foreach (var lamp in Lamps)
+                {
                     lamp.EnableLamp(true);
                 }
+                foreach (var lamp in Lamps)
+                {
+                    if (lamp.IsRed)
+                        lamp.enabled = false;
+                }
+
             }
             canMove = true;
             SceneSettings.Instance.CanTouch = true;
