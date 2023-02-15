@@ -38,18 +38,19 @@ public class MonitorEnabler : SceneAosObject
     {
         if (_currentMonitor == CurrentMonitor.MONITOR_1)
         {
-            if(SceneSettings.Instance.Memory.Monitor1Enabler)
-                OnEnableMonitor?.Invoke(condition);
+            OnEnableMonitor?.Invoke(condition);
+            SceneSettings.Instance.Memory.Monitor1 = condition;
         }
         else if(_currentMonitor == CurrentMonitor.MONITOR_2)
         {
-            if (SceneSettings.Instance.Memory.Monitor2Enabler)
-                OnEnableMonitor?.Invoke(condition);
+            OnEnableMonitor?.Invoke(condition);
+            SceneSettings.Instance.Memory.Monitor2 = condition;
         }
+              
         else if (_currentMonitor == CurrentMonitor.MONITOR_3)
         {
-            if (SceneSettings.Instance.Memory.Monitor3Enabler)
-                OnEnableMonitor?.Invoke(condition);
+            OnEnableMonitor?.Invoke(condition);
+            SceneSettings.Instance.Memory.Monitor3 = condition;
         }
     }
 }
