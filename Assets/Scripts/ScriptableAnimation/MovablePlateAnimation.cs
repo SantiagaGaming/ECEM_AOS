@@ -120,7 +120,7 @@ public class MovablePlateAnimation : RepairableObject
                 foreach (var lamp in Lamps)
                 {
                     if (lamp.IsRed)
-                        lamp.enabled = true;
+                        lamp.GetComponent<MeshRenderer>().enabled = true;
                 }
                 yield return new WaitForSeconds(1f);
          
@@ -132,16 +132,15 @@ public class MovablePlateAnimation : RepairableObject
                 foreach (var lamp in Lamps)
                 {
                     if (lamp.IsRed)
-                        lamp.enabled = false;
+                        lamp.GetComponent<MeshRenderer>().enabled = false;
                 }
             }    
-       
-            else
+                else
             {
                 foreach (var lamp in Lamps)
                 {
                     if (lamp.IsRed)
-                        lamp.enabled = true;
+                        lamp.GetComponent<MeshRenderer>().enabled = true;
                 }
                 yield return new WaitForSeconds(1f);
                 foreach (var lamp in Lamps)
@@ -151,7 +150,7 @@ public class MovablePlateAnimation : RepairableObject
                 foreach (var lamp in Lamps)
                 {
                     if (lamp.IsRed)
-                        lamp.enabled = false;
+                        lamp.GetComponent<MeshRenderer>().enabled = false;
                 }
 
             }
