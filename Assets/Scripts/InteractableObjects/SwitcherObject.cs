@@ -7,6 +7,7 @@ public class SwitcherObject : RepairableObject
     [SerializeField] private GameObject _switcher;
     [SerializeField] private MovingButtonWithAction _buttonOn;
     [SerializeField] private MovingButtonWithAction _buttonOff;
+    [SerializeField] private GameObject _lamp;
     private bool _canRotate = true;
     private bool _side = true;
     private void Start()
@@ -15,6 +16,7 @@ public class SwitcherObject : RepairableObject
         {
             _side = true;
             _switcher.transform.localRotation = Quaternion.Euler(56, 0, 0);
+            _lamp.SetActive(true);
         }
     }
     private void OnEnable()
@@ -54,6 +56,7 @@ public class SwitcherObject : RepairableObject
                 x--;
                 yield return new WaitForSeconds(0.01f);
             }
+            _lamp.SetActive(false);
         }
         else
         {
@@ -64,7 +67,8 @@ public class SwitcherObject : RepairableObject
                 x++;
                 yield return new WaitForSeconds(0.01f);
             }
-         }
+            _lamp.SetActive(true);
+        }
 
         _canRotate = true;
         GetComponent<Collider>().enabled = true;
