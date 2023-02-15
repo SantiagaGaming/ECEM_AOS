@@ -47,7 +47,7 @@ public class SwitcherObject : RepairableObject
         _canRotate = false;
         MovingButtonsController.Instance.HideAllButtons();
 
-        if (!value)
+        if (value)
         {
              int x = 56;
             while (x >= -34)
