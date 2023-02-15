@@ -79353,6 +79353,11 @@ MonoBehaviour:
   - {fileID: 596522900}
   - {fileID: 806565870}
   - {fileID: 766119262}
+  - {fileID: 1077767739}
+  - {fileID: 624472327}
+  - {fileID: 1559931349}
+  - {fileID: 1924180604}
+  - {fileID: 258390869}
 --- !u!4 &7850148351327437015
 Transform:
   m_ObjectHideFlags: 0
@@ -81897,6 +81902,11 @@ MonoBehaviour:
   - {fileID: 1948053722}
   - {fileID: 267185765}
   - {fileID: 146010524}
+  - {fileID: 544313253}
+  - {fileID: 1089278413}
+  - {fileID: 1359862015}
+  - {fileID: 1257211988}
+  - {fileID: 1690358843}
 --- !u!65 &7850148351481338074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84358,6 +84368,11 @@ MonoBehaviour:
   - {fileID: 1426283471}
   - {fileID: 115935518}
   - {fileID: 1189607899}
+  - {fileID: 1375183928}
+  - {fileID: 1371831841}
+  - {fileID: 723565371}
+  - {fileID: 1393592084}
+  - {fileID: 1254893157}
 --- !u!4 &7850148351594271635
 Transform:
   m_ObjectHideFlags: 0
