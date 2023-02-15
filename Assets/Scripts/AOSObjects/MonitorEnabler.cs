@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class MonitorEnabler : SceneAosObject
 {
     public UnityAction<bool> OnMonitorConditionChanged;
+    public UnityAction<bool> OnEnableMonitor;
 
     [SerializeField] private CurrentMonitor _currentMonitor;
     public CurrentMonitor CurrentM => _currentMonitor;
@@ -16,11 +17,20 @@ public class MonitorEnabler : SceneAosObject
     public void SetCondition(bool condition)
     {
         if(_currentMonitor==CurrentMonitor.MONITOR_1)
-        SceneSettings.Instance.Memory.Monitor1Enabler = condition;
+        {
+            SceneSettings.Instance.Memory.Monitor1Enabler = condition;
+            OnMonitorConditionChanged?.Invoke(condition);
+        }
        else if (_currentMonitor == CurrentMonitor.MONITOR_2)
+        {
             SceneSettings.Instance.Memory.Monitor2Enabler = condition;
+                OnMonitorConditionChanged?.Invoke(condition);
+        }
        else if (_currentMonitor == CurrentMonitor.MONITOR_3)
+        {
             SceneSettings.Instance.Memory.Monitor3Enabler = condition;
+                OnMonitorConditionChanged?.Invoke(condition);
+        }
     }
 
     [AosAction(name: "Сменить состояние объекта")]
@@ -28,18 +38,18 @@ public class MonitorEnabler : SceneAosObject
     {
         if (_currentMonitor == CurrentMonitor.MONITOR_1)
         {
-            SceneSettings.Instance.Memory.Monitor1 = condition;
-            OnMonitorConditionChanged?.Invoke(condition);
+            if(SceneSettings.Instance.Memory.Monitor1Enabler)
+                OnEnableMonitor?.Invoke(condition);
         }
         else if(_currentMonitor == CurrentMonitor.MONITOR_2)
         {
-            SceneSettings.Instance.Memory.Monitor2 = condition;
-            OnMonitorConditionChanged?.Invoke(condition);
+            if (SceneSettings.Instance.Memory.Monitor2Enabler)
+                OnEnableMonitor?.Invoke(condition);
         }
         else if (_currentMonitor == CurrentMonitor.MONITOR_3)
         {
-            SceneSettings.Instance.Memory.Monitor3 = condition;
-            OnMonitorConditionChanged?.Invoke(condition);
+            if (SceneSettings.Instance.Memory.Monitor3Enabler)
+                OnEnableMonitor?.Invoke(condition);
         }
     }
 }

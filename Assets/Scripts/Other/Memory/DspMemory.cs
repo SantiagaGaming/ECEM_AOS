@@ -17,9 +17,9 @@ public class DspMemory : MonoBehaviour
         if(SceneSettings.Instance.Memory.DspShvuKey3)
             _key3.PushInStrart();
         _knife.OnStartChangeKnifePosition(SceneSettings.Instance.Memory.KnifePosition);
-        _monitor1.OnStartMonitor(SceneSettings.Instance.Memory.Monitor1);
-        _monitor2.OnStartMonitor(SceneSettings.Instance.Memory.Monitor2);
-        _monitor3.OnStartMonitor(SceneSettings.Instance.Memory.Monitor3);
+        _monitor1.OnEnableMonitorCondition(SceneSettings.Instance.Memory.Monitor1);
+        _monitor2.OnEnableMonitorCondition(SceneSettings.Instance.Memory.Monitor2);
+        _monitor3.OnEnableMonitorCondition(SceneSettings.Instance.Memory.Monitor3);
     }
 
     private void OnEnable()

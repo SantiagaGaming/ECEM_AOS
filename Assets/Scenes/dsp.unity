@@ -1536,12 +1536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand1: {fileID: 343316449}
-  _hand2: {fileID: 343316448}
   _monitorEnabler: {fileID: 1888733501}
   _offCanvas: {fileID: 1858373104}
   _onCanvas: {fileID: 1409188715}
-  _id: dsp_workplace_mon1
 --- !u!1 &147809475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,12 +4871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand1: {fileID: 343316449}
-  _hand2: {fileID: 343316448}
   _monitorEnabler: {fileID: 1314030210}
   _offCanvas: {fileID: 399237508}
   _onCanvas: {fileID: 1782217634}
-  _id: dsp_workplace_mon3
 --- !u!1001 &493458100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9416,12 +9410,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a285e3a528d65c4fbe4729ed740bdc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hand1: {fileID: 343316449}
-  _hand2: {fileID: 343316448}
   _monitorEnabler: {fileID: 1513076884}
   _offCanvas: {fileID: 922492558}
   _onCanvas: {fileID: 1855094422}
-  _id: dsp_workplace_mon2
 --- !u!4 &1011573377
 Transform:
   m_ObjectHideFlags: 0
