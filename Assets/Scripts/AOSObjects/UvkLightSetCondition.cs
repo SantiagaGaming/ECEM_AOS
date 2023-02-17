@@ -10,6 +10,7 @@ public class UvkLightSetCondition : AosObjectBase
     [SerializeField] private GameObject _greenLight;
     [SerializeField] private GameObject _redLight;
     [SerializeField] private LampBlinker[] _blinkers;
+    public bool CanChange { get; set; } = true;
     private bool _blink = false;
     public int Condition { get; private set; }
     public bool Blink { get; set; } = false;
@@ -30,16 +31,14 @@ public class UvkLightSetCondition : AosObjectBase
         {
             Debug.Log(ObjectId + " condition " + condition);
             SceneSettings.Instance.Memory.UvkLights[ObjectId] = condition;
-            //EnableLight(condition);
+            EnableLight(condition);
             Condition = condition;
         }
     }
     public void EnableLight(int value)
     {
-        Debug.Log(_redLight.GetComponent<MeshRenderer>().enabled + "Mesh Before");
-        if (_greenLight == null || _redLight == null)
+        if (_greenLight == null || _redLight == null || CanChange==false)
             return;
-        Debug.Log(_redLight.GetComponent<MeshRenderer>().enabled + "Mesh");
         if (value==0)
         {
             _greenLight.SetActive(true);

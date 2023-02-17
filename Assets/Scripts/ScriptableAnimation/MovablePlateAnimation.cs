@@ -22,7 +22,8 @@ public class MovablePlateAnimation : RepairableObject
     {
         if (canMove)
         {
-
+            if(_currentCondition!=null)
+            _currentCondition.CanChange = false;
             SceneSettings.Instance.CanTouch = false;
             canMove = false;
             MovingButtonsController.Instance.HideAllButtons();
@@ -155,7 +156,12 @@ public class MovablePlateAnimation : RepairableObject
         
 
             }
-            _currentCondition.EnableLight(_currentCondition.Condition);
+            if(_currentCondition!= null)
+            {
+                _currentCondition.CanChange = true;
+                _currentCondition.EnableLight(_currentCondition.Condition);
+            }
+         
             canMove = true;
             SceneSettings.Instance.CanTouch = true;
         }
