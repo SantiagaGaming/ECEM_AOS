@@ -51353,7 +51353,7 @@ MonoBehaviour:
   screwDown: {fileID: 6931107465982393915}
   scpuTop: {fileID: 7850148350724577138}
   scpuBot: {fileID: 7850148351255869312}
-  _currentCondition: {fileID: 1037663703816600556}
+  _currentCondition: {fileID: 1037663704610350264}
   Lamps:
   - {fileID: 7850148350092953182}
   - {fileID: 7850148349777538652}

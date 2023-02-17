@@ -30,18 +30,23 @@ public class UvkLightSetCondition : AosObjectBase
         {
             Debug.Log(ObjectId + " condition " + condition);
             SceneSettings.Instance.Memory.UvkLights[ObjectId] = condition;
-            EnableLight(condition);
+            //EnableLight(condition);
             Condition = condition;
         }
     }
-    private void EnableLight(int value)
+    public void EnableLight(int value)
     {
+        Debug.Log(_redLight.GetComponent<MeshRenderer>().enabled + "Mesh Before");
         if (_greenLight == null || _redLight == null)
             return;
+        Debug.Log(_redLight.GetComponent<MeshRenderer>().enabled + "Mesh");
         if (value==0)
         {
             _greenLight.SetActive(true);
+            _greenLight.GetComponent<MeshRenderer>().enabled = true;
+       
             _redLight.SetActive(false);
+            _redLight.GetComponent<MeshRenderer>().enabled = false;
             EnableBlinkers(true);
             _blink= false;
             Blink = true;
@@ -49,14 +54,18 @@ public class UvkLightSetCondition : AosObjectBase
         else if(value==1)
         {
             _greenLight.SetActive(false);
+            _greenLight.GetComponent<MeshRenderer>().enabled = false;
             _redLight.SetActive(true);
+            _redLight.GetComponent<MeshRenderer>().enabled = true;
             EnableBlinkers(false);
             _blink = false;
         }
         else if(value ==2)
         {
             _greenLight.SetActive(false);
+            _greenLight.GetComponent<MeshRenderer>().enabled = false;
             _redLight.SetActive(false);
+            _redLight.GetComponent<MeshRenderer>().enabled = false;
             EnableBlinkers(false);
             _blink = false;
         }
@@ -70,10 +79,14 @@ public class UvkLightSetCondition : AosObjectBase
     private IEnumerator Blinker()
     {
         _greenLight.SetActive(false);
+        _greenLight.GetComponent<MeshRenderer>().enabled = false;
         _redLight.SetActive(true);
+        _redLight.GetComponent<MeshRenderer>().enabled = true;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.2f));
         _greenLight.SetActive(true);
+        _greenLight.GetComponent<MeshRenderer>().enabled = true;
         _redLight.SetActive(false);
+        _redLight.GetComponent<MeshRenderer>().enabled = false;
         yield return new WaitForSeconds(Random.Range(0.1f, 1.2f));
         if(_blink)
         StartCoroutine(Blinker());

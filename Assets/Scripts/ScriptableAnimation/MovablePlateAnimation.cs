@@ -152,8 +152,10 @@ public class MovablePlateAnimation : RepairableObject
                     if (lamp.IsRed)
                         lamp.GetComponent<MeshRenderer>().enabled = false;
                 }
+        
 
             }
+            _currentCondition.EnableLight(_currentCondition.Condition);
             canMove = true;
             SceneSettings.Instance.CanTouch = true;
         }
