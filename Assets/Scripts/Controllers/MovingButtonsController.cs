@@ -50,6 +50,7 @@ public class MovingButtonsController : MonoBehaviour
     public void ShowHandButton()
     {
         _handButton.SetActive(true);
+        Debug.Log("HAAAAND");
     }
     public void ShowHand1Button()
     {

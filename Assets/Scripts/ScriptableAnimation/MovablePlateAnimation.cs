@@ -31,7 +31,6 @@ public class MovablePlateAnimation : RepairableObject
             {
                 lamp.EnableLamp(false);
             }
-
             int screwZRot = 0;
             if (!_mbko)
             {
@@ -45,7 +44,6 @@ public class MovablePlateAnimation : RepairableObject
                 }
                     screwUp.SetActive(false);
             }
-
             screwDown.SetActive(true);
              screwZRot = 0;
             while (screwZRot > -36)
