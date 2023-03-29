@@ -16,6 +16,13 @@ public class OtkazUIButton : MonoBehaviour
     {
         API api = FindObjectOfType<API>();
         api.OnReasonInvoke(gameObject.name);
+        _button.enabled = false;
+        StartCoroutine(ButtonEnabler());
+    }
+    private IEnumerator ButtonEnabler()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _button.enabled = true;
     }
 
 }
