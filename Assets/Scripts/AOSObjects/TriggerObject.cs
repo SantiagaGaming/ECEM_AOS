@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AosSdk.Core.PlayerModule.Pointer;
@@ -18,8 +19,13 @@ public class TriggerObject : MonoBehaviour
         if (sceneAosObject != null)
         {
             sceneAosObject.InvokeOnClick();
-            _anotherCollider.GetComponent<Collider>().enabled = true;
-            GetComponent<Collider>().enabled = false;
+            StartCoroutine(Delay());
         }
         }
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1f);
+        _anotherCollider.GetComponent<Collider>().enabled = true;
+        GetComponent<Collider>().enabled = false;
+    }
 }
