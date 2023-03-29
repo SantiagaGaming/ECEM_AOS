@@ -14,7 +14,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     public bool IsClickable { get; set; } = true;
 
     protected CanvasObjectHelperController canvasHelper;
-    protected SceneAosObject sceneAosObject;
+    protected SceneAOSObject sceneAosObject;
 
     [SerializeField] protected OutlineCore[] outlineObjects;
     [SerializeField] protected Transform helperPos;
@@ -31,7 +31,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
             if(Collider != null)
                 Collider.enabled = false;
             ControllersHandler.Instance.GetAOSColliderActivator().AddBaseObject(this);
-            sceneAosObject = GetComponent<SceneAosObject>();
+            sceneAosObject = GetComponent<SceneAOSObject>();
         }
     }
 
@@ -41,7 +41,7 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
         {
             ControllersHandler.Instance.GetReactionHelper().EnableReactionHelper(false);
             ControllersHandler.Instance.GetReactionHelper().ChangeReactionHelperText("");
-            sceneAosObject = GetComponent<SceneAosObject>();
+            sceneAosObject = GetComponent<SceneAOSObject>();
             if (sceneAosObject != null)
             {
                 sceneAosObject.InvokeOnClick();

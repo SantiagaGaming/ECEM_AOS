@@ -11,5 +11,5 @@ public class CurrentAOSObject : MonoBehaviour
         if (Instance == null)
             Instance = this;
     }
-    public SceneAosObject SceneAosObject { get; set; }
+    public SceneAOSObject SceneAosObject { get; set; }
 }

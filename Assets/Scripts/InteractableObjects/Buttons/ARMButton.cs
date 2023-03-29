@@ -40,7 +40,7 @@ public class ARMButton : MonoBehaviour
     {
         if(_arm)
         {
-            SceneAosObject obj = GetComponent<SceneAosObject>();
+            SceneAOSObject obj = GetComponent<SceneAOSObject>();
             if (obj != null)
                 obj.InvokeOnClick();
         }

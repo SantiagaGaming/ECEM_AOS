@@ -14,9 +14,9 @@ public class Diet : MonoBehaviour
     [SerializeField] private StrelkaButton _indication;
     [SerializeField] private RadioButtonsContainer _radioContainer;
 
-    private SceneAosObject _minusID;
-    private SceneAosObject _plusID;
-    private SceneAosObject _indicationID;
+    private SceneAOSObject _minusID;
+    private SceneAOSObject _plusID;
+    private SceneAOSObject _indicationID;
 
     public static Diet Instance;
     private void Awake()
@@ -163,15 +163,15 @@ public class Diet : MonoBehaviour
         }
 
     }
-public SceneAosObject GetPlusID()
+public SceneAOSObject GetPlusID()
     {
         return _plusID;
     }
-    public SceneAosObject GetMinusID()
+    public SceneAOSObject GetMinusID()
     {
         return _minusID;
     }
-    public SceneAosObject GetIndicationID()
+    public SceneAOSObject GetIndicationID()
     {
         return _indicationID;
     }

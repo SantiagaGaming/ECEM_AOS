@@ -4,7 +4,7 @@ using AosSdk.Core.Utils;
 using UnityEngine;
 using UnityEngine.Events;
 [AosSdk.Core.Utils.AosObject(name: "AosObject")]
-public class SceneAosObject : AosObjectBase
+public class SceneAOSObject : AosObjectBase
 {
     [AosEvent(name: "OnClickObject")]
     public event AosEventHandlerWithAttribute OnClickObject;

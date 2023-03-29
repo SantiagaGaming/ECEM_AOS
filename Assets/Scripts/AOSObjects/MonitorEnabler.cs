@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 [AosSdk.Core.Utils.AosObject(name: "MonitorEnabler")]
 
-public class MonitorEnabler : SceneAosObject
+public class MonitorEnabler : SceneAOSObject
 {
     public UnityAction<bool> OnMonitorConditionChanged;
     public UnityAction<bool> OnEnableMonitor;

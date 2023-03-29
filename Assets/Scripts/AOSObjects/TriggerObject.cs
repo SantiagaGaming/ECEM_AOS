@@ -8,13 +8,13 @@ using UnityEngine;
 public class TriggerObject : MonoBehaviour
 {
     [SerializeField] private GameObject _anotherCollider;
-    private SceneAosObject sceneAosObject;
+    private SceneAOSObject sceneAosObject;
         private void OnTriggerEnter(Collider col)
         {
             var aosObject = col.GetComponentInParent<AosObjectBase>();
             if (!aosObject)
                 return;
-        sceneAosObject = GetComponent<SceneAosObject>();
+        sceneAosObject = GetComponent<SceneAOSObject>();
         if (sceneAosObject != null)
         {
             sceneAosObject.InvokeOnClick();

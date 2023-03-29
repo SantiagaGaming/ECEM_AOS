@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class RadioButtonsContainer : MonoBehaviour
 {
-    [SerializeField] private SceneAosObject[] _radioButtons;
-    public SceneAosObject GetRadioButton(string name)
+    [SerializeField] private SceneAOSObject[] _radioButtons;
+    public SceneAOSObject GetRadioButton(string name)
     {
-        SceneAosObject obj = _radioButtons.FirstOrDefault(b => b.ObjectId == name);
+        SceneAOSObject obj = _radioButtons.FirstOrDefault(b => b.ObjectId == name);
         if (obj != null)
             return obj;
         return null;
