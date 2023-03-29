@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +28,10 @@ public class ProjectMemory : ScriptableObject
     [HideInInspector] public bool Monitor3 { get; set; }
     [HideInInspector] public bool Monitor3Enabler { get; set; }
     [HideInInspector] public Dictionary<string,int> UvkLights { get; set; }
+
+    [HideInInspector] public JObject ResultInfo { get; set; }
+    [HideInInspector] public JObject ResultNav { get; set; }
+    [HideInInspector] public bool TimeResult { get; set; }
 
     public UnityAction MenuEvent;
     private void OnEnable()

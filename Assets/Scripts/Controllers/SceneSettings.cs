@@ -40,6 +40,10 @@ public void SetMemory()
         _memory.Monitor2Enabler = true;
         _memory.Monitor3Enabler = true;
         _memory.UvkLights = new Dictionary<string, int>();
+
+        _memory.TimeResult = false;
+        _memory.ResultInfo = new Newtonsoft.Json.Linq.JObject();
+        _memory.ResultNav = new Newtonsoft.Json.Linq.JObject();
         FillUvkLights();
     }
     private void FillUvkLights()

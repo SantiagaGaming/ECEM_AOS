@@ -20,8 +20,15 @@ public class MenuAPI : API
     private IEnumerator EndTweenDelay()
     {
         yield return new WaitForSeconds(0.2f);
-
+        if(!SceneSettings.Instance.Memory.TimeResult)
         OnMenuInvoke();
+        else
+        {
+            var result = SceneSettings.Instance.Memory.ResultInfo;
+            var nav = SceneSettings.Instance.Memory.ResultNav;
+            showResult(result, nav);
+        }
+          
     }
 
     public override void showMenu(JObject faultInfo, JObject exitInfo, JObject resons)
