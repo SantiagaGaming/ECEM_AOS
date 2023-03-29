@@ -174,4 +174,17 @@ public class ActionAPI : API
             ControllersHandler.Instance.GetReactionHelper().ChangeReactionHelperText(reactionText.ToString());
         }
     }
+    public override void showResult(JObject info, JObject nav)
+    {
+        //SceneSettings.Instance.Memory.Teleport = false;
+        //_menuScreenChanger.EnableScreen(TagsHelper.INFO);
+        //_endScreenView.SetHeaderText(info.SelectToken(TagsHelper.NAME).ToString());
+        //_endScreenView.SetResultText(info.SelectToken(TagsHelper.EVAL).ToString());
+        //_endScreenView.SetCommentText(info.SelectToken(TagsHelper.TEXT).ToString());
+        //_nextButton.ChangeActionOnButton(nav.SelectToken(TagsHelper.OK).SelectToken(TagsHelper.ACTION).ToString());
+        //_endScreenView.EnableNextButton(false);
+        //_endScreenView.EnableExitButton(true);
+        Debug.Log("Result");
+
+    }
 }
