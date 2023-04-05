@@ -32,6 +32,7 @@ public class ActionAPI : API
         ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
         ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
 
+        Debug.Log(data.ToString());
         foreach (JObject item in data)
         {
             var baseObject = item.SelectToken(TagsHelper.API_ID);
@@ -65,6 +66,7 @@ public class ActionAPI : API
     }
     public override void updatePlace(JArray data)
     {
+
         foreach (JObject item in data)
         {
             var points = item.SelectToken(TagsHelper.POINTS);
