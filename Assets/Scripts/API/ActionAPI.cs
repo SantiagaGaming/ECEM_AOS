@@ -32,7 +32,6 @@ public class ActionAPI : API
         ControllersHandler.Instance.GetAOSColliderActivator().DeactivateAllColliders();
         ControllersHandler.Instance.GetAOSImageContainer().DeactivateAllImages();
 
-        Debug.Log(data.ToString());
         foreach (JObject item in data)
         {
             var baseObject = item.SelectToken(TagsHelper.API_ID);
