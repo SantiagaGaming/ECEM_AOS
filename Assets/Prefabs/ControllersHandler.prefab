@@ -703,6 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7456722302095661854}
   - component: {fileID: 7456722302095661855}
+  - component: {fileID: 7604140251309632267}
   m_Layer: 0
   m_Name: ControllersHandler
   m_TagString: Untagged
@@ -753,6 +754,33 @@ MonoBehaviour:
   _aosImageContainer: {fileID: 7456722301542397950}
   _htmlToText: {fileID: 7456722303439358207}
   _reactionHelper: {fileID: 915587610}
+--- !u!114 &7604140251309632267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456722302095661852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09651be7272d7194a925c76656d01402, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenShowAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Screen Show
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d8d3bd7e-59e8-453a-9c4a-695ccec320d1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 4811098022547492684, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _format: 1
+  _imageSize: 8096
+  _fileName: Field
 --- !u!1 &7456722302548346078
 GameObject:
   m_ObjectHideFlags: 0

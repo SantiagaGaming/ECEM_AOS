@@ -1197,6 +1197,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ScreenShot",
+                    "type": "Button",
+                    "id": "76b47284-f2b8-42d5-aa4e-65d53a57fdcd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1384,6 +1393,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Esc",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "233cd46a-37fb-4f6d-bfe9-9c0b43e5805d",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScreenShot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
