@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class StartScreenView : MonoBehaviour
 {
-    [SerializeField] private Canvas _startScreenCanvas;        
+    [SerializeField] private GameObject _startScreenCanvas;        
     [SerializeField] private TextMeshProUGUI _headerText;
     [SerializeField] private TextMeshProUGUI _commentText;
     [SerializeField] private TextMeshProUGUI _nextButtonText;
 
     public void EnableStartScreen(bool value)
     {
-        _startScreenCanvas.enabled = value;   
+        _startScreenCanvas.SetActive(value);  
     }
     public void SetHeaderText(string text)
     {

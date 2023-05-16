@@ -5,28 +5,49 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuScreenView : BaseScreenView
+public class MenuScreenView : MonoBehaviour
 {
-
-    [SerializeField] private MenuScreenObject[] _menuScreens;
-    [SerializeField] private TextMeshProUGUI _currentLocationText;
-    [SerializeField] private TextMeshProUGUI _timertext;
     [SerializeField] private TextMeshProUGUI _commentText;
     [SerializeField] private TextMeshProUGUI _exitText;
     [SerializeField] private TextMeshProUGUI _warnText;
+    [SerializeField] private TextMeshProUGUI _endHeaderText;
+    [SerializeField] private TextMeshProUGUI _endCommentText;
+    [SerializeField] private TextMeshProUGUI _endResultText;
 
+    [SerializeField] private GameObject _menuScreen;
+    [SerializeField] private GameObject _endGameScreen;
+    [SerializeField] private GameObject _exitButton;
+    [SerializeField] private GameObject _backButton;
 
-    private string _currentScreenName;
-
-    public void SetTimertext(string text)
+    public void EnableEndGameScreen(bool value)
     {
-        _timertext.text = text;
+        _endGameScreen.SetActive(value);
     }
-    public void SetOtkazText(string text)
+    public void EnableMenuScreen(bool value)
     {
-        _commentText.text= text;
+        _menuScreen.SetActive(value);
+    }
+    public void SetEndHeaderText(string text)
+    {
+        _endHeaderText.text = text;
+    }
+    public void SetCommentText(string text)
+    {
+        _commentText.text = ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text);
+    }
+    public void SetEndResultText(string text)
+    {
+        _endResultText.text = ControllersHandler.Instance.GetHtmlToText().HTMLToTextReplace(text);
     }
 
+    public void EnableExitButton(bool value)
+    {
+        _exitButton.SetActive(value);
+    }
+    public void SetEndCommentText(string text)
+    {
+        _endCommentText.text= text;
+    }
     public void SetExitText(string text)
     {
         _exitText.text = text;
@@ -35,24 +56,8 @@ public class MenuScreenView : BaseScreenView
     {
         _warnText.text = text;
     }
-
-    public void ActivateMenuScreen(string name)
+    public void EnableBackButton(bool value)
     {
-        DeactivateAllScreens();
-        var tempMenuScreen = _menuScreens.FirstOrDefault(n => n.GetScreenName() == name);
-        tempMenuScreen.EnableScreenObject(true);
-        _currentScreenName = name;
+        _backButton.SetActive(value);
     }
-    private void DeactivateAllScreens()
-    {
-        foreach (var screen in _menuScreens)
-        {
-            screen.EnableScreenObject(false);
-        }
-    }
-    public string GetCurrentScreenName()
-    {
-        return _currentScreenName;
-    }
-
 }
